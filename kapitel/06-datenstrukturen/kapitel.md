@@ -18,7 +18,7 @@ Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einz
 - Datenstrukturen können *verschachtelt* werden, um noch komplexere Strukturen zu bilden.
 - Datenstrukturen können als Sammlung von Einzelwerten betrachtet werden, welche getrennt verarbeitet werden können.
 
-Durch diese Eigentschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet. 
+Durch diese Eigenschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet. 
 
 *Datenfelder* (engl. *arrays*) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine *eindeutige Position* hat. Die Position eines Wertes wird durch einen *Index* angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren **Länge**. Die Länge und die Idizes einer Datenstruktur sind natürliche Zahlen.
 
