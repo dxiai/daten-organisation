@@ -216,6 +216,6 @@ Bei der automatischen Datenerhebung werden grundsätzlich drei Kategorien unters
 
   Log-Einträge werden oft chronologisch in der Reihenfolge der Ereignisse gespeichert.
 
-Nur weil Sensoren und andere datengenerierende Instrumente verwendet werden, findet eine automatische Datenerhebung unter Umständen nicht statt. Ein entsprechendes Instrument muss die Funktion bereitstellen, um Metriken und/oder Logs zu generieren und bereitzustellen.
+Nur weil Sensoren und andere datengenerierende Instrumente verwendet werden, findet eine automatische Datenerhebung unter Umständen nicht statt. Ein entsprechendes Instrument muss über Funktionen verfügen, um Metriken und/oder Logs zu generieren und bereitzustellen.
 
 Bei der automatischen Datenerhebung für Metriken und Logs werden meistens mehrere Systeme gemeinsam eingesetzt. Ein System erfasst die Daten und ein anderes System speichert die Daten in einer Datenbank. Die Daten werden in der Regel in einem *Datenstrom* bzw. *Zeitreihe* erfasst und gespeichert.
