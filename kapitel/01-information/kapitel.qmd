@@ -67,7 +67,7 @@ Wie kann eine Nachricht ein Ziel erreichen, wenn die Daten durch Rauschen und Eq
 - Das Empfangen und Dekodieren der Nachricht 
 - Ein Informationsziel, die Information aufnimmt
 
-Zusätzlich muss das *Rauschen* des Kanals berücksichtigt werden. Später wurde das Modell um die *Equivokation* erweitert [@shannon_communication_1949]. Sowohl das Rauschen als auch die Equivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diese Überlegungen ergibt sich das Kommunikationschema in @fig-shannon-model.
+Zusätzlich muss das *Rauschen* des Kanals berücksichtigt werden. Später wurde das Modell um die *Equivokation* erweitert [@shannon_communication_1949]. Sowohl das Rauschen als auch die Equivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diesen Überlegungen ergibt sich das Kommunikationschema in @fig-shannon-model.
 
 
 ```{mermaid}
