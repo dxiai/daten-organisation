@@ -432,7 +432,7 @@ Anders als beim Kreuzprodukt, können beim äusseren Matrixprodukt beliebige Ope
 > ::: {#exm-dreiecks-matrix-erzeugen}
 > ## Eine Dreiecks-Matrix mit dem äusseren Produkt erzeugen.
 >
-> Eine Dreiecks-Matrix eine wichtige Matrix, weil durch die `0` ober- bzw. unterhalb der Hauptdigonalen bei der Matrixmultiplikation viele Rechenoperationen eingespart werden können. Diese Einsparung kommt in der Praxis immer dann zum Tragen, wenn nur Vorgänger- oder Nachfolgerwerte berückstichtigt werden müssen. Dafür ist es oft sinnvoll, eine Dreiecks-Matrix zu erzeugen, die nur die Werte `1` und `0` enthält.
+> Eine Dreiecks-Matrix eine wichtige Matrix, weil durch die `0` ober- bzw. unterhalb der Hauptdigonalen bei der Matrixmultiplikation viele Rechenoperationen eingespart werden können. Diese Einsparung kommt in der Praxis immer dann zum Tragen, wenn nur Vorgänger- oder Nachfolgerwerte berücksichtigt werden müssen. Dafür ist es oft sinnvoll, eine Dreiecks-Matrix zu erzeugen, die nur die Werte `1` und `0` enthält.
 >
 > Eine Dreiecksmatrix lässt sich mit dem äusseren Produkt aus zwei Sequenzen erzeugen. Dazu wird in zwei Schritten vorgegangen.
 >
