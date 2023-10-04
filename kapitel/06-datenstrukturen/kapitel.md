@@ -14,7 +14,7 @@ Eine **Datenstruktur** ist ein Datentyp, in dem mehrere Werte zusammengefasst we
 
 Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einzelner Wert behandeln. Dadurch haben Datenstrukturen eine Reihe von Vorteilen: 
 
-- Datenstrukturen können als *Einheit* behadelt werden.
+- Datenstrukturen können als *Einheit* behandelt werden.
 - Datenstrukturen können *verschachtelt* werden, um noch komplexere Strukturen zu bilden.
 - Datenstrukturen können als Sammlung von Einzelwerten betrachtet werden, welche getrennt verarbeitet werden können.
 
