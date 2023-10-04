@@ -22,7 +22,7 @@ Wenn die Begriffe *Daten* und *Information* im Kern identisch sind, warum werden
 
 Um dieses Problem zu verstehen, werden die beiden Begriffe auf ihren wörtlichen Ursprung zurückgeführt: 
 
-- *Daten*: Pluralform von Datum, das sich auf das lateinische Verb *dare* zurückgeführt werden kann. *Dare* bedeutet *gegeben* und das zugehörige Substantiv bedeutet *das Gegebene* oder *die Gabe*. 
+- *Daten*: Pluralform von Datum, das auf das lateinische Verb *dare* zurückgeführt werden kann. *Dare* bedeutet *gegeben* und das zugehörige Substantiv bedeutet *das Gegebene* oder *die Gabe*. 
 - *Information*: lässt sich ebenfalls auf das Lateinische zurückführen, wobei dieses Wort unverändert in den deutschen Wortschatz eingegangen ist. Die Bedeutung dieses Begriffs steht für *Auskunft* oder *Benachrichtigung*. 
 
 Mit diesen beiden Ursprüngen können die beiden Begriffe für Anwendungen vorläufig unterscheiden werden:
