@@ -87,7 +87,7 @@ Entsprechend enthält der Token-Vektor nach der Texttrennung mit der leeren Zeic
 
 Die Texttrennung ist umkehrbar. Die Umkehrfunktion der Texttrennung ist die Textverkettung. Die Textverkettung fügt mehrere Zeichenketten zu einer neuen Zeichenkette zusammen.
 
-Die Textverkettung ist eine spezielle From der Konkatenation von Vektoren (s. [Kapite @sec-konkatenation]).
+Die Textverkettung ist eine spezielle Form der Konkatenation von Vektoren (s. [Kapite @sec-konkatenation]).
 
 Die Textverkettung hat zwei Parameter: 
 
