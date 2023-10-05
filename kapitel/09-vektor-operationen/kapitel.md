@@ -386,7 +386,7 @@ Weil das Filtern die Länge des Vektors verändert, kann das Filtern **nicht** a
 
 ### Zählen durch Nummerieren
 
-Beim Nummerieren wird eine Sequenz erzeugt, die für jede zählbare Einheit einen Wert enthält. Die Länge dieser Sequenz entspricht der Anzahl der zählbaren Einheiten. Gleichzeigit entspricht der Maximal-Wert der Sequenz ebenfalls der Anzahl der zählbaren Einheiten.
+Beim Nummerieren wird eine Sequenz erzeugt, die für jede zählbare Einheit einen Wert enthält. Die Länge dieser Sequenz entspricht der Anzahl der zählbaren Einheiten. Gleichzeitig entspricht der Maximal-Wert der Sequenz ebenfalls der Anzahl der zählbaren Einheiten.
 
 ::: {.callout-note}
 ## Merke
