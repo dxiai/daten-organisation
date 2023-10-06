@@ -111,6 +111,56 @@ In den Datenwissenschaften kommen im Wesentlichen drei Arten von Funktionen zum 
 2. Aggregatoren, die mehrere Werte *zusammenfassen*; und 
 3. Generatoren, mit denen Werte *erzeugt* werden.
 
+
+### Substitution {#sec-substitution}
+
+::: {.callout-note}
+Wird ein Teil einer komplexen Operation in eine einfachere Funktion ausgelagert, dann spricht man von **Substitution**. 
+:::
+
+In der Mathematik wird beim Substituieren die Teiloperation in der Regel nur durch Bezeichner der ersetzenden Funktion angegeben. In der Praxis müssen solche Ersetzungsfunktionen explizit parametrisiert und ausgeführt werden.
+
+Die folgenden beiden Beispile illustrieren die Substituion mit einfachen mathematischen Funktionen. 
+
+Die Operation in @eq-problemzerlegung-basis führt zwei Operationen nacheinander aus. 
+
+$$ 
+f(a,b) \to (a - b)^2
+$$ {#eq-problemzerlegung-basis}
+
+Wird die Teiloperation $a - b$ substituiert, dann ergibt sich @eq-problemzerlegung-subst.
+
+$$ 
+f(a,b) \to s^2 ;  s = a - b
+$$ {#eq-problemzerlegung-subst}
+
+In diesem Beispiel wurde nur die Subtraktion substituiert. Weil der Bezeichner $s$ die Subtraktion versteckt, können die Klammern der ursprünglichen Operation entfallen.
+
+Durch Substituieren lassen sich häufig die grundsätzlichen Ideen von komplexen Operationen leichter erkennen und vereinfachen. Das Beispiel in @eq-problemzerlegung-vereinfachen zeigt diesen Effekt.
+
+$$
+g(a,b) \to \frac{a + b - 2ab}{b-a} \Leftrightarrow -\frac{(a-b)^2}{a-b} 
+$$ {#eq-problemzerlegung-vereinfachen}
+
+Für die rechte Operation wird in @eq-substitution-vereinfachen wieder die Substitution $s = a - b$ verwendet. 
+
+Bei einer Substitution sollen möglichst viele Teilterme mit dem gleichen Bezeichner substituiert werden. Deshalb wurde der *Nenner* $b-a$ so umgeformt, dass auch im Nenner der Term $a-b$ steht. Dazu wurde ausgenutzt, dass gilt $b-a \Leftrightarrow -(a-b)$. Das Vorzeichen kann in diesem Fall vor dem Bruch gezogen werden, so dass die Klammern um $a-b$ entfallen können.
+
+$$
+g(a,b) \to - \frac{s^2}{s} \Leftrightarrow - s; s = a - b
+$$ {#eq-substitution-vereinfachen}
+
+Der Bezeichner der Substitution unterscheidet sich nicht von anderen Bezeichnern. Es kann also angenommen werden, dass $s$ ein beliebiger Wert ist. So lässt sich leicht erkennen, dass $s$ gekürzt werden kann. Rein technisch wurde für den Substitutionsterm eine Funktion $s$ mit zwei Parametern erstellt. Diese Funktion ist in diesem Beispiel identisch mit der Funktion `subtraktion()`, mit der ein Wert von einem anderen abgezogen wird. 
+
+Um die ursprüngliche Operation zu erhalten, muss die Substitution rückgängig gemacht werden. Dazu wird der substituierte Bezeichner durch die ursprüngliche Teiloperation ersetzt. Daraus ergibt sich @eq-substitution-rueck.
+
+$$
+g(a,b) \to -(a-b) \Leftrightarrow b-a
+$$ {#eq-substitution-rueck}
+
+Diese Operation $b-a$ ist wesentlich einfacher als die ursprüngliche Funktion. Solches Vereinfachen von Funktionen ist für die Praxis wichtig, weil dadurch zum einen die Komplexität von Operationen verringert werden kann und zum anderen die Ausführungsgeschwindigkeit durch den Wegfall von Operationen erhöht werden kann.
+
+
 ### Spezielle Funktionen {#sec-spezielle-funktionen}
 
 #### Konstante Funktionen
@@ -194,54 +244,6 @@ Exponenten werden in der Mathematik in der Regel hochgestellt dargestellt. Die m
 
 Die Programmiersprache Python weicht von dieser Konvention ab und verwendet den `**`-Operator für Exponenten. Der `^`-Operator ist in Python der sog. *bitweise XOR-Operator*. [@python_software_foundation_bitwise_2013]
 :::
-
-### Substitution {#sec-substitution}
-
-::: {.callout-note}
-Wird ein Teil einer komplexen Operation in eine einfachere Funktion ausgelagert, dann spricht man von **Substitution**. 
-:::
-
-In der Mathematik wird beim Substituieren die Teiloperation in der Regel nur durch Bezeichner der ersetzenden Funktion angegeben. In der Praxis müssen solche Ersetzungsfunktionen explizit parametrisiert und ausgeführt werden.
-
-Die folgenden beiden Beispile illustrieren die Substituion mit einfachen mathematischen Funktionen. 
-
-Die Operation in @eq-problemzerlegung-basis führt zwei Operationen nacheinander aus. 
-
-$$ 
-f(a,b) \to (a - b)^2
-$$ {#eq-problemzerlegung-basis}
-
-Wird die Teiloperation $a - b$ substituiert, dann ergibt sich @eq-problemzerlegung-subst.
-
-$$ 
-f(a,b) \to s^2 ;  s = a - b
-$$ {#eq-problemzerlegung-subst}
-
-In diesem Beispiel wurde nur die Subtraktion substituiert. Weil der Bezeichner $s$ die Subtraktion versteckt, können die Klammern der ursprünglichen Operation entfallen.
-
-Durch Substituieren lassen sich häufig die grundsätzlichen Ideen von komplexen Operationen leichter erkennen und vereinfachen. Das Beispiel in @eq-problemzerlegung-vereinfachen zeigt diesen Effekt.
-
-$$
-g(a,b) \to \frac{a + b - 2ab}{b-a} \Leftrightarrow -\frac{(a-b)^2}{a-b} 
-$$ {#eq-problemzerlegung-vereinfachen}
-
-Für die rechte Operation wird in @eq-substitution-vereinfachen wieder die Substitution $s = a - b$ verwendet. 
-
-Bei einer Substitution sollen möglichst viele Teilterme mit dem gleichen Bezeichner substituiert werden. Deshalb wurde der *Nenner* $b-a$ so umgeformt, dass auch im Nenner der Term $a-b$ steht. Dazu wurde ausgenutzt, dass gilt $b-a \Leftrightarrow -(a-b)$. Das Vorzeichen kann in diesem Fall vor dem Bruch gezogen werden, so dass die Klammern um $a-b$ entfallen können.
-
-$$
-g(a,b) \to - \frac{s^2}{s} \Leftrightarrow - s; s = a - b
-$$ {#eq-substitution-vereinfachen}
-
-Der Bezeichner der Substitution unterscheidet sich nicht von anderen Bezeichnern. Es kann also angenommen werden, dass $s$ ein beliebiger Wert ist. So lässt sich leicht erkennen, dass $s$ gekürzt werden kann. Rein technisch wurde für den Substitutionsterm eine Funktion $s$ mit zwei Parametern erstellt. Diese Funktion ist in diesem Beispiel identisch mit der Funktion `subtraktion()`, mit der ein Wert von einem anderen abgezogen wird. 
-
-Um die ursprüngliche Operation zu erhalten, muss die Substitution rückgängig gemacht werden. Dazu wird der substituierte Bezeichner durch die ursprüngliche Teiloperation ersetzt. Daraus ergibt sich @eq-substitution-rueck.
-
-$$
-g(a,b) \to -(a-b) \Leftrightarrow b-a
-$$ {#eq-substitution-rueck}
-
-Diese Operation $b-a$ ist wesentlich einfacher als die ursprüngliche Funktion. Solches Vereinfachen von Funktionen ist für die Praxis wichtig, weil dadurch zum einen die Komplexität von Operationen verringert werden kann und zum anderen die Ausführungsgeschwindigkeit durch den Wegfall von Operationen erhöht werden kann.
 
 ### Besondere Operatoren
 
