@@ -24,7 +24,7 @@ Vektoren sind bezüglich des Datentyps *homogen*. D.h. alle Elemente eines Vekto
 Ein Vektor der Länge `0` heisst **leerer Vektor**. 
 :::
 
-Der leere Vektor wird endweder als $\varnothing$ oder als $\{\}$ geschrieben. Beide Schreibweisen sind gleichwertig.
+Der leere Vektor wird entweder als $\varnothing$ oder als $\{\}$ geschrieben. Beide Schreibweisen sind gleichwertig.
 
 Der leere Vektor ist eine besondere Datenstruktur, die keine Elemente enthält. Der leere Vektor kann als *Startwert* für die Konstruktion von Vektoren verwendet werden oder als *Ergebnis* von Operationen auf Vektoren vorkommen.
 
