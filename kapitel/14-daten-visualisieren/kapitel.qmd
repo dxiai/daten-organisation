@@ -149,7 +149,7 @@ Ein **Boxplot** stellt die Grösse der Verteilungsintervalle von Daten als Recht
 ::: {.callout-note}
 ## Merke
 
-Boxplots dürfen nur für ordinal- oder kontinuierlichskalierte Wertebereiche verwendet werden.
+Boxplots dürfen nur für ordinal- oder kontinuierlich skalierte Wertebereiche verwendet werden.
 :::
 
 Ein Boxplot hat nur eine Achse für den Wertebereich der dargestellten Werte. Die zweite Achse in einem einfachen Boxplot ist nur notwendig, um das Rechteck zeichnen zu können und hat sonst keine Bedeutung.
