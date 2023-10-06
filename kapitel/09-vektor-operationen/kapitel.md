@@ -175,7 +175,7 @@ a \circ v &= a \circ \{v_1; v_2; \dots; v_n\} \\
 \end{aligned}
 $$ 
 
-## Tranformationen
+## Transformationen
 
 ::: {#def-transformation}
 Eine **Transformation** bezeichnet eine Umformung der Element eines Vektors, wobei die Länge des Vektors unverändert bleibt. 
