@@ -224,7 +224,7 @@ Ein **Funktionsdiagramm** stellt die Parameter und die Ergebnisse einer oder meh
 In Funktionsdiagrammen werden die Parameter einer Funktion ihren Ergebnissen gegenübergestellt. Zwischen diesen Werten gibt es eine Beziehung, die durch die verwendete Funktion festgelegt wird. 
 
 ::: {#def-funktionale-abhängigkeit}
-Die Parametern und den Ergebnissen eine Funktion sind ***funktional abhängig***. Für den Spezialfall einer linearen Funktion sind die Werte **linear ahbängig**.
+Die Parametern und den Ergebnissen eine Funktion sind ***funktional abhängig***. Für den Spezialfall einer linearen Funktion sind die Werte **linear abhängig**.
 ::: 
 
 Funktionsdiagramme visualisieren also die funktionale Abhängigkeit zwischen Parametern und Ergebnissen von Funktionen. 
