@@ -546,7 +546,7 @@ In den vorherigen Abschnitten haben wir wichtige Erkenntnisse abgeleitet:
 1. Zahlensysteme **kodieren** Zahlenwerte zu einer Basis. 
 2. Die Basis eines Zahlensystems legt fest, wie viele Ziffern für Zahlenwerte zur Verfügung stehen. 
 3. Die kleinste Basis für ein Zahlensystem ist 2.
-4. Beliebige Symbole als Zahlenwerte abgebildetet werden können. 
+4. Beliebige Symbole als Zahlenwerte abgebildet werden können. 
 5. Ziffern sind Symbole. 
 
 Daraus ergibt sich der folgende Merksatz. 
