@@ -227,7 +227,7 @@ In Funktionsdiagrammen werden die Parameter einer Funktion ihren Ergebnissen geg
 Die Parametern und den Ergebnissen eine Funktion sind ***funktional abhängig***. Für den Spezialfall einer linearen Funktion sind die Werte **linear ahbängig**.
 ::: 
 
-Funktionsdiagramme visualisieren also die funktionale Abhängigkeit zwischen Parametern und Ergenissen von Funktionen. 
+Funktionsdiagramme visualisieren also die funktionale Abhängigkeit zwischen Parametern und Ergebnissen von Funktionen. 
 
 Für ein Funktionsdiagramm wird neben der Funktion zusätzlich ein Parameterintervall benötigt. Das Parameterintervall bildet die Grundlage für den Darstellungsbereich. Anschliessend wird eine Wertetabelle für das Parameterintervall erstellt. Diese Tabelle enthält zwei Vektoren: 
 
