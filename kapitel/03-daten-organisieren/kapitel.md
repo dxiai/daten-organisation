@@ -54,7 +54,7 @@ Ein **Merkmal** ist eine Eigenschaft, die in einer Messung durch einen *Messwert
 Ein Merkmal ist immer als Vektor organisiert. Alle Werte eines Merkmals haben also den gleichen Datentyp und den gleichen Wertebereich.
 
 ::: {#def-messereignis}
-Ein **Messereignis** fasst ein oder mehrere *gemeinsam gemessenen* Merkmale zusammen. Ein Messereignis wird auch als **Datensatz** bezeichnet. Bei der Datenvisualisierung werden Messereignisse als **Datenpunkte** bezeichnet.
+Ein **Messereignis** fasst ein oder mehrere *gemeinsam gemessene* Merkmale zusammen. Ein Messereignis wird auch als **Datensatz** bezeichnet. Bei der Datenvisualisierung werden Messereignisse als **Datenpunkte** bezeichnet.
 :::
 
 Ein Datensatz ist immer eine Liste von Werten, deren Datentypen und Wertebereichen voneinander verschieden sein können.
