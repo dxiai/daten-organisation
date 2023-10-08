@@ -75,7 +75,7 @@ Alle prinzipiell messbaren Entitäten bilden eine **Grundgesamtheit**.
 Eine **Stichprobe** ist die Gesamtheit der gemessenen Entitäten ab.
 ::: 
 
-Die **Statistik** befasst sich mit den Methoden, um von Stichproben auf die ursprüngliche **Grundgesamtheit** zu schliessen. Aus Sicht der Datenwissenschaft und Datenverarbeitung ist die Grundgesamtheit *unerheblich*, weil die nicht gemessenen Entitäten nicht in den Daten nicht abgebildet sind und deshalb unbekannt bleiben müssen!
+Die **Statistik** befasst sich mit den Methoden, um von Stichproben auf die ursprüngliche **Grundgesamtheit** zu schliessen. Aus Sicht der Datenwissenschaft und Datenverarbeitung ist die Grundgesamtheit *unerheblich*, weil die nicht gemessenen Entitäten nicht in den Daten abgebildet sind und deshalb unbekannt bleiben müssen!
 
 ### Daten normalisieren
 
