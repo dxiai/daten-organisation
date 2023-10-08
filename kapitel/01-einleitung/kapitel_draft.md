@@ -34,7 +34,7 @@ Datenzentrische Anweldungen lassen sich in vier Kategorien einteilen:
 3. Steuern
 4. Vorhersagen 
 
-Diese vier Kategorien werden in der Anwendung of kombiniert, so dass sich nicht alle Anwendungen eindeutig zuordnen lassen. 
+Diese vier Kategorien werden in der Anwendung oft kombiniert, so dass sich nicht alle Anwendungen eindeutig zuordnen lassen. 
 
 ## Organisation dieses Buchs
 
