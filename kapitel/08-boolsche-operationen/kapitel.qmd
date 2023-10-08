@@ -14,7 +14,7 @@ Als *Logischer Ausdruck* werden alle Funktionsketten bezeichnet, die einen Wahrh
 
 ::: {.callout-note}
 ## Merke 
-Die einfachsten logischen Ausdsrücke sind die Wahrheitswerte selbst. 
+Die einfachsten logischen Ausdrücke sind die Wahrheitswerte selbst. 
 :::
 
 Die klassische Aussagenlogik ist seit der Antike Teil der Rethorik und der Philosophie. Sie wurde von Aristoteles in seiner Schrift "Peri hermeneias" (Über die Interpretation) beschrieben. Das Ziel der Aussagenlogik ist es, die Struktur von Argumenten zu analysieren und zu bewerten. 
