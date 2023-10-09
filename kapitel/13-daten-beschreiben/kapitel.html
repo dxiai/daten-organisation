@@ -510,14 +510,14 @@ Hinweis
 <p>Mit dem Umfang einer Stichprobe meinen wir die <em>Anzahl der Entitäten</em>, die wir gemessen haben. In R ergibt sich dieser Wert direkt aus dem Stichprobenobjekt: Der <strong>Stichprobenumfang</strong> entspricht der <strong>Anzahl der Datensätze</strong> in unserem Stichprobenobjekt. Diese Anzahl bestimmen wir mit Hilfe der <code>count()</code>-Funktion oder innerrhalb einer Transforrmation mit <code>mutate()</code> mit Hilfe der <code>n()</code>-Funktion.</p>
 <p>Der <em>Stichprobenumfang</em> ist einer der drei allgemeinen Kennwerte, die jede Stichprobe beschreiben. Wir bestimmen zuerst die numerischen Kennwerte unserer Beispielstichprobe.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stichprobenumfang</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>() <span class="ot">-&gt;</span> stichprobenumfang</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>stichprobenumfang</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">length</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Dabei erkennen wir, dass der Stichprobenumfang 27 beträgt. Wir erkennen zusätzlich, dass wir 53 Vektoren in unserem Stichprobenobjekt vorliegen haben.</p>
 <p>Neben dem <em>Stichprobenumfang</em> unterscheiden wir zusätzlich den <em>Variablenumfang</em>. Der <strong>Variablenumfang</strong> bezeichnet die <strong>Anzahl der gemessenen Merkmalsausprägungen</strong>. Damit ist die Gesamtzahl der gemessenen Werte für eine Variable gemeint. Für diesen Wert müssen wir für eine Variable <em>nicht vorhandene</em> Werte aus der Variable entfernen. Diese Werte sind in R mit dem Wert <code>NA</code> gekennzeichnet. Wir entfernen die <code>NA</code>-Werte mit Hilfe der <code>drop_na()</code>-Funktion.</p>
@@ -566,8 +566,8 @@ Hinweis
 <p>Das zweite “Lagemass” sind die tatsächlich auftretenden Skalenwerte.</p>
 <p>Beide Kennwerte erschliessen sich über die <em>Häufigkeiten</em> der vorkommenden Werte. Dazu bestimmen wir die Häufigkeit des Auftretens einer Merkmalsausprägung in unserer Stichprobe. Das bestimmen der Häufigkeiten ist eine Abzählaufgabe, bei der wir vorher die gleichen Merkmalsausprägungen gruppiert haben.</p>
 <p>Das folgende Beispiel zwei Varianten für das Feststellen der Häufigkeiten von nominalskalierten Variablen. Die erste Variante ist die direkte Umsetzung des gerade beschriebenen Algorithmus.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(q3) <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(q3) <span class="sc">|&gt;</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <table border="1">
@@ -610,7 +610,7 @@ M
 
 </table>
 <p>Die zweite Variante verwendet die <code>count()</code>-Funktion, um das gleiche Ziel zu erreichen. Die Variante mit <code>count()</code> ist etwas leichter zu lesen, weil wir <em>explizit</em> klarstellen, dass wir die Merkmalsausprägungen <em>abzählen</em>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q4)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <table border="1">
@@ -655,8 +655,8 @@ P
 <p>Wir können an diesem Beispiel erkennen, dass in unserer Stichprobe nicht alle Ausprägungen der jeweiligen Skalierung in unseren Variablen vorkommen. Uns fällt auch auf, dass die Häufigkeiten für die gemessenen Merkmalsausprägungen der Variablen gleich sind.</p>
 <p>Neben den absoluten Häufigkeiten interessieren uns ebenfalls die <em>relativen Häufigkeiten</em>. Diese <strong>müssen</strong> bei der Beschreibung von nominalskalierten Variablen mit angegeben werden.</p>
 <p>Relative Häufigkeiten sind nichts anderes als die prozentualen Anteile der absouluten Häufigkeit in der Gesamtstichprobe. Wir können die relativen Häufigkeiten leicht aus den absoluten Häufigkeiten bestimmen.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q4) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q4) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">prozent =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -676,8 +676,8 @@ Achtung
 </div>
 <p>Wir können nun leicht den <strong>Modus</strong> der Variable mit Hilfe der <code>max</code>-Aggregation bestimmen. Anstelle der <code>summerise()</code>-Funktion verwenden wir jedoch besser die <code>filter()</code>-Funktion, um auch das zugehörige Skalenniveau zu erhalten.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmen des Modus von q3</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q3) <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q3) <span class="sc">|&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(n <span class="sc">==</span> <span class="fu">max</span>(n))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <table border="1">
@@ -730,9 +730,9 @@ Tipp
 <p>Die grundlegenden Kennwerte für metrische Skalenniveaus sind die <em>Bandbreite</em>, die sich aus dem kleinsten (<em>Minimum</em>) und grössten gemessenen Wert (<em>Maximum</em>) ergibt.</p>
 <p>Für metrischskalierte Variablen können wir immer den Median und Quantile bestimmen, wobei wir uns in der Regel auf die <em>Quartile</em> beschränken. Bei der Beschreibung der Quartile geben wir immer den <em>Interquartilsabstand</em> mit an. Dieser ist das Gegenstück zur Bandbreite und zeigt uns zwischen welchen Ausprägungen die Hälfte der gemessenen Variablenwerte liegen.</p>
 <p>Das folgende Beispiel zeigt die Berechnung der relevanten Kennwerte für die Variable <code>q10_1_0</code>. Diese Berechnung entspricht der <code>favstats</code> der in Sauer (2019) beschriebenen <code>mosaic</code>-Bibliothek</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="fu">n</span>(),</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">min =</span> <span class="fu">min</span>(q10_1_0),</span>
@@ -810,9 +810,9 @@ Hinweis
 </div>
 <p>Alle anderen Werte für den <code>type</code>-Parameter sind für besondere Fälle, wenn Ergebnisse aus anderen Quellen kontrolliert werden müssen.</p>
 <p>Das folgende Codesegment zeigt Berechnung der statistischen Kennwerte für ordinale Skalenniveaus.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="fu">n</span>(),</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">min =</span> <span class="fu">min</span>(q10_1_0),</span>

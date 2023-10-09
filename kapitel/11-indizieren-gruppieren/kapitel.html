@@ -530,8 +530,8 @@ Work in Progress
 <li>Das Verhältnis zwischen Leistung und Gewicht wird bestimmt und im Vektor <code>verhaeltnis</code> abgelegt.</li>
 <li>Die Leistungsklassen werden durch <em>Kodieren</em> den oben festgelegten Klassen zugewiesen und im Vektor <code>klasse</code> gespeichert.</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"modell"</span>) <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"modell"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">verhaeltnis =</span> hp<span class="sc">/</span>wt, </span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">klasse =</span> <span class="fu">case_when</span>( </span>
@@ -585,11 +585,11 @@ Wichtig
 </section>
 <section id="schritt-3-mischen" class="level4" data-number="15.2.0.3">
 <h4 data-number="15.2.0.3" class="anchored" data-anchor-id="schritt-3-mischen"><span class="header-section-number">15.2.0.3</span> Schritt 3: Mischen</h4>
-<p>Dieser Schritt greift auf die Funktion <code>sample()</code> zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch <code>daten %&gt;% mutate( id_neu = sample(id) )</code>. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf <code>daten %&gt;% arrange( id_neu )</code>.</p>
+<p>Dieser Schritt greift auf die Funktion <code>sample()</code> zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch <code>daten |&gt; mutate( id_neu = sample(id) )</code>. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf <code>daten |&gt; arrange( id_neu )</code>.</p>
 </section>
 <section id="schritt-4-entfernen-des-eindeutigen-vektors-und-exportieren-der-daten" class="level4" data-number="15.2.0.4">
 <h4 data-number="15.2.0.4" class="anchored" data-anchor-id="schritt-4-entfernen-des-eindeutigen-vektors-und-exportieren-der-daten"><span class="header-section-number">15.2.0.4</span> Schritt 4: Entfernen des eindeutigen Vektors und exportieren der Daten</h4>
-<p>Abschliessend müssen wir <strong>unbedingt</strong> die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: <code>daten %&gt;% select(-c(id, id_neu))</code>.</p>
+<p>Abschliessend müssen wir <strong>unbedingt</strong> die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: <code>daten |&gt; select(-c(id, id_neu))</code>.</p>
 </section>
 <section id="vollständige-lösung" class="level4" data-number="15.2.0.5">
 <h4 data-number="15.2.0.5" class="anchored" data-anchor-id="vollständige-lösung"><span class="header-section-number">15.2.0.5</span> Vollständige Lösung</h4>
@@ -599,22 +599,22 @@ Wichtig
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># mischen Funktion aus einer Funktionskette erstellen, damit </span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#    wir nicht so viel tippen müssen.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mischen <span class="ot">=</span> . <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mischen <span class="ot">=</span> . <span class="sc">|&gt;</span> </span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>( </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">id =</span> <span class="fu">row_number</span>(), </span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">id_neu =</span> <span class="fu">sample</span>(id)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(id_neu) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(id_neu) <span class="sc">|&gt;</span> </span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(id, id_neu))</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">%&gt;%</span> </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(geschlecht, <span class="fu">starts_with</span>(<span class="st">"technik"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">|&gt;</span> </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(geschlecht, <span class="fu">starts_with</span>(<span class="st">"technik"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="st">"teilstichprobe_geschlecht_technik.csv"</span>)</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">%&gt;%</span> </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(alter, <span class="fu">starts_with</span>(<span class="st">"sozial"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">|&gt;</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(alter, <span class="fu">starts_with</span>(<span class="st">"sozial"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="st">"teilstichprobe_alter_sozial.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Die zwei Teilstichproben lassen sich nicht mehr zusammenführen. Damit erkennen wir auch die Grenzen dieser Technik: Wenn zwei gemischte Stichproben ausreichend viele gemeinsame oder sehr detaillierte Vektoren haben, die in beiden Teilstichproben vorkommen, dann können diese Stichproben trotz mischen wieder zusammengeführt werden.</p>
 <p>Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem anderen Teil der Stichprobe zu kombinieren und so tiefere Rückschlüsse über die Teilnehmenden (womöglich unwissend) zuzulassen. Nur noch durch den Zugriff auf die ursprünglichen Daten können diese Zusammenhänge hergestellt werden. Daher sind die ursprünglichen Daten oft besonders schützenswert und sollten ohne Randomisierung nicht weitergegeben werden.</p>

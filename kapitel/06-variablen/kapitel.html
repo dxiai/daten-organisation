@@ -323,13 +323,13 @@ div.csl-indent {
   <li><a href="#variablen" id="toc-variablen" class="nav-link active" data-scroll-target="#variablen"><span class="header-section-number">10.1</span> Variablen</a></li>
   <li><a href="#funktionen" id="toc-funktionen" class="nav-link" data-scroll-target="#funktionen"><span class="header-section-number">10.2</span> Funktionen</a>
   <ul class="collapse">
-  <li><a href="#sec-spezielle-funktionen" id="toc-sec-spezielle-funktionen" class="nav-link" data-scroll-target="#sec-spezielle-funktionen"><span class="header-section-number">10.2.1</span> Spezielle Funktionen</a></li>
+  <li><a href="#sec-substitution" id="toc-sec-substitution" class="nav-link" data-scroll-target="#sec-substitution"><span class="header-section-number">10.2.1</span> Substitution</a></li>
+  <li><a href="#sec-spezielle-funktionen" id="toc-sec-spezielle-funktionen" class="nav-link" data-scroll-target="#sec-spezielle-funktionen"><span class="header-section-number">10.2.2</span> Spezielle Funktionen</a></li>
   </ul></li>
   <li><a href="#operatoren" id="toc-operatoren" class="nav-link" data-scroll-target="#operatoren"><span class="header-section-number">10.3</span> Operatoren</a>
   <ul class="collapse">
   <li><a href="#precedence---prioriät-von-operatoren" id="toc-precedence---prioriät-von-operatoren" class="nav-link" data-scroll-target="#precedence---prioriät-von-operatoren"><span class="header-section-number">10.3.1</span> Precedence - Prioriät von Operatoren</a></li>
-  <li><a href="#sec-substitution" id="toc-sec-substitution" class="nav-link" data-scroll-target="#sec-substitution"><span class="header-section-number">10.3.2</span> Substitution</a></li>
-  <li><a href="#besondere-operatoren" id="toc-besondere-operatoren" class="nav-link" data-scroll-target="#besondere-operatoren"><span class="header-section-number">10.3.3</span> Besondere Operatoren</a></li>
+  <li><a href="#besondere-operatoren" id="toc-besondere-operatoren" class="nav-link" data-scroll-target="#besondere-operatoren"><span class="header-section-number">10.3.2</span> Besondere Operatoren</a></li>
   </ul></li>
   <li><a href="#das-neutrale-element" id="toc-das-neutrale-element" class="nav-link" data-scroll-target="#das-neutrale-element"><span class="header-section-number">10.4</span> Das neutrale Element</a>
   <ul class="collapse">
@@ -465,34 +465,76 @@ f: P \to E
 <li>Aggregatoren, die mehrere Werte <em>zusammenfassen</em>; und</li>
 <li>Generatoren, mit denen Werte <em>erzeugt</em> werden.</li>
 </ol>
-<section id="sec-spezielle-funktionen" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-spezielle-funktionen"><span class="header-section-number">10.2.1</span> Spezielle Funktionen</h3>
-<section id="konstante-funktionen" class="level4" data-number="10.2.1.1">
-<h4 data-number="10.2.1.1" class="anchored" data-anchor-id="konstante-funktionen"><span class="header-section-number">10.2.1.1</span> Konstante Funktionen</h4>
+<section id="sec-substitution" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-substitution"><span class="header-section-number">10.2.1</span> Substitution</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wird ein Teil einer komplexen Operation in eine einfachere Funktion ausgelagert, dann spricht man von <strong>Substitution</strong>.</p>
+</div>
+</div>
+<p>In der Mathematik wird beim Substituieren die Teiloperation in der Regel nur durch Bezeichner der ersetzenden Funktion angegeben. In der Praxis müssen solche Ersetzungsfunktionen explizit parametrisiert und ausgeführt werden.</p>
+<p>Die folgenden beiden Beispile illustrieren die Substituion mit einfachen mathematischen Funktionen.</p>
+<p>Die Operation in <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.3</span></a> führt zwei Operationen nacheinander aus.</p>
+<p><span id="eq-problemzerlegung-basis"><span class="math display">
+f(a,b) \to (a - b)^2
+\tag{10.3}</span></span></p>
+<p>Wird die Teiloperation <span class="math inline">a - b</span> substituiert, dann ergibt sich <a href="#eq-problemzerlegung-subst">Formel&nbsp;<span>10.4</span></a>.</p>
+<p><span id="eq-problemzerlegung-subst"><span class="math display">
+f(a,b) \to s^2 ;  s = a - b
+\tag{10.4}</span></span></p>
+<p>In diesem Beispiel wurde nur die Subtraktion substituiert. Weil der Bezeichner <span class="math inline">s</span> die Subtraktion versteckt, können die Klammern der ursprünglichen Operation entfallen.</p>
+<p>Durch Substituieren lassen sich häufig die grundsätzlichen Ideen von komplexen Operationen leichter erkennen und vereinfachen. Das Beispiel in <a href="#eq-problemzerlegung-vereinfachen">Formel&nbsp;<span>10.5</span></a> zeigt diesen Effekt.</p>
+<p><span id="eq-problemzerlegung-vereinfachen"><span class="math display">
+g(a,b) \to \frac{a + b - 2ab}{b-a} \Leftrightarrow -\frac{(a-b)^2}{a-b}
+\tag{10.5}</span></span></p>
+<p>Für die rechte Operation wird in <a href="#eq-substitution-vereinfachen">Formel&nbsp;<span>10.6</span></a> wieder die Substitution <span class="math inline">s = a - b</span> verwendet.</p>
+<p>Bei einer Substitution sollen möglichst viele Teilterme mit dem gleichen Bezeichner substituiert werden. Deshalb wurde der <em>Nenner</em> <span class="math inline">b-a</span> so umgeformt, dass auch im Nenner der Term <span class="math inline">a-b</span> steht. Dazu wurde ausgenutzt, dass gilt <span class="math inline">b-a \Leftrightarrow -(a-b)</span>. Das Vorzeichen kann in diesem Fall vor dem Bruch gezogen werden, so dass die Klammern um <span class="math inline">a-b</span> entfallen können.</p>
+<p><span id="eq-substitution-vereinfachen"><span class="math display">
+g(a,b) \to - \frac{s^2}{s} \Leftrightarrow - s; s = a - b
+\tag{10.6}</span></span></p>
+<p>Der Bezeichner der Substitution unterscheidet sich nicht von anderen Bezeichnern. Es kann also angenommen werden, dass <span class="math inline">s</span> ein beliebiger Wert ist. So lässt sich leicht erkennen, dass <span class="math inline">s</span> gekürzt werden kann. Rein technisch wurde für den Substitutionsterm eine Funktion <span class="math inline">s</span> mit zwei Parametern erstellt. Diese Funktion ist in diesem Beispiel identisch mit der Funktion <code>subtraktion()</code>, mit der ein Wert von einem anderen abgezogen wird.</p>
+<p>Um die ursprüngliche Operation zu erhalten, muss die Substitution rückgängig gemacht werden. Dazu wird der substituierte Bezeichner durch die ursprüngliche Teiloperation ersetzt. Daraus ergibt sich <a href="#eq-substitution-rueck">Formel&nbsp;<span>10.7</span></a>.</p>
+<p><span id="eq-substitution-rueck"><span class="math display">
+g(a,b) \to -(a-b) \Leftrightarrow b-a
+\tag{10.7}</span></span></p>
+<p>Diese Operation <span class="math inline">b-a</span> ist wesentlich einfacher als die ursprüngliche Funktion. Solches Vereinfachen von Funktionen ist für die Praxis wichtig, weil dadurch zum einen die Komplexität von Operationen verringert werden kann und zum anderen die Ausführungsgeschwindigkeit durch den Wegfall von Operationen erhöht werden kann.</p>
+</section>
+<section id="sec-spezielle-funktionen" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-spezielle-funktionen"><span class="header-section-number">10.2.2</span> Spezielle Funktionen</h3>
+<section id="konstante-funktionen" class="level4" data-number="10.2.2.1">
+<h4 data-number="10.2.2.1" class="anchored" data-anchor-id="konstante-funktionen"><span class="header-section-number">10.2.2.1</span> Konstante Funktionen</h4>
 <div id="def-konstante-fkt" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10.8 </strong></span>Eine <strong>konstante Funktion</strong> erzeugt für jede Eingabe immer den gleichen Ergebniswert <span class="math inline">w</span>.</p>
 </div>
-<p>Konstante Funktionen sind formal wie in <a href="#eq-konstante-fkt">Formel&nbsp;<span>10.3</span></a> definiert:</p>
+<p>Konstante Funktionen sind formal wie in <a href="#eq-konstante-fkt">Formel&nbsp;<span>10.8</span></a> definiert:</p>
 <p><span id="eq-konstante-fkt"><span class="math display">
 f_{kW}(x) \to W
-\tag{10.3}</span></span></p>
+\tag{10.8}</span></span></p>
 <p>Das bedeutet, dass unabhängig von der Eingabe immer der Wert von <span class="math inline">W</span> als Ergebnis folgt.</p>
 </section>
-<section id="die-identitätsfunktion" class="level4" data-number="10.2.1.2">
-<h4 data-number="10.2.1.2" class="anchored" data-anchor-id="die-identitätsfunktion"><span class="header-section-number">10.2.1.2</span> Die Identitätsfunktion</h4>
+<section id="die-identitätsfunktion" class="level4" data-number="10.2.2.2">
+<h4 data-number="10.2.2.2" class="anchored" data-anchor-id="die-identitätsfunktion"><span class="header-section-number">10.2.2.2</span> Die Identitätsfunktion</h4>
 <p>Die nächste Funktion ähnelt in ihrer Definition konstanten Funktionen.</p>
 <div id="def-id-fkt" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10.9 </strong></span>Die <strong>Identitätsfunktion</strong> gibt für eine Eingabe diese Eingabe als Ergebnis zurück.</p>
 </div>
-<p>Die formale Definition der Identitätsfunktion zeigt <a href="#eq-id-fkt">Formel&nbsp;<span>10.4</span></a>.</p>
+<p>Die formale Definition der Identitätsfunktion zeigt <a href="#eq-id-fkt">Formel&nbsp;<span>10.9</span></a>.</p>
 <p><span id="eq-id-fkt"><span class="math display">
 f_{id}(x) \to x
-\tag{10.4}</span></span></p>
+\tag{10.9}</span></span></p>
 <p>Im Unterschied zu konstanten Funktionen ist das Ergebnis kein konstanter Wert, sondern der Wert der Parameter. Auf den ersten Blick erscheint diese Funktion sinnlos, denn sie verändert die Eingabeparameter nicht. Diese Funktion erfüllt in der Mathematik und in den Datenwissenschaften die gleiche Bedeutung wie die Zahl <code>1</code> für die Multiplikation oder die Zahl <code>0</code> für die Addition.</p>
 <p>Die Identitätsfunktion ist umkehrbar. Die Umkehrfunktion der Identitätsfunktion ist die Identitätsfunktion selbst.</p>
 </section>
-<section id="projektionen" class="level4" data-number="10.2.1.3">
-<h4 data-number="10.2.1.3" class="anchored" data-anchor-id="projektionen"><span class="header-section-number">10.2.1.3</span> Projektionen</h4>
+<section id="projektionen" class="level4" data-number="10.2.2.3">
+<h4 data-number="10.2.2.3" class="anchored" data-anchor-id="projektionen"><span class="header-section-number">10.2.2.3</span> Projektionen</h4>
 <div id="def-projektion" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10.10 </strong></span>Eine <strong>Projektion</strong> bezeichnet eine Funktion, die den gleichen Eingaben <strong>immer</strong> die <em>gleichen Ergebnisse</em> zuweist.</p>
 </div>
@@ -540,52 +582,10 @@ Achtung
 </div>
 </div>
 </section>
-<section id="sec-substitution" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="sec-substitution"><span class="header-section-number">10.3.2</span> Substitution</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Wird ein Teil einer komplexen Operation in eine einfachere Funktion ausgelagert, dann spricht man von <strong>Substitution</strong>.</p>
-</div>
-</div>
-<p>In der Mathematik wird beim Substituieren die Teiloperation in der Regel nur durch Bezeichner der ersetzenden Funktion angegeben. In der Praxis müssen solche Ersetzungsfunktionen explizit parametrisiert und ausgeführt werden.</p>
-<p>Die folgenden beiden Beispile illustrieren die Substituion mit einfachen mathematischen Funktionen.</p>
-<p>Die Operation in <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.5</span></a> führt zwei Operationen nacheinander aus.</p>
-<p><span id="eq-problemzerlegung-basis"><span class="math display">
-f(a,b) \to (a - b)^2
-\tag{10.5}</span></span></p>
-<p>Wird die Teiloperation <span class="math inline">a - b</span> substituiert, dann ergibt sich <a href="#eq-problemzerlegung-subst">Formel&nbsp;<span>10.6</span></a>.</p>
-<p><span id="eq-problemzerlegung-subst"><span class="math display">
-f(a,b) \to s^2 ;  s = a - b
-\tag{10.6}</span></span></p>
-<p>In diesem Beispiel wurde nur die Subtraktion substituiert. Weil der Bezeichner <span class="math inline">s</span> die Subtraktion versteckt, können die Klammern der ursprünglichen Operation entfallen.</p>
-<p>Durch Substituieren lassen sich häufig die grundsätzlichen Ideen von komplexen Operationen leichter erkennen und vereinfachen. Das Beispiel in <a href="#eq-problemzerlegung-vereinfachen">Formel&nbsp;<span>10.7</span></a> zeigt diesen Effekt.</p>
-<p><span id="eq-problemzerlegung-vereinfachen"><span class="math display">
-g(a,b) \to \frac{a + b - 2ab}{b-a} \Leftrightarrow -\frac{(a-b)^2}{a-b}
-\tag{10.7}</span></span></p>
-<p>Für die rechte Operation wird in <a href="#eq-substitution-vereinfachen">Formel&nbsp;<span>10.8</span></a> wieder die Substitution <span class="math inline">s = a - b</span> verwendet.</p>
-<p>Bei einer Substitution sollen möglichst viele Teilterme mit dem gleichen Bezeichner substituiert werden. Deshalb wurde der <em>Nenner</em> <span class="math inline">b-a</span> so umgeformt, dass auch im Nenner der Term <span class="math inline">a-b</span> steht. Dazu wurde ausgenutzt, dass gilt <span class="math inline">b-a \Leftrightarrow -(a-b)</span>. Das Vorzeichen kann in diesem Fall vor dem Bruch gezogen werden, so dass die Klammern um <span class="math inline">a-b</span> entfallen können.</p>
-<p><span id="eq-substitution-vereinfachen"><span class="math display">
-g(a,b) \to - \frac{s^2}{s} \Leftrightarrow - s; s = a - b
-\tag{10.8}</span></span></p>
-<p>Der Bezeichner der Substitution unterscheidet sich nicht von anderen Bezeichnern. Es kann also angenommen werden, dass <span class="math inline">s</span> ein beliebiger Wert ist. So lässt sich leicht erkennen, dass <span class="math inline">s</span> gekürzt werden kann. Rein technisch wurde für den Substitutionsterm eine Funktion <span class="math inline">s</span> mit zwei Parametern erstellt. Diese Funktion ist in diesem Beispiel identisch mit der Funktion <code>subtraktion()</code>, mit der ein Wert von einem anderen abgezogen wird.</p>
-<p>Um die ursprüngliche Operation zu erhalten, muss die Substitution rückgängig gemacht werden. Dazu wird der substituierte Bezeichner durch die ursprüngliche Teiloperation ersetzt. Daraus ergibt sich <a href="#eq-substitution-rueck">Formel&nbsp;<span>10.9</span></a>.</p>
-<p><span id="eq-substitution-rueck"><span class="math display">
-g(a,b) \to -(a-b) \Leftrightarrow b-a
-\tag{10.9}</span></span></p>
-<p>Diese Operation <span class="math inline">b-a</span> ist wesentlich einfacher als die ursprüngliche Funktion. Solches Vereinfachen von Funktionen ist für die Praxis wichtig, weil dadurch zum einen die Komplexität von Operationen verringert werden kann und zum anderen die Ausführungsgeschwindigkeit durch den Wegfall von Operationen erhöht werden kann.</p>
-</section>
-<section id="besondere-operatoren" class="level3" data-number="10.3.3">
-<h3 data-number="10.3.3" class="anchored" data-anchor-id="besondere-operatoren"><span class="header-section-number">10.3.3</span> Besondere Operatoren</h3>
-<section id="divisions-operatoren" class="level4" data-number="10.3.3.1">
-<h4 data-number="10.3.3.1" class="anchored" data-anchor-id="divisions-operatoren"><span class="header-section-number">10.3.3.1</span> Divisions-Operatoren</h4>
+<section id="besondere-operatoren" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="besondere-operatoren"><span class="header-section-number">10.3.2</span> Besondere Operatoren</h3>
+<section id="divisions-operatoren" class="level4" data-number="10.3.2.1">
+<h4 data-number="10.3.2.1" class="anchored" data-anchor-id="divisions-operatoren"><span class="header-section-number">10.3.2.1</span> Divisions-Operatoren</h4>
 <p>Unter den Grundrechenarten ist die Division ein Unikum. Als Einzige der Grundrechenarten kann das Ergebnis einen anderen Zahlentyp haben als die Operanden. Beispielsweise ergeben sich aus ganzen Zahlen rationale Zahlen und aus reellen Zahlen können sich ganze oder rationale Zahlen ergeben. Daraus ergibt sich, dass die Division über einen kontinuierlichen Wertebereich arbeitet.</p>
 <p>Die Division kann in zwei Unteroperationen gegliedert werden:</p>
 <ul>
@@ -622,8 +622,8 @@ Praxis
 </div>
 </div>
 </section>
-<section id="der-zuweisungsoperator" class="level4" data-number="10.3.3.2">
-<h4 data-number="10.3.3.2" class="anchored" data-anchor-id="der-zuweisungsoperator"><span class="header-section-number">10.3.3.2</span> Der Zuweisungsoperator</h4>
+<section id="der-zuweisungsoperator" class="level4" data-number="10.3.2.2">
+<h4 data-number="10.3.2.2" class="anchored" data-anchor-id="der-zuweisungsoperator"><span class="header-section-number">10.3.2.2</span> Der Zuweisungsoperator</h4>
 <p>Der Zuweisungsoperator ist ein besonderer Operator. Er ist ein binärer Operator, der einen Wert einem Bezeichner zuweist. Die meisten Programmiersprache verwenden dafür den <code>=</code>-Zeichen. Dabei steht der Bezeichner links und der Wert rechts vom Operator.</p>
 <p>Manche Programmiersprachen unterstützen gerichtete Zuweisungsoperatoren, bei denen der Bezeichner rechts vom Operator steht. Diese gerichteten Zuweisungsoperatoren sind in der Regel eine Abkürzung für eine Operation mit dem Bezeichner und dem Wert.</p>
 <p>Der Zuweisungsoperator ist zu allen anderen Operatoren nachrangig. Das bedeutet, dass der Zuweisungsoperator immer als letzter Operator einer Operation ausgeführt wird.</p>
@@ -641,8 +641,8 @@ Tipp
 </div>
 </div>
 </section>
-<section id="der-anwendungsoperator" class="level4" data-number="10.3.3.3">
-<h4 data-number="10.3.3.3" class="anchored" data-anchor-id="der-anwendungsoperator"><span class="header-section-number">10.3.3.3</span> Der Anwendungsoperator</h4>
+<section id="der-anwendungsoperator" class="level4" data-number="10.3.2.3">
+<h4 data-number="10.3.2.3" class="anchored" data-anchor-id="der-anwendungsoperator"><span class="header-section-number">10.3.2.3</span> Der Anwendungsoperator</h4>
 <p>Werden Klammern unmittelbar nach einem Funktionsbezeicher angegeben, dann ändern diese Klammern ihre Bedeutung, indem sie die <em>Anwendung</em> der bezeichneten Funktion erfordern. Mithilfe des Anwendungsoperators kann zwischen der Anwendung einer Funktion und ihrem Bezeichner unterschieden werden.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -673,8 +673,8 @@ zusammenzählen(2, 1) &amp;= 3
 \end{aligned}
 </span></p>
 </section>
-<section id="der-index-operator" class="level4" data-number="10.3.3.4">
-<h4 data-number="10.3.3.4" class="anchored" data-anchor-id="der-index-operator"><span class="header-section-number">10.3.3.4</span> Der Index-Operator</h4>
+<section id="der-index-operator" class="level4" data-number="10.3.2.4">
+<h4 data-number="10.3.2.4" class="anchored" data-anchor-id="der-index-operator"><span class="header-section-number">10.3.2.4</span> Der Index-Operator</h4>
 <p>In der Mathematik werden Idicees durch tieferstellen gekennzeichnet. Ein Index wird dann verwendet, wenn ein Bezeichner auf eine Datenstruktur verweist. Der Index bezeichnet den Wert an der entsprechende Position in der Datenstruktur. Am Beispiel des Summe-Operators wird dies in <a href="#eq-index-sum">Formel&nbsp;<span>10.11</span></a> verdeutlicht.</p>
 <p><span id="eq-index-sum"><span class="math display">
 \sum_{i=1}^{n} x_i \cdot y_i
@@ -811,7 +811,7 @@ Hinweis
 <p>In der Literatur wird die <em>Funktionsverkettung</em> auch als <strong>Composting</strong> bezeichnet.</p>
 </div>
 </div>
-<p>Das folgende Beispiel nutz aus, dass die Operatoren der Grundrechenarten eigentlich Funktionen sind. Die Operation aus <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.5</span></a> verwendet also die beiden Funktionen <code>subtraktion()</code> und <code>potenz()</code>. <a href="#eq-problemzerlegung-kette">Formel&nbsp;<span>10.18</span></a> zeigt die Operation aus <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.5</span></a> als verkettete Funktionen.</p>
+<p>Das folgende Beispiel nutz aus, dass die Operatoren der Grundrechenarten eigentlich Funktionen sind. Die Operation aus <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.3</span></a> verwendet also die beiden Funktionen <code>subtraktion()</code> und <code>potenz()</code>. <a href="#eq-problemzerlegung-kette">Formel&nbsp;<span>10.18</span></a> zeigt die Operation aus <a href="#eq-problemzerlegung-basis">Formel&nbsp;<span>10.3</span></a> als verkettete Funktionen.</p>
 <p><span id="eq-problemzerlegung-kette"><span class="math display">
 f(a,b) \to potenz(subtraktion(a,b),2)
 \tag{10.18}</span></span></p>
@@ -923,7 +923,7 @@ Merke
 </section>
 <section id="sec-funktionen-als-werte" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="sec-funktionen-als-werte"><span class="header-section-number">10.6</span> Funktionen als Werte</h2>
-<p>Bei der Substitution im <a href="#sec-substitution">Abschnitt&nbsp;<span>10.3.2</span></a> wurde eine Teiloperation einem Bezeichner zugewiesen, der anschliessend wie eine normale Variable behandlet wurde. Gleichzeitigt war dieser Bezeicher eine Funktion für die substituierte Teiloperation. Diese Überlegungen behandeln Funktionen genau gleich wie andere Datentypen.</p>
+<p>Bei der Substitution im <a href="#sec-substitution">Abschnitt&nbsp;<span>10.2.1</span></a> wurde eine Teiloperation einem Bezeichner zugewiesen, der anschliessend wie eine normale Variable behandlet wurde. Gleichzeitigt war dieser Bezeicher eine Funktion für die substituierte Teiloperation. Diese Überlegungen behandeln Funktionen genau gleich wie andere Datentypen.</p>
 <p>Der Datentyp <em>Funktion</em> gibt einen gültigen Wertebereich vor. Die Symbole dieses Wertebereichs sind jedoch nicht Zahlen oder Zeichenfolgen, sondern Funktionen. Der Bezeichner einer Funktion kann so durch Zuweisung geändert werden, <strong><em>ohne</em></strong> die Funktion anzuwenden.</p>
 <p>Eine Funktion ohne Bezeichner wird eine <strong>anonyme Funktion</strong> genannt.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -948,14 +948,16 @@ Exkurs
 </div>
 <p>Bei der Übergabe einer Callback-Funktion wird die Funktion als Parameter übergeben. Das entspricht der Zuweisung einer Funktion an einen neuen Bezeichner. Dadurch muss die aufgerufene Funktion den Bezeichner der Callback-Funktion zum Zeitpunkt ihrer Definition nicht kennen, sondern kann über den Parameternamen auf diese Funktion zugreifen.</p>
 <p>Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeicher und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden.</p>
-<p>In <a href="#eq-callback-app">Formel&nbsp;<span>10.24</span></a> wird der Funktion <span class="math inline">g</span> das <em>Ergebnis</em> der Funktionsanwendung <span class="math inline">f(3)</span> übergeben. Im Gegensatz dazu wird in <a href="#eq-callback-call">Formel&nbsp;<span>10.25</span></a> die Funktion <span class="math inline">f</span> selbst an die Funktion <span class="math inline">g</span> übergeben. Die Funktion <span class="math inline">g</span> kann nun die Funktion <span class="math inline">f</span> aufrufen.</p>
+<div id="exm-callback" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 10.3 (Anwendung von Callbacks) </strong></span>In <a href="#eq-callback-app">Formel&nbsp;<span>10.24</span></a> wird der Funktion <span class="math inline">g</span> das <em>Ergebnis</em> der Funktionsanwendung <span class="math inline">f(3)</span> übergeben. Im Gegensatz dazu wird in <a href="#eq-callback-call">Formel&nbsp;<span>10.25</span></a> die Funktion <span class="math inline">f</span> selbst an die Funktion <span class="math inline">g</span> übergeben. Die Funktion <span class="math inline">g</span> kann nun die Funktion <span class="math inline">f</span> aufrufen.</p>
 <p><span id="eq-callback-app"><span class="math display">
 g(f(3))
 \tag{10.24}</span></span></p>
 <p><span id="eq-callback-call"><span class="math display">
 g(f)
 \tag{10.25}</span></span></p>
-<p>Callback-Funktionen ermöglichen das <strong>Verallgemeinern</strong> von Algorithmen, indem der spezielle Teil einer Funktion durch eine Callback-Funktion festgelegt wird.</p>
+</div>
+<p>Callback-Funktionen ermöglichen das <strong>Verallgemeinern</strong> von Algorithmen, indem der spezielle Teil einer Funktion durch eine Callback-Funktion festgelegt wird. Die Funktion, die eine andere Funktion als Parameter akzeptiert, heisst <strong><em>Funktion höherer Ordnung</em></strong>. Eine Funktion heisst <strong><em>Callback</em></strong>, wenn sie einer Funktion höherer Ordnung als Parameter übergeben wird.</p>
 </section>
 <section id="closure-funktionen" class="level3" data-number="10.6.2">
 <h3 data-number="10.6.2" class="anchored" data-anchor-id="closure-funktionen"><span class="header-section-number">10.6.2</span> Closure-Funktionen</h3>
@@ -992,7 +994,7 @@ kubik(3) &amp;= 27
 <h2 data-number="10.7" class="anchored" data-anchor-id="besonderheiten-von-funktionsketten"><span class="header-section-number">10.7</span> Besonderheiten von Funktionsketten</h2>
 <section id="die-identitätsfunktion-1" class="level3" data-number="10.7.1">
 <h3 data-number="10.7.1" class="anchored" data-anchor-id="die-identitätsfunktion-1"><span class="header-section-number">10.7.1</span> Die Identitätsfunktion</h3>
-<p>Als erstes soll die Verkettung einer beliebigen <em>Projektion</em> <span class="math inline">F</span> mit der Identitätsfunktion <span class="math inline">f_{id}</span> untersucht werden. Es ist wichtig, dass <span class="math inline">F</span> eine Projektion ist, weil nur diese einer Eingabe immer den gleichen Ergebniswert zuweisen. Die Identitätsfunktion ist in <a href="#eq-id-fkt">Formel&nbsp;<span>10.4</span></a> definiert. Diese Funktion kann für jeden Wertebereich angepasst werden, so dass für jeden Wertebereich eine geeignete Identitätsfunktion für die Verkettung existiert. All diese Versionen der Identitätsfunktion werden unter <span class="math inline">f_{id}</span> zusammenfasst und als <strong>die Identitätsfunktion</strong> bezeichnet.</p>
+<p>Als erstes soll die Verkettung einer beliebigen <em>Projektion</em> <span class="math inline">F</span> mit der Identitätsfunktion <span class="math inline">f_{id}</span> untersucht werden. Es ist wichtig, dass <span class="math inline">F</span> eine Projektion ist, weil nur diese einer Eingabe immer den gleichen Ergebniswert zuweisen. Die Identitätsfunktion ist in <a href="#eq-id-fkt">Formel&nbsp;<span>10.9</span></a> definiert. Diese Funktion kann für jeden Wertebereich angepasst werden, so dass für jeden Wertebereich eine geeignete Identitätsfunktion für die Verkettung existiert. All diese Versionen der Identitätsfunktion werden unter <span class="math inline">f_{id}</span> zusammenfasst und als <strong>die Identitätsfunktion</strong> bezeichnet.</p>
 <p>Zuerst wird die Funktionsverkettung mit dem allgemeinen Verkettungsoperator betrachtet.</p>
 <p>Wird die Identitätsfunktion mit einer beliebigen Funktion <span class="math inline">F</span> nachfolgend verkettet, dann wird das Ergebnis dieser Funktion an die Identitätsfunktion als Parameter übergeben. Weil die Identitätsfunktion die übergebenen Parameter unverändert als Ergebnis zurückgibt, ist das Ergebnis der nachfolgenden Verknüpfung gleich dem Ergebnis der Funktion <span class="math inline">F</span>. Es gilt also <a href="#eq-f_id_nachfolgend">Formel&nbsp;<span>10.29</span></a>.</p>
 <p><span id="eq-f_id_nachfolgend"><span class="math display">
@@ -1037,7 +1039,7 @@ Merke
 </section>
 <section id="verkettung-mit-umkehrfunktionen" class="level3" data-number="10.7.2">
 <h3 data-number="10.7.2" class="anchored" data-anchor-id="verkettung-mit-umkehrfunktionen"><span class="header-section-number">10.7.2</span> Verkettung mit Umkehrfunktionen</h3>
-<p>In <a href="#sec-spezielle-funktionen">Abschnitt&nbsp;<span>10.2.1</span></a> wurden Projektionen definiert und festgehalten, dass einige Projektionen eine Umkehrfunktion haben.</p>
+<p>In <a href="#sec-spezielle-funktionen">Abschnitt&nbsp;<span>10.2.2</span></a> wurden Projektionen definiert und festgehalten, dass einige Projektionen eine Umkehrfunktion haben.</p>
 <p>Existiert für eine beliebige Projektion <span class="math inline">F</span> eine Umkehrfunktion <span class="math inline">F^{-1}</span>, dann kann die Verkettung zwischen der Funktion und der Umkehrfunktion untersucht werden. Die Umkehrfunktion einer Funktion akzeptiert die Rückgabewerte der Funktion als Parameter und hat als Rückgabewert die Parameter der ursprünglichen Funktion. Die Parameter von <span class="math inline">F^{-1}</span> und die Rückgabewerte von <span class="math inline">F</span> haben gemäss dieser Definition den gleichen Wertebereich. Das Gleiche gilt für die Rückgabewerte von <span class="math inline">F^{-1}</span> und die Parameter von <span class="math inline">F</span>. Damit ist für beide Richtungen die Voraussetzung für die Verkettung erfüllt. Es sind also sowohl die Verkettung <span class="math inline">F^{-1} \circ F</span> als auch <span class="math inline">F \circ F^{-1}</span> für alle umkehrbaren Funktionen zulässig.</p>
 <p>Werden nun die beiden Funktion <span class="math inline">F</span> und <span class="math inline">F^{-1}</span> als <span class="math inline">F \circ F^{-1}</span> verkettet, dann werden die Parameter von <span class="math inline">F^{-1}</span> auf die Rückgabewerte projiziert. Dieser werden anschliessend als Parameter der <span class="math inline">F</span> als Paramter übergeben und wieder projiziert. Weil das Ergebnis einer umkehrbaren Funktion identisch mit den Parametern ihrer Umkehrfunktion ist, muss das Ergebnis dieser Funktionskette den eingegebenen Parametern entsprechen.</p>
 <p>Wird die Verkettung zu <span class="math inline">F^{-1} \circ F</span> umgekehrt, dann muss das Ergebnis dieser Funktionskette aus den gleichen Gründen wie oben, mit den Parametern von <span class="math inline">F</span> gleich sein.</p>
