@@ -92,14 +92,14 @@ Der *Stichprobenumfang* ist einer der drei allgemeinen Kennwerte, die jede Stich
 
 ```R
 # Stichprobenumfang
-stichprobe %>% 
-    count() %>% 
+stichprobe |> 
+    count() |> 
     pull() -> stichprobenumfang
 
 stichprobenumfang
 
-stichprobe %>% 
-    names() %>% 
+stichprobe |> 
+    names() |> 
     length()
 ```
 
@@ -147,8 +147,8 @@ Beide Kennwerte erschliessen sich über die *Häufigkeiten* der vorkommenden Wer
 
 Das folgende Beispiel zwei Varianten für das Feststellen der Häufigkeiten von nominalskalierten Variablen. Die erste Variante ist die direkte Umsetzung des gerade beschriebenen Algorithmus. 
 ```R
-stichprobe %>% 
-    group_by(q3) %>% 
+stichprobe |> 
+    group_by(q3) |> 
     summarise(n = n())
 ```
 
@@ -166,7 +166,7 @@ stichprobe %>%
 Die zweite Variante verwendet die `count()`-Funktion, um das gleiche Ziel zu erreichen. Die Variante mit `count()` ist etwas leichter zu lesen, weil wir *explizit* klarstellen, dass wir die Merkmalsausprägungen *abzählen*. 
 
 ```R
-stichprobe %>% 
+stichprobe |> 
     count(q4)
 ```
 
@@ -188,8 +188,8 @@ Neben den absoluten Häufigkeiten interessieren uns ebenfalls die *relativen Hä
 Relative Häufigkeiten sind nichts anderes als die prozentualen Anteile der absouluten Häufigkeit in der Gesamtstichprobe. Wir können die relativen Häufigkeiten leicht aus den absoluten Häufigkeiten bestimmen.
 
 ```R
-stichprobe %>% 
-    count(q4) %>%
+stichprobe |> 
+    count(q4) |>
     mutate(
         prozent = n / sum(n)
     )
@@ -206,8 +206,8 @@ Wir können nun leicht den **Modus** der Variable mit Hilfe der `max`-Aggregatio
 
 ```R
 # Bestimmen des Modus von q3
-stichprobe %>% 
-    count(q3) %>%
+stichprobe |> 
+    count(q3) |>
     filter(n == max(n))
 ```
 
@@ -234,9 +234,9 @@ Für metrischskalierte Variablen können wir immer den Median und Quantile besti
 Das folgende Beispiel zeigt die Berechnung der relevanten Kennwerte für die Variable `q10_1_0`. Diese Berechnung entspricht der `favstats` der in Sauer (2019) beschriebenen `mosaic`-Bibliothek
 
 ```R
-stichprobe %>%
-    select(q10_1_0) %>%
-    drop_na() %>%
+stichprobe |>
+    select(q10_1_0) |>
+    drop_na() |>
     summarise(
         n = n(),
         min = min(q10_1_0),
@@ -285,9 +285,9 @@ Alle anderen Werte für den `type`-Parameter sind für besondere Fälle, wenn Er
 Das folgende Codesegment zeigt Berechnung der statistischen Kennwerte für ordinale Skalenniveaus. 
 
 ```R
-stichprobe %>%
-    select(q10_1_0) %>%
-    drop_na() %>%
+stichprobe |>
+    select(q10_1_0) |>
+    drop_na() |>
     summarise(
         n = n(),
         min = min(q10_1_0),
