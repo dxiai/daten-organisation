@@ -580,6 +580,8 @@ Bei der Übergabe einer Callback-Funktion wird die Funktion als Parameter überg
 
 Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeicher und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden. 
 
+::: {#exm-callback}
+## Anwendung von Callbacks
 In @eq-callback-app wird der Funktion $g$ das *Ergebnis* der Funktionsanwendung $f(3)$ übergeben. Im Gegensatz dazu wird in @eq-callback-call die Funktion $f$ selbst an die Funktion $g$ übergeben. Die Funktion $g$ kann nun die Funktion $f$ aufrufen. 
 
 $$
@@ -589,8 +591,9 @@ $$ {#eq-callback-app}
 $$
 g(f)
 $$ {#eq-callback-call}
+:::
 
-Callback-Funktionen ermöglichen das **Verallgemeinern** von Algorithmen, indem der spezielle Teil einer Funktion durch eine Callback-Funktion festgelegt wird.  
+Callback-Funktionen ermöglichen das **Verallgemeinern** von Algorithmen, indem der spezielle Teil einer Funktion durch eine Callback-Funktion festgelegt wird. Die Funktion, die eine andere Funktion als Parameter akzeptiert, heisst ***Funktion höherer Ordnung***. Eine Funktion heisst ***Callback***, wenn sie einer Funktion höherer Ordnung als Parameter übergeben wird. 
 
 ### Closure-Funktionen
 
