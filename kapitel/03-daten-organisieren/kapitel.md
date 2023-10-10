@@ -96,7 +96,7 @@ Ein **Messereignis** bezeichnet das gleichzeitige Erheben zusammengehörender Da
 Wenn Daten in einer Tabelle jeweils ein Messereignis repräsentieren, dann liegen sie in **Normalform** vor. In der Normalform ist die Tabelle gleichbedeutend mit der zugehörigen Stichprobe. Jede Zeile ist der Datensatz einer beobachteten Entität. Die Spalten repräsentieren die Messungen.
 
 ::: {.callout-note}
-Beachten Sie, dass *unabhängige Messereignisse* nicht mit *unabhängigen Variablen* in der Statistik verwechselt werden darf.
+Beachten Sie, dass *unabhängige Messereignisse* nicht mit *unabhängigen Variablen* in der Statistik verwechselt werden dürfen.
 :::
 
 ::: {#def-normalform}
