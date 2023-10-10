@@ -57,7 +57,7 @@ Häufig liegen Indexvektoren bereits in einer Stichprobe vor.
 |Fiat 128            | 32.4|   4|  78.7|  1|  1|
 |Honda Civic         | 30.4|   4|  75.7|  1|  1|
 
-: Ausschnit der `mtcars`-Stichprobe mit Primär- und Sekundärindizes {#tbl-mtcars-index}
+: Ausschnitt der `mtcars`-Stichprobe mit Primär- und Sekundärindizes {#tbl-mtcars-index}
 
 Der Vektor `modell` ist der **Primärindex**, weil dieser Vektor nur Werte enthält, die einen Datensatz eindeutig identifizieren.
 
