@@ -84,7 +84,7 @@ Zeichenketten setzen sich aus Symbolen zusammen, weshalb Zeichenketten eine *Lä
 
 Zeichenketten werden für alle Werte verwendet, die nicht als Zahlenwerte oder Wahrheitswerte dargestellt werden können. Gelegentlich müssen Zahlen als Zeichenketten dargestellt werden, um sie in einem bestimmten Format auszugeben oder für mathematische Operationen zu sperren.
 
-In den meisen Programmiersprachen müssen Zeichenketten besonders markiert werden, damit sie von anderen Datentypen und Bezeichnern unterschieden werden können (s. @sec-variablen-fkts-ops). Die Markierung erfolgt meistens durch Anführungszeichen.
+In den meisten Programmiersprachen müssen Zeichenketten besonders markiert werden, damit sie von anderen Datentypen und Bezeichnern unterschieden werden können (s. @sec-variablen-fkts-ops). Die Markierung erfolgt meistens durch Anführungszeichen.
 
 ::: {.callout-note}
 Programmiersprachen wie bspw. C, C++, C# oder Java verwenden für Zeichenketten den fundamentalen Datentyp des *Symbols* (oder *Character*). In diesen Programmiersprachen werden Zeichenketten als Liste von Symbolen behandelt. 

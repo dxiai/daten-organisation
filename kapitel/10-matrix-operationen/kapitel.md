@@ -472,7 +472,7 @@ Weil das äussere Produkt beliebige Operatoren erlaubt, lassen sich mit der glei
 > \{1;2;3;4;5;6\}
 > $$
 > 
-> Weil diese Struktur nicht durch einen direkten Vergleich erzeugt werden kann, wird eine Funktion $f$ für den logischen Ausdruch erstellt. Daraus ergibt sich das folgende äussere Produkt.
+> Weil diese Struktur nicht durch einen direkten Vergleich erzeugt werden kann, wird eine Funktion $f$ für den logischen Ausdruck erstellt. Daraus ergibt sich das folgende äussere Produkt.
 > 
 > $$ 
 > \{1;2;3;4;5;6\} \otimes_{f} \{1;2;3;4;5;6\}

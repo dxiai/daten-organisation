@@ -24,7 +24,7 @@ Vektoren sind bezüglich des Datentyps *homogen*. D.h. alle Elemente eines Vekto
 Ein Vektor der Länge `0` heisst **leerer Vektor**. 
 :::
 
-Der leere Vektor wird endweder als $\varnothing$ oder als $\{\}$ geschrieben. Beide Schreibweisen sind gleichwertig.
+Der leere Vektor wird entweder als $\varnothing$ oder als $\{\}$ geschrieben. Beide Schreibweisen sind gleichwertig.
 
 Der leere Vektor ist eine besondere Datenstruktur, die keine Elemente enthält. Der leere Vektor kann als *Startwert* für die Konstruktion von Vektoren verwendet werden oder als *Ergebnis* von Operationen auf Vektoren vorkommen.
 
@@ -175,7 +175,7 @@ a \circ v &= a \circ \{v_1; v_2; \dots; v_n\} \\
 \end{aligned}
 $$ 
 
-## Tranformationen
+## Transformationen
 
 ::: {#def-transformation}
 Eine **Transformation** bezeichnet eine Umformung der Element eines Vektors, wobei die Länge des Vektors unverändert bleibt. 
@@ -386,7 +386,7 @@ Weil das Filtern die Länge des Vektors verändert, kann das Filtern **nicht** a
 
 ### Zählen durch Nummerieren
 
-Beim Nummerieren wird eine Sequenz erzeugt, die für jede zählbare Einheit einen Wert enthält. Die Länge dieser Sequenz entspricht der Anzahl der zählbaren Einheiten. Gleichzeigit entspricht der Maximal-Wert der Sequenz ebenfalls der Anzahl der zählbaren Einheiten.
+Beim Nummerieren wird eine Sequenz erzeugt, die für jede zählbare Einheit einen Wert enthält. Die Länge dieser Sequenz entspricht der Anzahl der zählbaren Einheiten. Gleichzeitig entspricht der Maximal-Wert der Sequenz ebenfalls der Anzahl der zählbaren Einheiten.
 
 ::: {.callout-note}
 ## Merke

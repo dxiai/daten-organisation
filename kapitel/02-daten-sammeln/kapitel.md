@@ -26,7 +26,7 @@ Durch nicht erfasste Daten geht Information verloren. Dieser Informationsverlust
 Welche Daten in einem Datensatz erfasst wurden bzw. erfasst werden sollen,  werden in einem **Datenschema** festgehalten. Das Datenschema hat zwei Funktionen.
 
 1. Es legt fest, welche Daten für einen Datensatz erhoben werden müssen. In dieser Funktion ist das Datenschema eine grobe Anleitung welche Daten gesammelt werden sollen.
-2. Es dokumentiert, welche Daten in einem Datenssatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig zu auszuwerten und zu interpretieren.
+2. Es dokumentiert, welche Daten in einem Datenssatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.
 
 Ein Datenschema legt Felder für die Ablage der beobachteten Daten fest.
 
