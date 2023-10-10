@@ -305,7 +305,7 @@ Der Zuweisungsoperator ist beim Programmieren wichtig, deshalb sollte man sich b
 
 #### Der Anwendungsoperator
 
-Werden Klammern unmittelbar nach einem Funktionsbezeicher angegeben, dann ändern diese Klammern ihre Bedeutung, indem sie die *Anwendung* der bezeichneten Funktion erfordern. Mithilfe des Anwendungsoperators kann zwischen der Anwendung einer Funktion und ihrem Bezeichner unterschieden werden.
+Werden Klammern unmittelbar nach einem Funktionsbezeichner angegeben, dann ändern diese Klammern ihre Bedeutung, indem sie die *Anwendung* der bezeichneten Funktion erfordern. Mithilfe des Anwendungsoperators kann zwischen der Anwendung einer Funktion und ihrem Bezeichner unterschieden werden.
 
 ::: {.callout-warning}
 Der Anwendungsoperator kann ausschliesslich mit Bezeichnern verwendet werden, die auf eine Funktion verweisen.
@@ -578,7 +578,7 @@ Eine **Callback-Funktion** ist eine Funktion, die als Parameter an eine andere F
 
 Bei der Übergabe einer Callback-Funktion wird die Funktion als Parameter übergeben. Das entspricht der Zuweisung einer Funktion an einen neuen Bezeichner. Dadurch muss die aufgerufene Funktion den Bezeichner der Callback-Funktion zum Zeitpunkt ihrer Definition nicht kennen, sondern kann über den Parameternamen auf diese Funktion zugreifen.
 
-Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeicher und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden. 
+Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeichner und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden. 
 
 ::: {#exm-callback}
 ## Anwendung von Callbacks
