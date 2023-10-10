@@ -643,7 +643,7 @@ Tipp
 </section>
 <section id="der-anwendungsoperator" class="level4" data-number="10.3.2.3">
 <h4 data-number="10.3.2.3" class="anchored" data-anchor-id="der-anwendungsoperator"><span class="header-section-number">10.3.2.3</span> Der Anwendungsoperator</h4>
-<p>Werden Klammern unmittelbar nach einem Funktionsbezeicher angegeben, dann ändern diese Klammern ihre Bedeutung, indem sie die <em>Anwendung</em> der bezeichneten Funktion erfordern. Mithilfe des Anwendungsoperators kann zwischen der Anwendung einer Funktion und ihrem Bezeichner unterschieden werden.</p>
+<p>Werden Klammern unmittelbar nach einem Funktionsbezeichner angegeben, dann ändern diese Klammern ihre Bedeutung, indem sie die <em>Anwendung</em> der bezeichneten Funktion erfordern. Mithilfe des Anwendungsoperators kann zwischen der Anwendung einer Funktion und ihrem Bezeichner unterschieden werden.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -947,7 +947,7 @@ Exkurs
 <p><span class="theorem-title"><strong>Definition 10.15 </strong></span>Eine <strong>Callback-Funktion</strong> ist eine Funktion, die als Parameter an eine andere Funktion übergeben wurde.</p>
 </div>
 <p>Bei der Übergabe einer Callback-Funktion wird die Funktion als Parameter übergeben. Das entspricht der Zuweisung einer Funktion an einen neuen Bezeichner. Dadurch muss die aufgerufene Funktion den Bezeichner der Callback-Funktion zum Zeitpunkt ihrer Definition nicht kennen, sondern kann über den Parameternamen auf diese Funktion zugreifen.</p>
-<p>Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeicher und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden.</p>
+<p>Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeichner und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden.</p>
 <div id="exm-callback" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 10.3 (Anwendung von Callbacks) </strong></span>In <a href="#eq-callback-app">Formel&nbsp;<span>10.24</span></a> wird der Funktion <span class="math inline">g</span> das <em>Ergebnis</em> der Funktionsanwendung <span class="math inline">f(3)</span> übergeben. Im Gegensatz dazu wird in <a href="#eq-callback-call">Formel&nbsp;<span>10.25</span></a> die Funktion <span class="math inline">f</span> selbst an die Funktion <span class="math inline">g</span> übergeben. Die Funktion <span class="math inline">g</span> kann nun die Funktion <span class="math inline">f</span> aufrufen.</p>
 <p><span id="eq-callback-app"><span class="math display">
