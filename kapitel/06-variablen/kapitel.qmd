@@ -120,7 +120,7 @@ Wird ein Teil einer komplexen Operation in eine einfachere Funktion ausgelagert,
 
 In der Mathematik wird beim Substituieren die Teiloperation in der Regel nur durch Bezeichner der ersetzenden Funktion angegeben. In der Praxis müssen solche Ersetzungsfunktionen explizit parametrisiert und ausgeführt werden.
 
-Die folgenden beiden Beispile illustrieren die Substituion mit einfachen mathematischen Funktionen. 
+Die folgenden beiden Beispiele illustrieren die Substitution mit einfachen mathematischen Funktionen. 
 
 Die Operation in @eq-problemzerlegung-basis führt zwei Operationen nacheinander aus. 
 
