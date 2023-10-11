@@ -57,7 +57,7 @@ Häufig liegen Indexvektoren bereits in einer Stichprobe vor.
 |Fiat 128            | 32.4|   4|  78.7|  1|  1|
 |Honda Civic         | 30.4|   4|  75.7|  1|  1|
 
-: Ausschnit der `mtcars`-Stichprobe mit Primär- und Sekundärindizes {#tbl-mtcars-index}
+: Ausschnitt der `mtcars`-Stichprobe mit Primär- und Sekundärindizes {#tbl-mtcars-index}
 
 Der Vektor `modell` ist der **Primärindex**, weil dieser Vektor nur Werte enthält, die einen Datensatz eindeutig identifizieren.
 
@@ -104,8 +104,8 @@ In diesem Beispiel besteht die Hashing-Funktion aus zwei Teilen:
 2. Die Leistungsklassen werden durch *Kodieren* den oben festgelegten Klassen zugewiesen und im Vektor `klasse` gespeichert.
 
 ```r
-mtcars %>% 
-    as_tibble(rownames = "modell") %>% 
+mtcars |> 
+    as_tibble(rownames = "modell") |> 
     mutate(
         verhaeltnis = hp/wt, 
         klasse = case_when( 
@@ -154,11 +154,11 @@ Alle unsere Werte müssen zusammengehalten werden, weil unsere Analyse sonst nic
 
 #### Schritt 3: Mischen
 
-Dieser Schritt greift auf die Funktion `sample()` zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch ``daten %>% mutate( id_neu = sample(id) )``. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf ``daten %>% arrange( id_neu )``. 
+Dieser Schritt greift auf die Funktion `sample()` zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch ``daten |> mutate( id_neu = sample(id) )``. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf ``daten |> arrange( id_neu )``. 
 
 #### Schritt 4: Entfernen des eindeutigen Vektors und exportieren der Daten
 
-Abschliessend müssen wir **unbedingt** die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: ``daten %>% select(-c(id, id_neu))``. 
+Abschliessend müssen wir **unbedingt** die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: ``daten |> select(-c(id, id_neu))``. 
 
 #### Vollständige Lösung
 
@@ -172,22 +172,22 @@ daten = read_delim("beispielstichprobe.csv")
 
 # mischen Funktion aus einer Funktionskette erstellen, damit 
 #    wir nicht so viel tippen müssen.
-mischen = . %>% 
+mischen = . |> 
     mutate( 
         id = row_number(), 
         id_neu = sample(id)
-    ) %>% 
-    arrange(id_neu) %>% 
+    ) |> 
+    arrange(id_neu) |> 
     select(-c(id, id_neu))
 
-daten %>% 
-    select(geschlecht, starts_with("technik")) %>% 
-    mischen() %>% 
+daten |> 
+    select(geschlecht, starts_with("technik")) |> 
+    mischen() |> 
     write_csv("teilstichprobe_geschlecht_technik.csv")
 
-daten %>% 
-    select(alter, starts_with("sozial")) %>% 
-    mischen() %>% 
+daten |> 
+    select(alter, starts_with("sozial")) |> 
+    mischen() |> 
     write_csv("teilstichprobe_alter_sozial.csv")
 ```
 

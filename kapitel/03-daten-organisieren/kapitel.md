@@ -48,13 +48,13 @@ In Berichten und Publikationen wird *nicht* zwischen *Tabellen* und *tabellarisc
 Tabellen dienen zur systematischen Erfassung von Daten. Meist repräsentieren Tabellen Messungen, die später ausgewertet und analysiert werden sollen. Die Datenorganisation in Tabellen strukturiert Daten entlang zwei Dimensionen. Für die Datenerfassung werden die Daten in *Zeilen* und *Spalten* organisiert, wobei die Spalten meistens als *Merkmale* und die Zeilen als *Messereignisse* bezeichnet werden. Gemeinsam bilden die Merkmale und Messereignisse eine *Stichprobe* (engl. *sample*).
 
 ::: {#def-merkmal}
-Ein **Merkmal** ist eine Eigenschaft, die in einer Messung durch einen *Messwert* erfasst wird. In der Statistik werden Merkmale in der *Statistik* als **Variablen** bezeichnet.
+Ein **Merkmal** ist eine Eigenschaft, die in einer Messung durch einen *Messwert* erfasst wird. In der *Statistik* werden Merkmale als **Variablen** bezeichnet.
 :::
 
 Ein Merkmal ist immer als Vektor organisiert. Alle Werte eines Merkmals haben also den gleichen Datentyp und den gleichen Wertebereich.
 
 ::: {#def-messereignis}
-Ein **Messereignis** fasst ein oder mehrere *gemeinsam gemessenen* Merkmale zusammen. Ein Messereignis wird auch als **Datensatz** bezeichnet. Bei der Datenvisualisierung werden Messereignisse als **Datenpunkte** bezeichnet.
+Ein **Messereignis** fasst ein oder mehrere *gemeinsam gemessene* Merkmale zusammen. Ein Messereignis wird auch als **Datensatz** bezeichnet. Bei der Datenvisualisierung werden Messereignisse als **Datenpunkte** bezeichnet.
 :::
 
 Ein Datensatz ist immer eine Liste von Werten, deren Datentypen und Wertebereichen voneinander verschieden sein können.
@@ -75,7 +75,7 @@ Alle prinzipiell messbaren Entitäten bilden eine **Grundgesamtheit**.
 Eine **Stichprobe** ist die Gesamtheit der gemessenen Entitäten ab.
 ::: 
 
-Die **Statistik** befasst sich mit den Methoden, um von Stichproben auf die ursprüngliche **Grundgesamtheit** zu schliessen. Aus Sicht der Datenwissenschaft und Datenverarbeitung ist die Grundgesamtheit *unerheblich*, weil die nicht gemessenen Entitäten nicht in den Daten nicht abgebildet sind und deshalb unbekannt bleiben müssen!
+Die **Statistik** befasst sich mit den Methoden, um von Stichproben auf die ursprüngliche **Grundgesamtheit** zu schliessen. Aus Sicht der Datenwissenschaft und Datenverarbeitung ist die Grundgesamtheit *unerheblich*, weil die nicht gemessenen Entitäten nicht in den Daten abgebildet sind und deshalb unbekannt bleiben müssen!
 
 ### Daten normalisieren
 
@@ -96,7 +96,7 @@ Ein **Messereignis** bezeichnet das gleichzeitige Erheben zusammengehörender Da
 Wenn Daten in einer Tabelle jeweils ein Messereignis repräsentieren, dann liegen sie in **Normalform** vor. In der Normalform ist die Tabelle gleichbedeutend mit der zugehörigen Stichprobe. Jede Zeile ist der Datensatz einer beobachteten Entität. Die Spalten repräsentieren die Messungen.
 
 ::: {.callout-note}
-Beachten Sie, dass *unabhängige Messereignisse* nicht mit *unabhängigen Variablen* in der Statistik verwechselt werden darf.
+Beachten Sie, dass *unabhängige Messereignisse* nicht mit *unabhängigen Variablen* in der Statistik verwechselt werden dürfen.
 :::
 
 ::: {#def-normalform}

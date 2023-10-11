@@ -87,7 +87,7 @@ Entsprechend enthält der Token-Vektor nach der Texttrennung mit der leeren Zeic
 
 Die Texttrennung ist umkehrbar. Die Umkehrfunktion der Texttrennung ist die Textverkettung. Die Textverkettung fügt mehrere Zeichenketten zu einer neuen Zeichenkette zusammen.
 
-Die Textverkettung ist eine spezielle Form der Konkatenation von Vektoren (s. [Kapite @sec-konkatenation]).
+Die Textverkettung ist eine spezielle Form der Konkatenation von Vektoren (s. [Kapitel @sec-konkatenation]).
 
 Die Textverkettung hat zwei Parameter: 
 
@@ -120,7 +120,7 @@ Wird als Ersetzung die leere Zeichenkette verwendet, dann wird das Suchmuster au
 
 Wenn das Ergebnis einer Suchen-und-Ersetzen-Funktion die ursprüngliche Zeichenkette ist, wurde keine Ersetzung durchgeführt.
 
-Beim *Normalisieren* von Zeichenketten werden Suchen-und-Ersetzen-Funktionen solange angewendet, bis keine Ersetzung mehr vorgenommen wird. Die Zeichenkette ist dann normaliesiert.
+Beim *Normalisieren* von Zeichenketten werden Suchen-und-Ersetzen-Funktionen solange angewendet, bis keine Ersetzung mehr vorgenommen wird. Die Zeichenkette ist dann normalisiert.
 
 Weil das Normalisieren von Zeichenketten eine sehr häufige Operation ist, gibt es dafür spezielle Funktionen. Die wichtigsten dieser Funktionen sind: 
 
