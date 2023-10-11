@@ -434,15 +434,33 @@ Merke
 <p>Wie eine Funktion die Effekte erzeugt, wird im <strong>Funktionskörper</strong> festgelegt.</p>
 <p>Manche Funktionen benötigen Eingaben, um daraus die Ergebnisse zu erzeugen.</p>
 <div id="def-parameter" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.4 </strong></span>Die Eingaben einer Funktion heissen <strong>Parameter</strong> oder <strong>Funktionsargumente</strong>. Eine Funktion <strong>akzeptiert</strong> diese Parameter als Eingabe.</p>
+<p><span class="theorem-title"><strong>Definition 10.4 </strong></span>Die Eingaben einer Funktion heissen <strong>Parameter</strong>. Eine Funktion <strong>akzeptiert</strong> diese Parameter als Eingabe.</p>
 </div>
 <p><em>Parameter</em> sind spezielle <em>Variablen</em> mit dem Geltungsbereich des Funktionskörpers.</p>
+<p><em>Parameter</em> müssen von <strong>Argumenten</strong> abgegrenzt werden.</p>
+<div id="def-argument" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10.5 </strong></span>Ein <strong>Argument</strong> heisst ein Wert, der einem Parameter zugewiesen wird.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Argumente</strong> beziehen sich auf die Werte, die <em>für</em> die Ausführung einer Funktion von <em>aussen</em> übergeben werden.</p>
+<p><strong>Parameter</strong> beziehen sich auf Werte, die <em>während</em> einer Funktionsausführeung <em>innerhalb</em> des Funktionskörpers verwendet werden.</p>
+</div>
+</div>
 <p>Eine Funktion kann natürlich auch mehrere Parameter haben. Die Parameter einer Funktion werden als <strong>Parameterliste</strong> bezeichnet. Eine solche Parameterliste darf auch eine leere Liste sein.</p>
 <p>Die Datentypen der Parameter legen den <em>Definitionsbereich</em> einer Funktion fest. Der Datentyp der Rückgabe werde legt den <em>Zielbereich</em> fest. Eine Funktion stellt also eine <em>Beziehung</em> zwischen dem Definitionsbereich und dem Zielbereich her.</p>
 <p>Eine Funktion, die keine Parameter akzeptiert, wird ist eine <strong>parameterlose Funktion</strong>. Eine parameterlose Funktion hat deshalb eine leere Parameterliste als Eingabe.</p>
 <p>So lässt sich die Funktionsdefinition erweitern und präzisieren:</p>
 <div id="def-funktion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.5 </strong></span>Eine Funktion erzeugt Effekte im Zielbereich mithilfe einer Parameterliste mit Werten im Definitionsbereich.</p>
+<p><span class="theorem-title"><strong>Definition 10.6 </strong></span>Eine Funktion erzeugt Effekte im Zielbereich mithilfe einer Parameterliste mit Werten im Definitionsbereich.</p>
 </div>
 <p>Formal lässt sich diese Defition wird der durch die Rückgabeliste definierte Zielbereich dem Bezeichner <span class="math inline">E</span> zugewiesen und den Defitionsbereich der Parameterliste mit <span class="math inline">P</span> gekennzeichnet, dann ist entsprechend dieser Definition <strong>jede</strong> Funktion entsprechend <a href="#eq-fkt-def">Formel&nbsp;<span>10.2</span></a> definiert.</p>
 <p><span id="eq-fkt-def"><span class="math display">
@@ -451,12 +469,12 @@ f: P \to E
 <p>Diese Formel wird wie folgt gelesen: <em>Die Funktion <span class="math inline">f</span> bildet den Definitionsbereich <span class="math inline">P</span> auf den Zielbereich <span class="math inline">E</span> ab.</em> Die Formel kann auch analog zur Definition von Bezeichnern gelesen werden: <em>Für die Funktion <span class="math inline">f</span> verweisen alle Werte im Definitionsbereich <span class="math inline">P</span> auf Werte im Zielbereich <span class="math inline">E</span>.</em> Diese Beziehung zwischen Definitionsbereich <span class="math inline">P</span> und Zielbereich <span class="math inline">E</span> legt die Funktion fest. <span class="math inline">f</span> ist der <em>Bezeichner</em> der Funktion. Durch den Bezeichner und den Definitionsbereich der Parameterliste ist eine Funktion eindeutig beschrieben.</p>
 <p>Diese Funktionsdefinition benötigt <strong>keinen</strong> <em>Funktionskörper</em>. Tatsächlich können die gleichen Ergebnisse auf unterschiedlichen Wegen aus den gleichen Parametern erzeugt werden. Das kann bspw. durch die Verwendung unterschiedlicher Programmiersprachen sein.</p>
 <div id="def-functional-equal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.6 </strong></span>Wenn zwei Funktionen für die gleichen Parameter das gleiche Ergebnis erzeugen, dann sind diese Funktionen <strong>funktional gleich</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 10.7 </strong></span>Wenn zwei Funktionen für die gleichen Parameter das gleiche Ergebnis erzeugen, dann sind diese Funktionen <strong>funktional gleich</strong>.</p>
 </div>
 <p>Um eine Funktion zu verwenden, muss diese <em>aufgerufen</em> werden. Ein <em>Funktionsaufruf</em> wird meistens durch eine rundes Klammerpaar dargestellt. Wird eine Funktion aufgerufen, wird der Funktionskörper mit den Werten in den Parametern ausgeführt. Der Funktionsaufruf <span class="math inline">f(x)</span> wählt für einen Wert <span class="math inline">x</span> aus dem Definitionsbereich <span class="math inline">P</span> den entsprechenden Wert <span class="math inline">y</span> aus dem Zielbereich <span class="math inline">E</span> aus.</p>
 <p>Manche Programmiersprachen ermöglichen die Verwendung des gleichen Bezeichners für unterschiedliche Definitions- und Zielbereiche.</p>
 <div id="def-polymorph" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.7 </strong></span>Hat ein Funktionsbezeichner mehrere Definitionsbereiche, dann heisst diese Funktion <strong>polimorph</strong> (gr. <em>poli</em>: viel, gr. <em>morphos</em>: Gestalt).</p>
+<p><span class="theorem-title"><strong>Definition 10.8 </strong></span>Hat ein Funktionsbezeichner mehrere Definitionsbereiche, dann heisst diese Funktion <strong>polimorph</strong> (gr. <em>poli</em>: viel, gr. <em>morphos</em>: Gestalt).</p>
 </div>
 <p>Bei polimorphen Funktionen muss der Funktionsbezeichner und die Parameterliste gemeinsam eindeutig sein.</p>
 <p>In den Datenwissenschaften kommen im Wesentlichen drei Arten von Funktionen zum Einsatz:</p>
@@ -512,7 +530,7 @@ g(a,b) \to -(a-b) \Leftrightarrow b-a
 <section id="konstante-funktionen" class="level4" data-number="10.2.2.1">
 <h4 data-number="10.2.2.1" class="anchored" data-anchor-id="konstante-funktionen"><span class="header-section-number">10.2.2.1</span> Konstante Funktionen</h4>
 <div id="def-konstante-fkt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.8 </strong></span>Eine <strong>konstante Funktion</strong> erzeugt für jede Eingabe immer den gleichen Ergebniswert <span class="math inline">w</span>.</p>
+<p><span class="theorem-title"><strong>Definition 10.9 </strong></span>Eine <strong>konstante Funktion</strong> erzeugt für jede Eingabe immer den gleichen Ergebniswert <span class="math inline">w</span>.</p>
 </div>
 <p>Konstante Funktionen sind formal wie in <a href="#eq-konstante-fkt">Formel&nbsp;<span>10.8</span></a> definiert:</p>
 <p><span id="eq-konstante-fkt"><span class="math display">
@@ -524,7 +542,7 @@ f_{kW}(x) \to W
 <h4 data-number="10.2.2.2" class="anchored" data-anchor-id="die-identitätsfunktion"><span class="header-section-number">10.2.2.2</span> Die Identitätsfunktion</h4>
 <p>Die nächste Funktion ähnelt in ihrer Definition konstanten Funktionen.</p>
 <div id="def-id-fkt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.9 </strong></span>Die <strong>Identitätsfunktion</strong> gibt für eine Eingabe diese Eingabe als Ergebnis zurück.</p>
+<p><span class="theorem-title"><strong>Definition 10.10 </strong></span>Die <strong>Identitätsfunktion</strong> gibt für eine Eingabe diese Eingabe als Ergebnis zurück.</p>
 </div>
 <p>Die formale Definition der Identitätsfunktion zeigt <a href="#eq-id-fkt">Formel&nbsp;<span>10.9</span></a>.</p>
 <p><span id="eq-id-fkt"><span class="math display">
@@ -536,10 +554,10 @@ f_{id}(x) \to x
 <section id="projektionen" class="level4" data-number="10.2.2.3">
 <h4 data-number="10.2.2.3" class="anchored" data-anchor-id="projektionen"><span class="header-section-number">10.2.2.3</span> Projektionen</h4>
 <div id="def-projektion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.10 </strong></span>Eine <strong>Projektion</strong> bezeichnet eine Funktion, die den gleichen Eingaben <strong>immer</strong> die <em>gleichen Ergebnisse</em> zuweist.</p>
+<p><span class="theorem-title"><strong>Definition 10.11 </strong></span>Eine <strong>Projektion</strong> bezeichnet eine Funktion, die den gleichen Eingaben <strong>immer</strong> die <em>gleichen Ergebnisse</em> zuweist.</p>
 </div>
 <div id="def-umkehrbar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.11 </strong></span>Eine <em>Projektion</em> heisst <strong>umkehrbar</strong>, wenn eine zweite Funktion existiert, welche die Rückgabeliste der ersten Funktion als Parameterliste hat und aus dieser die Parameterliste der ersten Funktion als Rückgabeliste erzeugt. Diese zweite Funktion ist die <strong>Umkehrfunktion</strong> der ersten Funktion.</p>
+<p><span class="theorem-title"><strong>Definition 10.12 </strong></span>Eine <em>Projektion</em> heisst <strong>umkehrbar</strong>, wenn eine zweite Funktion existiert, welche die Rückgabeliste der ersten Funktion als Parameterliste hat und aus dieser die Parameterliste der ersten Funktion als Rückgabeliste erzeugt. Diese zweite Funktion ist die <strong>Umkehrfunktion</strong> der ersten Funktion.</p>
 </div>
 <p>Die Umkehrfunktion einer Funktion <span class="math inline">f</span> wird als <span class="math inline">f^{-1}</span> geschrieben.</p>
 <p>Aus diesen beiden Definitionen folgt im Umkehrschluss, dass nicht jede Funktion eine Projektion und nicht jede Projektion umkehrbar ist.</p>
@@ -550,7 +568,7 @@ f_{id}(x) \to x
 <h2 data-number="10.3" class="anchored" data-anchor-id="operatoren"><span class="header-section-number">10.3</span> Operatoren</h2>
 <p>Aus den Grundrechenarten sind Operatoren bekannt. Diese Operatoren sind z.B. <code>+</code>, <code>-</code>, <code>*</code> und <code>/</code>. Diese Operatoren sind in der Mathematik und den Datenwissenschaften <em>Funktionen</em>.</p>
 <div id="def-operation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.12 </strong></span>Eine <strong>Operation</strong> bezeichnet die Anwendung eines Operators. Eine Operation besteht aus einem Operator und den Operanden.</p>
+<p><span class="theorem-title"><strong>Definition 10.13 </strong></span>Eine <strong>Operation</strong> bezeichnet die Anwendung eines Operators. Eine Operation besteht aus einem Operator und den Operanden.</p>
 </div>
 <p>Ein <strong>Operator</strong> ist eine alternative Schreibweise für häufig verwendete <em>Funktionen</em>.</p>
 <p>Die <em>meisten</em> Operatoren sind unär oder binär. Unäre Operatoren haben nur einen Parameter. Ein unärer Operator ist das Vorzeichen <code>-</code> oder das <code>%</code>-Zeichen. Binäre Operatoren haben zwei Parameter. Alle Grundrechenarten sind binäre Operatoren.</p>
@@ -687,7 +705,7 @@ zusammenzählen(2, 1) &amp;= 3
 <h2 data-number="10.4" class="anchored" data-anchor-id="das-neutrale-element"><span class="header-section-number">10.4</span> Das neutrale Element</h2>
 <p>Manche Funktionen haben die besondere Eigenschaft, dass es einen Wert im Definitionsbereich gibt, der für alle Werte im Definitionsbereich das gleiche Ergebnis <em>unabhängig</em> davon erzeugt, als welcher Operand dieser Wert verwendet wird. Dieser Wert wird als das <strong>neutrales Element</strong> des Operators bezeichnet. Für die Addition ist das die Zahl <code>0</code> und für die Multiplikation ist das die Zahl <code>1</code>.</p>
 <div id="def-neutrales-element" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.13 </strong></span>Das <strong>neutrale Element</strong> eines Operators ist ein Wert im Definitionsbereich, der für <strong>alle</strong> Werte im Definitionsbereich des jeweils anderen Operanden diesen Wert als Ergebnis erzeugt.</p>
+<p><span class="theorem-title"><strong>Definition 10.14 </strong></span>Das <strong>neutrale Element</strong> eines Operators ist ein Wert im Definitionsbereich, der für <strong>alle</strong> Werte im Definitionsbereich des jeweils anderen Operanden diesen Wert als Ergebnis erzeugt.</p>
 </div>
 <p>Ist der Definitionsbereich durch den Datentyp Zahl festgelegt, dann muss das neutrale Element genau eine Zahl sein.</p>
 <p>Gemäss dieser Definition muss für das neutrale Element die Gleichung <a href="#eq-neutrales-element">Formel&nbsp;<span>10.12</span></a> gelten.</p>
@@ -763,7 +781,7 @@ Merke
 <h3 data-number="10.4.2" class="anchored" data-anchor-id="redundanz"><span class="header-section-number">10.4.2</span> Redundanz</h3>
 <p>Für das <em>neutrale Element</em> eines Operators ist die Operation mit der Identitätsfunktion funktional gleich.</p>
 <div id="def-redundant" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.14 </strong></span>Ergeben mehrere Teiloperationen <strong>immer</strong> das neutrale Element für die nächste Operation, dann sind diese Operationen <strong>redundant</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 10.15 </strong></span>Ergeben mehrere Teiloperationen <strong>immer</strong> das neutrale Element für die nächste Operation, dann sind diese Operationen <strong>redundant</strong>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -944,7 +962,7 @@ Exkurs
 <section id="callback-funktionen" class="level3" data-number="10.6.1">
 <h3 data-number="10.6.1" class="anchored" data-anchor-id="callback-funktionen"><span class="header-section-number">10.6.1</span> Callback-Funktionen</h3>
 <div id="def-callback-fkt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.15 </strong></span>Eine <strong>Callback-Funktion</strong> ist eine Funktion, die als Parameter an eine andere Funktion übergeben wurde.</p>
+<p><span class="theorem-title"><strong>Definition 10.16 </strong></span>Eine <strong>Callback-Funktion</strong> ist eine Funktion, die als Parameter an eine andere Funktion übergeben wurde.</p>
 </div>
 <p>Bei der Übergabe einer Callback-Funktion wird die Funktion als Parameter übergeben. Das entspricht der Zuweisung einer Funktion an einen neuen Bezeichner. Dadurch muss die aufgerufene Funktion den Bezeichner der Callback-Funktion zum Zeitpunkt ihrer Definition nicht kennen, sondern kann über den Parameternamen auf diese Funktion zugreifen.</p>
 <p>Bei der Verwendung von Callback-Funktionen muss klar zwischen dem Funktionsbezeichner und der Anwendung der Funktion unterschieden werden. Damit eine Funktion und nicht ihr Ergebnis als Parameter an eine andere Funktion übergeben werden kann, muss der Anwendungsoperator und die Parameterliste der Funktion weggelassen werden.</p>
@@ -962,7 +980,7 @@ g(f)
 <section id="closure-funktionen" class="level3" data-number="10.6.2">
 <h3 data-number="10.6.2" class="anchored" data-anchor-id="closure-funktionen"><span class="header-section-number">10.6.2</span> Closure-Funktionen</h3>
 <div id="def-closure-fkt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.16 </strong></span><strong>Closure-Funktionen</strong> sind Funktionen, die als Rückgabewert von einer anderen Funktion erzeugt werden.</p>
+<p><span class="theorem-title"><strong>Definition 10.17 </strong></span><strong>Closure-Funktionen</strong> sind Funktionen, die als Rückgabewert von einer anderen Funktion erzeugt werden.</p>
 </div>
 <p>Eine Closure-Funktion wird im Geltungsbereich der erzeugenden Funktion definiert und übernimmt alle Bezeichner dieses Geltungsbereichs, so dass für eine komplexe Operation alle notwendigen Werte vorhanden sind.</p>
 <p>Das Beispiel in <a href="#eq-closure-bsp-def">Formel&nbsp;<span>10.26</span></a> erzeugt die Funktion <span class="math inline">pDef</span> Closure-Funktionen zum Potenzieren mit einem festen Exponenten.</p>
