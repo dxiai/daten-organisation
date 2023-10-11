@@ -64,10 +64,23 @@ Wie eine Funktion die Effekte erzeugt, wird im **Funktionskörper** festgelegt.
 Manche Funktionen benötigen Eingaben, um daraus die Ergebnisse zu erzeugen.
 
 ::: {#def-parameter} 
-Die Eingaben einer Funktion heissen **Parameter** oder **Funktionsargumente**. Eine Funktion **akzeptiert** diese Parameter als Eingabe.
+Die Eingaben einer Funktion heissen **Parameter**. Eine Funktion **akzeptiert** diese Parameter als Eingabe.
 :::
 
 *Parameter* sind spezielle *Variablen* mit dem Geltungsbereich des Funktionskörpers.
+
+*Parameter* müssen von **Argumenten** abgegrenzt werden. 
+
+::: {#def-argument}
+Ein **Argument** heisst ein Wert, der einem Parameter zugewiesen wird.
+:::
+
+::: {.callout-note}
+## Merke
+**Argumente** beziehen sich auf die Werte, die *für* die Ausführung einer Funktion von *aussen* übergeben werden. 
+
+**Parameter** beziehen sich auf Werte, die *während* einer Funktionsausführeung *innerhalb* des Funktionskörpers verwendet werden. 
+:::
 
 Eine Funktion kann natürlich auch mehrere Parameter haben. Die Parameter einer Funktion werden als **Parameterliste** bezeichnet. Eine solche Parameterliste darf auch eine leere Liste sein. 
 
@@ -110,7 +123,6 @@ In den Datenwissenschaften kommen im Wesentlichen drei Arten von Funktionen zum 
 1. Transformationen, welche einen Wert in einen anderen Wert *überführen*; 
 2. Aggregatoren, die mehrere Werte *zusammenfassen*; und 
 3. Generatoren, mit denen Werte *erzeugt* werden.
-
 
 ### Substitution {#sec-substitution}
 
