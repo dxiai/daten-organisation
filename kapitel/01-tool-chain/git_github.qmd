@@ -41,7 +41,7 @@ Diese Kurzeinführung stellt die zentralen `git`-Konzepte für die tägliche Arb
 
 ## `git` installieren
 
-`git` besteht im wesentlichen aus einem Kommandozeilen-Werkzeug, das alle Funktionen von `git` bereitstellt. Dieses Werkzeug wird oft auch als *CLI-Tool* bezeichnet. Es für die meisten GUI-Apps die Voraussetzung für die Arbeit. Ausserdem stellen nicht alle GUI-Apps alle `git`-Funktionen bereit und gelegentlich kann es in Spezialfällen notwendig sein, `git` direkt zu verwenden. Deshalb sollte `git` immer auf einem Computer installiert sein. 
+`git` besteht im Wesentlichen aus einem Kommandozeilen-Werkzeug, das alle Funktionen von `git` bereitstellt. Dieses Werkzeug wird oft auch als *CLI-Tool* bezeichnet. Es ist für die meisten GUI-Apps die Voraussetzung für die Arbeit. Ausserdem stellen nicht alle GUI-Apps alle `git`-Funktionen bereit und gelegentlich kann es in Spezialfällen notwendig sein, `git` direkt zu verwenden. Deshalb sollte `git` immer auf einem Computer installiert sein. 
 
 ### `git` unter MacOS installieren
 
