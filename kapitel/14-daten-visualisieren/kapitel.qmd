@@ -76,7 +76,7 @@ Die horizontale Achse wird per Konvention **x-Achse** und die vertikale Achse
 
 Achsen sollten mit den wichtigsten Werten an **Achsmarkierungen** beschriftet werden und müssen eine aussagekräftige **Achsbeschriftung** haben. Die meisten Analyseumgebungen übernehmen standardmässig den Titel des Datenvektors.
 
-Für **nominalskalierte Wertebereiche** müssen **alle** dargestellten Werte über eine Achsmarkierung beschriftet werden. Bei sehr vielen Werten kann es vorkommen, dass diese Markierungen unleserlich werden. In diesem Fall sollten die Werte alphabetisch oder nummerisch sortiert werden und nur markannte Werte (z.B. jeden fünften Wert) hervorgehoben werden. In diesem Fall muss auf den vollständigen Wertebereich verwiesen werden, damit die Datenpunkte eindeutig identifiziert werden können.
+Für **nominalskalierte Wertebereiche** müssen **alle** dargestellten Werte über eine Achsmarkierung beschriftet werden. Bei sehr vielen Werten kann es vorkommen, dass diese Markierungen unleserlich werden. In diesem Fall sollten die Werte alphabetisch oder nummerisch sortiert werden und nur markante Werte (z.B. jeden fünften Wert) hervorgehoben werden. In diesem Fall muss auf den vollständigen Wertebereich verwiesen werden, damit die Datenpunkte eindeutig identifiziert werden können.
 
 Bei **ordinalskalierten Wertebereichen** müssen die **Extreme des Wertebereichs** beschriftet werden. Gegebenenfalls sollte auch der *Mittelpunkt* des Wertebereichs auf der Achse beschriftet werden.
 
