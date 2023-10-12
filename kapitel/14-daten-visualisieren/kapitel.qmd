@@ -69,7 +69,7 @@ Der Darstellungsbereich wird durch die *Hauptdimensionen* der Visualisierung auf
 
 ### Achsen
 
-Die **Achsen** markieren die *Hauptdimensionen* eines Diagramms. Es sollten nicht mehr als zwei Hauptdimensionen in einem Diagramm verwendet werden, weil sich aus der Darstellung nicht mehr erkennen lässt, welche Achse zu welchen visuellen Elementen grhört.
+Die **Achsen** markieren die *Hauptdimensionen* eines Diagramms. Es sollten nicht mehr als zwei Hauptdimensionen in einem Diagramm verwendet werden, weil sich aus der Darstellung nicht mehr erkennen lässt, welche Achse zu welchen visuellen Elementen gehört.
 
 Die horizontale Achse wird per Konvention **x-Achse** und die vertikale Achse 
 **y-Achse** genannt. 
