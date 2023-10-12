@@ -37,7 +37,7 @@ Gelegentlich fehlen Werte in den Daten oder wurden bei der Datenverarbeitung (no
 Als **undefinierte Werte**  die keine Werte repräsentieren.
 :::
 
-In den meisten Programmiersprachen kennen für undefinierte Werte eine konstanten Wert. Dieser Wert ist in der Regel vom beliebigen Datentyp. 
+Die meisten Programmiersprachen kennen für undefinierte Werte eine konstanten Wert. Dieser Wert ist in der Regel vom beliebigen Datentyp. 
 
 ### Zahlen
 
