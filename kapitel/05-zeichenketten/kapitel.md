@@ -5,7 +5,7 @@ execute:
 
 # Zeichenketten {#sec-chapter-zeichenketten}
 
-Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als erstes Worte oder Sätze assoziiert. Im [@sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [Kapitel @sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
+Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als erstes Worte oder Sätze assoziiert. Im [Abschnitt @sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [@sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
 
 ::: {#def-zeichenkette}
 Eine Zeichenkette ist eine beliebige Kette von Textsymbolen. Textsymbole können Buchstaben, Ziffern, Satzzeichen sowie nicht-druckbare Zeichen sein.
