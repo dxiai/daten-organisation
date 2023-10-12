@@ -11,16 +11,18 @@ Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Daten
 Eine Zeichenkette ist eine beliebige Kette von Textsymbolen. Textsymbole können Buchstaben, Ziffern, Satzzeichen sowie nicht-druckbare Zeichen sein.
 :::
 
-Zeichenkette sind immer **diskrete Daten**.
-
-Aus dieser Definition folgt, dass Zeichenketten eine Länge haben müssen.
+Aus dieser Definition folgt, dass jede Zeichenkette eine Länge haben muss.
 
 ::: {#def-zeichenkette-länge}
 Die **Länge** einer Zeichenkette entspricht der Anzahl aller enthaltenen Symbole.
 :::
 
-Zeichenketten sind also *Werte* und haben gleichzeitig die Eigenschaften eines Vektors. 
+Zeichenketten sind also *Werte* und haben gleichzeitig die Eigenschaften von *Vektoren*. 
 
+::: {.callout-note}
+## Merke
+Zeichenketten sind immer **diskrete Daten**.
+:::
 
 ## Nicht-druckbare Zeichen
 ::: {#def-nicht-druckbare-zeichen-zeichenkette}
