@@ -76,7 +76,7 @@ Die durch die Texttrennung entstehenden Zeichenketten heissen *Token*.
 Token können Sätze, Worte oder auch einzelne Buchstaben sein. Ein Token muss nicht zwingend sprachlich sinnvoll sein.
 
 ::: {#def-tokenvektor}
-Ein Vektor der Tokens enthält heisst *Token-Vektor*.
+Ein Vektor der Tokens enthält heisst **Token-Vektor**.
 ::: 
 
 Die Texttrennung hat also einen *Token-Vektor* als Ergebnis. 
