@@ -34,7 +34,7 @@ Die Versionierungsgeschichte wird von `git` automatisch erstellt. Die **Commit-M
 
 ### Entscheidungen und Massnahmen
 
-Weil Die Commit-Meldungen nicht viel Platz zu dokumentation bieten, werden *Entscheidungen* in der Regels als **Issues** und *Massnamen* als **Pull-Requests** einer `git`-Hosting-Plattform dokumentiert. Dabei gilt, dass *offene* Issues oder Pull-Requests noch nicht und *geschlossene* Issues und Pull-Requests vollständig im Projekt umgesetzt wurden. Commit-Meldungen müssen dann nur noch auf die zugehörigen *Issues* referenzieren.
+Weil die Commit-Meldungen nicht viel Platz zu dokumentation bieten, werden *Entscheidungen* in der Regels als **Issues** und *Massnamen* als **Pull-Requests** einer `git`-Hosting-Plattform dokumentiert. Dabei gilt, dass *offene* Issues oder Pull-Requests noch nicht und *geschlossene* Issues und Pull-Requests vollständig im Projekt umgesetzt wurden. Commit-Meldungen müssen dann nur noch auf die zugehörigen *Issues* referenzieren.
 
 ### Projektübersicht
 
