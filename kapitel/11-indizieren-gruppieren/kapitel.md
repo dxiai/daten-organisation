@@ -172,5 +172,15 @@ Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem and
 
 ::: {.callout-tip}
 ## Praxis
-Nicht randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden. 
+Nicht-randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden. 
 :::
+
+## Gruppieren
+
+::: {#def-gruppieren}
+Beim **Gruppieren** werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.
+:::
+
+Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Dabei bleibt die Gesamtstruktur der Daten erhalten. *Eine Gruppierung ist also nur an die Verwendung des Sekundärindex gekoppelt.* 
+
+Oft werden Gruppierungen verwendet, um wiederholtes Filtern zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten gearbeitet werden.
