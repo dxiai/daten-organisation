@@ -23,8 +23,8 @@ Mit **Indizieren** wird die Arbeitsweise von Algorithmen bezeichnet, mit der Dat
 Es werden drei Arten von Indizes unterschieden: 
 
 1. Der **Primärindex**, mit dem ein einzelner Datensatz eindeutig *identifiziert* werden kann. 
-2. **Sekundärindizes** erlauben *Querverweise* auf eine zweite Stichprobe (eine sog. *Indextabelle* oder engl. *Lookup-Table*).
-3. **Sekundärindizes** erlauben die Identifikation von Datensätzen mit *gemeinsamen Eigenschaften*. Diese Indizes werden auch als *Gruppenindex* bezeichnet.
+2. **Fremdschlüssel** sind Sekundärindizes für *Querverweise* auf eine zweite Datenstruktur (eine sog. *Indextabelle* oder engl. *Lookup-Table*).
+3. **Gruppenindizes** sind Sekundärindizes zur Identifikation von Datensätzen mit *gemeinsamen Eigenschaften*.
 
 Weil ein Index Werte über einen Datensatz enthält, gehört ein Index zum jeweiligen Datensatz und wird über einen *Indexvektor* in einer Stichprobe abgebildet.
 
