@@ -294,6 +294,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">15.2.1</span> Fazit</a></li>
   </ul></li>
+  <li><a href="#gruppieren" id="toc-gruppieren" class="nav-link" data-scroll-target="#gruppieren"><span class="header-section-number">15.3</span> Gruppieren</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
     </div>
@@ -610,12 +611,20 @@ Praxis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Nicht randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden.</p>
+<p>Nicht-randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden.</p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="gruppieren" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="gruppieren"><span class="header-section-number">15.3</span> Gruppieren</h2>
+<div id="def-gruppieren" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15.10 </strong></span>Beim <strong>Gruppieren</strong> werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.</p>
+</div>
+<p>Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Dabei bleibt die Gesamtstruktur der Daten erhalten. <em>Eine Gruppierung ist also nur an die Verwendung des Sekundärindex gekoppelt.</em></p>
+<p>Oft werden Gruppierungen verwendet, um wiederholtes Filtern zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten gearbeitet werden.</p>
+
+
 </section>
 
 </main> <!-- /main -->
