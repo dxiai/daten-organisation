@@ -17,7 +17,7 @@ Als *Logischer Ausdruck* werden alle Funktionsketten bezeichnet, die einen Wahrh
 Die einfachsten logischen Ausdrücke sind die Wahrheitswerte selbst. 
 :::
 
-Die klassische Aussagenlogik ist seit der Antike Teil der Rethorik und der Philosophie. Sie wurde von Aristoteles in seiner Schrift "Peri hermeneias" (Über die Interpretation) beschrieben. Das Ziel der Aussagenlogik ist es, die Struktur von Argumenten zu analysieren und zu bewerten. 
+Die klassische Aussagenlogik ist seit der Antike Teil der Rhetorik und der Philosophie. Sie wurde von Aristoteles in seiner Schrift "Peri hermeneias" (Über die Interpretation) beschrieben. Das Ziel der Aussagenlogik ist es, die Struktur von Argumenten zu analysieren und zu bewerten. 
 
 Eine wesentliche Aufgabe der Aussagenlogik ist die Analyse von Argumenten, um sinnvolle und nicht-sinnvolle Aussagen zu unterscheiden. Dazu werden die Argumente in Voraussetzungen (*Prämissen*) und Schlussfolgerungen (*Konklusionen*) unterteilt. Die Prämissen sind die Voraussetzungen, die für die Konklusion erfüllt sein müssen. 
 
