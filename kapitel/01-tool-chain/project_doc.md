@@ -87,7 +87,7 @@ Die Verwendungsrechte *externer Abhängigkeiten* können die Verwendung des eige
 Projekte, die mit Bezug auf die Daten und/oder die Auswertungsalgorithmen als *vertraulich* gelten, dürfen nicht in *öffentlichen* Projektrepositories verwaltet werden. In diesem Fall muss ein *privates* Repository verwendet werden. Unter Umständen ist eine Verwendung einer öffentlichen Plattform nicht möglich. In diesem Fall muss eine eigene `git`-Hosting-Plattform genutzt werden.
 :::
 
-Neben der Verwendung und Vertraulichkeit ist auch die **Urheberschaft** zu dokumentieren. Die Urheberschaft ist die Liste der Personen, die an einem Projekt mitgearbeitet haben. Traditionell wurde die Urheberschaft wird in der Regel in der Datei `AUTHORS.md` oder `AUTHORS` dokumentiert. 
+Neben der Verwendung und Vertraulichkeit ist auch die **Urheberschaft** zu dokumentieren. Die Urheberschaft ist die Liste der Personen, die an einem Projekt mitgearbeitet haben. Traditionell wurde die Urheberschaft, in der Regel, in der Datei `AUTHORS.md` oder `AUTHORS` dokumentiert. 
 
 
 ::: {.callout-tip}
