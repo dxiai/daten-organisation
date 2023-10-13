@@ -20,11 +20,42 @@ Ein **Index** bezeichnet Werte, mit denen sich ein oder mehrere Datensätze von 
 Mit **Indizieren** wird die Arbeitsweise von Algorithmen bezeichnet, mit der Datensätze *identifiziert* werden.  
 :::
 
-Es werden drei Arten von Indizes unterschieden: 
+::: {.callout-note}
+## Merke
+Indizes haben immer einen *diskreten Wertebereich*.
+:::
 
-1. Der **Primärindex**, mit dem ein einzelner Datensatz eindeutig *identifiziert* werden kann. 
-2. **Fremdschlüssel** sind Sekundärindizes für *Querverweise* auf eine zweite Datenstruktur (eine sog. *Indextabelle* oder engl. *Lookup-Table*).
-3. **Gruppenindizes** sind Sekundärindizes zur Identifikation von Datensätzen mit *gemeinsamen Eigenschaften*.
+Es werden zwei Arten von Indizes unterschieden: 
+
+::: {#def-primaerindex}
+Ein **Primärindex** enthält nur eindeutige werte, mit denen einzelne Datensätze eindeutig identifiziert werden.
+:::
+
+::: {#def-sekundaerindex}
+Ein **Sekundärindex** verwenden Werte, mit denen mehrere Datensätze identifiziert werden. 
+:::
+
+::: {#def-fremdschluessel}
+Ein **Fremdschlüssel** ist ein *Sekundärindex* für *Querverweise* auf eine zweite Datenstruktur (eine sog. *Indextabelle* oder engl. *Lookup-Table*).
+::: 
+
+Mithilfe von *Fremdschlüsseln* lassen sich gemeinsame Daten in eine zweite Datenstruktur auslagern. Diese Datenstruktur wird oft als Indextabelle bezeichnet.  In einer Indextabelle existiert für jeden eindeutigen Wert des Fremdschlüssels genau ein Datensatz. 
+
+::: {.callout-note}
+## Merke
+Die Werte eines Fremdschlüssels bilden einen Primärschlüssel in einer Indextabelle. 
+:::
+
+::: {#def-gruppenindex}
+Ein **Gruppenindex** ist ein *Sekundärindex* zur Identifikation von Datensätzen mit *gemeinsamen Eigenschaften*.
+::: 
+
+Im Gegensatz zu einem Fremdschlüssel sind diese Eigenschaften Teil des Datensatzes. 
+
+::: {.callout-note}
+## Merke
+Jeder Fremdschlüssel ist gleichzeitig ein Gruppenschlüssel!
+:::
 
 Weil ein Index Werte über einen Datensatz enthält, gehört ein Index zum jeweiligen Datensatz und wird über einen *Indexvektor* in einer Stichprobe abgebildet.
 
@@ -35,7 +66,6 @@ Ein **Indexvektor** bezeichnet einen Vektor, mit dessen Werten Datensätze ident
 ::: {#def-hash}
 Ein **Hash** bezeichnet einen Wert in einem Indexvektor.
 :::
-
 
 ### Existierende Indexvektoren. 
 
@@ -76,12 +106,7 @@ Hashing-Funktionen werden in der Industrie als Unterstützung zur Suche von Date
 
 ### Hashing zur Identifikation
 
-Die einfachste Technik zur eindeutigen Indizierung ist das ***Durchnummerieren*** der Datensätze einer Stichprobe. Bei dieser Technik wird jedem Datensatz eine Nummer zugewiesen. In R verwenden wir dazu die Funktion `row_number()`. Diese Funktion ist einer *Sequenz* vorzuziehen, weil diese Funktion auch bei leeren Stichproben fehlerfrei arbeitet.
-
-In Excel muss zum Durchnummerieren die `SEQUENZ()`-Funktion verwendet werden. Das erreichen wir mit der folgenden Operation: `=SEQUENZ(ZEILEN(StichprobenBereich))`, wobei `StichprobenBereich` eine Excel-Adresse sein muss. Weil mit Excel keine leeren Stichproben erzeugt werden dürfen, gibt es mit Excel nicht das gleiche Problem wie mit R. Wegen dieser Eigenschaft muss ein entsprechender Bereich mindestens einen Stichprobenumfang von eins haben. Diese Eigenschaft gilt auch für Tabellen, die nur aus Überschriften bestehen. 
-
-> **Fingerübung:** Nummerieren Sie die Stichprobe `mtcars` und speichern Sie die Nummern im Vektor `nr`.
-
+Die einfachste Technik zur eindeutigen Indizierung ist das ***Durchnummerieren*** der Datensätze einer Stichprobe. Bei dieser Technik wird jedem Datensatz eine Nummer zugewiesen. I
 
 ### Hashing zum Gruppieren
 
@@ -93,32 +118,6 @@ Vier gängige Techniken können dabei unterschieden werden:
 - Reihenfolgen bilden durch Ganzzahldivision (nur Zahlen)
 - Reihenfolgen bilden durch Modulo-Operation (nur Zahlen)
 - Reihenfolgen durch Anfangsbuchstaben (nur Zeichenketten)
-
-#### Beispiel Hashing zum Gruppieren.
-
-Das folgende Beispiel bildet einen Index, um die Motorisierung der Fahrzeugtypen in der Stichprobe `mtcars` zu bestimmen. Dabei sollen die Modelle in schwach-, mittel-, stark- und sehr starkmotorisierte Typen unterschieden werden. Die Motorisierung richtet sich dabei zum einen nach der Leistung (`hp`). Zum anderen richtet sich die Motorisierung nach dem Fahrzeuggewicht (`wt`), weil für ein schweres Fahrzeug mehr Leistung zum Bewegen benötigt wird als für ein leichtes. Um beide Werte zu berücksichtigen, wird das Verhältnis der beiden Werte bestimmt. Ein Verhältnis ist eine *Division*. In diesem Fall wird das Gewicht als Nenner verwendet und die Leistung als Zähler. So ergeben sich immer Werte grösser als 1, weil die Leistung immer viel grösser als das Gewicht ist.
-
-In diesem Beispiel besteht die Hashing-Funktion aus zwei Teilen: 
-
-1. Das Verhältnis zwischen Leistung und Gewicht wird bestimmt und im Vektor `verhaeltnis` abgelegt. 
-2. Die Leistungsklassen werden durch *Kodieren* den oben festgelegten Klassen zugewiesen und im Vektor `klasse` gespeichert.
-
-```r
-mtcars |> 
-    as_tibble(rownames = "modell") |> 
-    mutate(
-        verhaeltnis = hp/wt, 
-        klasse = case_when( 
-            verhaeltnis > 60 ~ "sehr stark",
-            verhaeltnis > 50 ~ "stark", 
-            verhaeltnis > 40 ~ "mittel", 
-            TRUE ~ "schwach") 
-    )
-```
-
-
-> **Fingerübung:** Bestimmen Sie die Effizienz der Modelle in `mtcars` indem Sie den Verbrauch (`mpg`) und den Hubraum (`disp`) berücksichtigen. Legen Sie Effizienzklassen fest.
-
 
 ### Hashing für Querverweise
 
@@ -134,8 +133,7 @@ Wenn wir mit Teilstichproben arbeiten und diese mit anderen teilen, müssen wir 
 Sobald  personenbezogene Daten statistisch ausgewertet und zur Publikation vorbereitet werden, **müssen** die Daten randomisiert werden!
 :::
 
-
-Dieses kleine Rezept beschreibt eine Technik zur Anonymisierung von Daten durch Mischen. Entscheidend bei dieser Technik ist, dass wir die Werte für unsere Analyse zusammenhalten möchten, sodass unsere Ergebnisse nachvollziehbar bleiben. Gleichzeitig soll es unmöglich werden, diese Daten mit anderen Teilen unserer Studien in Verbindung zu bringen.
+Dieses Rezept beschreibt eine Technik zur Anonymisierung von Daten durch Mischen. Entscheidend bei dieser Technik ist, dass wir die Werte für unsere Analyse zusammenhalten möchten, sodass unsere Ergebnisse nachvollziehbar bleiben. Gleichzeitig soll es unmöglich werden, diese Daten mit anderen Teilen unserer Studien in Verbindung zu bringen.
 
 Die Technik der Anonymisierung durch Mischen besteht aus vier Schritten: 
 
@@ -146,51 +144,33 @@ Die Technik der Anonymisierung durch Mischen besteht aus vier Schritten:
 
 #### Schritt 1: Auswahl der Vektoren
 
-Wie üblich wählen wir die Vektoren mit der `select()`-Funktion aus. 
+Beim Anonymisieren müssen alle Vektoren entfernt werden, über die der Ursprung der Daten abgeleitet werden kann. Oft ist es sinnvoller, nur die Vektoren auszuwählen, die öffentlich zugänglich gemacht werden sollen.
 
 #### Schritt 2: Erzeugung eines eindeutigen Vektors
 
-Alle unsere Werte müssen zusammengehalten werden, weil unsere Analyse sonst nicht mehr nachvollziehbar ist. Wir nummerieren dazu unsere Datensätze durch. 
+Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Informationen über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind. 
+
+Hierzu wird als Hashing-Funktion ein *Zufallszahlengenerator* verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als *Sortierindex*.
+
+::: {.callout-warning}
+Als Hashing-Funktion dürfen nur Zufallsgeneratoren für gleichverteilte Werte eingesetzt werden, weil nur so eine Klumpung von Werten vermieden werden kann, weil alle Werte im Erzeugungsintervall gleich wahrscheinlich sind. Es auch zu beachten, dass der Wertebereich des Zufallsgenerators viel grösser ist als die Anzahl der vorliegenden Datensätze.
+:::
 
 #### Schritt 3: Mischen
 
-Dieser Schritt greift auf die Funktion `sample()` zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch ``daten |> mutate( id_neu = sample(id) )``. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf ``daten |> arrange( id_neu )``. 
+In diesem Schritt werden die Datensätze über den in Schritt 2 erzeugten Sortierindex angeordnet. Dabei wird ausgenutzt, dass ein Zufallszahlengenerator Werte in keiner bestimmten Reihenfolge erzeugt. Das Sortieren entlang dieses Index bringt die erzeugten Hashes in eine neue Reihenfolge. Dadurch werden die Werte effektiv gemischt. Die neue Reihenfolge ist wegen Schritt 2 zufällig. 
 
-#### Schritt 4: Entfernen des eindeutigen Vektors und exportieren der Daten
+Das zufällige Mischen erzeugt Rauschen, welches Informationen überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.
 
-Abschliessend müssen wir **unbedingt** die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: ``daten |> select(-c(id, id_neu))``. 
+#### Schritt 4: Entfernen des Sortierindex und exportieren der Daten
 
-#### Vollständige Lösung
+Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Informationen über den verwendeten Zufallsgenerator enthalten.  
 
-Wir greifen hier auf eine Stichprobe zurück, die Geschlechtsinformationen, Alter und digitale Nutzungsgewohnheiten umfasst. Wir erstellen zwei getrennte Teilstichproben, von denen eine nur die Nutzungsgewohnheiten und das Geschlecht und eine nur die Nutzungsgewohnheiten und das Alter beinhaltet. 
+### Fazit
 
+Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem anderen Teil der Stichprobe zu kombinieren und so tiefere Rückschlüsse über die Teilnehmenden zuzulassen. Nur noch durch den Zugriff auf die ursprünglichen Daten können diese Zusammenhänge hergestellt werden. Daher sind die ursprünglichen Daten oft besonders schützenswert und sollten ohne Randomisierung nicht weitergegeben werden. 
 
-Sie müssen die Datei vor dem Einlesen noch in `beispielstichprobe.csv` umbenennen.
-
-```R
-daten = read_delim("beispielstichprobe.csv")
-
-# mischen Funktion aus einer Funktionskette erstellen, damit 
-#    wir nicht so viel tippen müssen.
-mischen = . |> 
-    mutate( 
-        id = row_number(), 
-        id_neu = sample(id)
-    ) |> 
-    arrange(id_neu) |> 
-    select(-c(id, id_neu))
-
-daten |> 
-    select(geschlecht, starts_with("technik")) |> 
-    mischen() |> 
-    write_csv("teilstichprobe_geschlecht_technik.csv")
-
-daten |> 
-    select(alter, starts_with("sozial")) |> 
-    mischen() |> 
-    write_csv("teilstichprobe_alter_sozial.csv")
-```
-
-Die zwei Teilstichproben lassen sich nicht mehr zusammenführen. Damit erkennen wir auch die Grenzen dieser Technik: Wenn zwei gemischte Stichproben ausreichend viele gemeinsame oder sehr detaillierte Vektoren haben, die in beiden Teilstichproben vorkommen, dann können diese Stichproben trotz mischen wieder zusammengeführt werden. 
-
-Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem anderen Teil der Stichprobe zu kombinieren und so tiefere Rückschlüsse über die Teilnehmenden (womöglich unwissend) zuzulassen. Nur noch durch den Zugriff auf die ursprünglichen Daten können diese Zusammenhänge hergestellt werden. Daher sind die ursprünglichen Daten oft besonders schützenswert und sollten ohne Randomisierung nicht weitergegeben werden. 
+::: {.callout-tip}
+## Praxis
+Nicht randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden. 
+:::
