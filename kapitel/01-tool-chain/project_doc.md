@@ -66,11 +66,11 @@ Die folgende Tabelle zeigt Paketmanager und die Datei für externe Abhängigkeit
 
 ### Vertraulichkeit, Verwendung und Urheberschaft
 
-Per Konvention wird die **Vertraulichkeit** und **Verwendungsrechte** in der Datei `LICENCE.md` oder `LICENSE` dokumentiert. Dabei handelt es sich um ein rechtliches Dokument, dass oft von einer Organisation oder Auftraggeber vorgegeben wird oder, wie im Fall von Open Source Lizenzen, durch einen Verband erstellt wurden. Die Lizenzdatei wird in aller Regel in einem Projekt nicht oder nur sehr selten geändert. 
+Per Konvention wird die **Vertraulichkeit** und **Verwendungsrechte** in der Datei `LICENCE.md` oder `LICENSE` dokumentiert. Dabei handelt es sich um ein rechtliches Dokument, das oft von einer Organisation oder Auftraggeber vorgegeben wird oder, wie im Fall von Open Source Lizenzen, durch einen Verband erstellt wurden. Die Lizenzdatei wird in aller Regel in einem Projekt nicht oder nur sehr selten geändert. 
 
 ::: {.callout-caution}
 ## Achtung
-Fehlt eine Lizenzdatei ist das Projekt nicht lizenzlos, sondern unterliegt dem gesetzlichen Urheberrecht am Wohnsitz der Projektbeteiligten. Damit ein Projekt lizenzlos veröffentlicht werden kann, muss dieses explizit in der Lizenzdatei festgehalten werden. Ein Beispiel für eine solchen Vermerk ist die sog. [MIT Lizenz](https://opensource.org/license/mit/).
+Fehlt eine Lizenzdatei, ist das Projekt nicht lizenzlos, sondern unterliegt dem gesetzlichen Urheberrecht am Wohnsitz der Projektbeteiligten. Damit ein Projekt lizenzlos veröffentlicht werden kann, muss dieses explizit in der Lizenzdatei festgehalten werden. Ein Beispiel für eine solchen Vermerk ist die sog. [MIT Lizenz](https://opensource.org/license/mit/).
 :::
 
 
