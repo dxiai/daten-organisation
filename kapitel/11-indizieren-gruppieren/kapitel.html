@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -324,7 +290,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hashing-zum-gruppieren" id="toc-hashing-zum-gruppieren" class="nav-link" data-scroll-target="#hashing-zum-gruppieren"><span class="header-section-number">15.1.4</span> Hashing zum Gruppieren</a></li>
   <li><a href="#hashing-für-querverweise" id="toc-hashing-für-querverweise" class="nav-link" data-scroll-target="#hashing-für-querverweise"><span class="header-section-number">15.1.5</span> Hashing für Querverweise</a></li>
   </ul></li>
-  <li><a href="#datensätze-randomisieren" id="toc-datensätze-randomisieren" class="nav-link" data-scroll-target="#datensätze-randomisieren"><span class="header-section-number">15.2</span> Datensätze randomisieren</a></li>
+  <li><a href="#datensätze-randomisieren" id="toc-datensätze-randomisieren" class="nav-link" data-scroll-target="#datensätze-randomisieren"><span class="header-section-number">15.2</span> Datensätze randomisieren</a>
+  <ul class="collapse">
+  <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">15.2.1</span> Fazit</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
     </div>
@@ -369,18 +338,66 @@ Work in Progress
 <div id="def-indizieren" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15.2 </strong></span>Mit <strong>Indizieren</strong> wird die Arbeitsweise von Algorithmen bezeichnet, mit der Datensätze <em>identifiziert</em> werden.</p>
 </div>
-<p>Es werden drei Arten von Indizes unterschieden:</p>
-<ol type="1">
-<li>Der <strong>Primärindex</strong>, mit dem ein einzelner Datensatz eindeutig <em>identifiziert</em> werden kann.</li>
-<li><strong>Sekundärindizes</strong> erlauben <em>Querverweise</em> auf eine zweite Stichprobe (eine sog. <em>Indextabelle</em> oder engl. <em>Lookup-Table</em>).</li>
-<li><strong>Sekundärindizes</strong> erlauben die Identifikation von Datensätzen mit <em>gemeinsamen Eigenschaften</em>. Diese Indizes werden auch als <em>Gruppenindex</em> bezeichnet.</li>
-</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Indizes haben immer einen <em>diskreten Wertebereich</em>.</p>
+</div>
+</div>
+<p>Es werden zwei Arten von Indizes unterschieden:</p>
+<div id="def-primaerindex" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15.3 </strong></span>Ein <strong>Primärindex</strong> enthält nur eindeutige werte, mit denen einzelne Datensätze eindeutig identifiziert werden.</p>
+</div>
+<div id="def-sekundaerindex" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15.4 </strong></span>Ein <strong>Sekundärindex</strong> verwenden Werte, mit denen mehrere Datensätze identifiziert werden.</p>
+</div>
+<div id="def-fremdschluessel" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15.5 </strong></span>Ein <strong>Fremdschlüssel</strong> ist ein <em>Sekundärindex</em> für <em>Querverweise</em> auf eine zweite Datenstruktur (eine sog. <em>Indextabelle</em> oder engl. <em>Lookup-Table</em>).</p>
+</div>
+<p>Mithilfe von <em>Fremdschlüsseln</em> lassen sich gemeinsame Daten in eine zweite Datenstruktur auslagern. Diese Datenstruktur wird oft als Indextabelle bezeichnet. In einer Indextabelle existiert für jeden eindeutigen Wert des Fremdschlüssels genau ein Datensatz.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Werte eines Fremdschlüssels bilden einen Primärschlüssel in einer Indextabelle.</p>
+</div>
+</div>
+<div id="def-gruppenindex" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15.6 </strong></span>Ein <strong>Gruppenindex</strong> ist ein <em>Sekundärindex</em> zur Identifikation von Datensätzen mit <em>gemeinsamen Eigenschaften</em>.</p>
+</div>
+<p>Im Gegensatz zu einem Fremdschlüssel sind diese Eigenschaften Teil des Datensatzes.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jeder Fremdschlüssel ist gleichzeitig ein Gruppenschlüssel!</p>
+</div>
+</div>
 <p>Weil ein Index Werte über einen Datensatz enthält, gehört ein Index zum jeweiligen Datensatz und wird über einen <em>Indexvektor</em> in einer Stichprobe abgebildet.</p>
 <div id="def-indexvektor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.3 </strong></span>Ein <strong>Indexvektor</strong> bezeichnet einen Vektor, mit dessen Werten Datensätze identifiziert werden können.</p>
+<p><span class="theorem-title"><strong>Definition 15.7 </strong></span>Ein <strong>Indexvektor</strong> bezeichnet einen Vektor, mit dessen Werten Datensätze identifiziert werden können.</p>
 </div>
 <div id="def-hash" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.4 </strong></span>Ein <strong>Hash</strong> bezeichnet einen Wert in einem Indexvektor.</p>
+<p><span class="theorem-title"><strong>Definition 15.8 </strong></span>Ein <strong>Hash</strong> bezeichnet einen Wert in einem Indexvektor.</p>
 </div>
 <section id="existierende-indexvektoren." class="level3" data-number="15.1.1">
 <h3 data-number="15.1.1" class="anchored" data-anchor-id="existierende-indexvektoren."><span class="header-section-number">15.1.1</span> Existierende Indexvektoren.</h3>
@@ -500,17 +517,13 @@ Work in Progress
 <h3 data-number="15.1.2" class="anchored" data-anchor-id="fehlende-indexvektoren"><span class="header-section-number">15.1.2</span> Fehlende Indexvektoren</h3>
 <p>Gelegentlich liegen in einer Stichprobe keine Primär- oder Sekundärindizes vor oder die vorhandenen Indizes erlauben keine Zusammenfassungen für eine konkrete Fragestellung. In solchen Fällen muss ein entsprechender Index erzeugt werden.</p>
 <div id="def-hashing-funktion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.5 </strong></span>Eine Funktion, die <em>Hashes</em> für Indexvektoren erzeugt, heisst <strong>Hashing-Funktion</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 15.9 </strong></span>Eine Funktion, die <em>Hashes</em> für Indexvektoren erzeugt, heisst <strong>Hashing-Funktion</strong>.</p>
 </div>
 <p>Hashing-Funktionen werden in der Industrie als Unterstützung zur Suche von Datensätzen in Datenbanken eingesetzt. Durch die geschickte Berechnung von Hashes beschleunigen diese Funktionen die Suche einzelner Werte um ein Vielfaches, indem sie den Bereich für die Suche einschränken. Deshalb haben viele Hashing-Funktionen ein anderes <strong>Anwendungsziel</strong> als die hier beschriebenen Hashing-Funktionen.</p>
 </section>
 <section id="hashing-zur-identifikation" class="level3" data-number="15.1.3">
 <h3 data-number="15.1.3" class="anchored" data-anchor-id="hashing-zur-identifikation"><span class="header-section-number">15.1.3</span> Hashing zur Identifikation</h3>
-<p>Die einfachste Technik zur eindeutigen Indizierung ist das <strong><em>Durchnummerieren</em></strong> der Datensätze einer Stichprobe. Bei dieser Technik wird jedem Datensatz eine Nummer zugewiesen. In R verwenden wir dazu die Funktion <code>row_number()</code>. Diese Funktion ist einer <em>Sequenz</em> vorzuziehen, weil diese Funktion auch bei leeren Stichproben fehlerfrei arbeitet.</p>
-<p>In Excel muss zum Durchnummerieren die <code>SEQUENZ()</code>-Funktion verwendet werden. Das erreichen wir mit der folgenden Operation: <code>=SEQUENZ(ZEILEN(StichprobenBereich))</code>, wobei <code>StichprobenBereich</code> eine Excel-Adresse sein muss. Weil mit Excel keine leeren Stichproben erzeugt werden dürfen, gibt es mit Excel nicht das gleiche Problem wie mit R. Wegen dieser Eigenschaft muss ein entsprechender Bereich mindestens einen Stichprobenumfang von eins haben. Diese Eigenschaft gilt auch für Tabellen, die nur aus Überschriften bestehen.</p>
-<blockquote class="blockquote">
-<p><strong>Fingerübung:</strong> Nummerieren Sie die Stichprobe <code>mtcars</code> und speichern Sie die Nummern im Vektor <code>nr</code>.</p>
-</blockquote>
+<p>Die einfachste Technik zur eindeutigen Indizierung ist das <strong><em>Durchnummerieren</em></strong> der Datensätze einer Stichprobe. Bei dieser Technik wird jedem Datensatz eine Nummer zugewiesen. I</p>
 </section>
 <section id="hashing-zum-gruppieren" class="level3" data-number="15.1.4">
 <h3 data-number="15.1.4" class="anchored" data-anchor-id="hashing-zum-gruppieren"><span class="header-section-number">15.1.4</span> Hashing zum Gruppieren</h3>
@@ -522,28 +535,6 @@ Work in Progress
 <li>Reihenfolgen bilden durch Modulo-Operation (nur Zahlen)</li>
 <li>Reihenfolgen durch Anfangsbuchstaben (nur Zeichenketten)</li>
 </ul>
-<section id="beispiel-hashing-zum-gruppieren." class="level4" data-number="15.1.4.1">
-<h4 data-number="15.1.4.1" class="anchored" data-anchor-id="beispiel-hashing-zum-gruppieren."><span class="header-section-number">15.1.4.1</span> Beispiel Hashing zum Gruppieren.</h4>
-<p>Das folgende Beispiel bildet einen Index, um die Motorisierung der Fahrzeugtypen in der Stichprobe <code>mtcars</code> zu bestimmen. Dabei sollen die Modelle in schwach-, mittel-, stark- und sehr starkmotorisierte Typen unterschieden werden. Die Motorisierung richtet sich dabei zum einen nach der Leistung (<code>hp</code>). Zum anderen richtet sich die Motorisierung nach dem Fahrzeuggewicht (<code>wt</code>), weil für ein schweres Fahrzeug mehr Leistung zum Bewegen benötigt wird als für ein leichtes. Um beide Werte zu berücksichtigen, wird das Verhältnis der beiden Werte bestimmt. Ein Verhältnis ist eine <em>Division</em>. In diesem Fall wird das Gewicht als Nenner verwendet und die Leistung als Zähler. So ergeben sich immer Werte grösser als 1, weil die Leistung immer viel grösser als das Gewicht ist.</p>
-<p>In diesem Beispiel besteht die Hashing-Funktion aus zwei Teilen:</p>
-<ol type="1">
-<li>Das Verhältnis zwischen Leistung und Gewicht wird bestimmt und im Vektor <code>verhaeltnis</code> abgelegt.</li>
-<li>Die Leistungsklassen werden durch <em>Kodieren</em> den oben festgelegten Klassen zugewiesen und im Vektor <code>klasse</code> gespeichert.</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"modell"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">verhaeltnis =</span> hp<span class="sc">/</span>wt, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">klasse =</span> <span class="fu">case_when</span>( </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            verhaeltnis <span class="sc">&gt;</span> <span class="dv">60</span> <span class="sc">~</span> <span class="st">"sehr stark"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            verhaeltnis <span class="sc">&gt;</span> <span class="dv">50</span> <span class="sc">~</span> <span class="st">"stark"</span>, </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            verhaeltnis <span class="sc">&gt;</span> <span class="dv">40</span> <span class="sc">~</span> <span class="st">"mittel"</span>, </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"schwach"</span>) </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<blockquote class="blockquote">
-<p><strong>Fingerübung:</strong> Bestimmen Sie die Effizienz der Modelle in <code>mtcars</code> indem Sie den Verbrauch (<code>mpg</code>) und den Hubraum (<code>disp</code>) berücksichtigen. Legen Sie Effizienzklassen fest.</p>
-</blockquote>
-</section>
 </section>
 <section id="hashing-für-querverweise" class="level3" data-number="15.1.5">
 <h3 data-number="15.1.5" class="anchored" data-anchor-id="hashing-für-querverweise"><span class="header-section-number">15.1.5</span> Hashing für Querverweise</h3>
@@ -567,7 +558,7 @@ Wichtig
 <p>Sobald personenbezogene Daten statistisch ausgewertet und zur Publikation vorbereitet werden, <strong>müssen</strong> die Daten randomisiert werden!</p>
 </div>
 </div>
-<p>Dieses kleine Rezept beschreibt eine Technik zur Anonymisierung von Daten durch Mischen. Entscheidend bei dieser Technik ist, dass wir die Werte für unsere Analyse zusammenhalten möchten, sodass unsere Ergebnisse nachvollziehbar bleiben. Gleichzeitig soll es unmöglich werden, diese Daten mit anderen Teilen unserer Studien in Verbindung zu bringen.</p>
+<p>Dieses Rezept beschreibt eine Technik zur Anonymisierung von Daten durch Mischen. Entscheidend bei dieser Technik ist, dass wir die Werte für unsere Analyse zusammenhalten möchten, sodass unsere Ergebnisse nachvollziehbar bleiben. Gleichzeitig soll es unmöglich werden, diese Daten mit anderen Teilen unserer Studien in Verbindung zu bringen.</p>
 <p>Die Technik der Anonymisierung durch Mischen besteht aus vier Schritten:</p>
 <ol type="1">
 <li>Auswahl der Vektoren, die wir in einer Publikation teilen möchten,</li>
@@ -577,47 +568,51 @@ Wichtig
 </ol>
 <section id="schritt-1-auswahl-der-vektoren" class="level4" data-number="15.2.0.1">
 <h4 data-number="15.2.0.1" class="anchored" data-anchor-id="schritt-1-auswahl-der-vektoren"><span class="header-section-number">15.2.0.1</span> Schritt 1: Auswahl der Vektoren</h4>
-<p>Wie üblich wählen wir die Vektoren mit der <code>select()</code>-Funktion aus.</p>
+<p>Beim Anonymisieren müssen alle Vektoren entfernt werden, über die der Ursprung der Daten abgeleitet werden kann. Oft ist es sinnvoller, nur die Vektoren auszuwählen, die öffentlich zugänglich gemacht werden sollen.</p>
 </section>
 <section id="schritt-2-erzeugung-eines-eindeutigen-vektors" class="level4" data-number="15.2.0.2">
 <h4 data-number="15.2.0.2" class="anchored" data-anchor-id="schritt-2-erzeugung-eines-eindeutigen-vektors"><span class="header-section-number">15.2.0.2</span> Schritt 2: Erzeugung eines eindeutigen Vektors</h4>
-<p>Alle unsere Werte müssen zusammengehalten werden, weil unsere Analyse sonst nicht mehr nachvollziehbar ist. Wir nummerieren dazu unsere Datensätze durch.</p>
+<p>Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Informationen über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind.</p>
+<p>Hierzu wird als Hashing-Funktion ein <em>Zufallszahlengenerator</em> verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als <em>Sortierindex</em>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warnung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Als Hashing-Funktion dürfen nur Zufallsgeneratoren für gleichverteilte Werte eingesetzt werden, weil nur so eine Klumpung von Werten vermieden werden kann, weil alle Werte im Erzeugungsintervall gleich wahrscheinlich sind. Es auch zu beachten, dass der Wertebereich des Zufallsgenerators viel grösser ist als die Anzahl der vorliegenden Datensätze.</p>
+</div>
+</div>
 </section>
 <section id="schritt-3-mischen" class="level4" data-number="15.2.0.3">
 <h4 data-number="15.2.0.3" class="anchored" data-anchor-id="schritt-3-mischen"><span class="header-section-number">15.2.0.3</span> Schritt 3: Mischen</h4>
-<p>Dieser Schritt greift auf die Funktion <code>sample()</code> zurück. Wir erzeugen aus den ursprünglichen Nummerierungen eine neue Nummerierung durch <code>daten |&gt; mutate( id_neu = sample(id) )</code>. Nach dieser neuen Nummerierung sind unsere Datensätze aber immer noch in der gleichen Reihenfolge und noch nicht gemischt. Wir müssen also die Reihenfolge so anpassen, dass die neue Nummerierung gilt. Das erreichen wir mit dem Funktionsaufruf <code>daten |&gt; arrange( id_neu )</code>.</p>
+<p>In diesem Schritt werden die Datensätze über den in Schritt 2 erzeugten Sortierindex angeordnet. Dabei wird ausgenutzt, dass ein Zufallszahlengenerator Werte in keiner bestimmten Reihenfolge erzeugt. Das Sortieren entlang dieses Index bringt die erzeugten Hashes in eine neue Reihenfolge. Dadurch werden die Werte effektiv gemischt. Die neue Reihenfolge ist wegen Schritt 2 zufällig.</p>
+<p>Das zufällige Mischen erzeugt Rauschen, welches Informationen überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.</p>
 </section>
-<section id="schritt-4-entfernen-des-eindeutigen-vektors-und-exportieren-der-daten" class="level4" data-number="15.2.0.4">
-<h4 data-number="15.2.0.4" class="anchored" data-anchor-id="schritt-4-entfernen-des-eindeutigen-vektors-und-exportieren-der-daten"><span class="header-section-number">15.2.0.4</span> Schritt 4: Entfernen des eindeutigen Vektors und exportieren der Daten</h4>
-<p>Abschliessend müssen wir <strong>unbedingt</strong> die beiden Hilfsvektoren, die wir zum Mischen verwendet haben, aus unserer Stichprobe wieder entfernen. Das erreichen wir mit einer Vektorauswahl: <code>daten |&gt; select(-c(id, id_neu))</code>.</p>
+<section id="schritt-4-entfernen-des-sortierindex-und-exportieren-der-daten" class="level4" data-number="15.2.0.4">
+<h4 data-number="15.2.0.4" class="anchored" data-anchor-id="schritt-4-entfernen-des-sortierindex-und-exportieren-der-daten"><span class="header-section-number">15.2.0.4</span> Schritt 4: Entfernen des Sortierindex und exportieren der Daten</h4>
+<p>Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Informationen über den verwendeten Zufallsgenerator enthalten.</p>
 </section>
-<section id="vollständige-lösung" class="level4" data-number="15.2.0.5">
-<h4 data-number="15.2.0.5" class="anchored" data-anchor-id="vollständige-lösung"><span class="header-section-number">15.2.0.5</span> Vollständige Lösung</h4>
-<p>Wir greifen hier auf eine Stichprobe zurück, die Geschlechtsinformationen, Alter und digitale Nutzungsgewohnheiten umfasst. Wir erstellen zwei getrennte Teilstichproben, von denen eine nur die Nutzungsgewohnheiten und das Geschlecht und eine nur die Nutzungsgewohnheiten und das Alter beinhaltet.</p>
-<p>Sie müssen die Datei vor dem Einlesen noch in <code>beispielstichprobe.csv</code> umbenennen.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>daten <span class="ot">=</span> <span class="fu">read_delim</span>(<span class="st">"beispielstichprobe.csv"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># mischen Funktion aus einer Funktionskette erstellen, damit </span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#    wir nicht so viel tippen müssen.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mischen <span class="ot">=</span> . <span class="sc">|&gt;</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>( </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">id =</span> <span class="fu">row_number</span>(), </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">id_neu =</span> <span class="fu">sample</span>(id)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(id_neu) <span class="sc">|&gt;</span> </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(id, id_neu))</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">|&gt;</span> </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(geschlecht, <span class="fu">starts_with</span>(<span class="st">"technik"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="st">"teilstichprobe_geschlecht_technik.csv"</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>daten <span class="sc">|&gt;</span> </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(alter, <span class="fu">starts_with</span>(<span class="st">"sozial"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mischen</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_csv</span>(<span class="st">"teilstichprobe_alter_sozial.csv"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Die zwei Teilstichproben lassen sich nicht mehr zusammenführen. Damit erkennen wir auch die Grenzen dieser Technik: Wenn zwei gemischte Stichproben ausreichend viele gemeinsame oder sehr detaillierte Vektoren haben, die in beiden Teilstichproben vorkommen, dann können diese Stichproben trotz mischen wieder zusammengeführt werden.</p>
-<p>Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem anderen Teil der Stichprobe zu kombinieren und so tiefere Rückschlüsse über die Teilnehmenden (womöglich unwissend) zuzulassen. Nur noch durch den Zugriff auf die ursprünglichen Daten können diese Zusammenhänge hergestellt werden. Daher sind die ursprünglichen Daten oft besonders schützenswert und sollten ohne Randomisierung nicht weitergegeben werden.</p>
+<section id="fazit" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="fazit"><span class="header-section-number">15.2.1</span> Fazit</h3>
+<p>Mit den gemischten Daten ist es nun nicht mehr möglich, die Werte mit einem anderen Teil der Stichprobe zu kombinieren und so tiefere Rückschlüsse über die Teilnehmenden zuzulassen. Nur noch durch den Zugriff auf die ursprünglichen Daten können diese Zusammenhänge hergestellt werden. Daher sind die ursprünglichen Daten oft besonders schützenswert und sollten ohne Randomisierung nicht weitergegeben werden.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nicht randomisierte Rohdaten sollte immer in geschützten Repositories versioniert werden.</p>
+</div>
+</div>
 
 
 </section>
