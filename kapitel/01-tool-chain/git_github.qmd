@@ -407,7 +407,7 @@ Date:   Fri Aug 18 15:26:36 2023 +0200
 
 Nun existiert die Datei `AUTHORS.md` auch im `main`-Branch.
 
-#### Merge-Konflikte lösen
+### Merge-Konflikte lösen
 
 Gelegentlich entstehen beim Mergen Konflikte. Ein Merge-Konflikt sind widersprüchliche Inhalte an der gleichen Code-Position. Solche Konflikte können auch entstehen, wenn mehrere Personen gleichgzeitig auf dem gleichen Branch arbeiten.
 
