@@ -353,7 +353,8 @@ div.csl-indent {
   <li><a href="#checkout" id="toc-checkout" class="nav-link" data-scroll-target="#checkout"><span class="header-section-number">7.2.4</span> Checkout</a></li>
   <li><a href="#tags" id="toc-tags" class="nav-link" data-scroll-target="#tags"><span class="header-section-number">7.2.5</span> Tags</a></li>
   <li><a href="#branching-und-merging" id="toc-branching-und-merging" class="nav-link" data-scroll-target="#branching-und-merging"><span class="header-section-number">7.2.6</span> Branching und Merging</a></li>
-  <li><a href="#fetch-pull-und-push" id="toc-fetch-pull-und-push" class="nav-link" data-scroll-target="#fetch-pull-und-push"><span class="header-section-number">7.2.7</span> Fetch, Pull und Push</a></li>
+  <li><a href="#merge-konflikte-lösen" id="toc-merge-konflikte-lösen" class="nav-link" data-scroll-target="#merge-konflikte-lösen"><span class="header-section-number">7.2.7</span> Merge-Konflikte lösen</a></li>
+  <li><a href="#fetch-pull-und-push" id="toc-fetch-pull-und-push" class="nav-link" data-scroll-target="#fetch-pull-und-push"><span class="header-section-number">7.2.8</span> Fetch, Pull und Push</a></li>
   </ul></li>
   <li><a href="#git-projektmanagement" id="toc-git-projektmanagement" class="nav-link" data-scroll-target="#git-projektmanagement"><span class="header-section-number">7.3</span> <code>git</code>-Projektmanagement</a>
   <ul class="collapse">
@@ -678,8 +679,9 @@ Date:   Fri Aug 18 15:26:36 2023 +0200
     Initial commit
         new file:   README.md</code></pre>
 <p>Nun existiert die Datei <code>AUTHORS.md</code> auch im <code>main</code>-Branch.</p>
-<section id="merge-konflikte-lösen" class="level4" data-number="7.2.6.1">
-<h4 data-number="7.2.6.1" class="anchored" data-anchor-id="merge-konflikte-lösen"><span class="header-section-number">7.2.6.1</span> Merge-Konflikte lösen</h4>
+</section>
+<section id="merge-konflikte-lösen" class="level3" data-number="7.2.7">
+<h3 data-number="7.2.7" class="anchored" data-anchor-id="merge-konflikte-lösen"><span class="header-section-number">7.2.7</span> Merge-Konflikte lösen</h3>
 <p>Gelegentlich entstehen beim Mergen Konflikte. Ein Merge-Konflikt sind widersprüchliche Inhalte an der gleichen Code-Position. Solche Konflikte können auch entstehen, wenn mehrere Personen gleichgzeitig auf dem gleichen Branch arbeiten.</p>
 <p><code>git</code> löst solche Widersprüche nicht selbst, sondern erfordert ein aktives Eingreifen der Entwickler:innen. Um diesen Schritt zu erleichtern, fügt git Markierungen für die Konflikte ein. Diese Markierungen sind in den aktiven Daten zu finden, aber sind keine eigenständigen Versionen im Repository.</p>
 <p>Ein solcher Konflikt kann dadurch provoziert werden, indem im <code>extras</code>-Branch der Datei <code>README.md</code> am Ende zusätzlicher Text hinzugefügt wird, so dass die Datei den folgenden Inhalt hat.</p>
@@ -706,9 +708,8 @@ Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>Alle Informationen zu den Autoren finden sich in der Datei <span class="co">[</span><span class="ot">AUTHORS.md</span><span class="co">]</span>.</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Die Datei ist nun konfliktfrei und kann in die Versionierung aufgenommen werden.</p>
-</section>
-<section id="rebase" class="level4" data-number="7.2.6.2">
-<h4 data-number="7.2.6.2" class="anchored" data-anchor-id="rebase"><span class="header-section-number">7.2.6.2</span> Rebase</h4>
+<section id="rebase" class="level4" data-number="7.2.7.1">
+<h4 data-number="7.2.7.1" class="anchored" data-anchor-id="rebase"><span class="header-section-number">7.2.7.1</span> Rebase</h4>
 <p>Normalerweise erfolgt das Auflösen von Merge-Konflikten durch die Verantwortlichen des Hauptzweigs. Das ist aus Sicht des Projektmanagements ungünstig. Besser wäre es, wenn nur konfliktfreie Änderungen übernommen werden müssten. <code>git</code> bietet hierzu das Kommando <code>git rebase</code> an. Das Kommando zieht alle Änderungen des Zielzweigs in den aktuellen Arbeitszweig.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout extras</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rebase main</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -729,8 +730,8 @@ Praxis
 </div>
 </section>
 </section>
-<section id="fetch-pull-und-push" class="level3" data-number="7.2.7">
-<h3 data-number="7.2.7" class="anchored" data-anchor-id="fetch-pull-und-push"><span class="header-section-number">7.2.7</span> Fetch, Pull und Push</h3>
+<section id="fetch-pull-und-push" class="level3" data-number="7.2.8">
+<h3 data-number="7.2.8" class="anchored" data-anchor-id="fetch-pull-und-push"><span class="header-section-number">7.2.8</span> Fetch, Pull und Push</h3>
 <p><code>git</code> synchronisiert Repositories nicht automatisch. Damit Änderungen in einem Clone oder Fork im eigenen Repository übernommen werden, müssen die Repositories <em>synchronisiert</em> werden.</p>
 <p>Das Kommando <code>git fetch</code> synchronisiert die Versionen der Remotes mit dem lokalem Repository. Falls ein Repository mehrere Remotes registriert hat, können alle Änderungen in allen Remotes mit <code>git fetch --all</code> auf einmal abgeglichen werden.</p>
 <p>Nach <code>git fetch</code> enthält das lokale Repository alle Versionen der Remotes. Diese Versionen werden allerdings nicht automatich in die lokalen Versionszweige übernommen. Die so synchornisierten Änderungen existieren als eigene Branches im Repository. Im Gegensatz zum regulären Merge, werden diese “Remote-Branches” mit dem Kommando <code>git pull</code> in die lokalen Versionen übernommen. <code>git pull</code> löst alle Unterschiede für den aktuellen Branch im lokalen und remote Repository auf.</p>
