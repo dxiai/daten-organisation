@@ -332,9 +332,10 @@ div.csl-indent {
   <li><a href="#vergleiche" id="toc-vergleiche" class="nav-link" data-scroll-target="#vergleiche"><span class="header-section-number">12.3</span> Vergleiche</a></li>
   <li><a href="#entscheidungen" id="toc-entscheidungen" class="nav-link" data-scroll-target="#entscheidungen"><span class="header-section-number">12.4</span> Entscheidungen</a></li>
   <li><a href="#sec-filtern" id="toc-sec-filtern" class="nav-link" data-scroll-target="#sec-filtern"><span class="header-section-number">12.5</span> Filtern</a></li>
-  <li><a href="#sortieren" id="toc-sortieren" class="nav-link" data-scroll-target="#sortieren"><span class="header-section-number">12.6</span> Sortieren</a>
+  <li><a href="#selektieren" id="toc-selektieren" class="nav-link" data-scroll-target="#selektieren"><span class="header-section-number">12.6</span> Selektieren</a></li>
+  <li><a href="#sortieren" id="toc-sortieren" class="nav-link" data-scroll-target="#sortieren"><span class="header-section-number">12.7</span> Sortieren</a>
   <ul class="collapse">
-  <li><a href="#sortieren-für-fortgeschrittene" id="toc-sortieren-für-fortgeschrittene" class="nav-link" data-scroll-target="#sortieren-für-fortgeschrittene"><span class="header-section-number">12.6.1</span> Sortieren für Fortgeschrittene</a></li>
+  <li><a href="#sortieren-für-fortgeschrittene" id="toc-sortieren-für-fortgeschrittene" class="nav-link" data-scroll-target="#sortieren-für-fortgeschrittene"><span class="header-section-number">12.7.1</span> Sortieren für Fortgeschrittene</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
@@ -886,10 +887,32 @@ Merke
 <p>Weil die Vektoren von Stichprobenobjekten immer die gleiche Länge haben, lassen sich Filter zum Auswählen von Datensätzen verwenden.</p>
 <!-- BEISPIEL -->
 </section>
-<section id="sortieren" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="sortieren"><span class="header-section-number">12.6</span> Sortieren</h2>
+<section id="selektieren" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="selektieren"><span class="header-section-number">12.6</span> Selektieren</h2>
+<p>Sehr häufig liegen umfangreiche Daten mit vielen Vektoren vor. Gelegentlich wollen wir unsere Analyse auf einzelne Vektoren beschränken. Analog zum Filtern von Datensätzen sollen in solchen Fällen nur bestimmte Vektoren ausgewählt werden.</p>
+<div id="def-select" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12.6 </strong></span>Das Filtern von Vektoren heisst <strong>selektieren</strong>.</p>
+</div>
+<p>Weil die Vektoren einer Stichprobe Namen haben, wird in der Regel über die Vektornamen <em>selektiert</em>.</p>
+<p>Die Vektorennamen einer Stichprobe haben besondere Eigenschaften:</p>
+<ol type="1">
+<li>Vektorennamen sind immer von Datentyp <code>Zeichenkette</code>.</li>
+<li>Vektorennamen einer Stichprobe bilden einen <strong>Vektor</strong>.</li>
+<li>Die Vektorennamen einer Stichprobe sind <strong>eindeutig</strong>.</li>
+</ol>
+<p>Die dritte Eigenschaft ist nicht ganz offensichtlich, denn in einer manuell eingegebenen Tabelle kann eine Überschrift mehrfach verwendet werden. Beim Importieren erzwingen die meisten Datenanalyse-Umgebungen eindeutige Vektornamen.</p>
+<p>Aus diesen Eigenschaften folgt, dass die Auswahl von Vektoren durch die Eigenschaften von Zeichenketten unterstützt wird. Zum Selektieren können die folgenden Operationen verwendet werden:</p>
+<ul>
+<li>Identischer Vektorname</li>
+<li>Vektorname beginnt mit einer bestimmten Zeichenkette</li>
+<li>Vektorname endet mit einer bestimmten Zeichenkette</li>
+<li>Vektorname enthält an einer beliebigen Position eine bestimme Zeichenkette</li>
+</ul>
+</section>
+<section id="sortieren" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="sortieren"><span class="header-section-number">12.7</span> Sortieren</h2>
 <div id="def-sorting" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12.6 </strong></span>Als <strong>Sortieren</strong> werden Funktionen bezeichnet, die Reihenfolge von Werten mittels eines logischen Ausdrucks bestimmen.</p>
+<p><span class="theorem-title"><strong>Definition 12.7 </strong></span>Als <strong>Sortieren</strong> werden Funktionen bezeichnet, die Reihenfolge von Werten mittels eines logischen Ausdrucks bestimmen.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -938,8 +961,8 @@ v_{Vorgänger} \le v_{Nachfolger}
 v_{Vorgänger} \ge v_{Nachfolger}
 \tag{12.6}</span></span></p>
 <!-- BEISPIEL asc und desc -->
-<section id="sortieren-für-fortgeschrittene" class="level3" data-number="12.6.1">
-<h3 data-number="12.6.1" class="anchored" data-anchor-id="sortieren-für-fortgeschrittene"><span class="header-section-number">12.6.1</span> Sortieren für Fortgeschrittene</h3>
+<section id="sortieren-für-fortgeschrittene" class="level3" data-number="12.7.1">
+<h3 data-number="12.7.1" class="anchored" data-anchor-id="sortieren-für-fortgeschrittene"><span class="header-section-number">12.7.1</span> Sortieren für Fortgeschrittene</h3>
 <p>Wie beim Filtern können sich die logischen Ausdrücke beim Sortieren auf andere Vektoren beziehen. Dabei wird ebenfalls ein Referenzvektor benötigt. Die Sortierung des Vektors erfolgt entsprechend der Positionen im Referenzvektor. Deshalb müssen Referenzvektoren immer die gleiche Länge wie die Sortiervektoren haben.</p>
 <!-- BEISPIEL -->
 <p>Beim Sortieren können komplexe logische Ausdrücke für spezielle Sortiuerungen eingesetzt werden. Dabei muss beachtet werden, dass diese Ausdrücke eine eindeutige Reihenfolge zulassen.</p>
