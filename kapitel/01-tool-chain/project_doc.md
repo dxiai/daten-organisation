@@ -109,7 +109,7 @@ Bei der Verwendung von Laborberichten wird angenommen, dass undokumentierte Mate
 Ein Laborbericht besteht aus den folgenden Teilen.
 
 - Titel
-- Beteiligte Untersucher
+- Beteiligte Untersuchende
 - Datum, Uhrzeit und Ort
 - Fragestellung bzw. Auftrag
 - Materialliste
@@ -202,7 +202,7 @@ Ein Projektbericht dokumentiert die Ausgangslage, die Methode, die Ergebnisse un
 Ein Projektbericht besteht ***immer*** aus den folgenden Teilen.
 
 - Titel
-- Autoren
+- Autor:innen
 - Zusammenfassung (Abstract)
 - Einleitung und Hintergrund
 - Forschungsfrage/Arbeitsauftrag
