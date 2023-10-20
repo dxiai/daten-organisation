@@ -5,22 +5,24 @@ execute:
 
 # Zeichenketten {#sec-chapter-zeichenketten}
 
-Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als erstes Worte oder Sätze assoziiert. Im [@sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [Kapitel @sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
+Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als erstes Worte oder Sätze assoziiert. Im [Abschnitt @sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [@sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
 
 ::: {#def-zeichenkette}
 Eine Zeichenkette ist eine beliebige Kette von Textsymbolen. Textsymbole können Buchstaben, Ziffern, Satzzeichen sowie nicht-druckbare Zeichen sein.
 :::
 
-Zeichenkette sind immer **diskrete Daten**.
-
-Aus dieser Definition folgt, dass Zeichenketten eine Länge haben müssen.
+Aus dieser Definition folgt, dass jede Zeichenkette eine Länge haben muss.
 
 ::: {#def-zeichenkette-länge}
 Die **Länge** einer Zeichenkette entspricht der Anzahl aller enthaltenen Symbole.
 :::
 
-Zeichenketten sind also *Werte* und haben gleichzeitig die Eigenschaften eines Vektors. 
+Zeichenketten sind also *Werte* und haben gleichzeitig die Eigenschaften von *Vektoren*. 
 
+::: {.callout-note}
+## Merke
+Zeichenketten sind immer **diskrete Daten**.
+:::
 
 ## Nicht-druckbare Zeichen
 ::: {#def-nicht-druckbare-zeichen-zeichenkette}
@@ -74,7 +76,7 @@ Die durch die Texttrennung entstehenden Zeichenketten heissen *Token*.
 Token können Sätze, Worte oder auch einzelne Buchstaben sein. Ein Token muss nicht zwingend sprachlich sinnvoll sein.
 
 ::: {#def-tokenvektor}
-Ein Vektor der Tokens enthält heisst *Token-Vektor*.
+Ein Vektor der Tokens enthält heisst **Token-Vektor**.
 ::: 
 
 Die Texttrennung hat also einen *Token-Vektor* als Ergebnis. 

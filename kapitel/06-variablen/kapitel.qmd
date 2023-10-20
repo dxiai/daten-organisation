@@ -64,10 +64,23 @@ Wie eine Funktion die Effekte erzeugt, wird im **Funktionskörper** festgelegt.
 Manche Funktionen benötigen Eingaben, um daraus die Ergebnisse zu erzeugen.
 
 ::: {#def-parameter} 
-Die Eingaben einer Funktion heissen **Parameter** oder **Funktionsargumente**. Eine Funktion **akzeptiert** diese Parameter als Eingabe.
+Die Eingaben einer Funktion heissen **Parameter**. Eine Funktion **akzeptiert** diese Parameter als Eingabe.
 :::
 
 *Parameter* sind spezielle *Variablen* mit dem Geltungsbereich des Funktionskörpers.
+
+*Parameter* müssen von **Argumenten** abgegrenzt werden. 
+
+::: {#def-argument}
+Ein **Argument** heisst ein Wert, der einem Parameter zugewiesen wird.
+:::
+
+::: {.callout-note}
+## Merke
+**Argumente** beziehen sich auf die Werte, die *für* die Ausführung einer Funktion von *aussen* übergeben werden. 
+
+**Parameter** beziehen sich auf Werte, die *während* einer Funktionsausführeung *innerhalb* des Funktionskörpers verwendet werden. 
+:::
 
 Eine Funktion kann natürlich auch mehrere Parameter haben. Die Parameter einer Funktion werden als **Parameterliste** bezeichnet. Eine solche Parameterliste darf auch eine leere Liste sein. 
 
@@ -110,7 +123,6 @@ In den Datenwissenschaften kommen im Wesentlichen drei Arten von Funktionen zum 
 1. Transformationen, welche einen Wert in einen anderen Wert *überführen*; 
 2. Aggregatoren, die mehrere Werte *zusammenfassen*; und 
 3. Generatoren, mit denen Werte *erzeugt* werden.
-
 
 ### Substitution {#sec-substitution}
 
@@ -417,7 +429,7 @@ $$
 \end{aligned}
 $$ {#eq-nelem-division2}
 
-Auch dieser Weg führt zu keinem Ergebnis für das neutrale Element, weil e_n *ein* Element des Definitionsbereich sein muss. In diesem Fall muss dieser Wert eine Zahl sein. Die Lösung $e_n = a^2$ liefert für unterschiedliche Werte für $a$ verschiedene Werte für $e_n$ kann deshalb auch keine Lösung für das neutrale Element sein. 
+Auch dieser Weg führt zu keinem Ergebnis für das neutrale Element, weil e_n *ein* Element des Definitionsbereich sein muss. In diesem Fall muss dieser Wert eine Zahl sein. Die Lösung $e_n = a^2$ liefert für unterschiedliche Werte für $a$ verschiedene Werte für $e_n$. Deshalb kann $a^2$ keine Lösung für das neutrale Element sein. 
 
 Aus diesen Betrachtungen folgt, dass die Division kein neutrales Element hat, weil über beide Definitionen des neutralen Elements kein eindeutiges Ergebnis für die Division gefunden wurde.
 
@@ -452,6 +464,7 @@ Wenn das Ergebnis einer Funktion als Parameter einer beliebigen anderen Funktion
 
 ::: {#def-fkt-kette}
 Eine **Funktionskette** ist eine Abfolge von Funktionen, wobei eine nachfolgende Funktion das Ergebnis einer vorangehenden Funktion als Parameter akzeptiert. 
+:::
 
 Die Funktionsverkettung dient dem Festlegen der Reihenfolge von Operationen. Das Prinzip der Funktionsverkettung ist einfach: Es wird das Ergebnis einer Funktion als Parameter einer anderen Funktion verwendet.
 
@@ -522,7 +535,7 @@ Aus dieser Bedingung hat die Konsequenz, dass die spezielle Funktionsverkettung 
 
 ::: {.callout-note}
 ## Merke
-Die spezielle Funktionsverkettung ist für parameterlose Funktionen **undefiniert**.
+Für parameterlose Funktionen als rechter Operand sind die allgemeine und die spezielle Funktionsverkettung **undefiniert**.
 :::
 
 Weil die verbleibende Parameterliste Teil der Operation ist, darf sie vom Operator nicht vernachlässigt werden. Der Operator muss also den ersten Parameter, die nachfolgende Funktion **und** die restlichen Parameter der nachfolgenden Funktion berücksichtigen. Daraus ergibt sich, dass der spezielle Funktionsverkettungsoperator *kein* binärer Operator ist. Die Funktion der speziellen Funktionsverkettung ist in @eq-spec-fktchain definiert.
