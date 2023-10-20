@@ -169,7 +169,7 @@ Weil ein Boxplot die Werte in gleichgrosse Intervalle gliedert, geben sie eine g
 
 ### Dichtediagramme
 
-Boxplots und Histogramme fassen die Werte immer zu Intervallen zusammen. Dadurch lässt sich die genaue Verteilung der Daten nicht genau nachvollziehen. Bei **kontinuierlichen Wertebereichen** zeichnen die Intervalle nicht immer ein akkurates Bild der Verteilung. Eine detailliertere Annäherung als ein Histogramm liefert die *Dichtefunktion* einer Verteilung.
+Boxplots und Histogramme fassen die Werte immer zu Intervallen zusammen. Dadurch lässt sich die genaue Verteilung der Daten nicht genau nachvollziehen. Bei **kontinuierlichen Wertebereichen** zeigen die Intervalle nicht immer ein akkurates Bild der Verteilung. Eine detailliertere Annäherung als ein Histogramm liefert die *Dichtefunktion* einer Verteilung.
 
 Die *Dichtefunktion* liefert die Wahrscheinlichkeiten, mit der Werte in einer Verteilung auftreten, als eine stetige Funktion von Wahrscheinlichkeitswerten. Weil nicht alle Werte in den Daten vorkommen, ist die Dichtefunktion eine ***Annäherung*** an die wahrscheinlichste Verteilung der dargestellten Werte. 
 
