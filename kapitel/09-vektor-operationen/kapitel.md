@@ -340,7 +340,7 @@ Die Anzahl der Elemente eines Vektors ist immer gleich der Länge des Vektors. D
 
 In der Mathematik (Mengenlehre) existiert das Konzept der **Abzählbarkeit**. Dieses Konzept wird auf *beliebige* und insbesondere unendliche Mengen angewandt, um deren abstrakte Umfänge zu vergleichen. 
 
-Beim Rechnen und Problemlösen mit Computern liegen **immer** mit **speziellen, endlichen** Strukturen vor. Damit muss beim Zählen immer die Frage nach dem *konkreten Umfang* der vorliegenden Elemente beantwortet werden.
+Beim Rechnen und Problemlösen mit Computern liegen Daten **immer** in  **speziellen, endlichen** Strukturen vor. Damit muss beim Zählen immer die Frage nach dem *konkreten Umfang* der vorliegenden Elemente beantwortet werden.
 :::
 
 Nicht immer muss der Umfang des gesamten Vektors bestimmt werden. Stattdessen sollen einzelne Elemente eines Vektors gezählt werden, die bestimmte Bedingungen erfüllen.  Eine solche Bedingung wird immer als **logischer Ausdruck** formuliert.
@@ -367,7 +367,7 @@ Dabei wird ausgenutzt, dass die Summe über einen Vektor von `0` und `1` die Anz
 ::: {.callout-note}
 ## Merke
 
-Immer wenn eine Summe über einen Vektor von `0` und `1` gebildet wird, wird eine Zählen-Operation vorbereitet.
+Immer wenn eine Summe über einen Vektor von `0` und `1` gebildet wird, wird eine Zählen-Operation durchgeführt.
 ::: 
 
 Die Transformation in die Werte `0` und `1` durch einen logischen Ausdruck wird als **Indikatorfunktion** bezeichnet. Die Indikatorfunktion ist eine Transformation mit einem logischen Ausdruck. Eine solche Funktion kann für nachgelagerte arithmetische Transformations-Operationen als Ersatz für eine vorgelagerte Entscheidung verwendet werden. In solchen Fällen wird das Ergebnis der Indikatorfunktion über eine Skalar-Multiplikation mit der nachgelagerten Operation verknüpft. Dabei stellt die Indikatorfunktion sicher, dass der Vektor die gleiche Länge wie die nachgelagerte Operation hat.

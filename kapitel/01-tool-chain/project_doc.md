@@ -109,7 +109,7 @@ Bei der Verwendung von Laborberichten wird angenommen, dass undokumentierte Mate
 Ein Laborbericht besteht aus den folgenden Teilen.
 
 - Titel
-- Beteiligte Untersucher
+- Beteiligte Untersuchende
 - Datum, Uhrzeit und Ort
 - Fragestellung bzw. Auftrag
 - Materialliste
@@ -202,7 +202,7 @@ Ein Projektbericht dokumentiert die Ausgangslage, die Methode, die Ergebnisse un
 Ein Projektbericht besteht ***immer*** aus den folgenden Teilen.
 
 - Titel
-- Autoren
+- Autor:innen
 - Zusammenfassung (Abstract)
 - Einleitung und Hintergrund
 - Forschungsfrage/Arbeitsauftrag
@@ -275,9 +275,9 @@ Werden Ideen, Aussagen oder Ergebnisse aus einer externen Quelle verwendet, dann
 Werden externe Quellen verwendet und *nicht referenziert*, dann handelt es sich um ein Plagiat. Plagiate sind ein schwerer Verstoss gegen die wissenschaftliche Integrität und das Urheberrecht. Bei Zertifizierungen sind Plagiate ausserdem ein Betrug. Das gilt auch für Paraphrasen ohne Referenz. 
 :::
 
-### Management-Zusammenfassung
+### Managementzusammenfassung
 
-Eine Management zusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigsten Informationen des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
+Eine Managementzusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigsten Informationen des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
 
 Eine gute Managementzusammenfassung kann direkt in einer Präsentation verwendet werden. Als Richtlinie für eine Managementzusammenfassung sind sieben Punkte. Diese Punkte sollten die folgenden Fragen beantworten.
 

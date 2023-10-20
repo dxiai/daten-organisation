@@ -330,6 +330,31 @@ Weil die Vektoren von Stichprobenobjekten immer die gleiche Länge haben, lassen
 
 <!-- BEISPIEL -->
 
+## Selektieren
+
+Sehr häufig liegen umfangreiche Daten mit vielen Vektoren vor. Gelegentlich wollen wir unsere Analyse auf einzelne Vektoren beschränken. Analog zum Filtern von Datensätzen sollen in solchen Fällen nur bestimmte Vektoren ausgewählt werden. 
+
+::: {#def-select}
+Das Filtern von Vektoren heisst **selektieren**. 
+:::
+
+Weil die Vektoren einer Stichprobe Namen haben, wird in der Regel über die Vektornamen *selektiert*. 
+
+Die Vektorennamen einer Stichprobe haben besondere Eigenschaften: 
+
+1. Vektorennamen sind immer von Datentyp `Zeichenkette`.
+2. Vektorennamen einer Stichprobe bilden einen **Vektor**.
+3. Die Vektorennamen einer Stichprobe sind **eindeutig**.
+
+Die dritte Eigenschaft ist nicht ganz offensichtlich, denn in einer manuell eingegebenen Tabelle kann eine Überschrift mehrfach verwendet werden. Beim Importieren erzwingen die meisten Datenanalyse-Umgebungen eindeutige Vektornamen.
+ 
+Aus diesen Eigenschaften folgt, dass die Auswahl von Vektoren durch die Eigenschaften von Zeichenketten unterstützt wird. Zum Selektieren können die folgenden Operationen verwendet werden: 
+
+- Identischer Vektorname
+- Vektorname beginnt mit einer bestimmten Zeichenkette
+- Vektorname endet mit einer bestimmten Zeichenkette
+- Vektorname enthält an einer beliebigen Position eine bestimme Zeichenkette
+
 ## Sortieren
 
 ::: {#def-sorting} 
