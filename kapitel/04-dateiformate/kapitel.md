@@ -131,7 +131,7 @@ Festkodierungen erlauben sehr effizientes speichern und lesen von Daten. Damit f
 > ::: {#exm-festkodierung}
 > ## Kodierung der IBAN
 >
-> Die IBAN ist ein festkodiertes Datenformat mit vier Werten. Die Kodierung ist international einheitlich festgelegt [@isotc_68sc_8_financial_2020].
+> Die IBAN ist ein festkodiertes Datenformat mit vier Werten. Die Kodierung ist international einheitlich festgelegt [@isotc_68sc_8_financial_2020]:
 >
 > - Länderkennung (2 Buchstaben)
 > - Prüfzahl (2 Ziffern)
