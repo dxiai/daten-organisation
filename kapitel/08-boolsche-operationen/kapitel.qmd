@@ -260,7 +260,7 @@ Im Beispiel von @eq-in-op-w-vektor ist das Ergebnis des Vergleichs: `{WAHR; FALS
 ## Entscheidungen
 
 ::: {#def-entscheidung} 
-Eine **Entscheidung** beschreibt eine Funktion, die mit Hilfe eines *logischen Ausdrucks* aus eines von zwei alternativen Ergebnissen *auswählt*.
+Eine **Entscheidung** (oder *Bedingung*) beschreibt eine Funktion, die mit Hilfe eines *logischen Ausdrucks* aus eines von zwei alternativen Ergebnissen *auswählt*.
 :::
 
 Bei Entscheidungen werden in der Regel die beiden Fälle des logischen Ausdrucks unterschieden. Dabei wird der Fall, der `WAHR` ergibt als *positiver Fall* und der Fall, der `FALSCH` ergibt als *negativer Fall* bezeichnet.
