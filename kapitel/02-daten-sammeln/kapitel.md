@@ -25,12 +25,12 @@ Durch nicht erfasste Daten geht Information verloren. Dieser Informationsverlust
 
 Welche Daten in einem Datensatz erfasst wurden bzw. erfasst werden sollen,  werden in einem **Datenschema** festgehalten. Das Datenschema hat zwei Funktionen.
 
-1. Es legt fest, welche Daten für einen Datensatz erhoben werden müssen. In dieser Funktion ist das Datenschema eine grobe Anleitung welche Daten gesammelt werden sollen.
+1. Es legt fest, welche Daten für einen Datensatz erhoben werden müssen. In dieser Funktion ist das Datenschema eine grobe Anleitung, welche Daten gesammelt werden sollen.
 2. Es dokumentiert, welche Daten in einem Datenssatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.
 
 Ein Datenschema legt Felder für die Ablage der beobachteten Daten fest.
 
-Jedes Datenfeld erhält immer einen eindeutigen **Namen** für ein Datenfeld. Über den Namen können die im Datenfeld erfassten Daten zugegriffen werden. Die Namen von Datenfeldern dienen der einfacheren Handhabung bei der digitalen Auswertung. Deshalb sollten diese Namen möglichst einfach und gleichzeitig die Daten etwas beschreiben. Damit beim Auswerten weniger Fehler passieren, sollten Namen nur die Zeichen `a-z`, `0-9` und `_` enthalten und mit einem Buchstaben beginnen.
+Jedes Datenfeld erhält immer einen eindeutigen **Namen** für ein Merkmal. Diese Namen entsprechen immer den *Spaltenüberschriften* einer Datentabelle. Über den Namen können die erfassten Daten zugegriffen werden. Die Namen dienen der einfacheren Handhabung bei der digitalen Auswertung. Deshalb sollten diese Namen möglichst einfach und gleichzeitig die Daten etwas beschreiben. Damit beim Auswerten weniger Fehler passieren, sollten Namen nur die Zeichen `a-z`, `0-9` und `_` enthalten und mit einem Buchstaben beginnen.
 
 Zusätzlich kann ein Datenfeld einen **Wertebereich** haben. Ein Wertebereich legt die zulässigen Werte für ein Datenfeld fest. Für die automatisierte Auswertung kann es hilfreich sein, auch das **Skalenniveau** (s. [@sec-skalenniveaus]) des Wertebereichs zu dokumentieren.
 
@@ -106,7 +106,7 @@ Semistrukturierte Daten folgen einer logischen Struktur, die allerdings nicht du
 
 :::
 
-Semi-strukturierte Daten werden oft für das Einbetten  strukturierter Daten in unstrukturierte Datenfelder verwendet. 
+Semi-strukturierte Daten werden oft für das Einbetten strukturierter Daten in unstrukturierte Datenfelder verwendet. 
 
 Ein typisches Beispiel für semistrukturierte Daten sind Social-Media-Meldungen mit Hashtags und `@`-Nennungen. Mit dem Hash-Symbol (`#`) werden Themen und Inhalte hervorgehoben und mit dem `@`-Symbol werden Nutzende markiert.  Durch die beiden Symbole wird eigendlich unstrukturierten Daten eine zusätzliche Struktur gegeben, auf welche zugegriffen werden kann. Eine Social-Media-Meldung kann keine, ein oder mehrere Hashtags und keine, eine oder mehrere Nennungen enthalten. 
 
