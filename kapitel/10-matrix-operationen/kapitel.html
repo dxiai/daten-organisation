@@ -400,7 +400,7 @@ Hinweis
 </span></p>
 </div>
 <div id="def-dreiecksmatrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14.6 </strong></span>Eine <strong>Dreiecksmatrix</strong> ist eine Matrix, die nur Werte unterhalb oder oberhalb der Hauptdiagonalen hat.</p>
+<p><span class="theorem-title"><strong>Definition 14.6 </strong></span>Eine <strong>Dreiecksmatrix</strong> ist eine quadratische Matrix, die nur Werte unterhalb oder oberhalb der Hauptdiagonalen hat.</p>
 </div>
 <p>Die Hauptdiagonale einer Dreiecks-Matrix wird nicht immer zum Wertebereich hinzugezählt. Je nach Anforderung, muss dieser Wertebereich entsprechend ein- oder ausgeschlossen werden.</p>
 <div id="exm-untere-dreiecksmatrix" class="theorem example">
@@ -576,12 +576,30 @@ A \times I = I \times A = A
 <section id="inverse-matrix" class="level3" data-number="14.5.2">
 <h3 data-number="14.5.2" class="anchored" data-anchor-id="inverse-matrix"><span class="header-section-number">14.5.2</span> Inverse Matrix</h3>
 <div id="def-inverse-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14.9 </strong></span>Die <strong>inverse Matrix</strong> <span class="math inline">A^{-1}</span> ist die Matrix, die mit der Matrix <span class="math inline">A</span> multipliziert die Identitätsmatrix <span class="math inline">I</span> ergibt. Es gilt also <a href="#eq-inverse-matrix">Formel&nbsp;<span>14.3</span></a>.</p>
+<p><span class="theorem-title"><strong>Definition 14.9 </strong></span>Die <strong>inverse Matrix</strong> <span class="math inline">A^{-1}</span> ist die quadratische Matrix, die mit ihrer ebenfalls quadratischen Ausgangsmatrix <span class="math inline">A</span> multipliziert die Identitätsmatrix <span class="math inline">I</span> ergibt. Es gilt also <a href="#eq-inverse-matrix">Formel&nbsp;<span>14.3</span></a>.</p>
 </div>
 <p><span id="eq-inverse-matrix"><span class="math display">
 A \times A^{-1} = A^{-1} \times A = I
 \tag{14.3}</span></span></p>
-<p>Die inverse Matrix kann nicht für beliebige Matrizen gebildet werden, sondern ist nur für bestimme quadratische Matrizen definiert. Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb von den meisten Softwarepaketen bereitgestellt. Es ist deshalb selten notwendig, eine inverse Matrix selbst zu berechnen.</p>
+<p>Die inverse Matrix kann nicht für beliebige Matrizen gebildet werden, sondern ist nur für quadratische Matrizen deren Determinante ungleich <code>0</code> ist.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bevor die Inverse einer Matrix bestimmt wird, muss sicher gestellt werden, dass die Matrix</p>
+<ol type="1">
+<li>quadratisch und</li>
+<li>ihre Determinante ungleich 0 ist.</li>
+</ol>
+</div>
+</div>
+<p>Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb von den meisten Softwarepaketen bereitgestellt. Es ist deshalb selten notwendig, eine inverse Matrix selbst zu berechnen.</p>
 </section>
 <section id="anwendungen-des-kreuzprodukts" class="level3" data-number="14.5.3">
 <h3 data-number="14.5.3" class="anchored" data-anchor-id="anwendungen-des-kreuzprodukts"><span class="header-section-number">14.5.3</span> Anwendungen des Kreuzprodukts</h3>
