@@ -83,7 +83,7 @@ $$
 :::
 
 ::: {#def-dreiecksmatrix}
-Eine **Dreiecksmatrix** ist eine Matrix, die nur Werte unterhalb oder oberhalb der Hauptdiagonalen hat.
+Eine **Dreiecksmatrix** ist eine quadratische Matrix, die nur Werte unterhalb oder oberhalb der Hauptdiagonalen hat.
 :::
 
 Die Hauptdiagonale einer Dreiecks-Matrix wird nicht immer zum Wertebereich hinzugezählt. Je nach Anforderung, muss dieser Wertebereich entsprechend ein- oder ausgeschlossen werden.
@@ -299,14 +299,24 @@ Aus der Anforderung für das Kreuzprodukt folgt direkt das Kreuzprodukt für Vek
 ### Inverse Matrix
 
 ::: {#def-inverse-matrix}
-Die **inverse Matrix** $A^{-1}$ ist die Matrix, die mit der Matrix $A$ multipliziert die Identitätsmatrix $I$ ergibt. Es gilt also @eq-inverse-matrix.
+Die **inverse Matrix** $A^{-1}$ ist die quadratische Matrix, die mit ihrer ebenfalls quadratischen Ausgangsmatrix $A$ multipliziert die Identitätsmatrix $I$ ergibt. Es gilt also @eq-inverse-matrix.
 :::
 
 $$
 A \times A^{-1} = A^{-1} \times A = I
 $$ {#eq-inverse-matrix}
 
-Die inverse Matrix kann nicht für beliebige Matrizen gebildet werden, sondern ist nur für bestimme quadratische Matrizen definiert. Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb von den meisten Softwarepaketen bereitgestellt. Es ist deshalb selten notwendig, eine inverse Matrix selbst zu berechnen.
+Die inverse Matrix kann nicht für beliebige Matrizen gebildet werden, sondern ist nur für quadratische Matrizen deren Determinante ungleich `0` ist.  
+
+::: {.callout-note}
+## Merke
+Bevor die Inverse einer Matrix bestimmt wird, muss sicher gestellt werden, dass die Matrix 
+
+1. quadratisch und 
+2. ihre Determinante ungleich 0 ist.
+:::
+
+Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb von den meisten Softwarepaketen bereitgestellt. Es ist deshalb selten notwendig, eine inverse Matrix selbst zu berechnen.
 
 ### Anwendungen des Kreuzprodukts
 
