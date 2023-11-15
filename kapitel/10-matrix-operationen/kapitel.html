@@ -557,7 +557,7 @@ A \times B \ne B \times A
 \tag{14.1}</span></span></p>
 <p>Das Kreuzprodukt hat ein <em>neutrales Element</em>: Die <strong>Identitätsmatrix</strong> <span class="math inline">I</span>. Die Identitätsmatrix ist eine quadratische Matrix, die an den Positionen der abfallenden Diagonalen den Wert 1 und sonst den Wert 0 hat.</p>
 <div id="exm-3d-id-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 14.8 (3-dimensionale Einheitsmatrix) </strong></span><span class="math display">
+<p><span class="theorem-title"><strong>Beispiel 14.8 (3x3 Einheitsmatrix) </strong></span><span class="math display">
 \begin{bmatrix}
 1 &amp; 0 &amp; 0 \\
 0 &amp; 1 &amp; 0 \\
@@ -603,9 +603,12 @@ Merke
 </section>
 <section id="anwendungen-des-kreuzprodukts" class="level3" data-number="14.5.3">
 <h3 data-number="14.5.3" class="anchored" data-anchor-id="anwendungen-des-kreuzprodukts"><span class="header-section-number">14.5.3</span> Anwendungen des Kreuzprodukts</h3>
+<p>Das Kreuzprodukt verbindet die Multiplikation von Werten mit einer Summenbildung. Besteht eine der beiden Matrizen nur als den Werten <code>0</code> und <code>1</code>, so entfallen alle Terme des Kreuzprodukts, in denen mit der <code>0</code> multipliziert wird. Ausserdem reduzieren sich die rechtlichen Terme auf die verbleibenden Werte der anderen Matrix. Diese Eigenschaft des Kreuzprodukts lässt sich für die Summenbildung ausnutzen.</p>
 <section id="zeilen--und-spaltensummen-berechnen" class="level4" data-number="14.5.3.1">
 <h4 data-number="14.5.3.1" class="anchored" data-anchor-id="zeilen--und-spaltensummen-berechnen"><span class="header-section-number">14.5.3.1</span> Zeilen- und Spaltensummen berechnen</h4>
-<p>Für Zeilen- bzw. Spaltensummen werden drei Eigenschaften ausgenutzt:</p>
+<p>Zwei spezielle Summen sind die Zeilen- und Spaltensummen. Dabei wird eine zusätzliche Eigenschaft des Kreuzprodukts ausgenutzt: Das Ergebnis des Kreuzprodukts zwischen einer <span class="math inline">m \times n</span>- und einer <span class="math inline">n \times p</span>-Matrix ist immer eine <span class="math inline">m \times p</span>-Matrix. Ist <span class="math inline">m</span> oder <span class="math inline">p</span> gleich <code>1</code>, dann ist das Ergebnis ein <em>Vektor</em>.</p>
+<p>Für die Zeilen- oder die Spaltensumme müssen alle Werte der gleichen Zeile bzw. der gleichen Spalte zusammengezählt werden. Für das Kreuzprodukt bedeutet das, dass die jeweils andere Matrix an jeder Position den Wert <code>1</code> haben muss. Gleichzeitig muss die zweite Matrix ein Vektor sein, damit das Ergebnis ein Vektor mit den entsprechenden Summen ist.</p>
+<p>Entsprechend werden für Zeilen- bzw. Spaltensummen drei Eigenschaften des Kreuzprodukts ausgenutzt:</p>
 <ol type="1">
 <li>Vektoren lassen sich als <span class="math inline">1 \times n</span>- bzw. <span class="math inline">n \times 1</span>-Matrizen verstehen.</li>
 <li>Das Ergebnis des Kreuzpodukts ist immer eine Matrix mit <span class="math inline">m \times p</span>-Dimensionen.</li>
