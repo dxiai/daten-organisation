@@ -275,7 +275,7 @@ $$ {#eq-kreuzprodukt-nicht-kommutativ}
 Das Kreuzprodukt hat ein *neutrales Element*: Die **Identitätsmatrix** $I$.  Die Identitätsmatrix ist eine quadratische Matrix, die an den Positionen der abfallenden Diagonalen den Wert 1 und sonst den Wert 0 hat. 
 
 ::: {#exm-3d-id-matrix}
-## 3-dimensionale Einheitsmatrix
+## 3x3 Einheitsmatrix
 
 $$
 \begin{bmatrix}
@@ -320,9 +320,15 @@ Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb
 
 ### Anwendungen des Kreuzprodukts
 
+Das Kreuzprodukt verbindet die Multiplikation von Werten mit einer Summenbildung. Besteht eine der beiden Matrizen nur als den Werten `0` und `1`, so entfallen alle Terme des Kreuzprodukts, in denen mit der `0` multipliziert wird. Ausserdem reduzieren sich die rechtlichen Terme auf die verbleibenden Werte der anderen Matrix. Diese Eigenschaft des Kreuzprodukts lässt sich für die Summenbildung ausnutzen.
+
 #### Zeilen- und Spaltensummen berechnen
 
-Für Zeilen- bzw. Spaltensummen werden drei Eigenschaften ausgenutzt: 
+Zwei spezielle Summen sind die Zeilen- und Spaltensummen. Dabei wird eine zusätzliche Eigenschaft des Kreuzprodukts ausgenutzt: Das Ergebnis des Kreuzprodukts zwischen einer $m \times n$- und einer $n \times p$-Matrix ist immer eine $m \times p$-Matrix. Ist $m$ oder $p$ gleich `1`, dann ist das Ergebnis ein *Vektor*.
+
+Für die Zeilen- oder die Spaltensumme müssen alle Werte der gleichen Zeile bzw. der gleichen Spalte zusammengezählt werden. Für das Kreuzprodukt bedeutet das, dass die jeweils andere Matrix an jeder Position den Wert `1` haben muss. Gleichzeitig muss die zweite Matrix ein Vektor sein, damit das Ergebnis ein Vektor mit den entsprechenden Summen ist.
+
+Entsprechend werden für Zeilen- bzw. Spaltensummen drei Eigenschaften des Kreuzprodukts ausgenutzt: 
 
 1. Vektoren lassen sich als $1 \times n$- bzw. $n \times 1$-Matrizen verstehen.
 2. Das Ergebnis des Kreuzpodukts ist immer eine Matrix mit $m \times p$-Dimensionen. 
