@@ -29,7 +29,7 @@ Die klassische Aussagenlogik beschäftigte sich mit der Verknüpfung von Argumen
 - Die Kontradiktion bezeichnet Aussagen, die immer falsch sind.
 - Die Kontingenz ist eine Aussage, die weder eine Tautologie noch eine Kontradiktion ist.
 
-Aussagen sind also *Konklusionen*, die sich aus der Verknüpfung von Argumenten (*Prämissen*) ergeben. Die klassische Aussagenlogik untersucht, wie sich die Wahrheitswerte der Prämissen auf die Wahrheitswerte der Konklusion auswirken. Es handelt sich dabei also um die
+Aussagen sind also *Konklusionen* (Schlussfolgerungen), die sich aus der Verknüpfung von Argumenten (*Prämissen*) ergeben. Die klassische Aussagenlogik untersucht, wie sich die Wahrheitswerte der Prämissen auf die Wahrheitswerte der Konklusion auswirken. Es handelt sich dabei also um die
 Analyse der Verknüpfung von Argumenten zu Aussagen in Form von Wenn-Dann-Beziehungen.
 
 Klassisch, d.h. seit der Antike, werden die folgenden Beziehungen zwischen zwei Aussagen unterschieden [@rautenberg_einfuhrung_2008].
