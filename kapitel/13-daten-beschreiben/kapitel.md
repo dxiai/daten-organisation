@@ -1,43 +1,100 @@
 ---
 # bibliography: references.bib
 
-title: Daten beschreiben
-
 abstract: ""
 
 execute: 
   echo: false
 ---
-
-## Universelle Kennzahlen
+# Daten beschreiben {#sec-chapter-deskriptve-statistik}
 
 ::: {.callout-warning}
 ## Work in Progress
 :::
 
-Wir haben das Zählen mit R und Excel kennengelernt. Diese Operation wenden wir an, um die zwei universellen Kennzahlen von Stichproben zu bestimmen. 
+> Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Informationen über den jeweiligen Untersuchungsgegenstand bekannt sind. [@bortz_statistik_2010, S. 25]
 
-::: {#def-universelle-kennzahlen} 
-Mit **universellen Kennzahlen** sind abgeleitete Werte gemeint, die wir für *alle* Stichproben bestimmen können. 
+::: {#def-deskriptive-statistik}
+Die **deskriptive Statistik** bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten. 
 :::
 
-Die beiden universellen Kennzahlen für Stichproben sind: 
+> Die Aufgabe der Deskriptivstatistik ist es, Daten prägnant zusammenzufassen. 
+>
+> @sauer_moderne_2019, S. 103
 
-- Der *Stichprobenumfang*, d.h. die Anzahl der Datensätze 
-- Die *Anzahl der Variablen*
+Die deskriptive Statistik ist ein wichtiger Schritt beim *Dekodieren* von Daten, weil sie Kennwerte liefert, oft als Grundlage für nachfolgende Arbeitsschritte dienen.
 
-Wir erkennen sofort, dass es sich bei der Bestimmung der beiden Kennwerte um ein **(Ab-) Zählproblem** handelt. 
+Die *deskriptive Statistik* beschreibt Messungen von sog. *Zufallsvariablen*, die in Stichproben zusammengefasst wurden. Die *Zufallsvariablen* sind die gemessenen *Merkmale* und eine *Stichprobe* entspricht 
 
-::: {.callout-note}
-## Merke
-In **jeder** wissenschaftlichen Arbeit, in der Sie Daten präsentieren, **müssen** Sie **immer** die beiden Kennwerte angeben. 
+::: {.callout-tip}
+## Praxis
+In der Praxis entsprechen **Zufallsvariablen** den *gemessenen Merkmalen* und eine **Stichprobe** entspricht einen Datenrahmen mit allen Vektoren der gemessenen Merkmale.
 :::
 
-Für die Anzahl der Variablen könnten wir im Prinzip auf die Dokumentation einer Stichprobe zurückgreifen. Wir bestimmen trotzdem *beide* Kennzahlen, um sicherzustellen, dass wir wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation nur implizit festgehalten werden.
+Eine Stichprobe enthält also alle zusammengehörenden Datensätze einer Untersuchung.
+
+## Umfänge 
+
+::: {#def-umfang}
+Ein **Umfang** bezeichnet die Anzahl von *gültigen Daten* vom gleichen Datentyp. 
+:::
+
+::: {#exm-vektor-umfang}
+## Vektorumfang
+Der Umfang ähnelt der Länge eines Vektors, mit dem Unterschied, dass bei der Länge einer Datenstruktur auch ungültige Werte mitgezählt werden können. Wurden alle ungültigen Werte aus einem Vektor entfernt, dann ist der Umfang des Vektors gleich dessen Länge. 
+:::
 
 ::: {.callout-tip}
 ## Konvention
-Stichprobenumfänge werden in wissenschaftlichen Arbeiten mit dem Buchstaben `n` gekennzeichnet. 
+Umfänge werden in wissenschaftlichen Arbeiten in der Regel mit dem Buchstaben `n` gekennzeichnet.
+:::
+
+::: {.callout-note}
+## Merke
+Die Bestimmung von Umfängen ist immer ein **(Ab-) Zählproblem**. 
+:::
+
+### Universelle Kennzahlen
+
+Zwei spezielle Umfänge ist der **Stichprobenumfang** und die **Anzahl der Variablen**. Weil sich diese beiden Werte für *alle Stichproben* bestimmen lassen, handelt es sich bei diesen beiden Umfängen um *universelle Kennzahlen* von Stichproben. 
+
+::: {#def-universelle-kennzahlen} 
+Mit **universellen Kennzahlen** sind abgeleitete Werte gemeint, die sich für *alle* Stichproben bestimmen lassen. 
+:::
+
+![Universelle Stichprobenkennwerte](figures/stichprobenkennwerte.png){#fig-stichprobenkennwerte}
+
+::: {.callout-note}
+## Merke
+In **jeder** (wissenschaftlichen) Arbeit, in der Daten präsentiert werden, **müssen** die beiden universellen Kennwerte angegeben werden. Fehlen diese Kennwerte, dann ist die Arbeit *unvollständig*.
+:::
+
+Der **Stichprobenumfang** entspricht der Anzahl der Datensätze einer Stichprobe. Oft wird der Stichprobenumfang **zwei Mal** berichtet. Zuerst wird der unbereinigte Stichprobenumfang berichtet. Diese beinhalte alle Datensätze der Stichprobe, was der Anzahl der durchgeführten Messungen entspricht. Anschliessend werden alle ungültigen Datensätze entfernt und die verbleibenden Datensätze nocheinmal gezählt. Sind beide Werte gleich, dann darf der Stichprobenumfang nur einmal berichtet werden.
+
+::: {.callout-important}
+## Achtung
+
+Jeder entfernte Datensatz entfernt gleichzeitig Information aus den Daten. Es sollten nur Datensätze entfernt werden, die sich eindeutig auf Messfehler zurückführen lassen.
+:::
+
+Typische Messfehler sind: 
+
+- Leere Datensätze, 
+- Doppelte Datensätze, die durch doppeltes Abspeichern entstehen,
+- Abgebrochene Eingaben oder Übertragungen sowie
+- Datensätze mit Werten, die eindeutig ausserhalb der gültigen Wertebereiche liegen.
+
+::: {.callout-tip}
+## Praxis
+Die Bedingungen mit denen Datensätze zur Analyse aus einer Stichprobe entfernt werden, **müssen** dokumentiert und berichtet werden.
+
+Die unkorrigierten Daten sollten auf keinen Fall gelöscht oder überschrieben werden, um sicherzustellen, dass fehlerhafte Korrekturen zu keinem Datenverlust führen!
+::: 
+
+Für die **Anzahl der Variablen** könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten *beide* Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation ausgelassen wurden festgehalten werden.
+
+::: {.callout-warning}
+Weil automatisch generierte sequentielle Vektoren keine Zufallsvariablen sind, werden sie nicht zur Anzahl der Variablen hinzugezählt. Solche Vektoren sollten im Datenschema entsprechend markiert werden. 
 :::
 
 ::: {.callout-tip}
@@ -47,77 +104,45 @@ In **Fragebogenstudien** wird die Anzahl der Vektoren als Anzahl der **Items** b
 
 ::: {.callout-tip}
 ## Konvention
-In **technischen Studien** wird die Anzahl der Vektoren als Anzahl der *Parameter*, *Vektoren* **oder** *Variablen* bezeichnet. Damit sind die unabhängigen, gemessenen Merkmale gemeint.
+In **technischen Studien** wird die Anzahl der Vektoren als Anzahl der *Parameter*, *Vektoren* **oder** *Variablen* bezeichnet. Damit sind die voneinander unabhängig gemessenen Merkmale gemeint.
 :::
 
-Bei beiden Kennzahlen müssen wir eine Anzahl bestimmen.  Beim **Stichprobenumfang** bestimmen wir die Anzahl der Datensätze. Für die **Anzahl der Variablen** müssen wir die Vektoren zählen. 
+Beim **Stichprobenumfang** bestimmen wir die Anzahl der Datensätze. Für die **Anzahl der Variablen** müssen wir die Vektoren zählen. 
 
 ::: {.callout-note}
 ## Merke
-Stichprobenobjekte sind immer **rechteckig**. Alle Variablen sind immer in allen Datensätzen vorhanden (horizontaler Umfang) und alle Datensätze haben für jede Variable einen Wert (vertikaler Umfang).  Wir erhalten die Kennwerte, indem wir horizontal und vertikal zählen.
+Stichproben sind immer **rechteckig**. Alle Variablen sind immer in allen Datensätzen vorhanden (horizontaler Umfang bzw. Anzahl der Variablen) und alle Datensätze haben für jede Variable einen Wert (vertikaler Umfang bzw. Stichprobenumfang).  Die Kennwerte lassen sich deshalb durch horizontales und vertikales zählen ermitteln.
 :::
 
-![Universelle Stichprobenkennwerte](figures/stichprobenkennwerte.png){#fig-stichprobenkennwerte}
+### Variablenumfang
 
+Wenn Statistiker von Stichprobenumfang sprechen, dann verweist das Wort *Stichprobe* sehr häufig auf die gerade behandelten Vektoren und *nicht unbedingt* auf alle gemeinsam gemessenen Merkmale. Deshalb muss für jede Variable auch der **Variablenumfang** bestimmt werden.
 
-::: {.callout-note}
-Die Aufgabe der Deskriptivstatistik ist es, Daten prägnant zusammenzufassen. 
-
-@sauer_moderne_2019, S. 103
+::: {#def-variablenumfang}
+Der **Variablenumfang** bezeichnet die Anzahl der gültigen Werte eines Vektors bzw. Merkmals.
 :::
 
-Die deskriptive Statistik wird oft mit wenigen Sätzen in der Literatur abgehandelt und auf die folgenden Punkte beschränkt. 
-
-1. Umfang
-1. Skalenniveau
-1. Lagemasse
-
-Das Zitat von Bortz & Schuster deutet bereits an, dass jeder *schliessenden Statistik* eine Stichprobenbeschrreibung mit Hilfe beschreibender Kennwerte vorangehen **muss**. Dabei müssen wir für die Beschreibung angemessene Lagemasse für das jeweilige Skalenniveau einer Variable wählen. Hier müssen wir etwas aufpassen und zwischen drei Arten von Vektoren in unseren Stichprobendaten unterscheiden: 
-
-1. Konstanten
-2. Indikatoren
-3. Variablen
-
-::: {.callout-note}
-Nur die **Variablenvektoren** können unsere Stichprobe beschreiben, weil Sie *gemessene Merkmalsausprägungen* unser Entitäten enthalten. 
-:::
-
-Im folgenden arbeiten wir mit einer Beispielstichprobe. Diese Stichprobe ist ein Ausschnitt aus einer Studie zur Relevanz von digitalen Kompetenzen bei Dozierenden während des ersten COVID-Lockdowns im FS2020. 
-
-## Umfang
-
-Mit dem Umfang einer Stichprobe meinen wir die *Anzahl der Entitäten*, die wir gemessen haben. In R ergibt sich dieser Wert direkt aus dem Stichprobenobjekt: Der **Stichprobenumfang** entspricht der **Anzahl der Datensätze** in unserem Stichprobenobjekt. Diese Anzahl bestimmen wir mit Hilfe der `count()`-Funktion oder innerrhalb einer Transforrmation mit `mutate()` mit Hilfe der `n()`-Funktion.
-
-Der *Stichprobenumfang* ist einer der drei allgemeinen Kennwerte, die jede Stichprobe beschreiben. Wir bestimmen zuerst die numerischen Kennwerte unserer Beispielstichprobe.
-
-```R
-# Stichprobenumfang
-stichprobe |> 
-    count() |> 
-    pull() -> stichprobenumfang
-
-stichprobenumfang
-
-stichprobe |> 
-    names() |> 
-    length()
-```
-
-Dabei erkennen wir, dass der Stichprobenumfang 27 beträgt. Wir erkennen zusätzlich, dass wir 53 Vektoren in unserem Stichprobenobjekt vorliegen haben.
-
-Neben dem *Stichprobenumfang* unterscheiden wir zusätzlich den *Variablenumfang*. Der **Variablenumfang** bezeichnet  die **Anzahl der gemessenen Merkmalsausprägungen**. Damit ist die Gesamtzahl der gemessenen Werte für eine Variable gemeint. Für diesen Wert müssen wir für eine Variable *nicht vorhandene* Werte aus der Variable entfernen. Diese Werte sind in R mit dem Wert `NA` gekennzeichnet. Wir entfernen die `NA`-Werte mit Hilfe der `drop_na()`-Funktion.
-
-Es ist normal, dass sich der Stichprobenumfang und die Variablenumfänge unterscheiden. Diese Unterschiede entstehen dadurch, dass nicht alle Messungen erfolgreich verlaufen. Zum Beispiel passiert es häufig, dass Teilnehmende bei einem Fragebogen nicht alle Fragen beantworten oder beantworten können. In solchen Fällen ist der Stichprobenumfang grösser als die jeweiligen Variablenumfänge. So kommt es regelmässig vor, dass verschiedene Variablenumfänge sich ebenfalls unterscheiden. 
+Zur Bestimmung des Variablenumfangs müssen alle fehlenden Werte aus dem entsprechenden Vektor entfernt werden, bevor der Umfang ermittelt wird. Deshalb ist es nicht unüblich, dass die einzelnen Merkmale voneinander und vom Stichprobenumfang abweichende Umfänge haben.
+ 
+Weil in den Entsprechend müssen fehlende Werte vor der Bestimmung des Variablenumfangs aus dem Vektor entfernt werden. Es ist normal, dass sich der Stichprobenumfang und die Variablenumfänge unterscheiden. Diese Unterschiede entstehen dadurch, dass nicht alle Messungen erfolgreich verlaufen. Zum Beispiel passiert es häufig, dass Teilnehmende bei einem Fragebogen nicht alle Fragen beantworten oder beantworten können. In solchen Fällen ist der Stichprobenumfang grösser als die jeweiligen Variablenumfänge. So kommt es regelmässig vor, dass verschiedene Variablenumfänge sich ebenfalls unterscheiden. 
 
 Die deskriptive Statistik muss daher **immer** den Stichprobenumfang **und** die Variablenumfänge anführen.
 
 ## Skalenniveaus und Lagemasse
 
-Für Variablen unterscheiden wir nur die folgenden Skalenniveaus: 
+Für Variablen wurden im @sec-datentypen die folgenden Skalenniveaus eingeführt, um Daten nach den Beziehungen zwischen den Werten des Wertebereichs zu kategorisieren. Dabei wurden die folgenden Kategorien eingeführt: 
 
-1. Nominal 
-2. Ordinal
-3. Metrisch (Intervall- oder Varianzskaliert)
+1. Nominalskalierte Daten
+2. Ordinalskalierte Daten
+3. Metrisch-skalierte Daten (Intervall- oder Varianzskaliert)
+
+Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über die Daten. 
+
+Nominalskalierte Daten lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden.
+
+Ordinalskalierte Daten lassen sich sortieren, so dass für jeden Wert eines Wertebereichs Grösser-Kleiner-Beziehungen zu allen anderen Werten festgelegt werden können. Entsprechend lassen sich die Werte auf eine Weise nummerieren, so dass die Nummerierung der Reihenfolge der Werte im Wertebereich widerspiegelt.
+
+
 
 Die Skalenniveaus unserer Variablen müssen wir den Vektoren zuordnen können. Dazu müssen wir sowohl die Variablen und Vektoren unserer Stichprobe kennen. Diese Information erschliesst sich nicht aus den Daten, sondern ist in der Regel separat dokumentiert. 
 
@@ -139,11 +164,18 @@ Für die Variable `q10` es 6 Untermerkmale und für die Variable `q16` gibt es 1
 
 ### Lagemasse für nominale Skalenniveaus
 
-Für nominale Variablen dürfen wir als Lagemass für die Verteilung nur den *Modus* bestimmen. Damit ist die am häufigsten auftretende Merkmalsausprägung gemeint.
+Für nominale Variablen dürfen wir als Lagemass für die Verteilung nur den *Modus* bestimmen. Damit ist die am häufigsten auftretende Merkmalsausprägung gemeint. 
 
-Das zweite "Lagemass" sind die tatsächlich auftretenden Skalenwerte.
+Das zweite "Lagemass" sind die Häufigkeiten der tatsächlich auftretenden Skalenwerte. Beide Kennwerte erschliessen sich über die *Häufigkeiten* der vorkommenden Werte.
 
-Beide Kennwerte erschliessen sich über die *Häufigkeiten* der vorkommenden Werte. Dazu bestimmen wir die Häufigkeit des Auftretens einer Merkmalsausprägung in unserer Stichprobe. Das bestimmen der Häufigkeiten ist eine Abzählaufgabe, bei der wir vorher die gleichen Merkmalsausprägungen gruppiert haben. 
+::: {.callout-tip}
+## Praxis
+Der Modus wird in der Regel zugunsten des zweiten "Lagemasses" für nominalskalierte Daten *nicht berichtet*, weil der Modus nur eine Merkmalsausprägung berücksichtigt und alle anderen Merkmalsausprägungen ignoriert.
+:::
+
+Die Häufigkeiten der tatsächlich auftretenden Merkmalsausprägungen werden durch abzählen (@sec-chapter-vektoren) bestimmt. 
+
+Dazu bestimmen wir die Häufigkeit des Auftretens einer Merkmalsausprägung in unserer Stichprobe. Das bestimmen der Häufigkeiten ist eine Abzählaufgabe, bei der wir vorher die gleichen Merkmalsausprägungen gruppiert haben. 
 
 Das folgende Beispiel zwei Varianten für das Feststellen der Häufigkeiten von nominalskalierten Variablen. Die erste Variante ist die direkte Umsetzung des gerade beschriebenen Algorithmus. 
 ```R
@@ -305,3 +337,43 @@ stichprobe |>
        mad = mad(q10_1_0, constant = 1)
     )
 ```
+
+#### Mittlere absolute Abweichung vom Median
+
+Der Interquartilsabstand (IQR) ist ein Standardmass, dass sich aus den Quartilsgrenzen ergibt. Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen des 2. und 3. Quartils definiert ist. Weil jedes Quartil genau ein Viertel einer Stichprobe umfasst, decken 2 Quartile die Hälfte der Stichprobe ab. Für ordianalskalierte Daten ist dieser Wert als Streumass weniger aussagekräftig, als die Varianz bei metrisch-skalierten Daten, weil der IQR die Hälfte der Werte ignoriert.
+
+Damit wir die gesamte Stichprobe beschreiben können, wünschen wir uns ein Mass für die Streuung über die gesamte Stichprobe. Dieses Mass ist die sog. **Mittlere absolute Abweichung vom Median** (MAD).  Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Varianz einer Stichprobe. 
+
+Dazu berechnen wir die Abstände der jeweiligen Merkmalsausprägung von Median. Weil sich aus der Definition des Medians ergibt, dass 50% unserer Werte unterhalb und 50% oberhalb des Medians liegen müssen wir darauf achten, dass sich die Differenzen nicht aufheben. Deshalb berechnen wir den Absolutbetrag der Differenzen. Damit erhalten für jede gemessene Merkmalsausprägung einen Wert für den Abstand zum Median. Für diese Werte bilden wir das arithmetische Mittel.
+
+Das Ergebnis zeigt uns die zentrale Tendenz für alle Werte unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. 
+
+Das folgende Beispiel stellt das Mittlere absolute Abweichung vom Median (`mad`) und den IQR für das Variablepaar `q10_1`  gegenüber.
+
+
+```R
+stichprobe |>
+    pivot_longer(starts_with("q10_1"), names_to = "variable", values_to = "werte") |> 
+    select(variable, werte) |>
+    drop_na() |>
+    group_by(variable) |>
+    summarise(
+        n = n(),
+        md = median(werte), 
+        iqr = IQR(werte),
+
+        mad_haendisch = (werte - md) |> abs() |> median(),
+        mad = mad(werte)
+    )
+```
+
+<table border="1">
+<thead>
+	<tr><th scope=col>variable</th><th scope=col>n</th><th scope=col>md</th><th scope=col>iqr</th><th scope=col>mad_haendisch</th><th scope=col>mad</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>q10_1_0</td><td>27</td><td>7</td><td>3.5</td><td>1.8888889</td><td>1.8888889</td></tr>
+	<tr><td>q10_1_1</td><td>27</td><td>9</td><td>1.5</td><td>0.8888889</td><td>0.8888889</td></tr>
+</tbody>
+</table>
