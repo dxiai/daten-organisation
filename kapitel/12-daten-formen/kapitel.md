@@ -35,7 +35,7 @@ Jede *partielle Umformung* führt zu Informationsverlusst durch *Equivokation*.
 ## Transponieren
 
 ::: {#def-transponieren}
-**Transponieren** ist eine Operation, die eine Datenstruktur um 90-Grad dreht. 
+**Transponieren** ist eine Operation, die Orientierung einer Datenstruktur ändert. 
 :::
 
 Es gibt zwei Arten des Transponierens.
@@ -43,18 +43,40 @@ Es gibt zwei Arten des Transponierens.
 1. Das Transponieren von Matrizen, bei dem die Zeilen und Spalten vertauscht werden. Dabei bleibt die grundsätzliche Struktur der Daten erhalten. 
 2. Das Transponieren von Daten, bei mehrere Vektoren zu einem Vektor zusammengefasst werden oder ein Vektor in mehrere Vektoren aufgegliedert wird. Weil sich die Struktur der Daten verändert, wird diese Operation auch als **Reshaping** oder **Pivoting** bezeichnet.
 
-@sec-chapter-matrix-operationen zeigt das Transponieren von Matrizen. Diese Operation wird nur verwendet, wenn eine Matrix mit einer zweiten Matrix multipliziert werden soll und die Orientierung der Matrix nicht für das Kreuzprodukt geeignet ist.
+@sec-chapter-matrix-operationen zeigt das Transponieren von **Matrizen**. Bei dieser Operation werden die Zeilen- und die Spaltenindizes vertauscht. Diese Operation darf nur auf Matrizen angewandt werden. Jede Matrix kann transponiert werden. Wird eine transponierte Matrix nocheinmal transponiert, dann ist das Ergebnis die ursprüngliche Matrix. Daraus folgt, das das Transponieren immer *umkehrbar* ist.
 
-Das Transponieren von Daten entspricht dem Überführen einer Matrix in eine ihrer **Vektorformen** (s. [Abschnitt @sec-matrix-vektor-formen]). Das Transponieren ist jedoch nicht auf Matrizen beschränkt, sondern ist für Vektoren mit beliebeigen Datentyp definiert. Hat eine Datenstruktur aus geschachtelten Vektoren für alle Werte den gleichen Datentyp und haben alle Vektoren die gleiche Länge, dann wird die Datenstruktur **Matrixform** genannt und kann transponiert werden.
+Die zweite Art des Transponierens wird auf **Datenrahmen** angewendet. 
+
+Beim Transponieren eines Datenrahmens wird zwischen der **Vektorform** bzw. *Langform* und der **Matrixform** bzw. *Breitform* unterschieden. Es ist üblich, dass beim Transponieren nicht alle Vektoren des Datenrahmens transponiert werden. Für die nicht transponierten Vektoren gilt, dass diese Werte in der Langform für jeden transponierten Wert wiederholt werden und in der Breitform gleiche Werte zu einem Wert zusammengefasst werden. Dabei gilt, dass ein Primärindex der *Matrixform* zum Sekundärindex der *Vektorform* wird und umgekehrt. 
+
+Die Breitform verteilt die Werte über mehrere Vektoren. In der Langform sind diese Werte in *einem* Vektor mit zusätzlichen Sekundärindex zusammengefasst. 
+
+Beim Transponieren in die Vektorform werden mehrere Vektoren zu einem Vektor zusammengefasst und die Vektornamen als ein neuer Sekundärindex für diese Werte erzeugt. 
 
 ::: {.callout-note}
-## Merke
-Vektoren können nur transponiert werden, wenn alle Vektoren vom gleichen Datentyp sind.
+## Merke (Voraussetzung für die Vektorform )
+Vektoren von Datenrahmen können nur in die Vektorform transponiert werden, wenn alle Vektoren vom gleichen Datentyp sind.
 :::
 
-Beim Transponieren wird zwischen der **Vektorform** bzw. *Langform* und der **Matrixform** bzw. *Breitform* unterschieden. Ein Primärindex der *Matrixform* wird zum Sekundärindex der *Vektorform* und umgekehrt. Weil aus der *Vektorform* nicht eindeutig hervorgeht wie die *Matrixform* aufgebaut ist, benötigt das Transponieren einen *zusätzlichen* Sekundärindex, der die Struktur der *Matrixform* beschreibt.
+Beim Transponieren in die Matrixform wird ein Sekundärindex verwendet, um Werte eines Vektors mehreren neuen Vektoren zuzuweisen. Die Werte des Sekundärindex werden anschliessend als Vektornamen verwendet. 
 
-Die *Vektorform* muss nicht zwingend die gleiche Anzahl Werte haben, wie die *Matrixform*. Die *Vektorform* kann auch *weniger Werte* als die *Matrixform* haben. 
+::: {.callout-note}
+## Merke (Voraussetzung)
+Ein Vektor und sein Sekundärindex kann nur in die Matrixform transponiert werden, wenn sich alle Werte eindeutig Datensätzen zuordnen lassen.
+:::
+
+Beim Transponieren von Datenrahmen muss beachtet werden, dass nicht Langform eine korrespondierende Breitform hat, weil aus der *Vektorform* nicht immer eindeutig hervorgeht, wie die *Matrixform* aufgebaut ist. Deshalb ist das Transponieren von Datenrahmen nur dann umkehrbar, wenn sich der transponierte Datenrahmen ebenfalls die Voraussetzung für das Transponieren erfüllt.
+
+::: {.callout-tip}
+## Praxis
+Um die Umkehrbarkeit des Transponierens sicherzustellen, werden zusätzliche Indexvektoren eingesetzt.
+
+Beim Transponieren von Datenrahmen empfiehlt sich beim Transponieren in die *Langform* ein **Primärindex**, der in der Langform zu einem zusätzlichen Sekundärindex erweitert wird. 
+
+Beim Transponieren eines Datenrahmen in die *Breitform* empfielt sich ein **zweiter Sekundärindex**, der in der Breitform zum Primärindex reduzierbar ist.
+:::
+
+Die *Vektorform* muss nicht zwingend die gleiche Anzahl Werte haben, wie die *Matrixform*. Die *Vektorform* kann auch *weniger Werte* als die *Matrixform* haben.
 
 ::: {#def-kurze-vektorform}
 Enthält eine Vektorform weniger Werte als ihre Matrixform, dann wird sie als **kurze Vektorform** bezeichnet.

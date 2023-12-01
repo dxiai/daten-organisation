@@ -181,6 +181,10 @@ Nicht-randomisierte Rohdaten sollte immer in geschützten Repositories versionie
 Beim **Gruppieren** werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.
 :::
 
-Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Dabei bleibt die Gesamtstruktur der Daten erhalten. *Eine Gruppierung ist also nur an die Verwendung des Sekundärindex gekoppelt.* 
+Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Eine gruppierte Operation verwendet nur die Werte innerhalb der gleichen Gruppe.  Der Vorteil einer gruppierten Operation ist, dass die Operation für alle Gruppen *gleichzeitig* ausgeführt wird. 
 
-Oft werden Gruppierungen verwendet, um wiederholtes Filtern zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten gearbeitet werden.
+Damit eine gruppierte Operationen durchgeführt werden können, müssen zusammengehörende Werte identifiziert werden. Das wird durch einen Sekundärindex möglich. *Eine Gruppierung wird durch gleiche Wert im Sekundärindex gebildet.*  Gruppierungen werden verwendet, um repititive zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten weritergearbeitet werden.
+
+
+Die Überlegungen des Gruppierens lassen sich auf mehrere Sekundärindizes verallgemeinern: In solchen Fällen werden die Gruppen über die Permutationen der Werte der Sekundärindizes gebildet. In der Regel werden nur die in den Daten *vorhandenen* Permutationen im Ergebnis einer gruppierten Operation berücksichtigt. Deshalb kann es notwendig sein, fehlende Permutationen nachträglich zu erzeugen, um nachgelagerte Analysen durchführen zu können.   
+
