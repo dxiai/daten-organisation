@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -115,6 +81,22 @@ div.csl-indent {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 </head>
 
@@ -335,13 +317,19 @@ div.csl-indent {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#universelle-kennzahlen" id="toc-universelle-kennzahlen" class="nav-link active" data-scroll-target="#universelle-kennzahlen"><span class="header-section-number">18.1</span> Universelle Kennzahlen</a></li>
-  <li><a href="#umfang" id="toc-umfang" class="nav-link" data-scroll-target="#umfang"><span class="header-section-number">18.2</span> Umfang</a></li>
-  <li><a href="#skalenniveaus-und-lagemasse" id="toc-skalenniveaus-und-lagemasse" class="nav-link" data-scroll-target="#skalenniveaus-und-lagemasse"><span class="header-section-number">18.3</span> Skalenniveaus und Lagemasse</a>
+  <li><a href="#umfänge" id="toc-umfänge" class="nav-link active" data-scroll-target="#umfänge"><span class="header-section-number">18.1</span> Umfänge</a>
   <ul class="collapse">
-  <li><a href="#lagemasse-für-nominale-skalenniveaus" id="toc-lagemasse-für-nominale-skalenniveaus" class="nav-link" data-scroll-target="#lagemasse-für-nominale-skalenniveaus"><span class="header-section-number">18.3.1</span> Lagemasse für nominale Skalenniveaus</a></li>
-  <li><a href="#lagemasse-für-metrische-skalenniveaus" id="toc-lagemasse-für-metrische-skalenniveaus" class="nav-link" data-scroll-target="#lagemasse-für-metrische-skalenniveaus"><span class="header-section-number">18.3.2</span> Lagemasse für metrische Skalenniveaus</a></li>
-  <li><a href="#lagemasse-für-ordinale-skalenniveaus" id="toc-lagemasse-für-ordinale-skalenniveaus" class="nav-link" data-scroll-target="#lagemasse-für-ordinale-skalenniveaus"><span class="header-section-number">18.3.3</span> Lagemasse für ordinale Skalenniveaus</a></li>
+  <li><a href="#universelle-kennzahlen" id="toc-universelle-kennzahlen" class="nav-link" data-scroll-target="#universelle-kennzahlen"><span class="header-section-number">18.1.1</span> Universelle Kennzahlen</a></li>
+  <li><a href="#variablenumfang" id="toc-variablenumfang" class="nav-link" data-scroll-target="#variablenumfang"><span class="header-section-number">18.1.2</span> Variablenumfang</a></li>
+  </ul></li>
+  <li><a href="#kennwerte-der-skalenniveaus" id="toc-kennwerte-der-skalenniveaus" class="nav-link" data-scroll-target="#kennwerte-der-skalenniveaus"><span class="header-section-number">18.2</span> Kennwerte der Skalenniveaus</a>
+  <ul class="collapse">
+  <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">18.2.1</span> Mittelwert</a></li>
+  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median"><span class="header-section-number">18.2.2</span> Median</a></li>
+  <li><a href="#absolute-und-relative-häufigkeiten" id="toc-absolute-und-relative-häufigkeiten" class="nav-link" data-scroll-target="#absolute-und-relative-häufigkeiten"><span class="header-section-number">18.2.3</span> Absolute und relative Häufigkeiten</a></li>
+  <li><a href="#quantile-und-quartile" id="toc-quantile-und-quartile" class="nav-link" data-scroll-target="#quantile-und-quartile"><span class="header-section-number">18.2.4</span> Quantile und Quartile</a></li>
+  <li><a href="#standardabweichung-und-varianz" id="toc-standardabweichung-und-varianz" class="nav-link" data-scroll-target="#standardabweichung-und-varianz"><span class="header-section-number">18.2.5</span> Standardabweichung und Varianz</a></li>
+  <li><a href="#mad" id="toc-mad" class="nav-link" data-scroll-target="#mad"><span class="header-section-number">18.2.6</span> MAD</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
@@ -351,7 +339,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></h1>
+<h1 class="title"><span id="sec-chapter-deskriptve-statistik" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></span></h1>
 </div>
 
 
@@ -366,45 +354,40 @@ div.csl-indent {
 
 </header>
 
-<section id="universelle-kennzahlen" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="universelle-kennzahlen"><span class="header-section-number">18.1</span> Universelle Kennzahlen</h2>
-<div class="callout callout-style-default callout-warning callout-titled">
+<blockquote class="blockquote">
+<p>Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Informationen über den jeweiligen Untersuchungsgegenstand bekannt sind. <span class="citation" data-cites="bortz_statistik_2010">(<a href="../../references.html#ref-bortz_statistik_2010" role="doc-biblioref">Bortz &amp; Schuster, 2010, S. 25</a>)</span></p>
+</blockquote>
+<div id="def-deskriptive-statistik" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.1 </strong></span>Die <strong>deskriptive Statistik</strong> bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten.</p>
+</div>
+<blockquote class="blockquote">
+<p>Die Aufgabe der Deskriptivstatistik ist es, Daten prägnant zusammenzufassen.</p>
+<p><span class="citation" data-cites="sauer_moderne_2019">Sauer (<a href="../../references.html#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>, S. 103</p>
+</blockquote>
+<p>Die deskriptive Statistik ist ein wichtiger Schritt beim <em>Dekodieren</em> von Daten, weil sie Kennwerte liefert, oft als Grundlage für nachfolgende Arbeitsschritte dienen.</p>
+<p>Die <em>deskriptive Statistik</em> beschreibt Messungen von sog. <em>Zufallsvariablen</em>, die in Stichproben zusammengefasst wurden. Die <em>Zufallsvariablen</em> sind die gemessenen <em>Merkmale</em> und eine <em>Stichprobe</em> entspricht</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Work in Progress
+Praxis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>In der Praxis entsprechen <strong>Zufallsvariablen</strong> den <em>gemessenen Merkmalen</em> und eine <strong>Stichprobe</strong> entspricht einen Datenrahmen mit allen Vektoren der gemessenen Merkmale.</p>
 </div>
 </div>
-<p>Wir haben das Zählen mit R und Excel kennengelernt. Diese Operation wenden wir an, um die zwei universellen Kennzahlen von Stichproben zu bestimmen.</p>
-<div id="def-universelle-kennzahlen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.1 </strong></span>Mit <strong>universellen Kennzahlen</strong> sind abgeleitete Werte gemeint, die wir für <em>alle</em> Stichproben bestimmen können.</p>
+<p>Eine Stichprobe enthält also alle zusammengehörenden Datensätze einer Untersuchung.</p>
+<section id="umfänge" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="umfänge"><span class="header-section-number">18.1</span> Umfänge</h2>
+<div id="def-umfang" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.2 </strong></span>Ein <strong>Umfang</strong> bezeichnet die Anzahl von <em>gültigen Daten</em> vom gleichen Datentyp.</p>
 </div>
-<p>Die beiden universellen Kennzahlen für Stichproben sind:</p>
-<ul>
-<li>Der <em>Stichprobenumfang</em>, d.h. die Anzahl der Datensätze</li>
-<li>Die <em>Anzahl der Variablen</em></li>
-</ul>
-<p>Wir erkennen sofort, dass es sich bei der Bestimmung der beiden Kennwerte um ein <strong>(Ab-) Zählproblem</strong> handelt.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="exm-vektor-umfang" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 18.1 (Vektorumfang) </strong></span>Der Umfang ähnelt der Länge eines Vektors, mit dem Unterschied, dass bei der Länge einer Datenstruktur auch ungültige Werte mitgezählt werden können. Wurden alle ungültigen Werte aus einem Vektor entfernt, dann ist der Umfang des Vektors gleich dessen Länge.</p>
 </div>
-<div class="callout-title-container flex-fill">
-Merke
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In <strong>jeder</strong> wissenschaftlichen Arbeit, in der Sie Daten präsentieren, <strong>müssen</strong> Sie <strong>immer</strong> die beiden Kennwerte angeben.</p>
-</div>
-</div>
-<p>Für die Anzahl der Variablen könnten wir im Prinzip auf die Dokumentation einer Stichprobe zurückgreifen. Wir bestimmen trotzdem <em>beide</em> Kennzahlen, um sicherzustellen, dass wir wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation nur implizit festgehalten werden.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -415,7 +398,94 @@ Konvention
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Stichprobenumfänge werden in wissenschaftlichen Arbeiten mit dem Buchstaben <code>n</code> gekennzeichnet.</p>
+<p>Umfänge werden in wissenschaftlichen Arbeiten in der Regel mit dem Buchstaben <code>n</code> gekennzeichnet.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Bestimmung von Umfängen ist immer ein <strong>(Ab-) Zählproblem</strong>.</p>
+</div>
+</div>
+<section id="universelle-kennzahlen" class="level3" data-number="18.1.1">
+<h3 data-number="18.1.1" class="anchored" data-anchor-id="universelle-kennzahlen"><span class="header-section-number">18.1.1</span> Universelle Kennzahlen</h3>
+<p>Zwei spezielle Umfänge ist der <strong>Stichprobenumfang</strong> und die <strong>Anzahl der Variablen</strong>. Weil sich diese beiden Werte für <em>alle Stichproben</em> bestimmen lassen, handelt es sich bei diesen beiden Umfängen um <em>universelle Kennzahlen</em> von Stichproben.</p>
+<div id="def-universelle-kennzahlen" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.3 </strong></span>Mit <strong>universellen Kennzahlen</strong> sind abgeleitete Werte gemeint, die sich für <em>alle</em> Stichproben bestimmen lassen.</p>
+</div>
+<div id="fig-stichprobenkennwerte" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/stichprobenkennwerte.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;18.1: Universelle Stichprobenkennwerte</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In <strong>jeder</strong> (wissenschaftlichen) Arbeit, in der Daten präsentiert werden, <strong>müssen</strong> die beiden universellen Kennwerte angegeben werden. Fehlen diese Kennwerte, dann ist die Arbeit <em>unvollständig</em>.</p>
+</div>
+</div>
+<p>Der <strong>Stichprobenumfang</strong> entspricht der Anzahl der Datensätze einer Stichprobe. Oft wird der Stichprobenumfang <strong>zwei Mal</strong> berichtet. Zuerst wird der unbereinigte Stichprobenumfang berichtet. Diese beinhalte alle Datensätze der Stichprobe, was der Anzahl der durchgeführten Messungen entspricht. Anschliessend werden alle ungültigen Datensätze entfernt und die verbleibenden Datensätze nocheinmal gezählt. Sind beide Werte gleich, dann darf der Stichprobenumfang nur einmal berichtet werden.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Achtung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jeder entfernte Datensatz entfernt gleichzeitig Information aus den Daten. Es sollten nur Datensätze entfernt werden, die sich eindeutig auf Messfehler zurückführen lassen.</p>
+</div>
+</div>
+<p>Typische Messfehler sind:</p>
+<ul>
+<li>Leere Datensätze,</li>
+<li>Doppelte Datensätze, die durch doppeltes Abspeichern entstehen,</li>
+<li>Abgebrochene Eingaben oder Übertragungen sowie</li>
+<li>Datensätze mit Werten, die eindeutig ausserhalb der gültigen Wertebereiche liegen.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Bedingungen mit denen Datensätze zur Analyse aus einer Stichprobe entfernt werden, <strong>müssen</strong> dokumentiert und berichtet werden.</p>
+<p>Die unkorrigierten Daten sollten auf keinen Fall gelöscht oder überschrieben werden, um sicherzustellen, dass fehlerhafte Korrekturen zu keinem Datenverlust führen!</p>
+</div>
+</div>
+<p>Für die <strong>Anzahl der Variablen</strong> könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten <em>beide</em> Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation ausgelassen wurden festgehalten werden.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warnung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Weil automatisch generierte sequentielle Vektoren keine Zufallsvariablen sind, werden sie nicht zur Anzahl der Variablen hinzugezählt. Solche Vektoren sollten im Datenschema entsprechend markiert werden.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -441,10 +511,10 @@ Konvention
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In <strong>technischen Studien</strong> wird die Anzahl der Vektoren als Anzahl der <em>Parameter</em>, <em>Vektoren</em> <strong>oder</strong> <em>Variablen</em> bezeichnet. Damit sind die unabhängigen, gemessenen Merkmale gemeint.</p>
+<p>In <strong>technischen Studien</strong> wird die Anzahl der Vektoren als Anzahl der <em>Parameter</em>, <em>Vektoren</em> <strong>oder</strong> <em>Variablen</em> bezeichnet. Damit sind die voneinander unabhängig gemessenen Merkmale gemeint.</p>
 </div>
 </div>
-<p>Bei beiden Kennzahlen müssen wir eine Anzahl bestimmen. Beim <strong>Stichprobenumfang</strong> bestimmen wir die Anzahl der Datensätze. Für die <strong>Anzahl der Variablen</strong> müssen wir die Vektoren zählen.</p>
+<p>Beim <strong>Stichprobenumfang</strong> bestimmen wir die Anzahl der Datensätze. Für die <strong>Anzahl der Variablen</strong> müssen wir die Vektoren zählen.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -455,212 +525,242 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Stichprobenobjekte sind immer <strong>rechteckig</strong>. Alle Variablen sind immer in allen Datensätzen vorhanden (horizontaler Umfang) und alle Datensätze haben für jede Variable einen Wert (vertikaler Umfang). Wir erhalten die Kennwerte, indem wir horizontal und vertikal zählen.</p>
+<p>Stichproben sind immer <strong>rechteckig</strong>. Alle Variablen sind immer in allen Datensätzen vorhanden (horizontaler Umfang bzw. Anzahl der Variablen) und alle Datensätze haben für jede Variable einen Wert (vertikaler Umfang bzw. Stichprobenumfang). Die Kennwerte lassen sich deshalb durch horizontales und vertikales zählen ermitteln.</p>
 </div>
 </div>
-<div id="fig-stichprobenkennwerte" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/stichprobenkennwerte.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;18.1: Universelle Stichprobenkennwerte</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die Aufgabe der Deskriptivstatistik ist es, Daten prägnant zusammenzufassen.</p>
-<p><span class="citation" data-cites="sauer_moderne_2019">Sauer (<a href="../../references.html#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>, S. 103</p>
-</div>
-</div>
-<p>Die deskriptive Statistik wird oft mit wenigen Sätzen in der Literatur abgehandelt und auf die folgenden Punkte beschränkt.</p>
-<ol type="1">
-<li>Umfang</li>
-<li>Skalenniveau</li>
-<li>Lagemasse</li>
-</ol>
-<p>Das Zitat von Bortz &amp; Schuster deutet bereits an, dass jeder <em>schliessenden Statistik</em> eine Stichprobenbeschrreibung mit Hilfe beschreibender Kennwerte vorangehen <strong>muss</strong>. Dabei müssen wir für die Beschreibung angemessene Lagemasse für das jeweilige Skalenniveau einer Variable wählen. Hier müssen wir etwas aufpassen und zwischen drei Arten von Vektoren in unseren Stichprobendaten unterscheiden:</p>
-<ol type="1">
-<li>Konstanten</li>
-<li>Indikatoren</li>
-<li>Variablen</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nur die <strong>Variablenvektoren</strong> können unsere Stichprobe beschreiben, weil Sie <em>gemessene Merkmalsausprägungen</em> unser Entitäten enthalten.</p>
-</div>
-</div>
-<p>Im folgenden arbeiten wir mit einer Beispielstichprobe. Diese Stichprobe ist ein Ausschnitt aus einer Studie zur Relevanz von digitalen Kompetenzen bei Dozierenden während des ersten COVID-Lockdowns im FS2020.</p>
 </section>
-<section id="umfang" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="umfang"><span class="header-section-number">18.2</span> Umfang</h2>
-<p>Mit dem Umfang einer Stichprobe meinen wir die <em>Anzahl der Entitäten</em>, die wir gemessen haben. In R ergibt sich dieser Wert direkt aus dem Stichprobenobjekt: Der <strong>Stichprobenumfang</strong> entspricht der <strong>Anzahl der Datensätze</strong> in unserem Stichprobenobjekt. Diese Anzahl bestimmen wir mit Hilfe der <code>count()</code>-Funktion oder innerrhalb einer Transforrmation mit <code>mutate()</code> mit Hilfe der <code>n()</code>-Funktion.</p>
-<p>Der <em>Stichprobenumfang</em> ist einer der drei allgemeinen Kennwerte, die jede Stichprobe beschreiben. Wir bestimmen zuerst die numerischen Kennwerte unserer Beispielstichprobe.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stichprobenumfang</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>() <span class="ot">-&gt;</span> stichprobenumfang</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>stichprobenumfang</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">length</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Dabei erkennen wir, dass der Stichprobenumfang 27 beträgt. Wir erkennen zusätzlich, dass wir 53 Vektoren in unserem Stichprobenobjekt vorliegen haben.</p>
-<p>Neben dem <em>Stichprobenumfang</em> unterscheiden wir zusätzlich den <em>Variablenumfang</em>. Der <strong>Variablenumfang</strong> bezeichnet die <strong>Anzahl der gemessenen Merkmalsausprägungen</strong>. Damit ist die Gesamtzahl der gemessenen Werte für eine Variable gemeint. Für diesen Wert müssen wir für eine Variable <em>nicht vorhandene</em> Werte aus der Variable entfernen. Diese Werte sind in R mit dem Wert <code>NA</code> gekennzeichnet. Wir entfernen die <code>NA</code>-Werte mit Hilfe der <code>drop_na()</code>-Funktion.</p>
-<p>Es ist normal, dass sich der Stichprobenumfang und die Variablenumfänge unterscheiden. Diese Unterschiede entstehen dadurch, dass nicht alle Messungen erfolgreich verlaufen. Zum Beispiel passiert es häufig, dass Teilnehmende bei einem Fragebogen nicht alle Fragen beantworten oder beantworten können. In solchen Fällen ist der Stichprobenumfang grösser als die jeweiligen Variablenumfänge. So kommt es regelmässig vor, dass verschiedene Variablenumfänge sich ebenfalls unterscheiden.</p>
+<section id="variablenumfang" class="level3" data-number="18.1.2">
+<h3 data-number="18.1.2" class="anchored" data-anchor-id="variablenumfang"><span class="header-section-number">18.1.2</span> Variablenumfang</h3>
+<p>Wenn Statistiker von Stichprobenumfang sprechen, dann verweist das Wort <em>Stichprobe</em> sehr häufig auf die gerade behandelten Vektoren und <em>nicht unbedingt</em> auf alle gemeinsam gemessenen Merkmale. Deshalb muss für jede Variable auch der <strong>Variablenumfang</strong> bestimmt werden.</p>
+<div id="def-variablenumfang" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.4 </strong></span>Der <strong>Variablenumfang</strong> bezeichnet die Anzahl der gültigen Werte eines Vektors bzw. Merkmals.</p>
+</div>
+<p>Zur Bestimmung des Variablenumfangs müssen alle fehlenden Werte aus dem entsprechenden Vektor entfernt werden, bevor der Umfang ermittelt wird. Deshalb ist es nicht unüblich, dass die einzelnen Merkmale voneinander und vom Stichprobenumfang abweichende Umfänge haben.</p>
+<p>Weil in den Entsprechend müssen fehlende Werte vor der Bestimmung des Variablenumfangs aus dem Vektor entfernt werden. Es ist normal, dass sich der Stichprobenumfang und die Variablenumfänge unterscheiden. Diese Unterschiede entstehen dadurch, dass nicht alle Messungen erfolgreich verlaufen. Zum Beispiel passiert es häufig, dass Teilnehmende bei einem Fragebogen nicht alle Fragen beantworten oder beantworten können. In solchen Fällen ist der Stichprobenumfang grösser als die jeweiligen Variablenumfänge. So kommt es regelmässig vor, dass verschiedene Variablenumfänge sich ebenfalls unterscheiden.</p>
 <p>Die deskriptive Statistik muss daher <strong>immer</strong> den Stichprobenumfang <strong>und</strong> die Variablenumfänge anführen.</p>
 </section>
-<section id="skalenniveaus-und-lagemasse" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="skalenniveaus-und-lagemasse"><span class="header-section-number">18.3</span> Skalenniveaus und Lagemasse</h2>
-<p>Für Variablen unterscheiden wir nur die folgenden Skalenniveaus:</p>
+</section>
+<section id="kennwerte-der-skalenniveaus" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="kennwerte-der-skalenniveaus"><span class="header-section-number">18.2</span> Kennwerte der Skalenniveaus</h2>
+<p>Für Variablen wurden im <a href="../05-datentypen/kapitel.html"><span>Kapitel&nbsp;8</span></a> die folgenden Skalenniveaus eingeführt, um Daten nach den Beziehungen zwischen den Werten des Wertebereichs zu kategorisieren. Dabei wurden die folgenden Kategorien eingeführt:</p>
 <ol type="1">
-<li>Nominal</li>
-<li>Ordinal</li>
-<li>Metrisch (Intervall- oder Varianzskaliert)</li>
+<li>Nominalskalierte Daten</li>
+<li>Ordinalskalierte Daten</li>
+<li>Metrisch-skalierte Daten (Intervall- oder Varianzskaliert)</li>
 </ol>
-<p>Die Skalenniveaus unserer Variablen müssen wir den Vektoren zuordnen können. Dazu müssen wir sowohl die Variablen und Vektoren unserer Stichprobe kennen. Diese Information erschliesst sich nicht aus den Daten, sondern ist in der Regel separat dokumentiert.</p>
-<p>Unsere Beispielstichprobe hat 53 Vektoren. Diese Vektoren sind vier Variablengruppen zugeordnet. Eine Variablengruppe sind unterschiedliche Merkmalsausprägungen mit dem gleichen Skalennivau, die wir in Beziehung setzen. Das Beispiel umfasst die folgenden Variablengruppen und Skalenniveaus:</p>
-<ol type="1">
-<li><code>q1</code> ist ein Indikator</li>
-<li><code>q3</code>, <code>q4</code> und <code>q16</code> sind nominalskalierte Variablen</li>
-</ol>
+<p>Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über die Daten, woraus sich die zulässigen Kennwerte ableiten. Diese Kennwerte heissen <strong>Lagemasse</strong>, weil sie ein Mass für die Struktur der Werteverteilung darstellen. Weil die Skalenniveaus hierarchisch organisiert sind, beschreiben die Kennzahlen für Verteilungen des allgemeinere Skalennivaus automatisch auch Verteilungen der spezielleren Skalennivaus. Für metrisch-skalierte Daten gelten also automatisch auch die Kennzahlen für ordinalskalierte und nominalskalierte Daten. Für ordinalskalierte Daten gelten automatisch auch die Kennzahlen für nominalskalierte Daten, aber <em>nicht</em> die für metrisch-skalierte Daten.</p>
+<p><strong>Nominalskalierte Daten</strong> lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden. Daraus ergeben sich <strong>absolute Häufigkeiten</strong>. Werden absolute Häufigkeiten auf das Intervall 0-100 normalisiert, dann spricht man von <strong>relativen Häufigkeiten</strong>. Weil es keine Beziehungen zwischen verschiedenen nominalskalierten Werten gibt, können nur die beiden Kennwerte der absuluten und relativen Häufigkeiten berichtet werden. Formal liesse sich auch noch der Modus bestimmen. Der Modus ist der am häufigsten vorkommende Wert, der sich direkt aus den absoluten bzw. relativen Häufigkeiten ergibt. In der Praxis wird der Modus nicht separat berichtet, sondern nur zusammen mit allen anderen relativen und absoluten Häufigkeiten.</p>
+<p><strong>Ordinalskalierte Daten</strong> lassen sich sortieren, so dass für jeden Wert eines Wertebereichs Grösser-Kleiner-Beziehungen zu allen anderen Werten festgelegt werden können. Entsprechend lassen sich die Werte auf eine Weise nummerieren, so dass die Nummerierung der Reihenfolge der Werte im Wertebereich widerspiegelt. Über diese Nummerierung lassen sich beliebige ordinalskalierte Werte auswerten und zusätzliche Kennwerte bestimmen:</p>
 <ul>
-<li><code>q3</code> hat die Skalierung von <code>F</code>, <code>M</code>, <code>X</code> und <code>O</code>.</li>
-<li><code>q4</code> hat die Skalierung von <code>A</code>, <code>G</code>, <code>L</code>, <code>N</code>, <code>P</code>, <code>S</code>, <code>T</code> und <code>W</code>.</li>
-<li><code>q16</code> hat die Skalierung von <code>0</code> und <code>1</code>.</li>
+<li><strong>Quantile</strong> (bzw. Quartile) aus denen sich der <strong>Median</strong> und der <strong>Interquartilsabstand</strong> (engl. <em>Interquartile Range</em>) ableiten.</li>
+<li>Die <strong>mittlere absolute Abweichung vom Median</strong> (eng. <em>Median Absolute Deviation</em> oder kurz <strong>MAD</strong>).</li>
 </ul>
-<ol start="3" type="1">
-<li><code>q10</code> sind ordinalskalierte Variablen mit der Skalierung von <code>0</code>-<code>10</code> in ganzzahligen Schritten. Die Messungen stammen von sog. Likert-Skalen.</li>
+<p><strong>Metrisch-skalierte Daten</strong> haben gleiche Abstände und in der Regel auch gleiche Verhältnisse. Solche Daten sind nicht nur sortierbar, es ist zusätzlich auch die Division definiert und sie lassen sich oft durch stetige Funktionen beschreiben. Diese Funktion heisst für eine Verteilung die <strong>Dichtefunktion</strong> der Verteilung. Sie zeigt an, mit welcher Häufigkeit Werte wahrscheinlich auftreten können. Für jede dieser Verteilungen lässt sich der <strong>Mittelwert</strong> und die <strong>Standardabweichung</strong> bestimmen.</p>
+<section id="mittelwert" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">18.2.1</span> Mittelwert</h3>
+<p>Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (<a href="#eq-mittelwert">Formel&nbsp;<span>18.1</span></a>).</p>
+<p><span id="eq-mittelwert"><span class="math display">
+\bar{x} = \frac{\sum{v_i}}{n}
+\tag{18.1}</span></span></p>
+<p>Weil der Mittelwert eine <em>Mitte</em> einer Verteilung markiert, ist der Mittelwert ein sog. <strong>zentrales Lagemass</strong>.</p>
+<p>Beim Mittelwert werden zwei Varianten unterschieden:</p>
+<ul>
+<li>Der <em>echte</em> Mittelwert (<span class="math inline">\mu</span>) einer Verteilung <span class="math inline">X</span>.</li>
+<li>Der <em>gemessene</em> Mittelwert (<span class="math inline">\bar{x}</span>, sprich “x-Balken” oder “x-bar”) einer Verteilung <span class="math inline">X</span>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Weil der echte Mittelwert einer Verteilung nur in Ausnahmefällen bekannt ist, wird nur der *gemessene Mittelwert berichtet.</p>
+</div>
+</div>
+<p>Damit ein zentrales Lagemass einer Verteilung beschreiben kann, muss diese Kennzahl ein gültiger Wert im Wertebereich der Daten sein. Wegen der Division zur Berechnung des <strong>Mittelwerts</strong>, kann diese Bedingung <strong>nur für metrische Skalenniveaus</strong> eingehalten werden.</p>
+</section>
+<section id="median" class="level3" data-number="18.2.2">
+<h3 data-number="18.2.2" class="anchored" data-anchor-id="median"><span class="header-section-number">18.2.2</span> Median</h3>
+<p>Der Median (<code>md</code>) ist der <em>Wert</em>, an dem eine Verteilung in zwei Hälften geteilt wird. Dadurch markiert der Median eine <em>andere</em> Mitte einer Verteilung. Entsprechend ist auch der Median ein zentrales Lagemass.</p>
+<p>Für eine <em>sortierte</em> Werteverteilung lässt sich der Median aus der Anzahl der Werte bestimmen: Der Median ist der Wert an der Position <span class="math inline">\frac{n}{2}</span> eines <strong>sortierten Vektors</strong>. Diese Position ist jedoch nur für gerade Anzahlen gültig. Für eine ungerade Anzahl von Werten liegt der Median an der Position <span class="math inline">\frac{n-1}{2}</span>.</p>
+<p>Weil der Median aus der Position der Werte eines sortierten Vektors bestimmt wird, müssen die Daten <em>sortierbar</em> sein. Der Median ist für <strong>metrisch-skalierte und</strong> für <strong>ordinalskalierte Werte</strong> zulässig.</p>
+</section>
+<section id="absolute-und-relative-häufigkeiten" class="level3" data-number="18.2.3">
+<h3 data-number="18.2.3" class="anchored" data-anchor-id="absolute-und-relative-häufigkeiten"><span class="header-section-number">18.2.3</span> Absolute und relative Häufigkeiten</h3>
+<p>Bei der Feststellung der Häufigkeiten wird gezählt, wie oft ein Wert in einem Vektor auftritt. Dieser Wert heisst die <strong>absolute Häufigkeit</strong> des Werts.</p>
+<p>Die absoluten Häufigkeiten lassen sich <em>normieren</em>. Es ist üblich die Häufigkeiten als Anteile des Ganzen anzugeben. Oft werden diese Anteile als Prozentwerten angegeben. Diese Anteile heissen <strong>relative Häufigkeiten</strong>, weil die Werte den Anteil relativ zur Gesamtzahl aller Werte abgibt.</p>
+<p>Die relativen Häufigkeit eines Werts ergibt aus der absoluten Häufigkeit sich, indem die absolute Häufigkeit durch den Umfang des Vektors geteilt wird.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Es <strong>müssen</strong> immer die absoluten <strong>und</strong> die relativen Häufigkeiten berichtet werden.</p>
+</div>
+</div>
+<p>Weil die Häufigkeiten beschreiben, über welche Werte die gemessenen Daten <em>gestreut</em> sind, werden diese Masse auch den <strong>Streumassen</strong> zugerechnet.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Alle Häufigkeiten beschreiben zusammen die <em>Verteilung</em> der gemessenen Werte.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei absoluten und relativen Häufigkeiten sind die <strong>Wertintervalle unveränderlich</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Weil für <strong>nominalskalierte Daten</strong> keine anderen Lagemasse zur Verfügung stehen, <strong>müssen</strong> die Häufigkeiten für dieses Skalenniveau immer angegeben werden!</p>
+</div>
+</div>
+<p>Für <strong>metrisch-skalierte Werte</strong> lassen sich die Häufigkeiten nicht so leicht bestimmen, wie für die anderen Skalennivaus. Zur Bestimmung der Häufigkeiten von metrisch-skalierten Daten, wird der Wertebereich in gleichgrosse Intervalle gegliedert. Anschliessend wird die Anzahl der Werte in jedem Intervall gezählt. Diese Intervalle erzeugen künstlich diskrete Wertebereiche.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als Histogram dargestellt und nicht separat angegeben.</p>
+</div>
+</div>
+</section>
+<section id="quantile-und-quartile" class="level3" data-number="18.2.4">
+<h3 data-number="18.2.4" class="anchored" data-anchor-id="quantile-und-quartile"><span class="header-section-number">18.2.4</span> Quantile und Quartile</h3>
+<p>Quantile gliedern eine Verteilung in gleichgrosse Häufigkeiten und kennzeichnen die Wertintervalle, über welche sich diese Häufigkeiten erstrecken.</p>
+<div id="def-quantil" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18.5 </strong></span>Ein <strong>Quantil</strong> ist der Wert, der zwei Bereiche mit gleichvielen Werten <em>trennt</em>. Das Quantil wird dem kleineren der beiden Wertebereiche zugerechnet.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei Quantilen ist die <strong>Anzahl der Werte in einem Intervall unveränderlich</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Achtung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ein besonderes Quantil ist der <strong>Median</strong>. Weil der Median auch als zentrales Lagemass verwendet wird, wird der Median <strong>nie</strong> als Quantil angegeben, sondern immer als der <strong>Median</strong> gesondert hervorgehoben.</p>
+</div>
+</div>
+<p>Zur Bestimmung der Quantile müssen die gemessenen Werte sortiert werden. Entsprechend lassen sich Quantile nur für ordinal- und metrisch-skalierte Daten bestimmen.</p>
+<p>Weil die Anzahl der Werte in einem Intervall fest ist, lassen sich über die Abstände zwischen den Quantilen Rückschlüsse über die Verteilung der gemessenen Werte ziehen: Sind die Abstände zwischen den Quantilen klein (oder auch <code>0</code>), dann liegen viele Werte in diesem kleinen Bereich. Weil die Quantile die Verteilung beschreiben sind auch sie <strong>Streumasse einer Verteilung</strong>.</p>
+<p>Eine häufig verwendete Variante der Quantile sind die <strong>Quartile</strong>. Diese Teilen die Verteilung in vier Bereiche, die gleich viele Werte enthalten. Als Quartil wird den Wert bezeichnet, der zwei dieser Bereiche trennt. Das 50%-Quartil ist identisch mit dem Median und wird deshalb <strong>nicht</strong> als Quartil bezeichnet. Es gibt also <strong>zwei</strong> Quartile.</p>
+<ul>
+<li>Das 25%-Quartil markiert das Ende der kleinsten Viertels der Werte.</li>
+<li>Das 75%-Quartil markiert das Ende der kleinsten drei-Viertel der Werte.</li>
+</ul>
+<p>Die Differenz zwischen dem 75%- und dem 25%-Quartil heisst Interquartilabstand oder angekürzt <strong>IQR</strong> (für engl. <em>interquartile Range</em>).</p>
+</section>
+<section id="standardabweichung-und-varianz" class="level3" data-number="18.2.5">
+<h3 data-number="18.2.5" class="anchored" data-anchor-id="standardabweichung-und-varianz"><span class="header-section-number">18.2.5</span> Standardabweichung und Varianz</h3>
+<p>Ein besonderes Streumass für metrisch-skalierte Daten ist die <strong>Varianz</strong>. Die Varianz kennzeichnet die Variabilität der Werte relativ zum Mittelwert. Die Varianz ist immer ein positiver Wert.</p>
+<p>Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (<a href="#eq-varianz">Formel&nbsp;<span>18.2</span></a>).</p>
+<p><span id="eq-varianz"><span class="math display">
+var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
+\tag{18.2}</span></span></p>
+<p>Wie auch beim Mittelwert werden zwei Arten der Varianz unterschieden:</p>
+<ol type="1">
+<li>Die <em>echte Varianz</em>, die mit dem grichischen Buchstaben Sigma (<span class="math inline">\sigma^2</span>) gekennzeichnet wird</li>
+<li>Die <em>gemessene Varianz</em> (<span class="math inline">s^2</span>)</li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Übung
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Bestimmen Sie alle Vektorennamen in der Beispielstichprobe.</p>
-</div>
-</div>
-<p>Für die Variable <code>q10</code> es 6 Untermerkmale und für die Variable <code>q16</code> gibt es 19 Untermerkmale. Für alle Merkmale in <code>q10</code> und <code>q16</code> wurden jeweils zwei Aspekte (<code>0</code> und <code>1</code>) erhoben. Diese Aspekte können für das jeweilige Untermerkmal direkt verglichen werden. Wir haben also im Vektor <code>q16_13_1</code> den zweiten Aspekt des 13. Untermerkmals der Variable q16 erfasst.</p>
-<section id="lagemasse-für-nominale-skalenniveaus" class="level3" data-number="18.3.1">
-<h3 data-number="18.3.1" class="anchored" data-anchor-id="lagemasse-für-nominale-skalenniveaus"><span class="header-section-number">18.3.1</span> Lagemasse für nominale Skalenniveaus</h3>
-<p>Für nominale Variablen dürfen wir als Lagemass für die Verteilung nur den <em>Modus</em> bestimmen. Damit ist die am häufigsten auftretende Merkmalsausprägung gemeint.</p>
-<p>Das zweite “Lagemass” sind die tatsächlich auftretenden Skalenwerte.</p>
-<p>Beide Kennwerte erschliessen sich über die <em>Häufigkeiten</em> der vorkommenden Werte. Dazu bestimmen wir die Häufigkeit des Auftretens einer Merkmalsausprägung in unserer Stichprobe. Das bestimmen der Häufigkeiten ist eine Abzählaufgabe, bei der wir vorher die gleichen Merkmalsausprägungen gruppiert haben.</p>
-<p>Das folgende Beispiel zwei Varianten für das Feststellen der Häufigkeiten von nominalskalierten Variablen. Die erste Variante ist die direkte Umsetzung des gerade beschriebenen Algorithmus.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(q3) <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<table border="1">
+<p>Weil die Varianz vorzeichenlos ist und durch das Quadrieren nicht die gleiche Masseinheit hat wie die Werte, lassen sich die Varianz und die Werte nicht direkt miteinander vergleichen.</p>
+<p>Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die <strong>Standardabweichung</strong>. Die <strong>Standardabweichung</strong> hängt direkt mit der Varianz zusuammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte.</p>
+</section>
+<section id="mad" class="level3" data-number="18.2.6">
+<h3 data-number="18.2.6" class="anchored" data-anchor-id="mad"><span class="header-section-number">18.2.6</span> MAD</h3>
+<p>Der Interquartilsabstand (IQR) ist ein <em>Standardmass</em>, dass sich aus den Quartilsgrenzen ergibt. <em>Standardmass</em> bedeutet in diesem Fall, dass für Studien vorausgesetzt wird, dass dieser Wert für ordinal- und z.T. auch für metrisch-skalierte Daten berichtet wird. Der IQR hat jedoch zwei wichtige Nachteile:</p>
+<ol type="1">
+<li>Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen der beiden Quartile definiert ist. Weil zwischen den beiden Quartilen einer Stichprobe nur die Hälfte der Werte liegt, bleibt die andere Hälfte der Werte unberücksichtigt.</li>
+<li>Der IQR muss anders interpretiert werden, als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.</li>
+</ol>
+<p>Für ordinalskalierte Daten ist also ein Streumass wünschenswert, das alle Werte berücksichtigt und sie relativ zum zentralen Lagemass des Medians beschreibt Dieses Mass ist die sog. <strong>Mittlere absolute Abweichung vom Median</strong> (MAD). Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Streuung der Werte.</p>
+<p>Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (<a href="#eq-mad">Formel&nbsp;<span>18.3</span></a>). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.</p>
+<p><span id="eq-mad"><span class="math display">
+MAD(x) = md(| x_i - md(x) |)
+\tag{18.3}</span></span></p>
+<p>Das Ergebnis zeigt die zentrale Tendenz für <em>alle Werte</em> unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. Der Vorteil der MAD ist, dass dieser Wert genau gleich wie die Standardabweichung interpretiert wird.</p>
+<div id="exm-mad" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 18.2 (MAD im Verhältnis zum IQR) </strong></span>&nbsp;</p>
+<table class="table">
 <thead>
-<tr>
-<th scope="col">
-q3
-</th>
-<th scope="col">
-n
-</th>
-</tr>
-<tr>
-<th scope="col">
-&lt;chr&gt;
-</th>
-<th scope="col">
-&lt;int&gt;
-</th>
+<tr class="header">
+<th style="text-align: right;">variable</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">md</th>
+<th style="text-align: right;">iqr</th>
+<th style="text-align: right;">mad</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-F
-</td>
-<td>
-10
-</td>
+<tr class="odd">
+<td style="text-align: right;">q10_1_0</td>
+<td style="text-align: right;">&nbsp;27</td>
+<td style="text-align: right;">&nbsp;7</td>
+<td style="text-align: right;">&nbsp;3.5</td>
+<td style="text-align: right;">1.8888889&nbsp;</td>
 </tr>
-<tr>
-<td>
-M
-</td>
-<td>
-17
-</td>
+<tr class="even">
+<td style="text-align: right;">q10_1_1</td>
+<td style="text-align: right;">&nbsp;27</td>
+<td style="text-align: right;">&nbsp;9</td>
+<td style="text-align: right;">&nbsp;1.5</td>
+<td style="text-align: right;">&nbsp;0.8888889</td>
 </tr>
 </tbody>
-
 </table>
-<p>Die zweite Variante verwendet die <code>count()</code>-Funktion, um das gleiche Ziel zu erreichen. Die Variante mit <code>count()</code> ist etwas leichter zu lesen, weil wir <em>explizit</em> klarstellen, dass wir die Merkmalsausprägungen <em>abzählen</em>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q4)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<table border="1">
-<thead>
-<tr>
-<th scope="col">
-q4
-</th>
-<th scope="col">
-n
-</th>
-</tr>
-<tr>
-<th scope="col">
-&lt;chr&gt;
-</th>
-<th scope="col">
-&lt;int&gt;
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-N
-</td>
-<td>
-17
-</td>
-</tr>
-<tr>
-<td>
-P
-</td>
-<td>
-10
-</td>
-</tr>
-</tbody>
-
-</table>
-<p>Wir können an diesem Beispiel erkennen, dass in unserer Stichprobe nicht alle Ausprägungen der jeweiligen Skalierung in unseren Variablen vorkommen. Uns fällt auch auf, dass die Häufigkeiten für die gemessenen Merkmalsausprägungen der Variablen gleich sind.</p>
-<p>Neben den absoluten Häufigkeiten interessieren uns ebenfalls die <em>relativen Häufigkeiten</em>. Diese <strong>müssen</strong> bei der Beschreibung von nominalskalierten Variablen mit angegeben werden.</p>
-<p>Relative Häufigkeiten sind nichts anderes als die prozentualen Anteile der absouluten Häufigkeit in der Gesamtstichprobe. Wir können die relativen Häufigkeiten leicht aus den absoluten Häufigkeiten bestimmen.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q4) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">prozent =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Damit erhalten wir die prozentualen Anteile für alle beobachteten Merkmalsausprägungen.</p>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -671,167 +771,15 @@ Achtung
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Beachten Sie hier, dass <code>n</code> den Vektor <code>n</code> bezeichnet, der durch den Aufruf der <code>count()</code>-Funktion erzeugt wird. Sie dürfen diesen Vektor nicht mit der Funktion <code>n()</code> verwechseln! Die <code>n()</code>-Funktion liefert die Anzahl der Datensätze einer Stichprobe. Nachdem wir <code>count()</code> aufgerufen haben, ist das Ergebnis von <code>n()</code> in diesem Beispiel gleich <code>2</code>.</p>
+<p>Obwohl die MAD als Streumass besser geeignet ist als der IQR, wird das Mass seltener in empirischen Arbeiten verwendet. Die MAD sollte deshalb <strong>immer</strong> zusammen mit dem IQR berichtet werden und in ihrer Bedeutung als Streumass im Text hervorgehoben werden.</p>
 </div>
 </div>
-<p>Wir können nun leicht den <strong>Modus</strong> der Variable mit Hilfe der <code>max</code>-Aggregation bestimmen. Anstelle der <code>summerise()</code>-Funktion verwenden wir jedoch besser die <code>filter()</code>-Funktion, um auch das zugehörige Skalenniveau zu erhalten.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bestimmen des Modus von q3</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(q3) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(n <span class="sc">==</span> <span class="fu">max</span>(n))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<table border="1">
-<thead>
-<tr>
-<th scope="col">
-q3
-</th>
-<th scope="col">
-n
-</th>
-</tr>
-<tr>
-<th scope="col">
-&lt;chr&gt;
-</th>
-<th scope="col">
-&lt;int&gt;
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-M
-</td>
-<td>
-17
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tipp
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Der <strong>Modus</strong> ist in der deskriptiven Statistik nur in Ausnahmefällen von Bedeutung. Eine solche Ausnahme liegt vor, wenn aus mehreren Merkmalsausprägungen der Modus den stark überwiegenden Anteil in der Stichprobe ausmacht. Dieser Anteil ist ungefähr ab einer relativen Häufigkeit von <code>.75</code> oder grösser gegeben. In solchen Fällen sollten Sie trotzdem die Häufigkeiten der anderen Merkmalsausprägungen berichten.</p>
-</div>
-</div>
-</section>
-<section id="lagemasse-für-metrische-skalenniveaus" class="level3" data-number="18.3.2">
-<h3 data-number="18.3.2" class="anchored" data-anchor-id="lagemasse-für-metrische-skalenniveaus"><span class="header-section-number">18.3.2</span> Lagemasse für metrische Skalenniveaus</h3>
-<p>Die grundlegenden Kennwerte für metrische Skalenniveaus sind die <em>Bandbreite</em>, die sich aus dem kleinsten (<em>Minimum</em>) und grössten gemessenen Wert (<em>Maximum</em>) ergibt.</p>
-<p>Für metrischskalierte Variablen können wir immer den Median und Quantile bestimmen, wobei wir uns in der Regel auf die <em>Quartile</em> beschränken. Bei der Beschreibung der Quartile geben wir immer den <em>Interquartilsabstand</em> mit an. Dieser ist das Gegenstück zur Bandbreite und zeigt uns zwischen welchen Ausprägungen die Hälfte der gemessenen Variablenwerte liegen.</p>
-<p>Das folgende Beispiel zeigt die Berechnung der relevanten Kennwerte für die Variable <code>q10_1_0</code>. Diese Berechnung entspricht der <code>favstats</code> der in Sauer (2019) beschriebenen <code>mosaic</code>-Bibliothek</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">min =</span> <span class="fu">min</span>(q10_1_0),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">max =</span> <span class="fu">max</span>(q10_1_0),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">bw =</span> max <span class="sc">-</span> min,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">iqr =</span> <span class="fu">IQR</span>(q10_1_0), <span class="co"># berücksichtigt ausreisser!</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">q1 =</span> <span class="fu">quantile</span>(q10_1_0, .<span class="dv">25</span>),</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># q2 = quantile(q10_1_0, .5), # der Median ist die zweite Quartilsgrenze</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">md =</span> <span class="fu">median</span>(q10_1_0), </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">q3 =</span> <span class="fu">quantile</span>(q10_1_0, .<span class="dv">75</span>),</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># q4 = quantile(q10_1_0, 1) , # Das Maximum ist die vierte Quartilsgrenze.</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">mad =</span> <span class="fu">mad</span>(q10_1_0, <span class="at">constant =</span> <span class="dv">1</span>) </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Merke
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Diese Ergebnisse werden nicht interpretiert!</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Merke
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Es handelt sich bei diesen Ergebnisse um sog. <strong>á priori Fakten</strong>. Es sind Fakten, die sich direkt aus den Messungen und der Definition der Lagemasse ergeben und keiner weiteren Begründung bedürfen.</p>
-</div>
-</div>
-</section>
-<section id="lagemasse-für-ordinale-skalenniveaus" class="level3" data-number="18.3.3">
-<h3 data-number="18.3.3" class="anchored" data-anchor-id="lagemasse-für-ordinale-skalenniveaus"><span class="header-section-number">18.3.3</span> Lagemasse für ordinale Skalenniveaus</h3>
-<p>Im Unterschied zu den metrischen Skalenniveaus ist der Mittelwert und die Standardabweichung für <em>ordianle Skalenniveaus</em> <strong>nicht definiert</strong>. Ausserdem werden Quartilsgrenzen und die davon abhängigen Variablen <em>etwas</em> anders berechnet als bei metrischskalierten Variablen. Damit wir keine Folgefehler für die spätere Analyse erhalten müssen wir für ordinalskalierte Variablen die entsprechenden Kennwerte richtig berechnen.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Achtung
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In vielen Fällen ergeben die verschiedenen Berechnungsarten die <em>gleichen Ergebnisse</em>. Das bedeutet nicht, dass die Ergebnisse in <em>allen</em> Fällen gleich und damit austauschbar sind!</p>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>Die Berechnungsart wird mit dem Parameter <code>type</code> festgelegt. Dieser Parameter können wir die Ganzzahlen von <code>1</code> bis <code>8</code> übergeben. Der Standardwert für diesen Parameter ist <code>7</code>. Die Werte <code>1</code>, <code>2</code> und <code>3</code> sind für die Berechnung bei ordinalen Skalenniveaus gedacht. Die anderen Werte beschreiben verschiedene Varianten für metrische Skalenniveaus.</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Verwenden Sie nur die Werte <code>1</code> für ordinale Skalenniveaus und <code>7</code> für metrische Skalenniveaus. Weil <code>7</code> der Vorgabewert ist, wird dieser bei metrischen Skalenniveaus einfach weggelassen.</p>
-</div>
-</div>
-<p>Alle anderen Werte für den <code>type</code>-Parameter sind für besondere Fälle, wenn Ergebnisse aus anderen Quellen kontrolliert werden müssen.</p>
-<p>Das folgende Codesegment zeigt Berechnung der statistischen Kennwerte für ordinale Skalenniveaus.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stichprobe <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q10_1_0) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">min =</span> <span class="fu">min</span>(q10_1_0),</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">max =</span> <span class="fu">max</span>(q10_1_0),</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">bw =</span> max <span class="sc">-</span> min,</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">iqr =</span> <span class="fu">IQR</span>(q10_1_0, <span class="at">type =</span> <span class="dv">1</span>), <span class="co"># berücksichtigt ausreisser!</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">q1 =</span> <span class="fu">quantile</span>(q10_1_0, .<span class="dv">25</span>, <span class="at">type =</span> <span class="dv">1</span>),</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># q2 = quantile(q10_1_0, .5, type = 1), # der Median ist die zweite Quartilsgrenze</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">md =</span> <span class="fu">median</span>(q10_1_0, <span class="at">type =</span> <span class="dv">1</span>), </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">q3 =</span> <span class="fu">quantile</span>(q10_1_0, .<span class="dv">75</span>, <span class="at">type =</span> <span class="dv">1</span>),</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># q4 = quantile(q10_1_0, 1, type = 1) , # Das Maximum ist die vierte Quartilsgrenze. </span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">mad =</span> <span class="fu">mad</span>(q10_1_0, <span class="at">constant =</span> <span class="dv">1</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bortz_statistik_2010" class="csl-entry" role="listitem">
+Bortz, J., &amp; Schuster, C. (2010). <em>Statistik für Human- und Sozialwissenschaftler</em> (7., vollständig überarbeitete und erweiterte Auflage). Springer.
+</div>
 <div id="ref-sauer_moderne_2019" class="csl-entry" role="listitem">
 Sauer, S. (2019). <em>Moderne Datenanalyse mit R: Daten einlesen, aufbereiten, visualisieren, modellieren und kommunizieren</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-21587-3">https://doi.org/10.1007/978-3-658-21587-3</a>
 </div>

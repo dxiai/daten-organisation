@@ -621,8 +621,9 @@ Praxis
 <div id="def-gruppieren" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15.10 </strong></span>Beim <strong>Gruppieren</strong> werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.</p>
 </div>
-<p>Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Dabei bleibt die Gesamtstruktur der Daten erhalten. <em>Eine Gruppierung ist also nur an die Verwendung des Sekundärindex gekoppelt.</em></p>
-<p>Oft werden Gruppierungen verwendet, um wiederholtes Filtern zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten gearbeitet werden.</p>
+<p>Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Eine gruppierte Operation verwendet nur die Werte innerhalb der gleichen Gruppe. Der Vorteil einer gruppierten Operation ist, dass die Operation für alle Gruppen <em>gleichzeitig</em> ausgeführt wird.</p>
+<p>Damit eine gruppierte Operationen durchgeführt werden können, müssen zusammengehörende Werte identifiziert werden. Das wird durch einen Sekundärindex möglich. <em>Eine Gruppierung wird durch gleiche Wert im Sekundärindex gebildet.</em> Gruppierungen werden verwendet, um repititive zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten weritergearbeitet werden.</p>
+<p>Die Überlegungen des Gruppierens lassen sich auf mehrere Sekundärindizes verallgemeinern: In solchen Fällen werden die Gruppen über die Permutationen der Werte der Sekundärindizes gebildet. In der Regel werden nur die in den Daten <em>vorhandenen</em> Permutationen im Ergebnis einer gruppierten Operation berücksichtigt. Deshalb kann es notwendig sein, fehlende Permutationen nachträglich zu erzeugen, um nachgelagerte Analysen durchführen zu können.</p>
 
 
 </section>
