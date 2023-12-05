@@ -8,10 +8,6 @@ execute:
 ---
 # Daten beschreiben {#sec-chapter-deskriptve-statistik}
 
-::: {.callout-warning}
-## Work in Progress
-:::
-
 > Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Informationen über den jeweiligen Untersuchungsgegenstand bekannt sind. [@bortz_statistik_2010, S. 25]
 
 ::: {#def-deskriptive-statistik}
@@ -128,7 +124,7 @@ Weil in den Entsprechend müssen fehlende Werte vor der Bestimmung des Variablen
 
 Die deskriptive Statistik muss daher **immer** den Stichprobenumfang **und** die Variablenumfänge anführen.
 
-## Skalenniveaus und Lagemasse
+## Kennwerte der Skalenniveaus
 
 Für Variablen wurden im @sec-datentypen die folgenden Skalenniveaus eingeführt, um Daten nach den Beziehungen zwischen den Werten des Wertebereichs zu kategorisieren. Dabei wurden die folgenden Kategorien eingeführt: 
 
@@ -136,244 +132,166 @@ Für Variablen wurden im @sec-datentypen die folgenden Skalenniveaus eingeführt
 2. Ordinalskalierte Daten
 3. Metrisch-skalierte Daten (Intervall- oder Varianzskaliert)
 
-Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über die Daten. 
+Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über die Daten, woraus sich die zulässigen Kennwerte ableiten. Diese Kennwerte heissen **Lagemasse**, weil sie ein Mass für die Struktur der Werteverteilung darstellen. Weil die Skalenniveaus hierarchisch organisiert sind, beschreiben die Kennzahlen für Verteilungen des allgemeinere Skalennivaus automatisch auch Verteilungen der spezielleren Skalennivaus. Für metrisch-skalierte Daten gelten also automatisch auch die Kennzahlen für ordinalskalierte und nominalskalierte Daten. Für ordinalskalierte Daten gelten automatisch auch die Kennzahlen für nominalskalierte Daten, aber *nicht* die für metrisch-skalierte Daten.
 
-Nominalskalierte Daten lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden.
+**Nominalskalierte Daten** lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden. Daraus ergeben sich **absolute Häufigkeiten**. Werden absolute Häufigkeiten auf das Intervall 0-100 normalisiert, dann spricht man von **relativen Häufigkeiten**.  Weil es keine Beziehungen zwischen verschiedenen nominalskalierten Werten gibt, können nur die beiden Kennwerte der absuluten und relativen Häufigkeiten berichtet werden. Formal liesse sich auch noch der Modus bestimmen. Der Modus ist der am häufigsten vorkommende Wert, der sich direkt aus den absoluten bzw. relativen Häufigkeiten ergibt. In der Praxis wird der Modus nicht separat berichtet, sondern nur zusammen mit allen anderen relativen und absoluten Häufigkeiten.
 
-Ordinalskalierte Daten lassen sich sortieren, so dass für jeden Wert eines Wertebereichs Grösser-Kleiner-Beziehungen zu allen anderen Werten festgelegt werden können. Entsprechend lassen sich die Werte auf eine Weise nummerieren, so dass die Nummerierung der Reihenfolge der Werte im Wertebereich widerspiegelt. Die 
+**Ordinalskalierte Daten** lassen sich sortieren, so dass für jeden Wert eines Wertebereichs Grösser-Kleiner-Beziehungen zu allen anderen Werten festgelegt werden können. Entsprechend lassen sich die Werte auf eine Weise nummerieren, so dass die Nummerierung der Reihenfolge der Werte im Wertebereich widerspiegelt. Über diese Nummerierung lassen sich beliebige ordinalskalierte Werte auswerten und zusätzliche Kennwerte bestimmen:
 
+- **Quantile** (bzw. Quartile) aus denen sich der **Median** und der **Interquartilsabstand** (engl. *Interquartile Range*) ableiten. 
+- Die **mittlere absolute Abweichung vom Median** (eng. *Median Absolute Deviation* oder kurz **MAD**).
 
+**Metrisch-skalierte Daten** haben gleiche Abstände und in der Regel auch gleiche Verhältnisse. Solche Daten sind nicht nur sortierbar, es ist zusätzlich auch die Division definiert und sie lassen sich oft durch stetige Funktionen beschreiben. Diese Funktion heisst für eine Verteilung die **Dichtefunktion** der Verteilung. Sie zeigt an, mit welcher Häufigkeit Werte wahrscheinlich auftreten können. Für jede dieser Verteilungen lässt sich der **Mittelwert** und die **Standardabweichung** bestimmen.
 
-Die Skalenniveaus unserer Variablen müssen wir den Vektoren zuordnen können. Dazu müssen wir sowohl die Variablen und Vektoren unserer Stichprobe kennen. Diese Information erschliesst sich nicht aus den Daten, sondern ist in der Regel separat dokumentiert. 
+### Mittelwert
 
-Unsere Beispielstichprobe hat 53 Vektoren. Diese Vektoren sind vier Variablengruppen zugeordnet. Eine Variablengruppe sind unterschiedliche Merkmalsausprägungen mit dem gleichen Skalennivau, die wir in Beziehung setzen. Das Beispiel umfasst die folgenden Variablengruppen und Skalenniveaus: 
+Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (@eq-mittelwert).
 
-1. `q1` ist ein Indikator
-2. `q3`, `q4` und `q16` sind nominalskalierte Variablen
-  * `q3` hat die Skalierung von `F`, `M`, `X` und `O`. 
-  * `q4` hat die Skalierung von `A`, `G`, `L`, `N`, `P`, `S`, `T` und `W`. 
-  * `q16` hat die Skalierung von `0` und `1`. 
-3. `q10` sind ordinalskalierte Variablen mit der Skalierung von `0`-`10` in ganzzahligen Schritten. Die Messungen stammen von sog. Likert-Skalen.
+$$
+\bar{x} = \frac{\sum{v_i}}{n}
+$$ {#eq-mittelwert}
 
-::: {.callout-tip}
-## Übung 
-Bestimmen Sie alle Vektorennamen in der Beispielstichprobe.
-:::
+Weil der Mittelwert eine *Mitte* einer Verteilung markiert, ist der Mittelwert ein sog. **zentrales Lagemass**.
 
-Für die Variable `q10` es 6 Untermerkmale und für die Variable `q16` gibt es 19 Untermerkmale. Für alle Merkmale in `q10` und `q16` wurden jeweils zwei Aspekte (`0` und `1`) erhoben. Diese Aspekte können für das jeweilige Untermerkmal direkt verglichen werden. Wir haben also im Vektor `q16_13_1` den zweiten Aspekt des 13. Untermerkmals der Variable q16 erfasst. 
+Beim Mittelwert werden zwei Varianten unterschieden:
 
-### Lagemasse für nominale Skalenniveaus
-
-Für nominale Variablen dürfen wir als Lagemass für die Verteilung nur den *Modus* bestimmen. Damit ist die am häufigsten auftretende Merkmalsausprägung gemeint. 
-
-Das zweite "Lagemass" sind die Häufigkeiten der tatsächlich auftretenden Skalenwerte. Beide Kennwerte erschliessen sich über die *Häufigkeiten* der vorkommenden Werte.
+- Der *echte* Mittelwert ($\mu$) einer Verteilung $X$. 
+- Der *gemessene* Mittelwert ($\bar{x}$, sprich "x-Balken" oder "x-bar") einer Verteilung $X$.
 
 ::: {.callout-tip}
 ## Praxis
-Der Modus wird in der Regel zugunsten des zweiten "Lagemasses" für nominalskalierte Daten *nicht berichtet*, weil der Modus nur eine Merkmalsausprägung berücksichtigt und alle anderen Merkmalsausprägungen ignoriert.
+Weil der echte Mittelwert einer Verteilung nur in Ausnahmefällen bekannt ist, wird nur der *gemessene Mittelwert berichtet.
 :::
 
-Die Häufigkeiten der tatsächlich auftretenden Merkmalsausprägungen werden durch abzählen (@sec-chapter-vektoren) bestimmt. 
+Damit ein zentrales Lagemass einer Verteilung beschreiben kann, muss diese Kennzahl ein gültiger Wert im Wertebereich der Daten sein. Wegen der Division zur Berechnung des **Mittelwerts**, kann diese Bedingung **nur für metrische Skalenniveaus** eingehalten werden. 
 
-Dazu bestimmen wir die Häufigkeit des Auftretens einer Merkmalsausprägung in unserer Stichprobe. Das bestimmen der Häufigkeiten ist eine Abzählaufgabe, bei der wir vorher die gleichen Merkmalsausprägungen gruppiert haben. 
+### Median
 
-Das folgende Beispiel zwei Varianten für das Feststellen der Häufigkeiten von nominalskalierten Variablen. Die erste Variante ist die direkte Umsetzung des gerade beschriebenen Algorithmus. 
-```R
-stichprobe |> 
-    group_by(q3) |> 
-    summarise(n = n())
-```
+Der Median (`md`) ist der *Wert*, an dem eine Verteilung in zwei Hälften geteilt wird. Dadurch markiert der Median eine *andere* Mitte einer Verteilung. Entsprechend ist auch der Median ein zentrales Lagemass. 
 
-<table border="1">
-<thead>
-	<tr><th scope=col>q3</th><th scope=col>n</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>F</td><td>10</td></tr>
-	<tr><td>M</td><td>17</td></tr>
-</tbody>
-</table>
+Für eine *sortierte* Werteverteilung lässt sich der Median aus der Anzahl der Werte bestimmen: Der Median ist der Wert an der Position $\frac{n}{2}$ eines **sortierten Vektors**. Diese Position ist jedoch nur für gerade Anzahlen gültig. Für eine ungerade Anzahl von Werten liegt der Median an der Position $\frac{n-1}{2}$.
 
-Die zweite Variante verwendet die `count()`-Funktion, um das gleiche Ziel zu erreichen. Die Variante mit `count()` ist etwas leichter zu lesen, weil wir *explizit* klarstellen, dass wir die Merkmalsausprägungen *abzählen*. 
+Weil der Median aus der Position der Werte eines sortierten Vektors bestimmt wird, müssen die Daten *sortierbar* sein. Der Median ist für **metrisch-skalierte und** für **ordinalskalierte Werte** zulässig. 
 
-```R
-stichprobe |> 
-    count(q4)
-```
+### Absolute und relative Häufigkeiten
 
-<table border="1">
-<thead>
-	<tr><th scope=col>q4</th><th scope=col>n</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>N</td><td>17</td></tr>
-	<tr><td>P</td><td>10</td></tr>
-</tbody>
-</table>
+Bei der Feststellung der Häufigkeiten wird gezählt, wie oft ein Wert in einem Vektor auftritt. Dieser Wert heisst die **absolute Häufigkeit** des Werts. 
 
-Wir können an diesem Beispiel erkennen, dass in unserer Stichprobe nicht alle Ausprägungen der jeweiligen Skalierung in unseren Variablen vorkommen. Uns fällt auch auf, dass die Häufigkeiten für die gemessenen Merkmalsausprägungen der Variablen gleich sind. 
+Die absoluten Häufigkeiten lassen sich *normieren*. Es ist üblich die Häufigkeiten als Anteile des Ganzen anzugeben. Oft werden diese Anteile als Prozentwerten angegeben. Diese Anteile heissen **relative Häufigkeiten**, weil die Werte den Anteil relativ zur Gesamtzahl aller Werte abgibt. 
 
-Neben den absoluten Häufigkeiten interessieren uns ebenfalls die *relativen Häufigkeiten*. Diese **müssen** bei der Beschreibung von nominalskalierten Variablen mit angegeben werden. 
-
-Relative Häufigkeiten sind nichts anderes als die prozentualen Anteile der absouluten Häufigkeit in der Gesamtstichprobe. Wir können die relativen Häufigkeiten leicht aus den absoluten Häufigkeiten bestimmen.
-
-```R
-stichprobe |> 
-    count(q4) |>
-    mutate(
-        prozent = n / sum(n)
-    )
-``` 
-
-Damit erhalten wir die prozentualen Anteile für alle beobachteten Merkmalsausprägungen. 
-
-::: {.callout-warning}
-## Achtung
-Beachten Sie hier, dass `n` den Vektor `n` bezeichnet, der durch den Aufruf der `count()`-Funktion erzeugt wird. Sie dürfen diesen Vektor nicht mit der Funktion `n()` verwechseln! Die `n()`-Funktion liefert die Anzahl der Datensätze einer Stichprobe. Nachdem wir `count()` aufgerufen haben, ist das Ergebnis von `n()` in diesem Beispiel gleich `2`. 
-:::
-
-Wir können nun leicht den **Modus** der Variable mit Hilfe der `max`-Aggregation bestimmen. Anstelle der `summerise()`-Funktion verwenden wir jedoch besser die `filter()`-Funktion, um auch das zugehörige Skalenniveau zu erhalten.
-
-```R
-# Bestimmen des Modus von q3
-stichprobe |> 
-    count(q3) |>
-    filter(n == max(n))
-```
-
-<table border="1">
-<thead>
-	<tr><th scope=col>q3</th><th scope=col>n</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>M</td><td>17</td></tr>
-</tbody>
-</table>
+Die relativen Häufigkeit eines Werts ergibt aus der absoluten Häufigkeit sich, indem die absolute Häufigkeit durch den Umfang des Vektors geteilt wird.
 
 ::: {.callout-tip}
-Der **Modus** ist in der deskriptiven Statistik  nur in Ausnahmefällen von Bedeutung. Eine solche Ausnahme liegt vor, wenn aus mehreren Merkmalsausprägungen der Modus den stark überwiegenden Anteil in der Stichprobe ausmacht. Dieser Anteil ist ungefähr ab einer relativen Häufigkeit von `.75` oder grösser gegeben. In solchen  Fällen sollten Sie trotzdem die Häufigkeiten der anderen Merkmalsausprägungen berichten.
+## Praxis
+
+Es **müssen** immer die absoluten **und** die relativen Häufigkeiten berichtet werden.
 :::
 
-### Lagemasse für metrische Skalenniveaus
-
-Die grundlegenden Kennwerte für  metrische Skalenniveaus sind die *Bandbreite*, die sich aus dem kleinsten (*Minimum*) und grössten gemessenen Wert (*Maximum*) ergibt. 
-
-Für metrischskalierte Variablen können wir immer den Median und Quantile bestimmen, wobei wir uns in der Regel auf die *Quartile* beschränken. Bei der Beschreibung der Quartile geben wir immer den *Interquartilsabstand* mit an. Dieser ist das Gegenstück zur Bandbreite und zeigt uns zwischen welchen Ausprägungen die Hälfte der gemessenen Variablenwerte liegen.
-
-Das folgende Beispiel zeigt die Berechnung der relevanten Kennwerte für die Variable `q10_1_0`. Diese Berechnung entspricht der `favstats` der in Sauer (2019) beschriebenen `mosaic`-Bibliothek
-
-```R
-stichprobe |>
-    select(q10_1_0) |>
-    drop_na() |>
-    summarise(
-        n = n(),
-        min = min(q10_1_0),
-        max = max(q10_1_0),
-        bw = max - min,
-        
-        iqr = IQR(q10_1_0), # berücksichtigt ausreisser!
-        
-        q1 = quantile(q10_1_0, .25),
-        # q2 = quantile(q10_1_0, .5), # der Median ist die zweite Quartilsgrenze
-        md = median(q10_1_0), 
-        q3 = quantile(q10_1_0, .75),
-        # q4 = quantile(q10_1_0, 1) , # Das Maximum ist die vierte Quartilsgrenze.
-
-        mad = mad(q10_1_0, constant = 1) 
-    )
-```
+Weil die Häufigkeiten beschreiben, über welche Werte die gemessenen Daten *gestreut* sind, werden diese Masse auch den **Streumassen** zugerechnet. 
 
 ::: {.callout-note}
 ## Merke
-Diese Ergebnisse werden nicht interpretiert! 
+Alle Häufigkeiten beschreiben zusammen die *Verteilung* der gemessenen Werte. 
 :::
 
 ::: {.callout-note}
 ## Merke
-Es handelt sich bei diesen Ergebnisse um sog. **á priori Fakten**. Es sind Fakten, die sich direkt aus den Messungen und der Definition der Lagemasse ergeben und keiner weiteren Begründung bedürfen.
+
+Bei absoluten und relativen Häufigkeiten sind die **Wertintervalle unveränderlich**. 
 :::
 
-### Lagemasse für ordinale Skalenniveaus
+::: {.callout-tip}
+## Praxis
+Weil für **nominalskalierte Daten** keine anderen Lagemasse zur Verfügung stehen, **müssen** die Häufigkeiten für dieses Skalenniveau immer angegeben werden!
+:::
 
-Im Unterschied zu den metrischen Skalenniveaus ist der Mittelwert und die Standardabweichung für *ordianle Skalenniveaus* **nicht definiert**. Ausserdem werden Quartilsgrenzen und die davon abhängigen Variablen *etwas* anders berechnet als bei metrischskalierten Variablen. Damit wir keine Folgefehler für die spätere Analyse erhalten müssen wir für ordinalskalierte Variablen die entsprechenden Kennwerte richtig berechnen. 
+
+Für **metrisch-skalierte Werte** lassen sich die Häufigkeiten nicht so leicht bestimmen, wie für die anderen Skalennivaus. Zur Bestimmung der Häufigkeiten von metrisch-skalierten Daten, wird der Wertebereich in gleichgrosse Intervalle gegliedert. Anschliessend wird die Anzahl der Werte in jedem Intervall gezählt. Diese Intervalle erzeugen künstlich diskrete Wertebereiche. 
+
+::: {.callout-tip}
+## Praxis
+Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als Histogram dargestellt und nicht separat angegeben. 
+:::
+
+### Quantile und Quartile
+
+Quantile gliedern eine Verteilung in gleichgrosse Häufigkeiten und kennzeichnen die Wertintervalle, über welche sich diese Häufigkeiten erstrecken. 
+
+::: {#def-quantil}
+Ein **Quantil** ist der Wert, der zwei Bereiche mit gleichvielen Werten *trennt*. Das Quantil wird dem kleineren der beiden Wertebereiche zugerechnet.
+:::
+
+::: {.callout-note}
+## Merke
+
+Bei Quantilen ist die **Anzahl der Werte in einem Intervall unveränderlich**.
+:::
+
+::: {.callout-important}
+## Achtung
+
+Ein besonderes Quantil ist der **Median**. Weil der Median auch als zentrales Lagemass verwendet wird, wird der Median **nie** als Quantil angegeben, sondern immer als der **Median** gesondert hervorgehoben. 
+:::
+
+Zur Bestimmung der Quantile müssen die gemessenen Werte sortiert werden. Entsprechend lassen sich Quantile nur für ordinal- und metrisch-skalierte Daten bestimmen. 
+
+Weil die Anzahl der Werte in einem Intervall fest ist, lassen sich über die Abstände zwischen den Quantilen Rückschlüsse über die Verteilung der gemessenen Werte ziehen: Sind die Abstände zwischen den Quantilen klein (oder auch `0`), dann liegen viele Werte in diesem kleinen Bereich. Weil die Quantile die Verteilung beschreiben sind auch sie **Streumasse einer Verteilung**.
+
+Eine häufig verwendete Variante der Quantile sind die **Quartile**. Diese Teilen die Verteilung in vier Bereiche, die gleich viele Werte enthalten. Als Quartil wird den Wert bezeichnet, der zwei dieser Bereiche trennt. Das 50%-Quartil ist identisch mit dem Median und wird deshalb **nicht** als Quartil bezeichnet. Es gibt also **zwei** Quartile. 
+
+- Das 25%-Quartil markiert das Ende der kleinsten Viertels der Werte. 
+- Das 75%-Quartil markiert das Ende der kleinsten drei-Viertel der Werte.
+
+Die Differenz zwischen dem 75%- und dem 25%-Quartil heisst Interquartilabstand oder angekürzt **IQR** (für engl. *interquartile Range*). 
+
+### Standardabweichung und Varianz
+
+Ein besonderes Streumass für metrisch-skalierte Daten ist die **Varianz**. Die Varianz kennzeichnet die Variabilität der Werte relativ zum Mittelwert. Die Varianz ist immer ein positiver Wert. 
+
+Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (@eq-varianz).
+
+$$
+var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
+$$ {#eq-varianz}
+
+Wie auch beim Mittelwert werden zwei Arten der Varianz unterschieden: 
+
+1. Die *echte Varianz*, die mit dem grichischen Buchstaben Sigma ($\sigma^2$) gekennzeichnet wird
+2. Die *gemessene Varianz* ($s^2$)
+
+Weil die Varianz vorzeichenlos ist und durch das Quadrieren nicht die gleiche Masseinheit hat wie die Werte, lassen sich die Varianz und die Werte nicht direkt miteinander vergleichen.
+
+Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die **Standardabweichung**. Die **Standardabweichung** hängt direkt mit der Varianz zusuammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte. 
+
+
+### MAD
+
+Der Interquartilsabstand (IQR) ist ein *Standardmass*, dass sich aus den Quartilsgrenzen ergibt. *Standardmass* bedeutet in diesem Fall, dass für Studien vorausgesetzt wird, dass dieser Wert für ordinal- und z.T. auch für metrisch-skalierte Daten berichtet wird. Der IQR hat jedoch zwei wichtige Nachteile: 
+
+1. Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen der beiden Quartile definiert ist. Weil zwischen den beiden Quartilen einer Stichprobe nur die Hälfte der Werte liegt, bleibt die andere Hälfte der Werte unberücksichtigt. 
+2. Der IQR muss anders interpretiert werden, als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.
+
+Für ordinalskalierte Daten ist also ein Streumass wünschenswert, das alle Werte berücksichtigt und sie relativ zum zentralen Lagemass des Medians beschreibt Dieses Mass ist die sog. **Mittlere absolute Abweichung vom Median** (MAD).  Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Streuung der Werte. 
+
+Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (@eq-mad). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.
+
+$$
+MAD(x) = md(| x_i - md(x) |)
+$$ {#eq-mad}
+
+Das Ergebnis zeigt die zentrale Tendenz für *alle Werte* unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. Der Vorteil der MAD ist, dass dieser Wert genau gleich wie die Standardabweichung interpretiert wird.
+
+
+::: {#exm-mad}
+## MAD im Verhältnis zum IQR
+
+| variable | n | md | iqr| mad |
+| ---: | ---: | ---: | ---: | ---: |
+| q10_1_0 | 27 | 7 | 3.5 | 1.8888889 | 1.8888889 |
+| q10_1_1 | 27 | 9 | 1.5| 0.8888889 | 0.8888889 | 
+:::
 
 ::: {.callout-warning}
 ## Achtung
-In vielen Fällen ergeben die verschiedenen Berechnungsarten die *gleichen Ergebnisse*. Das bedeutet nicht, dass die Ergebnisse in *allen* Fällen gleich und damit austauschbar sind!
+Obwohl die MAD als Streumass besser geeignet ist als der IQR, wird das Mass seltener in empirischen Arbeiten verwendet. Die MAD sollte deshalb **immer** zusammen mit dem IQR berichtet werden und in ihrer Bedeutung als Streumass im Text hervorgehoben werden. 
 :::
-
-> Die Berechnungsart wird mit dem Parameter `type` festgelegt. Dieser Parameter können wir die Ganzzahlen von `1` bis `8` übergeben. Der Standardwert für diesen Parameter ist `7`. Die Werte `1`, `2` und `3` sind für die Berechnung bei ordinalen Skalenniveaus gedacht. Die anderen Werte beschreiben verschiedene Varianten für metrische Skalenniveaus. 
-
-::: {.callout-note}
-Verwenden Sie nur die Werte `1` für ordinale Skalenniveaus und `7` für metrische Skalenniveaus. Weil `7` der Vorgabewert ist, wird dieser bei metrischen Skalenniveaus einfach weggelassen. 
-:::
-
-Alle anderen Werte für den `type`-Parameter sind für besondere Fälle, wenn Ergebnisse aus anderen Quellen kontrolliert werden müssen. 
-
-Das folgende Codesegment zeigt Berechnung der statistischen Kennwerte für ordinale Skalenniveaus. 
-
-```R
-stichprobe |>
-    select(q10_1_0) |>
-    drop_na() |>
-    summarise(
-        n = n(),
-        min = min(q10_1_0),
-        max = max(q10_1_0),
-        bw = max - min,
-        
-        iqr = IQR(q10_1_0, type = 1), # berücksichtigt ausreisser!
-        
-        q1 = quantile(q10_1_0, .25, type = 1),
-        # q2 = quantile(q10_1_0, .5, type = 1), # der Median ist die zweite Quartilsgrenze
-        md = median(q10_1_0, type = 1), 
-        q3 = quantile(q10_1_0, .75, type = 1),
-        # q4 = quantile(q10_1_0, 1, type = 1) , # Das Maximum ist die vierte Quartilsgrenze. 
-
-       mad = mad(q10_1_0, constant = 1)
-    )
-```
-
-#### Mittlere absolute Abweichung vom Median
-
-Der Interquartilsabstand (IQR) ist ein Standardmass, dass sich aus den Quartilsgrenzen ergibt. Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen des 2. und 3. Quartils definiert ist. Weil jedes Quartil genau ein Viertel einer Stichprobe umfasst, decken 2 Quartile die Hälfte der Stichprobe ab. Für ordianalskalierte Daten ist dieser Wert als Streumass weniger aussagekräftig, als die Varianz bei metrisch-skalierten Daten, weil der IQR die Hälfte der Werte ignoriert.
-
-Damit wir die gesamte Stichprobe beschreiben können, wünschen wir uns ein Mass für die Streuung über die gesamte Stichprobe. Dieses Mass ist die sog. **Mittlere absolute Abweichung vom Median** (MAD).  Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Varianz einer Stichprobe. 
-
-Dazu berechnen wir die Abstände der jeweiligen Merkmalsausprägung von Median. Weil sich aus der Definition des Medians ergibt, dass 50% unserer Werte unterhalb und 50% oberhalb des Medians liegen müssen wir darauf achten, dass sich die Differenzen nicht aufheben. Deshalb berechnen wir den Absolutbetrag der Differenzen. Damit erhalten für jede gemessene Merkmalsausprägung einen Wert für den Abstand zum Median. Für diese Werte bilden wir das arithmetische Mittel.
-
-Das Ergebnis zeigt uns die zentrale Tendenz für alle Werte unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. 
-
-Das folgende Beispiel stellt das Mittlere absolute Abweichung vom Median (`mad`) und den IQR für das Variablepaar `q10_1`  gegenüber.
-
-
-```R
-stichprobe |>
-    pivot_longer(starts_with("q10_1"), names_to = "variable", values_to = "werte") |> 
-    select(variable, werte) |>
-    drop_na() |>
-    group_by(variable) |>
-    summarise(
-        n = n(),
-        md = median(werte), 
-        iqr = IQR(werte),
-
-        mad_haendisch = (werte - md) |> abs() |> median(),
-        mad = mad(werte)
-    )
-```
-
-<table border="1">
-<thead>
-	<tr><th scope=col>variable</th><th scope=col>n</th><th scope=col>md</th><th scope=col>iqr</th><th scope=col>mad_haendisch</th><th scope=col>mad</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>q10_1_0</td><td>27</td><td>7</td><td>3.5</td><td>1.8888889</td><td>1.8888889</td></tr>
-	<tr><td>q10_1_1</td><td>27</td><td>9</td><td>1.5</td><td>0.8888889</td><td>0.8888889</td></tr>
-</tbody>
-</table>
