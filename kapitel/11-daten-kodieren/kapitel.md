@@ -59,15 +59,17 @@ Sehr häufig werden Kodierungsfunktionen als **Entscheidungsbäume** (s. @def-en
 
 ### Kodierungstabellen
 
-Eine besondere Technik des Kodierens ist die Verwendung von Kodierungstabellen.
+Eine besondere Technik des Kodierens ist die Verwendung von Kodierungstabellen. Solche Tabellen bilden Entscheidungsbäume tabellarisch ab. Eine Umsetzung eines Entscheidungsbaums kann dann mit einer Kombination von zwei Datenrahmen gleichgesetzt werden.
 
 ::: {#def-kodierungstabelle}
 Eine **Kodierungstabelle** ist eine Tabelle, die jedem Wert eines Wertebereichs einen Wert eines anderen Wertebereichs zuordnet.
-::: 
+:::
+
+Eine Kodierungstabelle ist eine *Variante* einer *Indextabelle*.
 
 Die *Kodierungsfunktion* ist in diesem Fall die Vereinigung oder eine partielle Vereinigung der Stichprobe mit der Kodierungstabelle.
 
 ::: {.callout-tip}
 ## Praxis
 Kodierungstabellen sollten immer für die Kodierung von nominal- oder ordinalskalierten Wertebereichen verwendet werden, weil sie die Kodierungsfunktion explizit machen und gleichzeitig die Kodierung *dokumentieren*.
-::: 
+:::
