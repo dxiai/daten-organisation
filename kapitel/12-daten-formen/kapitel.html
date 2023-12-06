@@ -395,14 +395,182 @@ Merke
 <p>Die zweite Art des Transponierens wird auf <strong>Datenrahmen</strong> angewendet.</p>
 <p>Beim Transponieren eines Datenrahmens wird zwischen der <strong>Vektorform</strong> bzw. <em>Langform</em> und der <strong>Matrixform</strong> bzw. <em>Breitform</em> unterschieden. Es ist üblich, dass beim Transponieren nicht alle Vektoren des Datenrahmens transponiert werden. Für die nicht transponierten Vektoren gilt, dass diese Werte in der Langform für jeden transponierten Wert wiederholt werden und in der Breitform gleiche Werte zu einem Wert zusammengefasst werden. Dabei gilt, dass ein Primärindex der <em>Matrixform</em> zum Sekundärindex der <em>Vektorform</em> wird und umgekehrt.</p>
 <p>Die Breitform verteilt die Werte über mehrere Vektoren. In der Langform sind diese Werte in <em>einem</em> Vektor mit zusätzlichen Sekundärindex zusammengefasst.</p>
+<blockquote class="blockquote">
+<div id="exm-transponieren-breitform" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 17.1 (Transponieren durch Auffächern) </strong></span>Die Ausgangsstichprobe in der Langform hat zwei Vektoren. Im ersten Vektor (<code>Namen</code>) stehen die Vektornamen der aufgefächerten Stichprobe. Es werden also die Werte entlang dieses Vektors aufgefächert. Im zweiten Vektor (<code>Werte</code>) stehen die Werte, die in die neuen Vektoren übernommen werden.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Namen</th>
+<th style="text-align: right;">Werte</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">v1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">v1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">v2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">v3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">v2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">v3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">v1</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">v2</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+<p>Durch das Auffächern werden die Werte entsprechend der Werte im Namensvektor auf neue Vektoren aufgeteilt. Wir transponieren also entlang der Namen. So erhalten wir die Breitform der Stichprobe.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">v1</th>
+<th style="text-align: right;">v2</th>
+<th style="text-align: right;">v3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Beachten Sie, dass der letzte Wert im Vektor v3 fehlt, weil in der Langform nur zwei Werte diesem Namen zugewiesen waren.</p>
+</div>
+</blockquote>
 <p>Beim Transponieren in die Vektorform werden mehrere Vektoren zu einem Vektor zusammengefasst und die Vektornamen als ein neuer Sekundärindex für diese Werte erzeugt.</p>
+<blockquote class="blockquote">
+<div id="exm-transponieren-breitform" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 17.2 (Transponieren durch Zusammenfächern) </strong></span>Beim Transponieren durch Zusammenfächern werden alle Werte aus einer Auswahl von Vektoren in separate Datensätze umgewandelt. Für ein einfaches Beispiel sei die folgende Kostenstichprobe in der Breitform gegeben.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Monat</th>
+<th style="text-align: right;">Einkauf</th>
+<th style="text-align: right;">Verkauf</th>
+<th style="text-align: right;">Kosten</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mai</td>
+<td style="text-align: right;">-1000</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">-5000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Juni</td>
+<td style="text-align: right;">-50</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">-5000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Juli</td>
+<td style="text-align: right;">-50</td>
+<td style="text-align: right;">17000</td>
+<td style="text-align: right;">-5000</td>
+</tr>
+</tbody>
+</table>
+<p>In diesem Beispiel transponieren wir entlang der Vektoren <code>Einkauf</code>, <code>Verkauf</code> und <code>Kosten</code> und fassen die Werte zu einem Vektor <code>Betrag</code> in der Langform zusammen. Weil wir nach dem Transponieren keine Information verlieren dürfen, müssen wir für jeden Wert auch den zugehörigen Vektornamen in der Langform abbilden. Daraus ergibt sich die folgende Langform.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Monat</th>
+<th style="text-align: right;">Betrag</th>
+<th style="text-align: left;">Art</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mai</td>
+<td style="text-align: right;">-1000</td>
+<td style="text-align: left;">Einkauf</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mai</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">Verkauf</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mai</td>
+<td style="text-align: right;">-5000</td>
+<td style="text-align: left;">Kosten</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Juni</td>
+<td style="text-align: right;">-50</td>
+<td style="text-align: left;">Einkauf</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Juni</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">Verkauf</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Juni</td>
+<td style="text-align: right;">-5000</td>
+<td style="text-align: left;">Kosten</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Juli</td>
+<td style="text-align: right;">-50</td>
+<td style="text-align: left;">Einkauf</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Juli</td>
+<td style="text-align: right;">17000</td>
+<td style="text-align: left;">Verkauf</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Juli</td>
+<td style="text-align: right;">-5000</td>
+<td style="text-align: left;">Kosten</td>
+</tr>
+</tbody>
+</table>
+<p>In diesem Beispiel erkennen wir, dass die Werte der nicht transponierten Vektoren in der Langform der Stichprobe mehrfach auftreten.</p>
+</div>
+</blockquote>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Merke (Voraussetzung für die Vektorform )
+Merke (Voraussetzung für die Vektorform)
 </div>
 </div>
 <div class="callout-body-container callout-body">
