@@ -474,7 +474,7 @@ Praxis
 <p>Die unkorrigierten Daten sollten auf keinen Fall gelöscht oder überschrieben werden, um sicherzustellen, dass fehlerhafte Korrekturen zu keinem Datenverlust führen!</p>
 </div>
 </div>
-<p>Für die <strong>Anzahl der Variablen</strong> könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten <em>beide</em> Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation ausgelassen wurden festgehalten werden.</p>
+<p>Für die <strong>Anzahl der Variablen</strong> könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten <em>beide</em> Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichtet und nicht versehentlich Variablen ausgelassen werden, die in der Dokumentation festgehalten werden.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -556,6 +556,53 @@ Merke
 <li>Die <strong>mittlere absolute Abweichung vom Median</strong> (eng. <em>Median Absolute Deviation</em> oder kurz <strong>MAD</strong>).</li>
 </ul>
 <p><strong>Metrisch-skalierte Daten</strong> haben gleiche Abstände und in der Regel auch gleiche Verhältnisse. Solche Daten sind nicht nur sortierbar, es ist zusätzlich auch die Division definiert und sie lassen sich oft durch stetige Funktionen beschreiben. Diese Funktion heisst für eine Verteilung die <strong>Dichtefunktion</strong> der Verteilung. Sie zeigt an, mit welcher Häufigkeit Werte wahrscheinlich auftreten können. Für jede dieser Verteilungen lässt sich der <strong>Mittelwert</strong> und die <strong>Standardabweichung</strong> bestimmen.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Merke
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="#tbl-beschreibende-kennwerte-pro-skalierung">Tabelle&nbsp;<span>18.1</span></a> zeigt die notwendigen Kennwerte für das entsprechende Skalenniveau. Die beschreibenden Kennwerte müssen für jedes gemessene Merkmal berichtet werden.</p>
+</div>
+</div>
+<div id="tbl-beschreibende-kennwerte-pro-skalierung" class="anchored">
+<table class="table">
+<caption>Tabelle&nbsp;18.1: Minimale beschreibende Kennwerte nach Skalennivaus</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Skalierung</th>
+<th style="text-align: left;">Zentrale Lagemasse</th>
+<th style="text-align: left;">Streumasse</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nominal</td>
+<td style="text-align: left;">- &nbsp;</td>
+<td style="text-align: left;">absolute &amp; relative Häufigkeit, Kontingenztabellen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: left;">Median&nbsp;</td>
+<td style="text-align: left;">q1, q3, IQR, MAD</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Metrisch</td>
+<td style="text-align: left;">Median, Mittelwert&nbsp;</td>
+<td style="text-align: left;">Standardabweichung, q1, q3, IQR, MAD, Standardfehler</td>
+</tr>
+</tbody>
+</table>
+</div>
 <section id="mittelwert" class="level3" data-number="18.2.1">
 <h3 data-number="18.2.1" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">18.2.1</span> Mittelwert</h3>
 <p>Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (<a href="#eq-mittelwert">Formel&nbsp;<span>18.1</span></a>).</p>
@@ -647,6 +694,7 @@ Praxis
 <p>Weil für <strong>nominalskalierte Daten</strong> keine anderen Lagemasse zur Verfügung stehen, <strong>müssen</strong> die Häufigkeiten für dieses Skalenniveau immer angegeben werden!</p>
 </div>
 </div>
+<p>Es ist üblich neben der absoluten und relativen Verteilung <em>eines</em> Merkmals, auch die <strong>gemeinsamen Häufigkeiten</strong> von zwei nominalskalierten Merkmalen in Form von <em>Kontingenztabellen</em> (<a href="../10-matrix-operationen/kapitel.html"><span>Kapitel&nbsp;14</span></a>) anzugeben und damit die erhobenen Daten besser zu beschreiben.</p>
 <p>Für <strong>metrisch-skalierte Werte</strong> lassen sich die Häufigkeiten nicht so leicht bestimmen, wie für die anderen Skalennivaus. Zur Bestimmung der Häufigkeiten von metrisch-skalierten Daten, wird der Wertebereich in gleichgrosse Intervalle gegliedert. Anschliessend wird die Anzahl der Werte in jedem Intervall gezählt. Diese Intervalle erzeugen künstlich diskrete Wertebereiche.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
