@@ -87,7 +87,7 @@ Die Bedingungen mit denen Datensätze zur Analyse aus einer Stichprobe entfernt 
 Die unkorrigierten Daten sollten auf keinen Fall gelöscht oder überschrieben werden, um sicherzustellen, dass fehlerhafte Korrekturen zu keinem Datenverlust führen!
 ::: 
 
-Für die **Anzahl der Variablen** könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten *beide* Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichten und nicht versehentlich Variablen unterschlagen, die in der Dokumentation ausgelassen wurden festgehalten werden.
+Für die **Anzahl der Variablen** könnte prinzipiell auf die Dokumentation einer Stichprobe zurückgegriffen werden. Trotzdem sollten *beide* Kennzahlen bestimmt werden, um sicherzustellen, dass wirklich alle Variablen in einer Stichprobe berichtet und nicht versehentlich Variablen ausgelassen werden, die in der Dokumentation festgehalten werden.
 
 ::: {.callout-warning}
 Weil automatisch generierte sequentielle Vektoren keine Zufallsvariablen sind, werden sie nicht zur Anzahl der Variablen hinzugezählt. Solche Vektoren sollten im Datenschema entsprechend markiert werden. 
@@ -142,6 +142,20 @@ Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über d
 - Die **mittlere absolute Abweichung vom Median** (eng. *Median Absolute Deviation* oder kurz **MAD**).
 
 **Metrisch-skalierte Daten** haben gleiche Abstände und in der Regel auch gleiche Verhältnisse. Solche Daten sind nicht nur sortierbar, es ist zusätzlich auch die Division definiert und sie lassen sich oft durch stetige Funktionen beschreiben. Diese Funktion heisst für eine Verteilung die **Dichtefunktion** der Verteilung. Sie zeigt an, mit welcher Häufigkeit Werte wahrscheinlich auftreten können. Für jede dieser Verteilungen lässt sich der **Mittelwert** und die **Standardabweichung** bestimmen.
+
+::: {.callout-note}
+## Merke
+@tbl-beschreibende-kennwerte-pro-skalierung zeigt die notwendigen Kennwerte für das entsprechende Skalenniveau. Die beschreibenden Kennwerte müssen für jedes gemessene Merkmal berichtet werden.
+:::
+
+| Skalierung | Zentrale Lagemasse | Streumasse |
+| :--- | :--- | :-------  |
+| Nominal | -  | absolute & relative Häufigkeit, Kontingenztabellen |
+| Ordinal | Median | q1, q3, IQR, MAD |
+| Metrisch | Median, Mittelwert | Standardabweichung, q1, q3, IQR, MAD, Standardfehler |
+
+: Minimale beschreibende Kennwerte nach Skalennivaus {#tbl-beschreibende-kennwerte-pro-skalierung}
+
 
 ### Mittelwert
 
@@ -205,6 +219,7 @@ Bei absoluten und relativen Häufigkeiten sind die **Wertintervalle unveränderl
 Weil für **nominalskalierte Daten** keine anderen Lagemasse zur Verfügung stehen, **müssen** die Häufigkeiten für dieses Skalenniveau immer angegeben werden!
 :::
 
+Es ist üblich neben der absoluten und relativen Verteilung *eines* Merkmals, auch die **gemeinsamen Häufigkeiten** von zwei nominalskalierten Merkmalen in Form von *Kontingenztabellen* (@sec-chapter-matrix-operationen) anzugeben und damit die erhobenen Daten besser zu beschreiben.
 
 Für **metrisch-skalierte Werte** lassen sich die Häufigkeiten nicht so leicht bestimmen, wie für die anderen Skalennivaus. Zur Bestimmung der Häufigkeiten von metrisch-skalierten Daten, wird der Wertebereich in gleichgrosse Intervalle gegliedert. Anschliessend wird die Anzahl der Werte in jedem Intervall gezählt. Diese Intervalle erzeugen künstlich diskrete Wertebereiche. 
 
