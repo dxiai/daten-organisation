@@ -327,10 +327,11 @@ div.csl-indent {
   <li><a href="#mittelwert" id="toc-mittelwert" class="nav-link" data-scroll-target="#mittelwert"><span class="header-section-number">18.2.1</span> Mittelwert</a></li>
   <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median"><span class="header-section-number">18.2.2</span> Median</a></li>
   <li><a href="#absolute-und-relative-häufigkeiten" id="toc-absolute-und-relative-häufigkeiten" class="nav-link" data-scroll-target="#absolute-und-relative-häufigkeiten"><span class="header-section-number">18.2.3</span> Absolute und relative Häufigkeiten</a></li>
-  <li><a href="#quantile-und-quartile" id="toc-quantile-und-quartile" class="nav-link" data-scroll-target="#quantile-und-quartile"><span class="header-section-number">18.2.4</span> Quantile und Quartile</a></li>
-  <li><a href="#standardabweichung-und-varianz" id="toc-standardabweichung-und-varianz" class="nav-link" data-scroll-target="#standardabweichung-und-varianz"><span class="header-section-number">18.2.5</span> Standardabweichung und Varianz</a></li>
-  <li><a href="#standardfehler" id="toc-standardfehler" class="nav-link" data-scroll-target="#standardfehler"><span class="header-section-number">18.2.6</span> Standardfehler</a></li>
-  <li><a href="#mad" id="toc-mad" class="nav-link" data-scroll-target="#mad"><span class="header-section-number">18.2.7</span> MAD</a></li>
+  <li><a href="#bandbreite" id="toc-bandbreite" class="nav-link" data-scroll-target="#bandbreite"><span class="header-section-number">18.2.4</span> Bandbreite</a></li>
+  <li><a href="#quantile-und-quartile" id="toc-quantile-und-quartile" class="nav-link" data-scroll-target="#quantile-und-quartile"><span class="header-section-number">18.2.5</span> Quantile und Quartile</a></li>
+  <li><a href="#standardabweichung-und-varianz" id="toc-standardabweichung-und-varianz" class="nav-link" data-scroll-target="#standardabweichung-und-varianz"><span class="header-section-number">18.2.6</span> Standardabweichung und Varianz</a></li>
+  <li><a href="#standardfehler" id="toc-standardfehler" class="nav-link" data-scroll-target="#standardfehler"><span class="header-section-number">18.2.7</span> Standardfehler</a></li>
+  <li><a href="#mad" id="toc-mad" class="nav-link" data-scroll-target="#mad"><span class="header-section-number">18.2.8</span> MAD</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
@@ -594,12 +595,12 @@ Merke
 <tr class="even">
 <td style="text-align: left;">Ordinal</td>
 <td style="text-align: left;">Median&nbsp;</td>
-<td style="text-align: left;">Quartil 1, Quartil 3, IQR, MAD</td>
+<td style="text-align: left;">Bandbreite, Quartil 1, Quartil 3, IQR, MAD</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Metrisch</td>
 <td style="text-align: left;">Median, Mittelwert&nbsp;</td>
-<td style="text-align: left;">Standardabweichung, Quartil 1, Quartil 3, IQR, MAD, Standardfehler</td>
+<td style="text-align: left;">Standardabweichung, Bandbreite, Quartil 1, Quartil 3, IQR, MAD, Standardfehler</td>
 </tr>
 </tbody>
 </table>
@@ -724,8 +725,15 @@ Praxis
 </div>
 </div>
 </section>
-<section id="quantile-und-quartile" class="level3" data-number="18.2.4">
-<h3 data-number="18.2.4" class="anchored" data-anchor-id="quantile-und-quartile"><span class="header-section-number">18.2.4</span> Quantile und Quartile</h3>
+<section id="bandbreite" class="level3" data-number="18.2.4">
+<h3 data-number="18.2.4" class="anchored" data-anchor-id="bandbreite"><span class="header-section-number">18.2.4</span> Bandbreite</h3>
+<p>Die <strong>Bandbreite</strong> der gemessenen Werte ergibt sich aus dem Abstand zwischen dem kleinsten und dem grössten gemessenen Wert. Entsprechend werden der kleinste und der grösste Wert als Kennwert für die Bandbreite angegeben. Gelegentlich ist es notwendig die Bandbreite als eigenen Wert aufzuführen. Das ist z.B. dann sinnvoll, um ähnliche Bandbreiten in unterschiedlichen Wertebereichen hervorzuheben. In solchen Fällen wird die Bandbreite als Differenz zwischen dem grössten und kleinsten Wert berechnet (<a href="#eq-bandbreite">Formel&nbsp;<span>18.2</span></a>).</p>
+<p><span id="eq-bandbreite"><span class="math display">
+bd = x_{max} - x_{min}
+\tag{18.2}</span></span></p>
+</section>
+<section id="quantile-und-quartile" class="level3" data-number="18.2.5">
+<h3 data-number="18.2.5" class="anchored" data-anchor-id="quantile-und-quartile"><span class="header-section-number">18.2.5</span> Quantile und Quartile</h3>
 <p>Quantile gliedern eine Verteilung in gleichgrosse Häufigkeiten und kennzeichnen die Wertintervalle, über welche sich diese Häufigkeiten erstrecken.</p>
 <div id="def-quantil" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18.5 </strong></span>Ein <strong>Quantil</strong> ist der Wert, der zwei Bereiche mit gleichvielen Werten <em>trennt</em>. Das Quantil wird dem kleineren der beiden Wertebereiche zugerechnet.</p>
@@ -765,13 +773,13 @@ Achtung
 </ul>
 <p>Die Differenz zwischen dem 75%- und dem 25%-Quartil heisst Interquartilabstand oder angekürzt <strong>IQR</strong> (für engl. <em>interquartile Range</em>).</p>
 </section>
-<section id="standardabweichung-und-varianz" class="level3" data-number="18.2.5">
-<h3 data-number="18.2.5" class="anchored" data-anchor-id="standardabweichung-und-varianz"><span class="header-section-number">18.2.5</span> Standardabweichung und Varianz</h3>
+<section id="standardabweichung-und-varianz" class="level3" data-number="18.2.6">
+<h3 data-number="18.2.6" class="anchored" data-anchor-id="standardabweichung-und-varianz"><span class="header-section-number">18.2.6</span> Standardabweichung und Varianz</h3>
 <p>Ein besonderes Streumass für metrisch-skalierte Daten ist die <strong>Varianz</strong>. Die Varianz kennzeichnet die Variabilität der Werte relativ zum Mittelwert. Die Varianz ist immer ein positiver Wert.</p>
-<p>Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (<a href="#eq-varianz">Formel&nbsp;<span>18.2</span></a>).</p>
+<p>Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (<a href="#eq-varianz">Formel&nbsp;<span>18.3</span></a>).</p>
 <p><span id="eq-varianz"><span class="math display">
 var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
-\tag{18.2}</span></span></p>
+\tag{18.3}</span></span></p>
 <p>Wie auch beim Mittelwert werden zwei Arten der Varianz unterschieden:</p>
 <ol type="1">
 <li>Die <em>echte Varianz</em>, die mit dem grichischen Buchstaben Sigma (<span class="math inline">\sigma^2</span>) gekennzeichnet wird</li>
@@ -780,8 +788,8 @@ var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
 <p>Weil die Varianz vorzeichenlos ist und durch das Quadrieren nicht die gleiche Masseinheit hat wie die Werte, lassen sich die Varianz und die Werte nicht direkt miteinander vergleichen.</p>
 <p>Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die <strong>Standardabweichung</strong>. Die <strong>Standardabweichung</strong> hängt direkt mit der Varianz zusuammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte.</p>
 </section>
-<section id="standardfehler" class="level3" data-number="18.2.6">
-<h3 data-number="18.2.6" class="anchored" data-anchor-id="standardfehler"><span class="header-section-number">18.2.6</span> Standardfehler</h3>
+<section id="standardfehler" class="level3" data-number="18.2.7">
+<h3 data-number="18.2.7" class="anchored" data-anchor-id="standardfehler"><span class="header-section-number">18.2.7</span> Standardfehler</h3>
 <p>Ein besonderer Kennwert ist der sog. Standardfehler.</p>
 <div id="def-standardfehler" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18.6 </strong></span>Der <strong>Standardfehler des Mittelwerts</strong> beschreibt den Bereich in welchem der (unbekannte) <em>echte Mittelwert µ</em> relativ zum <em>gemessenen Mittelwert <span class="math inline">\bar{x}</span></em> liegt.</p>
@@ -800,24 +808,24 @@ Merke
 </div>
 </div>
 <p>Der Standardfehler wird in der Praxis meist mit dem Symbol <strong><em>se</em></strong> abgekürzt. In der insbes. deutschsprachigen Literatur finden sich zusätzlich uneinheitliche Schreibweisen wie z.B. <span class="math inline">\sigma_{\bar{x}}</span> oder <span class="math inline">\sigma_{\hat{\vartheta}}</span>. Weil sich das Symbol <span class="math inline">\sigma</span> jedoch auf die <em>echte Standardabweichung</em> bezieht und der Standardfehler immer aus der <em>gemessene Standardabweichung (s)</em> hergeleitet wird, ist die im anglo-amerikanischen Raum verbreitete Schreibweise <strong><em>se</em></strong> für <em>standard error</em> vorzuziehen.</p>
-<p>Der Standardfehler wird über die <a href="#eq-standardfehler">Formel&nbsp;<span>18.3</span></a> bestimmt. Aus dieser Formel geht hervor, dass sich der Standardfehler aus der Standardabweichung und dem Variablenumfang herleitet. Weil die Standardabweichung nur für metrisch-skalierte Daten definiert ist, ist der Standardfehler ebenfalls nur für diese Skalierung definiert.</p>
+<p>Der Standardfehler wird über die <a href="#eq-standardfehler">Formel&nbsp;<span>18.4</span></a> bestimmt. Aus dieser Formel geht hervor, dass sich der Standardfehler aus der Standardabweichung und dem Variablenumfang herleitet. Weil die Standardabweichung nur für metrisch-skalierte Daten definiert ist, ist der Standardfehler ebenfalls nur für diese Skalierung definiert.</p>
 <p><span id="eq-standardfehler"><span class="math display">
 se = \frac{s}{\sqrt{n}}
-\tag{18.3}</span></span></p>
-<p>Aus <a href="#eq-standardfehler">Formel&nbsp;<span>18.3</span></a> lässt sich ableiten, dass der Standardfehler mit zunehmenden Variablenumfang immer kleiner wird. Diese Eigenschaft hängt damit zusammen, dass je mehr Werte gemessen wurden, der gemessene Mittelwert sich immer mehr dem echten Mittelwert annähert.</p>
+\tag{18.4}</span></span></p>
+<p>Aus <a href="#eq-standardfehler">Formel&nbsp;<span>18.4</span></a> lässt sich ableiten, dass der Standardfehler mit zunehmenden Variablenumfang immer kleiner wird. Diese Eigenschaft hängt damit zusammen, dass je mehr Werte gemessen wurden, der gemessene Mittelwert sich immer mehr dem echten Mittelwert annähert.</p>
 </section>
-<section id="mad" class="level3" data-number="18.2.7">
-<h3 data-number="18.2.7" class="anchored" data-anchor-id="mad"><span class="header-section-number">18.2.7</span> MAD</h3>
+<section id="mad" class="level3" data-number="18.2.8">
+<h3 data-number="18.2.8" class="anchored" data-anchor-id="mad"><span class="header-section-number">18.2.8</span> MAD</h3>
 <p>Der Interquartilsabstand (IQR) ist ein <em>Standardmass</em>, dass sich aus den Quartilsgrenzen ergibt. <em>Standardmass</em> bedeutet in diesem Fall, dass für Studien vorausgesetzt wird, dass dieser Wert für ordinal- und z.T. auch für metrisch-skalierte Daten berichtet wird. Der IQR hat jedoch zwei wichtige Nachteile:</p>
 <ol type="1">
 <li>Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen der beiden Quartile definiert ist. Weil zwischen den beiden Quartilen einer Stichprobe nur die Hälfte der Werte liegt, bleibt die andere Hälfte der Werte unberücksichtigt.</li>
 <li>Der IQR muss anders interpretiert werden, als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.</li>
 </ol>
 <p>Für ordinalskalierte Daten ist also ein Streumass wünschenswert, das alle Werte berücksichtigt und sie relativ zum zentralen Lagemass des Medians beschreibt Dieses Mass ist die sog. <strong>Mittlere absolute Abweichung vom Median</strong> (MAD). Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Streuung der Werte.</p>
-<p>Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (<a href="#eq-mad">Formel&nbsp;<span>18.4</span></a>). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.</p>
+<p>Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (<a href="#eq-mad">Formel&nbsp;<span>18.5</span></a>). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.</p>
 <p><span id="eq-mad"><span class="math display">
 MAD(x) = md(| x_i - md(x) |)
-\tag{18.4}</span></span></p>
+\tag{18.5}</span></span></p>
 <p>Das Ergebnis zeigt die zentrale Tendenz für <em>alle Werte</em> unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. Der Vorteil der MAD ist, dass dieser Wert genau gleich wie die Standardabweichung interpretiert wird.</p>
 <div id="exm-mad" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 18.2 (MAD im Verhältnis zum IQR) </strong></span>&nbsp;</p>
