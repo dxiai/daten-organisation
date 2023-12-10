@@ -151,11 +151,16 @@ Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über d
 | Skalierung | Zentrale Lagemasse | Streumasse |
 | :--- | :--- | :-------  |
 | Nominal | -  | absolute & relative Häufigkeit, Kontingenztabellen |
-| Ordinal | Median | q1, q3, IQR, MAD |
-| Metrisch | Median, Mittelwert | Standardabweichung, q1, q3, IQR, MAD, Standardfehler |
+| Ordinal | Median |  Quartil 1, Quartil 3, IQR, MAD |
+| Metrisch | Median, Mittelwert | Standardabweichung, Quartil 1, Quartil 3, IQR, MAD, Standardfehler |
 
 : Minimale beschreibende Kennwerte nach Skalennivaus {#tbl-beschreibende-kennwerte-pro-skalierung}
 
+::: {.callout-tip}
+## Praxis
+
+Die Kennwerte müssen **für alle** gemessenen Variablen zusammen mit dem Variablenumgang *n* berichtet werden.
+:::
 
 ### Mittelwert
 
@@ -177,7 +182,7 @@ Beim Mittelwert werden zwei Varianten unterschieden:
 Weil der echte Mittelwert einer Verteilung nur in Ausnahmefällen bekannt ist, wird nur der *gemessene Mittelwert berichtet.
 :::
 
-Damit ein zentrales Lagemass einer Verteilung beschreiben kann, muss diese Kennzahl ein gültiger Wert im Wertebereich der Daten sein. Wegen der Division zur Berechnung des **Mittelwerts**, kann diese Bedingung **nur für metrische Skalenniveaus** eingehalten werden. 
+Damit ein zentrales Lagemass einer Verteilung beschreiben kann, muss diese Kennzahl ein gültiger Wert im Wertebereich der Daten sein. Wegen der Division zur Berechnung des **Mittelwerts**, kann diese Bedingung **nur für metrische Skalenniveaus** eingehalten werden.
 
 ### Median
 
@@ -278,6 +283,28 @@ Weil die Varianz vorzeichenlos ist und durch das Quadrieren nicht die gleiche Ma
 
 Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die **Standardabweichung**. Die **Standardabweichung** hängt direkt mit der Varianz zusuammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte. 
 
+### Standardfehler
+
+Ein besonderer Kennwert ist der sog. Standardfehler.
+
+::: {#def-standardfehler}
+Der **Standardfehler des Mittelwerts** beschreibt den Bereich in welchem der (unbekannte) *echte Mittelwert µ* relativ zum *gemessenen Mittelwert $\bar{x}$* liegt.
+:::
+
+::: {.callout-note}
+## Merke
+Der Standardfehler ist ein Kennwert für die Genauigkeit gemessenen Mittelwerts.
+:::
+
+Der Standardfehler wird in der Praxis meist mit dem Symbol ***se*** abgekürzt. In der insbes. deutschsprachigen Literatur finden sich zusätzlich uneinheitliche Schreibweisen wie z.B. $\sigma_{\bar{x}}$ oder $\sigma_{\hat{\vartheta}}$. Weil sich das Symbol $\sigma$ jedoch auf die *echte Standardabweichung* bezieht und der Standardfehler immer aus der *gemessene Standardabweichung (s)* hergeleitet wird, ist die im anglo-amerikanischen Raum verbreitete Schreibweise ***se*** für *standard error* vorzuziehen.
+
+Der Standardfehler wird über die @eq-standardfehler bestimmt. Aus dieser Formel geht hervor, dass sich der Standardfehler aus der Standardabweichung und dem Variablenumfang herleitet. Weil die Standardabweichung nur für metrisch-skalierte Daten definiert ist, ist der Standardfehler ebenfalls nur für diese Skalierung definiert. 
+
+$$
+se = \frac{s}{\sqrt{n}}
+$$ {#eq-standardfehler}
+
+Aus @eq-standardfehler lässt sich ableiten, dass der Standardfehler mit zunehmenden Variablenumfang immer kleiner wird. Diese Eigenschaft hängt damit zusammen, dass je mehr Werte gemessen wurden, der gemessene Mittelwert sich immer mehr dem echten Mittelwert annähert. 
 
 ### MAD
 
