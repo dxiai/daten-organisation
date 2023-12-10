@@ -151,8 +151,8 @@ Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über d
 | Skalierung | Zentrale Lagemasse | Streumasse |
 | :--- | :--- | :-------  |
 | Nominal | -  | absolute & relative Häufigkeit, Kontingenztabellen |
-| Ordinal | Median |  Quartil 1, Quartil 3, IQR, MAD |
-| Metrisch | Median, Mittelwert | Standardabweichung, Quartil 1, Quartil 3, IQR, MAD, Standardfehler |
+| Ordinal | Median |  Bandbreite, Quartil 1, Quartil 3, IQR, MAD |
+| Metrisch | Median, Mittelwert | Standardabweichung, Bandbreite, Quartil 1, Quartil 3, IQR, MAD, Standardfehler |
 
 : Minimale beschreibende Kennwerte nach Skalennivaus {#tbl-beschreibende-kennwerte-pro-skalierung}
 
@@ -232,6 +232,14 @@ Für **metrisch-skalierte Werte** lassen sich die Häufigkeiten nicht so leicht 
 ## Praxis
 Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als Histogram dargestellt und nicht separat angegeben. 
 :::
+
+### Bandbreite
+
+Die **Bandbreite** der gemessenen Werte ergibt sich aus dem Abstand zwischen dem kleinsten und dem grössten gemessenen Wert. Entsprechend werden der kleinste und der grösste Wert als Kennwert für die Bandbreite angegeben. Gelegentlich ist es notwendig die Bandbreite als eigenen Wert aufzuführen. Das ist z.B. dann sinnvoll, um ähnliche Bandbreiten in unterschiedlichen Wertebereichen hervorzuheben. In solchen Fällen wird die Bandbreite als Differenz zwischen dem grössten und kleinsten Wert berechnet (@eq-bandbreite).
+
+$$
+bd = x_{max} - x_{min}
+$$ {#eq-bandbreite}
 
 ### Quantile und Quartile
 
