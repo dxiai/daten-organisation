@@ -238,8 +238,13 @@ Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als His
 Die **Bandbreite** der gemessenen Werte ergibt sich aus dem Abstand zwischen dem kleinsten und dem grössten gemessenen Wert. Entsprechend werden der kleinste und der grösste Wert als Kennwert für die Bandbreite angegeben. Gelegentlich ist es notwendig die Bandbreite als eigenen Wert aufzuführen. Das ist z.B. dann sinnvoll, um ähnliche Bandbreiten in unterschiedlichen Wertebereichen hervorzuheben. In solchen Fällen wird die Bandbreite als Differenz zwischen dem grössten und kleinsten Wert berechnet (@eq-bandbreite).
 
 $$
-bd = x_{max} - x_{min}
+bd = | x_{max} - x_{min} |
 $$ {#eq-bandbreite}
+
+::: {.callout-note}
+## Merke
+Die Bandbreite ist vorzeichenlos.
+:::
 
 ### Quantile und Quartile
 
