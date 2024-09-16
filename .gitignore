@@ -69,3 +69,5 @@ index.pdf
 index.toc
 index.out
 **/*.rmarkdown
+site_libs/
+_freeze/
