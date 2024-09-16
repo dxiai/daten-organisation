@@ -158,7 +158,7 @@ Inzwischen gibt es brauchbare Werkzeuge zur Transskription von Mediendateien. Di
 
 Bei der technisch-unterstützten Datenerhebung soll das manuelle Datensammeln durch technische Werkzeuge vereinfacht werden, indem bestimmte Daten automatisch erfasst werden. Ein wichtiges Instrument für die technisch-unterstützte Datenerhebung sind *Formulare*. Formulare sind strukturierte Dokumente zur systematischen und wiederholten manuellen Eingabe von Daten durch Menschen.
 
-Im Gegensatz zu Papierfromularen können digitale Formulare die Eingaben überprüfen und bieten unterschiedliche Eingabeformate. Digitale Formulare können auch automatisch Daten erfassen, die nicht direkt eingegeben werden, wie beispielsweise den Zeitpunkt der Eingabe. Die populärste Art der digitalen Formulare sind inzwischen online Formulare, weil sie die grösste Flexibilität bei einer vergleichsweise niedrigen Nutzungsschwelle bieten.
+Im Gegensatz zu Papierformularen können digitale Formulare die Eingaben überprüfen und bieten unterschiedliche Eingabeformate. Digitale Formulare können auch automatisch Daten erfassen, die nicht direkt eingegeben werden, wie beispielsweise den Zeitpunkt der Eingabe. Die populärste Art der digitalen Formulare sind inzwischen online Formulare, weil sie die grösste Flexibilität bei einer vergleichsweise niedrigen Nutzungsschwelle bieten.
 
 Es lassen sich zwei Arten von Diensten für online Formulare unterschieden: 
 
