@@ -196,7 +196,7 @@ v_2 + m_{21} & v_2 + m_{22} & v_2 + m_{23}
 \end{bmatrix}
 \end{aligned}
 $$
-
+:::
 
 ## Skalarmultiplikation (Punktprodukt)
 
@@ -507,7 +507,7 @@ Weil das äussere Produkt beliebige Operatoren erlaubt, lassen sich mit der glei
 > 1 &  1 &  0 &  0 &  0 &  0 \\
 > 1 &  1 &  1 &  0 &  0 &  0 \\
 > 0 &  1 &  1 &  1 &  0 &  0 \\
-> 0 &  0 &  1 &  1 &  1 &  0\\
+> 0 &  0 &  1 &  1 &  1 &  0 \\
 > 0 &  0 &  0 &  1 &  1 &  1 \\
 > 0 &  0 &  0 &  0 &  1 &  1 
 > \end{bmatrix}
