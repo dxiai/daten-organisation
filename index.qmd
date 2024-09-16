@@ -6,7 +6,7 @@ Work in Progress
 
 Dieses Werk ist lizenziert unter einer Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz (CC-BY-NC-SA). Details zur Nutzungsbedingungen und dem Copyright finden sich unter [createivecommons.org](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
-2023, Christian Glahn, Zurich, Switzerland
+2023-2024, Christian Glahn, Zurich, Switzerland
 
 [![](kapitel/01-einleitung/figures/by-nc-sa.png){.unnumbered width=100}](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
 
