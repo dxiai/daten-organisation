@@ -368,7 +368,7 @@ Dabei wird ausgenutzt, dass die Summe über einen Vektor von `0` und `1` die Anz
 ::: {.callout-note}
 ## Merke
 
-Immer wenn eine Summe über einen Vektor von `0` und `1` gebildet wird, wird eine Zählen-Operation durchgeführt.
+Immer wenn eine Summe über einen Vektor von `0` und `1` gebildet wird, wird eine Zählen-Operation vorbereitet.
 ::: 
 
 Die Transformation in die Werte `0` und `1` durch einen logischen Ausdruck wird als **Indikatorfunktion** bezeichnet. Die Indikatorfunktion ist eine Transformation mit einem logischen Ausdruck. Eine solche Funktion kann für nachgelagerte arithmetische Transformations-Operationen als Ersatz für eine vorgelagerte Entscheidung verwendet werden. In solchen Fällen wird das Ergebnis der Indikatorfunktion über eine Skalar-Multiplikation mit der nachgelagerten Operation verknüpft. Dabei stellt die Indikatorfunktion sicher, dass der Vektor die gleiche Länge wie die nachgelagerte Operation hat.
