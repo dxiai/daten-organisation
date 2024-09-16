@@ -5,7 +5,7 @@ execute:
 
 # Dateiformate {#sec-chapter-dateiformate}
 
-Zum Speichern und zum Austausch von Daten spielen Dateiformate enie wichtige Rolle. Dateiformate legen fest, wie Daten serialisiert werden. Die Serialisierung von Daten ist die Grundlage für die Speicherung und den Austausch von Daten. Eine spezielle Serialisierung wird als *Datenformat* bezeichnet.
+Zum Speichern und zum Austausch von Daten spielen Dateiformate eine wichtige Rolle. Dateiformate legen fest, wie Daten serialisiert werden. Die Serialisierung von Daten ist die Grundlage für die Speicherung und den Austausch von Daten. Eine spezielle Serialisierung wird als *Datenformat* bezeichnet.
 
 In Computern werden Daten immer als *Datenströme* abgebildet. 
 
