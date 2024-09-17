@@ -312,7 +312,7 @@ Das Zählen funktioniert dabei wie folgt:
 | `255` | `11111111` | `377` | `0xFF` |
 | `256` | `100000000` | `400` | `0x100` |
 
-: Darstellung von Zahlenwerten in verschiedenen Zahlensystemen {#tbl-darstellung-zahenwerte}
+: Darstellung von Zahlenwerten in verschiedenen Zahlensystemen {#tbl-darstellung-zahlenwerte}
 
 ## Wissenschaftliche Schreibweise von Zahlen {#sec-wissenschaftliche-schreibweise}
 

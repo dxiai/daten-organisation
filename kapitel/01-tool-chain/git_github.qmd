@@ -100,7 +100,7 @@ Neben gleichwertigen Repositories gibt es noch hierarchische Beziehungen zwische
 
 ### Versionierungsstatus feststellen
 
-Mit dem Kommando `git status` kann der aktuelle Änderungsstatus eines Repositories gestgestellt werden. In einem frisch initialisierten Repository liefert dieses Kommando die folgende Meldung. 
+Mit dem Kommando `git status` kann der aktuelle Änderungsstatus eines Repositories festgestellt werden. In einem frisch initialisierten Repository liefert dieses Kommando die folgende Meldung. 
 
 ```
 On branch main
