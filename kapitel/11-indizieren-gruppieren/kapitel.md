@@ -71,7 +71,8 @@ Ein **Hash** bezeichnet einen Wert in einem Indexvektor.
 
 Häufig liegen Indexvektoren bereits in einer Stichprobe vor.
 
-#### Beispiel bestehende Primär- und Sekundärindizes
+::: {#exm-prime-sec-indices}
+## Bestehende Primär- und Sekundärindizes
 
 |modell               |  mpg| cyl|  disp| vs| am| 
 |:-------------------|----:|---:|-----:|--:|--:|
@@ -88,6 +89,7 @@ Häufig liegen Indexvektoren bereits in einer Stichprobe vor.
 |Honda Civic         | 30.4|   4|  75.7|  1|  1|
 
 : Ausschnitt der `mtcars`-Stichprobe mit Primär- und Sekundärindizes {#tbl-mtcars-index}
+:::
 
 Der Vektor `modell` ist der **Primärindex**, weil dieser Vektor nur Werte enthält, die einen Datensatz eindeutig identifizieren.
 

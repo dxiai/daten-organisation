@@ -53,7 +53,7 @@ Die *Differenz* entspricht einen Filter mit einem oder mehreren $\notin$-Verglei
 **Kodieren** von Daten bedeutet die Umwandlung von Daten in ein anderes Format oder einen anderen Wertebereich.
 :::
 
-Beim Kodieren wird eine **Kodierungsfunktion** verwendet, die jeden Wert des urspünglichen Wertebereichs einem Wert des gewünschten Wertebereichs zuordnet. Dabei ist es nicht notwendig, dass alle ursprünglichen Werte eindeutig zugewiesen werden. Das heisst, dass mehrere Werte des ursprünglichen Wertebereichs dem gleichen Wert des neuen Wertebereichs zugeordnet werden können.
+Beim Kodieren wird eine **Kodierungsfunktion** verwendet, die jeden Wert des ursprünglichen Wertebereichs einem Wert des gewünschten Wertebereichs zuordnet. Dabei ist es nicht notwendig, dass alle ursprünglichen Werte eindeutig zugewiesen werden. Das heisst, dass mehrere Werte des ursprünglichen Wertebereichs dem gleichen Wert des neuen Wertebereichs zugeordnet werden können.
 
 Sehr häufig werden Kodierungsfunktionen als **Entscheidungsbäume** (s. @def-entscheidungsbaum) umgesetzt. Dabei werden logische Ausdrücke für die Zuweisung der Ergebniswerte verwendet. Die logischen Ausdrücke werden dabei der Reihe nach geprüft. Die erste zutreffende Entscheidung, bestimmt den Ergebniswert.
 

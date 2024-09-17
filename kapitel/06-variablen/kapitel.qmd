@@ -94,7 +94,7 @@ So lässt sich die Funktionsdefinition erweitern und präzisieren:
 Eine Funktion erzeugt Effekte im Zielbereich mithilfe einer Parameterliste mit Werten im Definitionsbereich.
 :::
 
-Formal lässt sich diese Defition wird der durch die Rückgabeliste definierte Zielbereich dem Bezeichner $E$ zugewiesen und den Defitionsbereich der Parameterliste mit $P$ gekennzeichnet, dann ist entsprechend dieser Definition **jede** Funktion entsprechend @eq-fkt-def definiert. 
+Formal lässt sich diese Definition wird der durch die Rückgabeliste definierte Zielbereich dem Bezeichner $E$ zugewiesen und den Definitionsbereich der Parameterliste mit $P$ gekennzeichnet, dann ist entsprechend dieser Definition **jede** Funktion entsprechend @eq-fkt-def definiert. 
 
 $$ 
 f: P \to E
@@ -709,7 +709,7 @@ In [Abschnitt @sec-spezielle-funktionen] wurden Projektionen definiert und festg
 
 Existiert für eine beliebige Projektion $F$ eine Umkehrfunktion $F^{-1}$, dann kann die Verkettung zwischen der Funktion und der Umkehrfunktion untersucht werden. Die Umkehrfunktion einer Funktion akzeptiert die Rückgabewerte der Funktion als Parameter und hat als Rückgabewert die Parameter der ursprünglichen Funktion. Die Parameter von $F^{-1}$ und die Rückgabewerte von $F$ haben gemäss dieser Definition den gleichen Wertebereich. Das Gleiche gilt für die Rückgabewerte von $F^{-1}$ und die Parameter von $F$. Damit ist für beide Richtungen die Voraussetzung für die Verkettung erfüllt. Es sind also sowohl die Verkettung $F^{-1} \circ F$ als auch $F \circ F^{-1}$ für alle umkehrbaren Funktionen zulässig.
 
-Werden nun die beiden Funktion $F$ und $F^{-1}$ als $F \circ F^{-1}$ verkettet, dann werden die Parameter von $F^{-1}$ auf die Rückgabewerte projiziert. Dieser werden anschliessend als Parameter der $F$ als Paramter übergeben und wieder projiziert. Weil das Ergebnis einer umkehrbaren Funktion identisch mit den Parametern ihrer Umkehrfunktion ist, muss das Ergebnis dieser Funktionskette den eingegebenen Parametern entsprechen. 
+Werden nun die beiden Funktion $F$ und $F^{-1}$ als $F \circ F^{-1}$ verkettet, dann werden die Parameter von $F^{-1}$ auf die Rückgabewerte projiziert. Diese werden anschliessend als Parameter der $F$ als Parameter übergeben und wieder projiziert. Weil das Ergebnis einer umkehrbaren Funktion identisch mit den Parametern ihrer Umkehrfunktion ist, muss das Ergebnis dieser Funktionskette den eingegebenen Parametern entsprechen. 
 
 Wird die Verkettung zu  $F^{-1} \circ F$ umgekehrt, dann muss das Ergebnis dieser Funktionskette aus den gleichen Gründen wie oben, mit den Parametern von $F$ gleich sein.
 

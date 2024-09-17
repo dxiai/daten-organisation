@@ -7,7 +7,7 @@ execute:
 
 # Informationstheorie {#sec-chapter-informationstheorie}
 
-Die Arbeit mit Daten schliesst immer die Frage ein, ob diese Daten relevante Information verbergen. Dazu müssen zwei Konzepte erfasst werden:  
+Die Arbeit mit Daten schliesst immer die Frage ein, ob diese Daten relevante Informationen verbergen. Dazu müssen zwei Konzepte erfasst werden:  
 
 1. Daten 
 2. Information
