@@ -10,4 +10,4 @@ Dieses Werk ist lizenziert unter einer Creative Commons Namensnennung - Nicht-ko
 
 [![](kapitel/01-einleitung/figures/by-nc-sa.png){.unnumbered width=100}](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
 
-Die PDF-Version liegt [hier zum Download](https://dxi.ai/daten-organisation/Daten-und-Information.pdf).
+<!-- Die PDF-Version liegt [hier zum Download](https://dxi.ai/daten-organisation/Daten-und-Information.pdf).-->
