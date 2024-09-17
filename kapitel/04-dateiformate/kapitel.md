@@ -54,7 +54,7 @@ Jedes Dateiformat erfordert einen eigenen *Parser*. Wird ein ungeeigneter  *Pars
 Für die gängigsten Datenformate existieren eigene Parser. Die Entwicklung eines Parsers für ein bestimmtes Format ist nur selten notwendig. 
 :::
 
-Die Auswahl eines geeigneten Parsers liegt in der Verantwortung der Person, die die Daten importiert. In manchen Fällen kann das Dateiformat automatisch erkannt werden. In diesen Fällen wird ein geeigneter Parser automatisch ausgewählt. Diese automatische Auswahl ist aber nicht immer korrekt. Deshalb muss das Ergebnis des Parsers immer überprüft werden.
+Die Auswahl eines geeigneten Parsers liegt in der Verantwortung der Person, welche die Daten importiert. In manchen Fällen kann das Dateiformat automatisch erkannt werden. In diesen Fällen wird ein geeigneter Parser automatisch ausgewählt. Diese automatische Auswahl ist aber nicht immer korrekt. Deshalb muss das Ergebnis des Parsers immer überprüft werden.
 
 #### Werte zuordnen
 
@@ -158,7 +158,7 @@ Eine typische Anwendung der zeilenbasierten Textkodierung sind sog. *Log-Dateien
 
 Die Werte lassen sich auf verschiedene Arten in Datenströmen kodieren. Die einfachste Form ist die **Mengenkodierung**. Bei der Mengenkodierung werden die Werte in einer festen Reihenfolge in den Datenstrom geschrieben. Dabei werden die Werte als eine zusammenhängende *Menge* behandelt.
 
-Die verbreitesten Formen der Mengenkodierung sind die *Listenkodierung* und die *Tabellenkodierung*. Bei der Listenkodierung werden die einzelnen Werte nacheinander in den Datenstrom geschrieben. Dabei ist die Reihenfolge der Werte nich von Bedeutung. Bei der Tabellenkodierung werden die Werte in einer tabellarisch organisiert. Dabei werden die Werte in Zeilen und Spalten organisiert, wobei jede Zeile und jede Spalte als eine Teilmenge behandelt wird. Die Reihenfolge der Zeilen und Spalten ist dabei nicht von Bedeutung, solange die Zeilen- und Spaltenteilmengen erhalten bleiben.
+Die verbreitesten Formen der Mengenkodierung sind die *Listenkodierung* und die *Tabellenkodierung*. Bei der Listenkodierung werden die einzelnen Werte nacheinander in den Datenstrom geschrieben. Dabei ist die Reihenfolge der Werte nicht von Bedeutung. Bei der Tabellenkodierung werden die Werte in einer tabellarisch organisiert. Dabei werden die Werte in Zeilen und Spalten organisiert, wobei jede Zeile und jede Spalte als eine Teilmenge behandelt wird. Die Reihenfolge der Zeilen und Spalten ist dabei nicht von Bedeutung, solange die Zeilen- und Spaltenteilmengen erhalten bleiben.
 
 ::: {.callout-note}
 Die Mengenkodierung ist gleichzeitig die Grundlage für *Datenbanken* und *tabellarischen Dateien*. In Datenbanken werden die Werte tabellenartig in sog. *Relationen* organisiert.
@@ -166,13 +166,13 @@ Die Mengenkodierung ist gleichzeitig die Grundlage für *Datenbanken* und *tabel
 
 Die Mengenkodierung ist einfach und effizient. Sie hat aber den Nachteil, dass die Werte nicht leicht hierarchisch organisiert werden können, weil jede Hierarchieebene eine eigene Menge erfordert und damit von den anderen Ebenen abgegrenzt wäre. Dieses Problem löst die **Baumkodierung**. Die Baumkodierung kodiert Werte in einer Hierarchie. Dadurch lassen sich komplex-geschachtelte Datenstrukturen in einer Datei abbilden. 
 
-In einer Baumkodierung werden die Werte auf einer Hierarchiestufe zusammengefasst. Eine Hierarchiestufe wird als *Knoten* bezeichnet. In einer solchen Kodierung hat jeder Knoten eine Vorgängerstufe. Diese Vorgängerstufe wird *Elternknoten* genannt. Die Knoten auf der gleichen Hierachiestufe haben immer den gleichen Elternknoten. Diese Knoten heissen *Geschwisterknoten*. Die Knoten ohne Nachfolger nennt man *Blattknoten*. Die eigentlichen Werte finden sich nur in Blattknoten. 
+In einer Baumkodierung werden die Werte auf einer Hierarchiestufe zusammengefasst. Eine Hierarchiestufe wird als *Knoten* bezeichnet. In einer solchen Kodierung hat jeder Knoten eine Vorgängerstufe. Diese Vorgängerstufe wird *Elternknoten* genannt. Die Knoten auf der gleichen Hierarchiestufe haben immer den gleichen Elternknoten. Diese Knoten heissen *Geschwisterknoten*. Die Knoten ohne Nachfolger nennt man *Blattknoten*. Die eigentlichen Werte finden sich nur in Blattknoten. 
 
 Mit der Baumkodierung lassen sich beliebig komplexe Datenstrukturen abbilden. Für die Kodierung von Datenstrukturen mit *höchstens zwei* Hierarchiestufen und *vielen Werten* ist die Baumkodierung weniger effizient als die Mengenkodierung.
 
 ## Separator-strukturierte Textdateien {#sec-separator-strukturierte-textdateien}
 
-Eine besondere Klasse der zeilenbasierten Textdateien sind die sog. "*Separator-strukturierten*" Dateien. Diese Dateiformate sind eine einfache Form der *Tabellenkodierung*, bei der die Werte in der gleichen Zeile durch ein zusätzlichens *Trennzeichen* voneinander abgegrenzt werden. 
+Eine besondere Klasse der zeilenbasierten Textdateien sind die sog. "*Separator-strukturierten*" Dateien. Diese Dateiformate sind eine einfache Form der *Tabellenkodierung*, bei der die Werte in der gleichen Zeile durch ein zusätzliches *Trennzeichen* voneinander abgegrenzt werden. 
 
 Separator-strukturierte Dateien sind zeilenbasierte Textdateien, bei denen die Werte in einer Zeile durch ein *Trennzeichen* voneinander abgegrenzt werden. Dadurch lassen sich die Werte in einer Zeile leichter als bei einer Festkodierung kodieren und dekodieren. Für die Trennung der Werte muss nur das verwendete Trennzeichen bekannt sein. Die Position und die Länge der Werte wird durch das Trennzeichen festgelegt und muss nicht vorab definiert werden.
 
@@ -388,7 +388,7 @@ XML kann Werte als *Attribut* oder als *Inhalt* eines Tags kodieren. Die Wahl de
 ```
 :::
 
-Attribute sollten nur für die Kodierung von ergänzenden Daten verwendet. Zu solchen Daten ghört beispielsweise der Datentyp eines Wertes, weil XML alle Werte nur als Zeichenketten abbildet.
+Attribute sollten nur für die Kodierung von ergänzenden Daten verwendet. Zu solchen Daten gehört beispielsweise der Datentyp eines Wertes, weil XML alle Werte nur als Zeichenketten abbildet.
 
 ::: {#exm-xml-format-meta-attribute}
 ## XML-Format einer tabellarischen Struktur mit ergänzenden Attributen
@@ -489,7 +489,7 @@ HTML ist für die Datenkodierung nur von Bedeutung, wenn Daten als Webseiten dar
 ::: {.callout-tip}
 ## Praxis
 
-Der Datenaustausch über HTML-Tabellen ist inzwischen vernachlässigbar. HTML-Tabellen werden fast ausschliesslich für die Darstellung von Daten innerhalb von Anwendungen verwendet. Es gibt praktische keine Datenquellen mehr, deren Daten ausschliesslich als HTML-Tabellen vorliegen. Häufig werden Mess-Daten auch nicht mehr auf Web-Seiten bereitgestellt, sondern nur über Dateien in einem einem effizienteren Format verlinkt.
+Der Datenaustausch über HTML-Tabellen ist inzwischen vernachlässigbar. HTML-Tabellen werden fast ausschliesslich für die Darstellung von Daten innerhalb von Anwendungen verwendet. Es gibt praktische keine Datenquellen mehr, deren Daten ausschliesslich als HTML-Tabellen vorliegen. Häufig werden Mess-Daten auch nicht mehr auf Web-Seiten bereitgestellt, sondern nur über Dateien in einem effizienteren Format verlinkt.
 :::
 
 

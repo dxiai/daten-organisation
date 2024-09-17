@@ -27,7 +27,7 @@ Die Versionierung betrifft alle erzeugenden Projektdateien. Dazu gehören:
 - Projektkonfiguration 
 - Dokumentation
 
-Es gibt verschiedene Systeme für die Versionierung. Im Bereich der Software-Entwickung und den Datenwissenschaften hat sich `git` als Industriestandard etabliert.
+Es gibt verschiedene Systeme für die Versionierung. Im Bereich der Software-Entwicklung und den Datenwissenschaften hat sich `git` als Industriestandard etabliert.
 
 `git` ist ein verteiltes Versionierungssystem. *Verteilt* bedeutet dabei, dass die Versionierung mit allen teilnehmenden Systemen vollständig geteilt wird und es keine zentrale Instanz für die Versionierung gibt. Es handelt sich daher um ein redundantes *Peer-to-Peer*-System. `git` unterteilt die Versionierung in Projekte, den sog. ***Repositories***, dass auf verschiedenen Computern repliziert bzw. ge-**cloned**  wird. Dadurch erhält jeder Computer mit einem Repository-Clone eine vollständige Kopie der Versionierung eines Projekts. 
 
@@ -41,7 +41,7 @@ Diese Kurzeinführung stellt die zentralen `git`-Konzepte für die tägliche Arb
 
 ## `git` installieren
 
-`git` besteht im wesentlichen aus einem Kommandozeilen-Werkzeug, das alle Funktionen von `git` bereitstellt. Dieses Werkzeug wird oft auch als *CLI-Tool* bezeichnet. Es für die meisten GUI-Apps die Voraussetzung für die Arbeit. Ausserdem stellen nicht alle GUI-Apps alle `git`-Funktionen bereit und gelegentlich kann es in Spezialfällen notwendig sein, `git` direkt zu verwenden. Deshalb sollte `git` immer auf einem Computer installiert sein. 
+`git` besteht im wesentlichen aus einem Kommandozeilen-Werkzeug, das alle Funktionen von `git` bereitstellt. Dieses Werkzeug wird oft auch als *CLI-Tool* bezeichnet. Es ist für die meisten GUI-Apps die Voraussetzung für die Arbeit. Ausserdem stellen nicht alle GUI-Apps alle `git`-Funktionen bereit und gelegentlich kann es in Spezialfällen notwendig sein, `git` direkt zu verwenden. Deshalb sollte `git` immer auf einem Computer installiert sein. 
 
 ### `git` unter MacOS installieren
 
@@ -64,7 +64,7 @@ GUI-Apps die Arbeit mit `git`. Für die Arbeit mit diesem Buch werden die folgen
 
 ### `git`-Hosting-Plattformen
 
-`git` ist zuerst auf den eigenen Computer beschränkt. Für das Zusammenarbeiten mit anderen und die Sicherung der eigenen Versionierung empfielt sich die Verwendung einer sog. `git`-Hosting-Plattform. Eine `git`-Hosting-Plattform erlaubt es die Versionierung eines Projekts online zu sichern und mit anderen zu teilen, die bietet Projektmanagementfunktionen sowie Automatisierungsmöglichkeiten, die über die Kernfunktionen von `git` hinausgehen. 
+`git` ist zuerst auf den eigenen Computer beschränkt. Für das Zusammenarbeiten mit anderen und die Sicherung der eigenen Versionierung empfiehlt sich die Verwendung einer sog. `git`-Hosting-Plattform. Eine `git`-Hosting-Plattform erlaubt es, die Versionierung eines Projekts online zu sichern und mit anderen zu teilen, die bietet Projektmanagementfunktionen sowie Automatisierungsmöglichkeiten, die über die Kernfunktionen von `git` hinausgehen. 
 
 Die wichtigsten `git`-Hosting-Plattformen mit gleichwertigem Funktionsumfang sind:
 
@@ -141,7 +141,7 @@ Im Gegensatz zu Cloud-Speichern führt `git` keine automatische Synchronisation 
 Die Versionierung erfolgt immer in zwei Schritten: 
 
 1. Auswahl der zuversionierenden Dateien mit `git add`.
-2. Erstellen einer neuen Verion mit den Änderungen in den ausgewählten Dateien mit `git commit`.
+2. Erstellen einer neuen Version mit den Änderungen in den ausgewählten Dateien mit `git commit`.
 
 
 Auf der Kommandozeile werden die beiden Schritte durch zwei Aufrufe von `git`: 

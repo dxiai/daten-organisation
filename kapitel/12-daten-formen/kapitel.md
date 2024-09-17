@@ -29,7 +29,7 @@ Lässt sich durch wiederholtes Umformen die ursprüngliche Datenstruktur nicht e
 
 ::: {.callout-note}
 ## Merke
-Jede *partielle Umformung* führt zu Informationsverlusst durch *Equivokation*.
+Jede *partielle Umformung* führt zu Informationsverlusst durch *Äquivokation*.
 :::
 
 ## Transponieren
@@ -128,7 +128,7 @@ Um die Umkehrbarkeit des Transponierens sicherzustellen, werden zusätzliche Ind
 
 Beim Transponieren von Datenrahmen empfiehlt sich beim Transponieren in die *Langform* ein **Primärindex**, der in der Langform zu einem zusätzlichen Sekundärindex erweitert wird. 
 
-Beim Transponieren eines Datenrahmen in die *Breitform* empfielt sich ein **zweiter Sekundärindex**, der in der Breitform zum Primärindex reduzierbar ist.
+Beim Transponieren eines Datenrahmen in die *Breitform* empfiehlt sich ein **zweiter Sekundärindex**, der in der Breitform zum Primärindex reduzierbar ist.
 :::
 
 Die *Vektorform* muss nicht zwingend die gleiche Anzahl Werte haben, wie die *Matrixform*. Die *Vektorform* kann auch *weniger Werte* als die *Matrixform* haben.

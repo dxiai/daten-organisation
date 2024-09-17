@@ -12,7 +12,7 @@ Die Datenvisualisierung ist ein wichtiges Werkzeug für die Datenanalyse. Die Da
 Die Datenvisualisierung ist ein Hilfsmittel zur Analyse und zur Kommunikation. Sie ist kein Selbstzweck und stellt *keine* Analyse dar. Die Datenvisualisierung kann helfen, Daten vor einer weiterführenden Analyse zu verstehen.
 :::
 
-Die Datenvisualisierung kann Informationstheoretisch betrachtet werden. Dabei werden die Werte visuell *kodiert*. Dieser Vorgang folgt den gleichen informationstheoretischen Prinzipien wie die Datenverarbeitung. Entsprechend muss die Datenvisualisierung als eine Form der Informationskodierung verstanden werden. Aus dieser Einsicht folgt konsequent, dass Information bei der Visualisierung zwangsläufig durch Rauschen und Equivokation verloren geht. Gleichzeitig müssen Visualisierungen nicht nur erstellt sondern auch gelesen und systematisch interpretiert werden. Bei wissenschaftlichen Visualisierungen werden spezielle visuelle Codes verwendet, um Werte und ihre Beziehungen zueinander sichtbar zu machen.
+Die Datenvisualisierung kann Informationstheoretisch betrachtet werden. Dabei werden die Werte visuell *kodiert*. Dieser Vorgang folgt den gleichen informationstheoretischen Prinzipien wie die Datenverarbeitung. Entsprechend muss die Datenvisualisierung als eine Form der Informationskodierung verstanden werden. Aus dieser Einsicht folgt konsequent, dass Information bei der Visualisierung zwangsläufig durch Rauschen und Äquivokation verloren geht. Gleichzeitig müssen Visualisierungen nicht nur erstellt sondern auch gelesen und systematisch interpretiert werden. Bei wissenschaftlichen Visualisierungen werden spezielle visuelle Codes verwendet, um Werte und ihre Beziehungen zueinander sichtbar zu machen.
 
 ::: {.callout-tip}
 ## Künstlerische Freiheit
@@ -129,19 +129,19 @@ mtcars |> ggplot(aes(mpg)) + geom_histogram(binwidth= 1.5) + theme_minimal()
 mtcars |> ggplot(aes(gear)) + geom_bar() + theme_minimal()
 ```
 
-Die Reihenfolge der Balken ist nicht beliebig. Die Balken werden für alle ordinalskalierten Wertebereiche in der Reihenfolge der Werte bzw. der Intervalle angeordnet. Nominalskalierte Wertebereiche haben keine natürliche Reihenfolgen. Deshalb werden die Balken eines Histogramms für nominalskalierte Wertebereiche in der Reihenfolge der Häufigkeiten angeordnet.
+Die Reihenfolge der Balken ist nicht beliebig. Die Balken werden für alle ordinalskalierten Wertebereiche in der Reihenfolge der Werte bzw. der Intervalle angeordnet. Nominalskalierte Wertebereiche haben keine natürlichen Reihenfolgen. Deshalb werden die Balken eines Histogramms für nominalskalierte Wertebereiche in der Reihenfolge der Häufigkeiten angeordnet.
 
 Eine Sonderform eines Histogramms ist das sog. *Kreis-* bzw. *Tortendiagramm*. Ein Tortendiagramm ist ein Histogramm, bei dem die Balken durch Kreissegmente ersetzt werden. Die Grösse der Kreissegmente entspricht dem Anteil der Häufigkeit an der Gesamthäufigkeit. 
 
 ::: {.callout-note}
 ## Merke
-Ein Histogramm ist einem Kreisdiagramm immer vorzuziehen. Kreisdiagramme sollten nur verwendet werden, wenn wenige Kreissegmente vorhanden sind. Dabei sollten entweder ein Kreissegment besonders hervorstechen oder alle Segmente ungefährt *gleichverteilt* sein. 
+Ein Histogramm ist einem Kreisdiagramm immer vorzuziehen. Kreisdiagramme sollten nur verwendet werden, wenn wenige Kreissegmente vorhanden sind. Dabei sollten entweder ein Kreissegment besonders hervorstechen oder alle Segmente ungefähr *gleichverteilt* sein. 
 :::
 
 ### Boxplot
 
 ::: {#def-boxplot}
-Ein **Boxplot** stellt die Grösse der Verteilungsintervalle von Daten als Rechteck und Linien dar. Aussergewöhneliche Werte (Ausreisser) werden als Punkte dargestellt.
+Ein **Boxplot** stellt die Grösse der Verteilungsintervalle von Daten als Rechteck und Linien dar. Aussergewöhnliche Werte (Ausreisser) werden als Punkte dargestellt.
 :::
 
 **Box-Whisker-Diagramm** und **Kastengrafik** sind gebräuchliche Synonyme für Boxplots. 
@@ -514,7 +514,7 @@ mtcars |>
 
 ### Teildiagramme
 
-Mit Teildiagrammen werden die Werte entlang einer Variablen in Daten-Segmente getrennt und anschliessend werden die die restlichen Variablen für jedes Segment einzeln visualisiert. Diese Teildiagramme heissen *Facetten*.
+Mit Teildiagrammen werden die Werte entlang einer Variablen in Daten-Segmente getrennt und anschliessend werden die restlichen Variablen für jedes Segment einzeln visualisiert. Diese Teildiagramme heissen *Facetten*.
 
 Solche Facetten können nur mithilfe *diskreter Daten* gebildet werden. Jede Facette *muss eine Überschrift* haben, die den Wert der Nebendimension zeigt, der die dargestellten Datenpunkte zusammenfasst.
 

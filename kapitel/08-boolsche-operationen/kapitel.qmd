@@ -168,7 +168,7 @@ Die Antivalenz kann durch die anderen drei Operationen ausgedrückt werden, wesh
 
 Grundsätzlich gelten für die Boole'sche Algebra die gleichen Regeln wie für die Arithmetik. D.h. zuerst wird die Negation berechnet, dann `UND` abschliessend `ODER`. Diese Reihenfolge ist damit begründet, dass die `UND`-Operation der Multiplikation und die `ODER`-Operation der Addition entsprecht. Um die Reihenfolge zu ändern, werden wie üblich Klammern verwendet.
 
-Logische Ausdrücke werden schnell komplex und unübersichtlich. Die Boole'sche Algebra definiert Regeln, die die Umformung von logischen Ausdrücken vereinfachen. Die wichtigsten Regeln sind in der folgenden Tabelle aufgelistet.
+Logische Ausdrücke werden schnell komplex und unübersichtlich. Die Boole'sche Algebra definiert Regeln, die das Umformen von logischen Ausdrücken vereinfachen. Die wichtigsten Regeln sind in der folgenden Tabelle aufgelistet.
 
 | Name | Gleichung |
 | ----------- | :---: |
@@ -229,7 +229,7 @@ $$
 \end{aligned}
 $$ {#eq-in-operator-log-comb}
 
-In vielen Fällen sind die zu prüfenden Elemente in $B$ nicht vorab bekannt oder die Anzahl der Elemente variiert. In diesem Fall ist eine explizite `ODER`-Operation nicht möglich. Auch in weniger komplexen Fällen, empfielt es sich, die `ODER`-Operation zu vermeiden und die Existenzprüfung vorzuziehen, weil sie die Lesbarkeit eines logischen Ausdrucks erhöht. 
+In vielen Fällen sind die zu prüfenden Elemente in $B$ nicht vorab bekannt oder die Anzahl der Elemente variiert. In diesem Fall ist eine explizite `ODER`-Operation nicht möglich. Auch in weniger komplexen Fällen, empfiehlt es sich, die `ODER`-Operation zu vermeiden und die Existenzprüfung vorzuziehen, weil sie die Lesbarkeit eines logischen Ausdrucks erhöht. 
 
 
 @eq-in-operator-ex1 zeigt die Anwendung des $\in$-Operators.

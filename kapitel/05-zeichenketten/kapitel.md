@@ -5,7 +5,7 @@ execute:
 
 # Zeichenketten {#sec-chapter-zeichenketten}
 
-Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als erstes Worte oder Sätze assoziiert. Im [Abschnitt @sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [@sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
+Neben Zahlen gehören Zeichenketten zu den wichtigsten Datentypen für die Datenanalyse. Bei Zeichenketten werden als Erstes Worte oder Sätze assoziiert. Zeichenketten sind aber nicht auf die natürliche Sprache beschränkt, sondern beziehen sich auf jede beliebige Folge von Textsymbolen. Im [Abschnitt @sec-zeichenkodierung] wurde die Kodierung von Symbolen als Zahlen vorgestellt und [@sec-datentypen] hat Zeichenketten als fundamentalen Datentyp eingeführt. Diese Ideen werden in diesem Kapitel erweitert und durch die wichtigsten Operationen für Zeichenketten ergänzt.
 
 ::: {#def-zeichenkette}
 Eine Zeichenkette ist eine beliebige Kette von Textsymbolen. Textsymbole können Buchstaben, Ziffern, Satzzeichen sowie nicht-druckbare Zeichen sein.
@@ -110,7 +110,7 @@ Das Entfernen und Vereinheitlichen von Leerzeichen und nicht-druckbaren Zeichen 
 
 Eine *normalisierte Zeichenkette* enthält keine führenden oder nachfolgenden Leerzeichen, keine nicht-druckbaren Zeichen und keine aufeinanderfolgenden Leerzeichen. 
 
-Die Operation des Normalisieren ist das Suchen und Ersetzen. Beim Suchen und Ersetzen werden Zeichenketten durch andere Zeichenketten ersetzt. Die Basis-Funktion des Suchens und Ersetzens hat drei Parameter: 
+Die Operation des Normalisierens ist das Suchen und Ersetzen. Beim Suchen und Ersetzen werden Zeichenketten durch andere Zeichenketten ersetzt. Die Basis-Funktion des Suchens und Ersetzens hat drei Parameter: 
 
 - Die Zeichenkette, in der gesucht werden soll
 - Die gesuchte Zeichenkette (das *Suchmuster*)
@@ -139,6 +139,6 @@ Oft müssen Zeichenketten auch von anderen Symbolen bereinigt werden. Dabei hand
 
 Zeichenketten können in der Gross- oder Kleinschreibung variieren. Die Gross- und Kleinschreibung ist ein *semantisches Merkmal* von Zeichenketten, kann aber auch auf Tippfehler zurückgehen. Um Varianten der Gross- und Kleinschreibung zu ignorieren, werden alle Symbole einer Zeichenkette in Gross- oder in Kleinbuchstaben umgewandelt, falls es sich um Buchstaben handelt. Alle anderen Symbole bleiben unverändert. 
 
-Die Umwandlung von Gross- in Kleinbuchstaben ist leicht umzusetzen, weil Kleinbuchstaben in der Zeichenkodierung immer um den gleichen Wert (`0x20`)grösser sind als Grossbuchstaben. Die Umwandlung wird in der Regel mit einer entsprechenden Funktion durchgeführt und muss nicht selbst implementiert werden.
+Die Umwandlung von Gross- in Kleinbuchstaben ist leicht umzusetzen, weil Kleinbuchstaben in der Zeichenkodierung immer um den gleichen Wert (`0x20`) grösser sind als Grossbuchstaben. Die Umwandlung wird in der Regel mit einer entsprechenden Funktion durchgeführt und muss nicht selbst implementiert werden.
 
 Satzzeichen, Zahlen und viele Schriften verfügen über keine grossen und kleinen Buchstaben. Die entsprechen Symbole werden nicht umgewandelt.

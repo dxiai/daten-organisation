@@ -26,7 +26,7 @@ Durch nicht erfasste Daten geht Information verloren. Dieser Informationsverlust
 Welche Daten in einem Datensatz erfasst wurden bzw. erfasst werden sollen,  werden in einem **Datenschema** festgehalten. Das Datenschema hat zwei Funktionen.
 
 1. Es legt fest, welche Daten für einen Datensatz erhoben werden müssen. In dieser Funktion ist das Datenschema eine grobe Anleitung, welche Daten gesammelt werden sollen.
-2. Es dokumentiert, welche Daten in einem Datenssatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.
+2. Es dokumentiert, welche Daten in einem Datensatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.
 
 Ein Datenschema legt Felder für die Ablage der beobachteten Daten fest.
 
@@ -58,9 +58,9 @@ Beim Daten sammeln werden drei Arten von Daten unterschieden:
 
 Typische unstrukturierte Daten sind Notizen, Transkripte gespochener Sprache oder Videos. Unstrukturierte Daten können Werte von Interesse enthalten, auf die jedoch nicht direkt zugegriffen werden kann.
 
-Unstrukturierte Daten haben den Vorteil, dass sie *Ergebnisoffen* ein. Dadurch sind unstrukturierte Daten offen für neue und unvorgesehene Information. Entsprechend werden Techniken, die unstrukturierte Daten erheben auch als ***offene*** Erhebungstechniken bezeichnet. 
+Unstrukturierte Daten haben den Vorteil, dass sie *Ergebnisoffen* sind. Dadurch sind unstrukturierte Daten offen für neue und unvorhergesehene Informationen. Entsprechend werden Techniken, die unstrukturierte Daten erheben, auch als ***offene*** Erhebungstechniken bezeichnet. 
 
-Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Equivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden. 
+Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Äquivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden. 
 
 ::: {.callout-note}
 
@@ -77,9 +77,9 @@ Ohne vorbereitende Kodierung lassen sich unstrukturierte Daten kaum systematisch
 
 Weil strukturierte Daten einen festen Wertebereich haben, ist sichergestellt, dass nur Werte innerhalb dieses *abgeschlossenen* Bereichs gültig sind. Deshalb werden Techniken, mit denen strukturierte Daten erhoben gelten auch als ***geschlossene*** Erhebungstechniken.
 
-Strukturierte Daten basieren immer auf einer festen Wertebereich, die Information kodiert. In dieser Struktur werden die Daten nach ihrer Bedeutung und ihren zulässigen Wertebereichen organisiert. Die feste Struktur macht strukturierte Daten innerhalb der Struktur weniger anfällig gegenüber Rauschen als unstrukturierte Daten. 
+Strukturierte Daten basieren immer auf einem festen Wertebereich für die Kodierung von Information. In dieser Struktur werden die Daten nach ihrer Bedeutung und ihren zulässigen Wertebereichen organisiert. Die feste Struktur macht strukturierte Daten innerhalb der Struktur weniger anfällig gegenüber Rauschen als unstrukturierte Daten. 
 
-Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Informationen über diese Struktur kodieren. Das führt zu Equivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind. 
+Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Informationen über diese Struktur kodieren. Das führt zu Äquivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind. 
 
 Tabellen sind typische strukturierte Daten, die in Spalten und Zeilen organisiert sind.
 
@@ -108,7 +108,7 @@ Semistrukturierte Daten folgen einer logischen Struktur, die allerdings nicht du
 
 Semi-strukturierte Daten werden oft für das Einbetten strukturierter Daten in unstrukturierte Datenfelder verwendet. 
 
-Ein typisches Beispiel für semistrukturierte Daten sind Social-Media-Meldungen mit Hashtags und `@`-Nennungen. Mit dem Hash-Symbol (`#`) werden Themen und Inhalte hervorgehoben und mit dem `@`-Symbol werden Nutzende markiert.  Durch die beiden Symbole wird eigendlich unstrukturierten Daten eine zusätzliche Struktur gegeben, auf welche zugegriffen werden kann. Eine Social-Media-Meldung kann keine, ein oder mehrere Hashtags und keine, eine oder mehrere Nennungen enthalten. 
+Ein typisches Beispiel für semistrukturierte Daten sind Social-Media-Meldungen mit Hashtags und `@`-Nennungen. Mit dem Hash-Symbol (`#`) werden Themen und Inhalte hervorgehoben und mit dem `@`-Symbol werden Nutzende markiert.  Durch die beiden Symbole wird eigentlich unstrukturierten Daten eine zusätzliche Struktur gegeben, auf welche zugegriffen werden kann. Eine Social-Media-Meldung kann keine, ein oder mehrere Hashtags und keine, eine oder mehrere Nennungen enthalten. 
 
 ``` {#lst-zhaw-tweet lst-cap="Tweet mit Hashtag [@zhaw_zhaw_2023]"}
 Das neue Laborgebäude auf dem ZHAW-Campus Reidbach 
@@ -121,7 +121,7 @@ detailansicht-news/event-news/
 lebensmittelforschung-unter-einem-dach-vereint/
 ```
 
-Ein anderes Beispiel finden sich regelmässig in Bankmiteilungen im Feld "Verwendungszweck". In diesem Feld werden oft zusätzliche Daten für die Kommunikation zwischen den Beteiligten einer Transaktion hinterlegt. @lst-semistructured zeigt semistrukturierte Daten im Verwendungszweck von Banktransaktionen, diese können für eine Analyse verwendet werden.  
+Ein anderes Beispiel finden sich regelmässig in Bankmitteilungen im Feld "Verwendungszweck". In diesem Feld werden oft zusätzliche Daten für die Kommunikation zwischen den Beteiligten einer Transaktion hinterlegt. @lst-semistructured zeigt semistrukturierte Daten im Verwendungszweck von Banktransaktionen, diese können für eine Analyse verwendet werden.  
 
 ``` {#lst-semistructured lst-cap="Semistrukturierte Daten"}
 1   PV2332 PG386.5 SV375.26 
@@ -201,7 +201,7 @@ Bei der automatischen Datenerhebung werden Daten automatisch erfasst und gespeic
 
 Bei der automatischen Datenerhebung werden grundsätzlich drei Kategorien unterschieden:
 
-- **Snapshots** erfassen eine Momentaufnahme eines Systems. Bei Snapshots handelt es sich immer um komplexe *strukturierte Daten*. Ein Snapshot kann beispielsweise ein Foto, ein MRI-Scan oder eine Gen-Sequenz sein. Ein Snapshot liefert einen *Datensatz*, der in der Regel sehr viele Werte umfassst. Snapshots werden oft von speziellen Geräten erfasst und gespeichert.
+- **Snapshots** erfassen eine Momentaufnahme eines Systems. Bei Snapshots handelt es sich immer um komplexe *strukturierte Daten*. Ein Snapshot kann beispielsweise ein Foto, ein MRI-Scan oder eine Gen-Sequenz sein. Ein Snapshot liefert einen *Datensatz*, der in der Regel sehr viele Werte umfasst. Snapshots werden oft von speziellen Geräten erfasst und gespeichert.
 
 - **Metriken** geben Auskunft über *Zustände* zu einem bestimmten Zeitpunkt. Oft werden Metriken in regelmässigen Abständen erfasst. Bei Metriken handelt es sich immer um einfache *strukturierte Daten*. Eine Metrik kann beispielsweise die Anzahl der Besucher einer Webseite zu einem bestimmten Zeitpunkt oder die Temperatur in einem Raum sein. Eine Metrik hat üblicherweise drei Eigenschaften:
 

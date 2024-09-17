@@ -298,7 +298,7 @@ Beim Aggregieren hängen die Operationen von der jeweiligen vorangehenden Operat
 >
 > Der $\sum{}$-Operator ist ein Aggregator. Die dem Operator nachfolgenden Terme legen die zu aggregierenden Vektorelement fest. Die Reduktionsfunktion ist die Addition (`+`). 
 >
-> Für den Vektor $v = \{1;2;3;4;5\}$ kann die die Summe der Quadrate wie folgt geschrieben werden.
+> Für den Vektor $v = \{1;2;3;4;5\}$ kann die Summe der Quadrate wie folgt geschrieben werden.
 >
 > $$
 > \sum_{i=1}^5 v_i^2

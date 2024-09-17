@@ -42,7 +42,7 @@ Diese analogen Technologien haben das Problem, dass sich Signale über längere 
 
 ::: {.callout-note}
 ## Merke
-Durch *Equivokation* gehen Informationen beim Übertragen verloren.
+Durch *Äquivokation* gehen Informationen beim Übertragen verloren.
 :::
 
 Ein zweites Problem analoger Kommunikationstechnologien sind äussere Störungen des Mediums. Wird z.B. ein Magnet an ein Kabel gehalten, werden die über das Kabel übertragenen Signale verzerrt. Solche Veränderungen des Signals werden als Rauschen (engl. *Noise*) bezeichnet. Rauschen entsteht auch zufällig mit zunehmender Länge eines Mediums. 
@@ -67,7 +67,7 @@ Wie kann eine Nachricht ein Ziel erreichen, wenn die Daten durch Rauschen und Eq
 - Das Empfangen und Dekodieren der Nachricht 
 - Ein Informationsziel, die Information aufnimmt
 
-Zusätzlich muss das *Rauschen* des Kanals berücksichtigt werden. Später wurde das Modell um die *Equivokation* erweitert [@shannon_communication_1949]. Sowohl das Rauschen als auch die Equivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diesen Überlegungen ergibt sich das Kommunikationschema in @fig-shannon-model.
+Zusätzlich muss das *Rauschen* des Kanals berücksichtigt werden. Später wurde das Modell um die *Äquivokation* erweitert [@shannon_communication_1949]. Sowohl das Rauschen als auch die Äquivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diesen Überlegungen ergibt sich das Kommunikationschema in @fig-shannon-model.
 
 
 ```{mermaid}
@@ -80,7 +80,7 @@ flowchart LR
   b --> c(Medium)
   c --> f(Dekodieren)
   
-  c --> e(Equivokation)
+  c --> e(Äquivokation)
   r(Rauschen) --> c
 
   f --> g(Information)
@@ -546,7 +546,7 @@ In den vorherigen Abschnitten haben wir wichtige Erkenntnisse abgeleitet:
 1. Zahlensysteme **kodieren** Zahlenwerte zu einer Basis. 
 2. Die Basis eines Zahlensystems legt fest, wie viele Ziffern für Zahlenwerte zur Verfügung stehen. 
 3. Die kleinste Basis für ein Zahlensystem ist 2.
-4. Beliebige Symbole als Zahlenwerte abgebildet werden können. 
+4. Beliebige Symbole können als Zahlenwerte abgebildet werden . 
 5. Ziffern sind Symbole. 
 
 Daraus ergibt sich der folgende Merksatz. 

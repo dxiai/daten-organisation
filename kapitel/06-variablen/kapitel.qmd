@@ -21,7 +21,7 @@ Bezeichner sind in einem Geltungsbereich immer *eindeutig*. Das bedeutet, dass B
 Die Definition eines Geltungsbereichs ist in den meisten Programmiersprachen und -Umgebungen genau festgelegt.
 :::
 
-Mit Bezeichnern kann wie mit Werten gearbeitet werden, weil ein Bezeichner für einen Wert steht. Ein Bezeichner kann einen einzelnen Wert oder eine beliebige komplexe Datenstruktur aufnehmen. Ein Bezeichner kann auf einen einzelne Zahl oder Zeichenkette genauso verweisen, wie auf einen Vektor, eine Liste oder eine Matrix. Bezeichner sind nicht auf die fundamentalen Datentypen beschränkt. Z.B. ist ein *Dateiname* ein Bezeichner für die Daten in einer Datei oder ein `git`-Tag ist ein Bezeichner für eine bestimmte Version eines Projektes. Durch den Bezeichner wird vom eigentlichen Wert *abstrahiert*.
+Mit Bezeichnern kann wie mit Werten gearbeitet werden, weil ein Bezeichner für einen Wert steht. Ein Bezeichner kann einen einzelnen Wert oder eine beliebige komplexe Datenstruktur aufnehmen. Ein Bezeichner kann auf eine einzelne Zahl oder eine Zeichenkette genauso verweisen, wie auf einen Vektor, eine Liste oder eine Matrix. Bezeichner sind nicht auf die fundamentalen Datentypen beschränkt. Z.B. ist ein *Dateiname* ein Bezeichner für die Daten in einer Datei oder ein `git`-Tag ist ein Bezeichner für eine bestimmte Version eines Projektes. Durch den Bezeichner wird vom eigentlichen Wert *abstrahiert*.
 
 Damit ein Wert über einen Bezeichner *abstrahiert* werden kann, muss er *benannt* werden. Das Benennen eines Wertes wird *Zuweisen* genannt. Der Wert wird also einem Bezeichner *zugewiesen*. Eine Zuweisung wird in der mathematischen Notation über einen Pfeil ($\to$) dargestellt. Dabei zeigt der Pfeil vom Bezeichner auf den Wert. Diese Schreibweise bedeutet, dass ein Bezeichner auf den angegebenen Wert *verweist*. Die @eq-bezeichner-zuweisung zeigt die Zuweisung des Wertes $12$ an den Bezeichner $Wert$.
 
@@ -236,7 +236,7 @@ Bei Operatoren wird zwischen *Präfix*, *Infix* und *Postfix* unterschieden. Pr�
 
 ### Precedence - Prioriät von Operatoren
 
-In komplexen Operationen ist nicht immer eindeutig, welche Parameter zu welchem Operator gehören. Damit richtigt gerechnet wird, besteht zwischen den Operatoren eine Hierachie, in welcher jeder Operator eine bestimmte Priorität für die Ausführung hat. Das bedeutet, dass ein Operator mit höherer Priorität vor einem Opeartor mit niedrigerer Priorität ausgeführt wird. Bei Operatoren mit gleicher Priorität wird **immer** der am weitesten links stehende Operator zuerst ausgeführt.
+In komplexen Operationen ist nicht immer eindeutig, welche Parameter zu welchem Operator gehören. Damit richtig gerechnet wird, besteht zwischen den Operatoren eine Hierarchie, in welcher jeder Operator eine bestimmte Priorität für die Ausführung hat. Das bedeutet, dass ein Operator mit höherer Priorität vor einem Operator mit niedrigerer Priorität ausgeführt wird. Bei Operatoren mit gleicher Priorität wird **immer** der am weitesten links stehende Operator zuerst ausgeführt.
 
 Um einen Operator in der Anwendung vorzureihen, werden Klammern verwendet. Klammern legen die Reihenfolge der Operationen fest. 
 

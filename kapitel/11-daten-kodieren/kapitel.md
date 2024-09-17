@@ -35,7 +35,7 @@ Für eine Spaltenkonkatenation müssen beide Stichproben den gleichen Umfang hab
 
 - partielle Vereinigung (partial union)
 
-Die partielle Vereinigung kombiniert nur Werte, die in beiden Quelle ein gemeinsames Merkmal teilen. Das Ergebnis enthält anschliessend nur noch Datensätze mit allen Merkmalen aus beider Quellen für die es eine Entsprechung für die gemeinsamen Merkmale gibt.
+Die partielle Vereinigung kombiniert nur Werte, die in beiden Quelle ein gemeinsames Merkmal teilen. Das Ergebnis enthält anschliessend nur noch Datensätze mit allen Merkmalen aus beiden Quellen für die es eine Entsprechung für die gemeinsamen Merkmale gibt.
 
 - Schnittmenge (intersection/inner join)
 

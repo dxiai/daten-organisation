@@ -60,12 +60,12 @@ Ein **Messereignis** fasst ein oder mehrere *gemeinsam gemessene* Merkmale zusam
 Ein Datensatz ist immer eine Liste von Werten, deren Datentypen und Wertebereichen voneinander verschieden sein können.
 
 ::: {.callout-note}
-Der Begriff *Datensatz* wird im Deutschen mehrdeutig verwendet. Es ist nicht immer klar, ob ein Datensatz ein Zeile in einer Tabelle oder eine ganze Tabelle bezeichnet. Im Englishen wird der Begriff *Datensatz* entweder mit *data record* (etwa Dateneintrag) für eine Zeile in einer Tabelle benutzt. Die Begriffe *data set* (Datenmenge) oder *data frame* (Datenraster) bezeichnen eine ganze Tabelle. 
+Der Begriff *Datensatz* wird im Deutschen mehrdeutig verwendet. Es ist nicht immer klar, ob ein Datensatz ein Zeile in einer Tabelle oder eine ganze Tabelle bezeichnet. Im Englischen wird der Begriff *Datensatz* entweder mit *data record* (etwa Dateneintrag) für eine Zeile in einer Tabelle benutzt. Die Begriffe *data set* (Datenmenge) oder *data frame* (Datenraster) bezeichnen eine ganze Tabelle. 
 :::
 
 Die *Merkmale* beschreiben gemeinsam ein *Messereignis*. Weil es sich bei den Merkmalen eines Messereignisses um *zusammengehörende* Werte handelt, wird auch der Begriff **Entität** (gegebene Einheit; eindeutig identifizierbare, zusammenhängende Größe) verwendet.
 
-Messungen bilden einen Ausschnitt einer **Grundgesamtheit** ab. Eine Grundgesamtheit umfasst alle *prinziell* messbaren Entitäten. Eine Stichprobe ist eine *Teilmenge* der Grundgesamtheit, die nur die *tatsächlich gemessenen* Entitäten enthält. 
+Messungen bilden einen Ausschnitt einer **Grundgesamtheit** ab. Eine Grundgesamtheit umfasst alle *prinzipiell* messbaren Entitäten. Eine Stichprobe ist eine *Teilmenge* der Grundgesamtheit, die nur die *tatsächlich gemessenen* Entitäten enthält. 
 
 ::: {#def-grundgesamtheit}
 Alle prinzipiell messbaren Entitäten bilden eine **Grundgesamtheit**.
@@ -142,7 +142,7 @@ Diese zweite Tabelle macht deutlich, dass viele nicht normalisierte Tabellen ein
 
 Datendateien sollten möglichst isoliert und vor versehentlichen überschreiben geschützt werden.
 
-Daten werden am Besten immer in eigenen Dateien abgelegt. Diese Dateien enthalten nur Werte und keine Umformungen oder Berechnungen. Wenn ein Projekt mehrere Datenerhebungen umfasst, dann sollten die Daten für jede Erhebung in einer eigenen Datei abgelegt werden. Hierzu sollte eine eindeutige Bezeichnung verwendet werden, die auf die Erhebung hinweist. Ein geeignetes Format für Dateinamen ist ein Datum-Kennungs-Format, die die Erhebung eindeutig identifiziert. Dabei wird das Datum in der Form `YYYY-MM-DD` angegeben, gefolgt von einer kurzen Bezeichnung der Erhebung. 
+Daten werden am Besten immer in eigenen Dateien abgelegt. Diese Dateien enthalten nur Werte und keine Umformungen oder Berechnungen. Wenn ein Projekt mehrere Datenerhebungen umfasst, dann sollten die Daten für jede Erhebung in einer eigenen Datei abgelegt werden. Hierzu sollte eine eindeutige Bezeichnung verwendet werden, die auf die Erhebung hinweist. Ein geeignetes Format für Dateinamen ist ein Datum-Kennungs-Format, welches die Erhebung eindeutig identifiziert. Dabei wird das Datum in der Form `YYYY-MM-DD` angegeben, gefolgt von einer kurzen Bezeichnung der Erhebung. 
 
 ::: {#exm-datum-kennung}
 ## Dateiname im Datum-Kennungsformat

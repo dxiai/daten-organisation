@@ -37,7 +37,7 @@ Gelegentlich fehlen Werte in den Daten oder wurden bei der Datenverarbeitung (no
 Als **undefinierte Werte**  die keine Werte repräsentieren.
 :::
 
-In den meisten Programmiersprachen gibt es für undefinierte Werte einen konstanten Wert. Dieser Wert ist in der Regel vom beliebigen Datentyp. 
+In den meisten Programmiersprachen werden undefinierte Werte auf einen konstanten Wert abgebildet. Dieser Wert ist in der Regel vom beliebigen Datentyp. 
 
 ### Zahlen
 
@@ -213,7 +213,7 @@ Lässt ein Wertebereich beliebige Abstufungen zwischen Werten zu, dann heisst di
 :::
 
 ::: {.callout-note} 
-*Kontinierliche Daten* werden auch als *metrische Daten*, *varianzskalierte Daten* oder *kardinale Skalenniveaus* bezeichnet. 
+*Kontinuierliche Daten* werden auch als *metrische Daten*, *varianzskalierte Daten* oder *kardinale Skalenniveaus* bezeichnet. 
 ::: 
 
 @def-kontinuierliche-daten verweist auf die Verhältnisse zwischen zwei Werten. Das Verhältnis ist das Gleiche wie ein Bruch bzw. die Division. Bei diskreten Daten können die Verhältnisse zwischen beliebigen Wertepaaren nicht so gebildet werden, dass auch alle Verhältnisse im gleichen diskreten Wertebereich liegen.
@@ -250,7 +250,7 @@ Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einz
 - Datenstrukturen können *verschachtelt* werden, um noch komplexere Strukturen zu bilden.
 - Datenstrukturen können als Sammlung von Einzelwerten betrachtet werden, welche getrennt verarbeitet werden können.
 
-Durch diese Eigentschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet. 
+Durch diese Eigenschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet. 
 
 ### Eindimensionale Datenstrukturen
 
@@ -284,7 +284,7 @@ Ein **Spezialfall** der geschachtelten Liste sind **Listen, die Vektoren mit *gl
 Eine **Datenrahmen** (engl. *data frame*) verknüpft mehrere gleichlange Vektoren mit *unterschiedlichen Datentypen*. 
 :::
 
-Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als *hetreogene Datenstrukturen*.
+Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als *heterogene Datenstrukturen*.
 
 Die gleiche Logik lässt sich auch auf Vektoren anwenden. In diesem Fall ist der **Spezialfall** ein **Vektor, der Vektoren gleicher Länge und des gleichen Datentyps schachtelt**. Diese Datenstruktur hat ebenfalls einen eigenen Namen:
 
