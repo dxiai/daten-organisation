@@ -153,7 +153,7 @@ Boole konnte zeigen, dass die arithmetischen Operationen die gleichen Ergebnisse
 
 ## Boole'sche Algebra
 
-Die Bool'sche Arithmetik ist für regelmässige Aufgaben etwas unhantlich, weil die beiden Operationen `ODER` und `Entweder-Oder` sich nicht mit einer arithmetischen Operation ausdrücken lassen. Weil die logischen Operationen einen besonderen Fall der Mengenlehre darstellen, wurden die Symbole für die Konjunktion und Disjunktion der Symbolik der Mengenlehre entlehnt.
+Die Boolesche Arithmetik ist für regelmässige Aufgaben etwas unhandlich, weil die beiden Operationen `ODER` und `Entweder-Oder` sich nicht mit einer arithmetischen Operation ausdrücken lassen. Weil die logischen Operationen einen besonderen Fall der Mengenlehre darstellen, wurden die Symbole für die Konjunktion und Disjunktion der Symbolik der Mengenlehre entlehnt.
 
 | Logische Operation | logischer Operator | Mengenoperator | Mengenoperation |
 | -------- | :---: | :---: | -------- |
