@@ -71,3 +71,4 @@ index.out
 **/*.rmarkdown
 site_libs/
 _freeze/
+**/*.html
