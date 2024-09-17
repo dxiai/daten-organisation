@@ -72,3 +72,9 @@ index.out
 site_libs/
 _freeze/
 **/*.html
+**/*_files/
+**/*.html
+**/*.aux
+**/*.log
+**/*.pdf
+**/*.toc
