@@ -150,7 +150,7 @@ Beim Anonymisieren müssen alle Vektoren entfernt werden, über die der Ursprung
 
 #### Schritt 2: Erzeugung eines eindeutigen Vektors
 
-Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind. 
+Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten liefern kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert wurden. 
 
 Hierzu wird als Hashing-Funktion ein *Zufallszahlengenerator* verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als *Sortierindex*.
 
@@ -162,7 +162,7 @@ Als Hashing-Funktion dürfen nur Zufallsgeneratoren für gleichverteilte Werte e
 
 In diesem Schritt werden die Datensätze über den in Schritt 2 erzeugten Sortierindex angeordnet. Dabei wird ausgenutzt, dass ein Zufallszahlengenerator Werte in keiner bestimmten Reihenfolge erzeugt. Das Sortieren entlang dieses Index bringt die erzeugten Hashes in eine neue Reihenfolge. Dadurch werden die Werte effektiv gemischt. Die neue Reihenfolge ist wegen Schritt 2 zufällig. 
 
-Das zufällige Mischen erzeugt Rauschen, welches Information überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.
+Das zufällige Mischen erzeugt Rauschen, welches Information überlagert, die sich aus der Reihenfolge der Daten ergeben könnte.
 
 #### Schritt 4: Entfernen des Sortierindex und exportieren der Daten
 

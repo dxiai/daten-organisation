@@ -38,9 +38,9 @@ Weil die Commit-Meldungen nicht viel Platz zu dokumentation bieten, werden *Ents
 
 ### Projektübersicht
 
-Per Konvention werden in der Datei `README.md` bzw. `README` die Ausgangslage und Motivation, technische Information sowie die Repository-Organisation dokumentiert. Diese Dokumentation ist notwendig, um mit dem Projekt arbeiten zu können. Zu den technischen Information gehören alle Information, die benötigt werden, um mit den Daten oder dem Code zu arbeiten. 
+Per Konvention werden in der Datei `README.md` bzw. `README` die Ausgangslage und Motivation, technische Information sowie die Repository-Organisation dokumentiert. Diese Dokumentation ist notwendig, um mit dem Projekt arbeiten zu können. Zur technischen Information gehört alles benötigte, um mit den Daten oder dem Code arbeiten zu können. 
 
-Strukturierte Daten müssen in der Projektübersicht dokumentiert werden. Die folgenden Information über die Daten sollten angegeben werden.
+Strukturierte Daten müssen in der Projektübersicht dokumentiert werden. Die folgende Information über die Daten sollte angegeben werden:
 
 - die Namen von Variablen
 - die Datentypen der Variablen
@@ -277,7 +277,7 @@ Werden externe Quellen verwendet und *nicht referenziert*, dann handelt es sich 
 
 ### Managementzusammenfassung
 
-Eine Managementzusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigsten Information des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
+Eine Managementzusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigste Information des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
 
 Eine gute Managementzusammenfassung kann direkt in einer Präsentation verwendet werden. Als Richtlinie für eine Managementzusammenfassung sind sieben Punkte. Diese Punkte sollten die folgenden Fragen beantworten.
 

@@ -193,7 +193,7 @@ Eine Variante des Sortieren sind **Zuordnungs-Items**. Bei diesen Items muss jed
 
 Gelegentlich werden Fotos oder Bilder angeboten und die Teilnehmenden werden gebeten, Bereiche auf diesen Bildern auszuwählen. Dabei handelt es sich um eine Variante eines **Multiple-Choice-Grids**, bei dem die Antwortmöglichkeiten als Bilder dargestellt werden.
 
-Durch die Wahl der Fragetypen und dem Festlegen der Wertebereiche von Formular-Items werden wird die Information *kodiert*.
+Durch die Wahl der Fragetypen und dem Festlegen der Wertebereiche von Formular-Items wird die Information der Antworten *kodiert*.
 
 ### Automatische Datenerhebung
 
