@@ -7,7 +7,7 @@ execute:
 
 # Informationstheorie {#sec-chapter-informationstheorie}
 
-Die Arbeit mit Daten schliesst immer die Frage ein, ob diese Daten relevante Informationen verbergen. Dazu müssen zwei Konzepte erfasst werden:  
+Die Arbeit mit Daten schliesst immer die Frage ein, ob diese Daten relevante Information verbergen. Dazu müssen zwei Konzepte erfasst werden:  
 
 1. Daten 
 2. Information
@@ -35,14 +35,14 @@ Mit diesen beiden Ursprüngen können die beiden Begriffe für Anwendungen vorl�
 Claude Shannon befasste sich in den 1940er Jahren mit den Herausforderungen der (damals) modernen Kommunikationstechnologien Telegraphie und Telefon. Diese Technologien übertragen Nachrichten über einen Nachrichten*kanal*. Ein solcher Kanal kann ein Kabel oder auch eine Funkfrequenz sein. Dieser Nachrichtenkanal wird als *Medium* bezeichnet. 
 
 ::: {#def-kommunikation} 
-Als *Kommunikation* wird das Übertragen von Informationen über ein Medium bezeichnet. 
+Als *Kommunikation* wird das Übertragen von Information über ein Medium bezeichnet. 
 :::
 
 Diese analogen Technologien haben das Problem, dass sich Signale über längere Distanzen abschwächen. Dieser Effekt ergibt sich aus dem "Medium", dass für eine Kommunikation verwendet wird.  Ein Kabel hat z.B. eine Dämpfung, die mit der Länge des Kabels steigt. Je länger ein Kabel wird, desto grösser wird die Dämpfung. Die Dämpfung hat zur Folge, dass ein Signal leiser wird. Dadurch geht ein Teil des ursprünglichen Signals verloren. Dieser Prozess wird als "Equivocation" bezeichnet.
 
 ::: {.callout-note}
 ## Merke
-Durch *Äquivokation* gehen Informationen beim Übertragen verloren.
+Durch *Äquivokation* gehen Information beim Übertragen verloren.
 :::
 
 Ein zweites Problem analoger Kommunikationstechnologien sind äussere Störungen des Mediums. Wird z.B. ein Magnet an ein Kabel gehalten, werden die über das Kabel übertragenen Signale verzerrt. Solche Veränderungen des Signals werden als Rauschen (engl. *Noise*) bezeichnet. Rauschen entsteht auch zufällig mit zunehmender Länge eines Mediums. 

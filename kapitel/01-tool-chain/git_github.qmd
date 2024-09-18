@@ -418,7 +418,7 @@ Ein solcher Konflikt kann dadurch provoziert werden, indem im `extras`-Branch de
 ```markdown
 # Mein erstes Projekt
 
-Alle Informationen zu den Autoren finden sich in der Datei [AUTHORS.md]
+Alle Information zu den Autoren finden sich in der Datei [AUTHORS.md]
 ```
 
 Wird nun versucht den `extras` und den `main`-Branch zusammenzuführen, meldet `git merge` den folgenden Konflikt: 
@@ -437,7 +437,7 @@ Der Inhalt der Datei `README.md` zeigt nun den Merge-Konflikt.
 <<<<<<< HEAD
 Eine Übung zur Versionierung mit git.
 =======
-Alle Informationen zu den Autoren finden sich in der Datei [AUTHORS.md].
+Alle Information zu den Autoren finden sich in der Datei [AUTHORS.md].
 >>>>>>> extras
 ```
 
@@ -450,7 +450,7 @@ Es bleibt den Entwickler:innen überlassen, sich für eine, beide oder keine der
 
 Eine Übung zur Versionierung mit git.
 
-Alle Informationen zu den Autoren finden sich in der Datei [AUTHORS.md].
+Alle Information zu den Autoren finden sich in der Datei [AUTHORS.md].
 ```
 
 Die Datei ist nun konfliktfrei und kann in die Versionierung aufgenommen werden.

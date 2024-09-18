@@ -55,7 +55,7 @@ Dieses Buch kann auf zwei Arten gelesen und verwendet werden:
 
 ## Farbcodes und andere wichtige Hinweise
 
-Dieses Buch verwendet Hervorhebungen und Farbcodes, um die verschiedenen Arten von Informationen zu unterscheiden. 
+Dieses Buch verwendet Hervorhebungen und Farbcodes, um die verschiedenen Arten von Information zu unterscheiden. 
 
 ::: {#def-beispiel .unnumbered}
 Eine Definition eines Konzepts oder Begriffs.
@@ -89,7 +89,7 @@ Weist auf häufige Missverständnisse und Fehler hin.
 :::
 
 ::: {.callout-important}
-Weist auf zentrale Konzepte und Informationen hin.
+Weist auf zentrale Konzepte und Information hin.
 :::
 
 

@@ -18,7 +18,7 @@ execute:
 
 ## Technische Projektdokumentation
 
-Die technische Projektdokumentation dokumentiert die Organisation und Struktur eines Projekts und enthält alle relevanten Informationen, um die Dateien in einem `git`-Repository richtig zu interpretieren und die Arbeitsschritte zu reproduzieren. 
+Die technische Projektdokumentation dokumentiert die Organisation und Struktur eines Projekts und enthält alle relevanten Information, um die Dateien in einem `git`-Repository richtig zu interpretieren und die Arbeitsschritte zu reproduzieren. 
 
 Eine vollständige **Projektdokumentation** enthält die folgenden Teile.
 
@@ -38,9 +38,9 @@ Weil die Commit-Meldungen nicht viel Platz zu dokumentation bieten, werden *Ents
 
 ### Projektübersicht
 
-Per Konvention werden in der Datei `README.md` bzw. `README` die Ausgangslage und Motivation, technische Informationen sowie die Repository-Organisation dokumentiert. Diese Dokumentation ist notwendig, um mit dem Projekt arbeiten zu können. Zu den technischen Informationen gehören alle Informationen, die benötigt werden, um mit den Daten oder dem Code zu arbeiten. 
+Per Konvention werden in der Datei `README.md` bzw. `README` die Ausgangslage und Motivation, technische Information sowie die Repository-Organisation dokumentiert. Diese Dokumentation ist notwendig, um mit dem Projekt arbeiten zu können. Zu den technischen Information gehören alle Information, die benötigt werden, um mit den Daten oder dem Code zu arbeiten. 
 
-Strukturierte Daten müssen in der Projektübersicht dokumentiert werden. Die folgenden Informationen über die Daten sollten angegeben werden.
+Strukturierte Daten müssen in der Projektübersicht dokumentiert werden. Die folgenden Information über die Daten sollten angegeben werden.
 
 - die Namen von Variablen
 - die Datentypen der Variablen
@@ -277,7 +277,7 @@ Werden externe Quellen verwendet und *nicht referenziert*, dann handelt es sich 
 
 ### Managementzusammenfassung
 
-Eine Managementzusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigsten Informationen des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
+Eine Managementzusammenfassung ist eine Kurzfassung eines Projektberichts, die sich an die Entscheidungsträger richtet. Sie ist deutlich kürzer als die Zusammenfassung und enthält nur die wichtigsten Information des Projektberichts. In der Regel ist die Managementzusammenfassung nicht länger als eine Seite und ist Stichpunktartig formuliert.
 
 Eine gute Managementzusammenfassung kann direkt in einer Präsentation verwendet werden. Als Richtlinie für eine Managementzusammenfassung sind sieben Punkte. Diese Punkte sollten die folgenden Fragen beantworten.
 

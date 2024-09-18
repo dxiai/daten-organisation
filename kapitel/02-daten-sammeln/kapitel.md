@@ -58,7 +58,7 @@ Beim Daten sammeln werden drei Arten von Daten unterschieden:
 
 Typische unstrukturierte Daten sind Notizen, Transkripte gespochener Sprache oder Videos. Unstrukturierte Daten können Werte von Interesse enthalten, auf die jedoch nicht direkt zugegriffen werden kann.
 
-Unstrukturierte Daten haben den Vorteil, dass sie *Ergebnisoffen* sind. Dadurch sind unstrukturierte Daten offen für neue und unvorhergesehene Informationen. Entsprechend werden Techniken, die unstrukturierte Daten erheben, auch als ***offene*** Erhebungstechniken bezeichnet. 
+Unstrukturierte Daten haben den Vorteil, dass sie *Ergebnisoffen* sind. Dadurch sind unstrukturierte Daten offen für neue und unvorhergesehene Information. Entsprechend werden Techniken, die unstrukturierte Daten erheben, auch als ***offene*** Erhebungstechniken bezeichnet. 
 
 Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Äquivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden. 
 
@@ -79,7 +79,7 @@ Weil strukturierte Daten einen festen Wertebereich haben, ist sichergestellt, da
 
 Strukturierte Daten basieren immer auf einem festen Wertebereich für die Kodierung von Information. In dieser Struktur werden die Daten nach ihrer Bedeutung und ihren zulässigen Wertebereichen organisiert. Die feste Struktur macht strukturierte Daten innerhalb der Struktur weniger anfällig gegenüber Rauschen als unstrukturierte Daten. 
 
-Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Informationen über diese Struktur kodieren. Das führt zu Äquivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind. 
+Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Information über diese Struktur kodieren. Das führt zu Äquivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind. 
 
 Tabellen sind typische strukturierte Daten, die in Spalten und Zeilen organisiert sind.
 

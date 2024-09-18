@@ -8,7 +8,7 @@ execute:
 ---
 # Daten beschreiben {#sec-chapter-deskriptve-statistik}
 
-> Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Informationen über den jeweiligen Untersuchungsgegenstand bekannt sind. [@bortz_statistik_2010, S. 25]
+> Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Information über den jeweiligen Untersuchungsgegenstand bekannt sind. [@bortz_statistik_2010, S. 25]
 
 ::: {#def-deskriptive-statistik}
 Die **deskriptive Statistik** bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten. 

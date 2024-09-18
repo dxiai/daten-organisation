@@ -123,7 +123,7 @@ Vier gängige Techniken können dabei unterschieden werden:
 
 ### Hashing für Querverweise
 
-Beim Hashing für Querverweise gibt es zwei Stichproben. Die erste Stichprobe ist die Hauptstichprobe mit den eigentlichen Werten. Die zweite Stichprobe ist die Referenzstichprobe, die zusätzliche Informationen enthält. Ein Indexvektor für Querverweise in der ersten Stichprobe bezieht sich immer auf einen Primärindex aus der zweiten Stichprobe.
+Beim Hashing für Querverweise gibt es zwei Stichproben. Die erste Stichprobe ist die Hauptstichprobe mit den eigentlichen Werten. Die zweite Stichprobe ist die Referenzstichprobe, die zusätzliche Information enthält. Ein Indexvektor für Querverweise in der ersten Stichprobe bezieht sich immer auf einen Primärindex aus der zweiten Stichprobe.
 
 Die Hashing-Funktion muss deshalb einen Verweis zur zweiten Stichprobe herstellen. Diese Verbindung kann mit der gleichen Strategie erzeugt werden, wie beim Gruppieren. Dabei muss jedoch darauf geachtet werden, dass alle Zuordnungen des Primärvektors korrekt abgebildet sind. 
 
@@ -150,7 +150,7 @@ Beim Anonymisieren müssen alle Vektoren entfernt werden, über die der Ursprung
 
 #### Schritt 2: Erzeugung eines eindeutigen Vektors
 
-Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Informationen über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind. 
+Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind. 
 
 Hierzu wird als Hashing-Funktion ein *Zufallszahlengenerator* verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als *Sortierindex*.
 
@@ -162,11 +162,11 @@ Als Hashing-Funktion dürfen nur Zufallsgeneratoren für gleichverteilte Werte e
 
 In diesem Schritt werden die Datensätze über den in Schritt 2 erzeugten Sortierindex angeordnet. Dabei wird ausgenutzt, dass ein Zufallszahlengenerator Werte in keiner bestimmten Reihenfolge erzeugt. Das Sortieren entlang dieses Index bringt die erzeugten Hashes in eine neue Reihenfolge. Dadurch werden die Werte effektiv gemischt. Die neue Reihenfolge ist wegen Schritt 2 zufällig. 
 
-Das zufällige Mischen erzeugt Rauschen, welches Informationen überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.
+Das zufällige Mischen erzeugt Rauschen, welches Information überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.
 
 #### Schritt 4: Entfernen des Sortierindex und exportieren der Daten
 
-Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Informationen über den verwendeten Zufallsgenerator enthalten.  
+Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Information über den verwendeten Zufallsgenerator enthalten.  
 
 ### Fazit
 
