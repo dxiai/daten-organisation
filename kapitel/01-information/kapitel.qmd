@@ -334,7 +334,7 @@ Neben der ausführlichen wissenschaftlichen Schreibweise wird regelmässig eine 
 | 10 | $1 \cdot 10^1$ | 1e1 |
 | 100 | $1 \cdot 10^2$ | 1e2 |
 | 523140000 | $5.2314 \cdot 10^8$ | 5.2314e8 |
-| 0.00000000007234 | $7.234 \cdot 10^-11$ | 7.234e-11 |
+| 0.00000000007234 | $7.234 \cdot 10^{-11}$ | 7.234e-11 |
 
 : Beispiele für die wissenschaftliche Notation verschiedener Zahlenwerte {#tbl-wiss-notation}
 
