@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 6&nbsp; Daten organisieren</title>
+<title>6&nbsp; Daten organisieren – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -71,13 +78,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/03-daten-organisieren/kapitel.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daten organisieren</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/03-daten-organisieren/kapitel.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daten organisieren</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -86,12 +93,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -110,9 +117,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -139,9 +146,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -186,9 +193,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -245,9 +252,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -275,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -297,12 +304,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#datenmanipulation" id="toc-datenmanipulation" class="nav-link" data-scroll-target="#datenmanipulation"><span class="header-section-number">6.3</span> Datenmanipulation</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/03-daten-organisieren/kapitel.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daten organisieren</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daten organisieren</span></h1>
 </div>
@@ -317,27 +324,29 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Daten sind das wichtigste Gut der Datenwissenschaften. Deshalb sollte sorgsam und systematisch mit ihnen umgegangen werden. Zu diesem Zweck müssen Daten organisiert werden.</p>
 <p>Das Ziel der Datenorganisation ist es, Daten so zu strukturieren, damit sie einfach und effizient verarbeitet werden können. Zur Datenorganisation gehört die Strukturierung, Ablage, Versionierung und Bereitstellung von Daten.</p>
 <section id="daten-strukturieren" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="daten-strukturieren"><span class="header-section-number">6.1</span> Daten strukturieren</h2>
-<p>Im <a href="../02-daten-sammeln/kapitel.html">Kapitel&nbsp;<span>5</span></a> wurde die Bedeutung des Datenschemas für das Sammeln von Daten behandelt. Ein Schema gibt vor, welche Werte einen Datensatz bilden. Dieser Abschnitt konzentriert sich auf die Umsetzung des Datenschemas.</p>
+<p>Im <a href="../02-daten-sammeln/kapitel.html" class="quarto-xref">Kapitel&nbsp;<span>5</span></a> wurde die Bedeutung des Datenschemas für das Sammeln von Daten behandelt. Ein Schema gibt vor, welche Werte einen Datensatz bilden. Dieser Abschnitt konzentriert sich auf die Umsetzung des Datenschemas.</p>
 <section id="daten-als-tabellen" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="daten-als-tabellen"><span class="header-section-number">6.1.1</span> Daten als Tabellen</h3>
-<p>Daten werden oft als Tabellen präsentiert. Tabellen sind eine einfache und intuitive Form der <em>Datenorganisation</em>. Vorläufig lassen sich Tabellen wie in <a href="#def-tabellenstruktur">Definition&nbsp;<span>6.1</span></a> definieren. Diese Definition wird in <a href="../05-datentypen/kapitel.html#sec-chapter-datenstrukturen">Kapitel&nbsp;<span>8.3</span></a> erweitert, um verschiedene Datenstrukturen zu unterscheiden.</p>
+<p>Daten werden oft als Tabellen präsentiert. Tabellen sind eine einfache und intuitive Form der <em>Datenorganisation</em>. Vorläufig lassen sich Tabellen wie in <a href="#def-tabellenstruktur" class="quarto-xref">Definition&nbsp;<span>6.1</span></a> definieren. Diese Definition wird in <a href="../05-datentypen/kapitel.html#sec-chapter-datenstrukturen" class="quarto-xref">Kapitel&nbsp;<span>8.3</span></a> erweitert, um verschiedene Datenstrukturen zu unterscheiden.</p>
 <div id="def-tabellenstruktur" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.1 </strong></span><strong>Tabellen</strong> formen eine Datenstruktur, die Zeilen und Spalten hat und in der alle Zeilen die gleiche Breite und alle Spalten die gleiche Länge haben.</p>
+<p><span class="theorem-title"><strong>Definition 6.1</strong></span> <strong>Tabellen</strong> formen eine Datenstruktur, die Zeilen und Spalten hat und in der alle Zeilen die gleiche Breite und alle Spalten die gleiche Länge haben.</p>
 </div>
 <p>Tabellen organisieren Daten in Zeilen und Spalten, wobei jede Zeile und jede Spalte eine Überschrift haben kann.</p>
 <div id="def-vektornamen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.2 </strong></span>Die Überschriften einer Tabelle werden als <em>Namen</em>, bzw. <em>Spaltennamen</em> und <em>Zeilennamen</em> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 6.2</strong></span> Die Überschriften einer Tabelle werden als <em>Namen</em>, bzw. <em>Spaltennamen</em> und <em>Zeilennamen</em> bezeichnet.</p>
 </div>
 <p>Eine bestimmte Spalte in einer bestimmten Zeile heisst <em>Tabellenzelle</em> oder schlicht <em>Zelle</em>. Eine Zelle enthält genau einen Wert.</p>
-<p><a href="#def-tabellenstruktur">Definition&nbsp;<span>6.1</span></a> legt fest, dass eine <em>Tabelle</em> keine Zellen haben kann, die sich über mehrere Zeilen oder Spalten erstrecken. Viele Publikationen zeigen jedoch Datenstrukturen mit solchen Zellen. Solche Datenstrukturen sind keine Tabellen im Sinne von <a href="#def-tabellenstruktur">Definition&nbsp;<span>6.1</span></a>.</p>
+<p><a href="#def-tabellenstruktur" class="quarto-xref">Definition&nbsp;<span>6.1</span></a> legt fest, dass eine <em>Tabelle</em> keine Zellen haben kann, die sich über mehrere Zeilen oder Spalten erstrecken. Viele Publikationen zeigen jedoch Datenstrukturen mit solchen Zellen. Solche Datenstrukturen sind keine Tabellen im Sinne von <a href="#def-tabellenstruktur" class="quarto-xref">Definition&nbsp;<span>6.1</span></a>.</p>
 <div id="def-tabellarisch" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.3 </strong></span>Eine tabellenartige Struktur mit Tabellenzellen, die sich über mehr als eine Zeile oder eine Spalte erstrecken heisst <strong>tabellarische Darstellung</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 6.3</strong></span> Eine tabellenartige Struktur mit Tabellenzellen, die sich über mehr als eine Zeile oder eine Spalte erstrecken heisst <strong>tabellarische Darstellung</strong>.</p>
 </div>
 <p><em>Tabellarische Darstellungen</em> dienen der <em>Präsentation</em> von Daten und Ergebnissen. Sie sind nicht für die <em>Datenorganisation</em> geeignet.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -359,11 +368,11 @@ Tipp
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="begriffe"><span class="header-section-number">6.1.2</span> Begriffe</h3>
 <p>Tabellen dienen zur systematischen Erfassung von Daten. Meist repräsentieren Tabellen Messungen, die später ausgewertet und analysiert werden sollen. Die Datenorganisation in Tabellen strukturiert Daten entlang zwei Dimensionen. Für die Datenerfassung werden die Daten in <em>Zeilen</em> und <em>Spalten</em> organisiert, wobei die Spalten meistens als <em>Merkmale</em> und die Zeilen als <em>Messereignisse</em> bezeichnet werden. Gemeinsam bilden die Merkmale und Messereignisse eine <em>Stichprobe</em> (engl. <em>sample</em>).</p>
 <div id="def-merkmal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.4 </strong></span>Ein <strong>Merkmal</strong> ist eine Eigenschaft, die in einer Messung durch einen <em>Messwert</em> erfasst wird. In der <em>Statistik</em> werden Merkmale als <strong>Variablen</strong> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 6.4</strong></span> Ein <strong>Merkmal</strong> ist eine Eigenschaft, die in einer Messung durch einen <em>Messwert</em> erfasst wird. In der <em>Statistik</em> werden Merkmale als <strong>Variablen</strong> bezeichnet.</p>
 </div>
 <p>Ein Merkmal ist immer als Vektor organisiert. Alle Werte eines Merkmals haben also den gleichen Datentyp und den gleichen Wertebereich.</p>
 <div id="def-messereignis" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.5 </strong></span>Ein <strong>Messereignis</strong> fasst ein oder mehrere <em>gemeinsam gemessene</em> Merkmale zusammen. Ein Messereignis wird auch als <strong>Datensatz</strong> bezeichnet. Bei der Datenvisualisierung werden Messereignisse als <strong>Datenpunkte</strong> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 6.5</strong></span> Ein <strong>Messereignis</strong> fasst ein oder mehrere <em>gemeinsam gemessene</em> Merkmale zusammen. Ein Messereignis wird auch als <strong>Datensatz</strong> bezeichnet. Bei der Datenvisualisierung werden Messereignisse als <strong>Datenpunkte</strong> bezeichnet.</p>
 </div>
 <p>Ein Datensatz ist immer eine Liste von Werten, deren Datentypen und Wertebereichen voneinander verschieden sein können.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -376,16 +385,16 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Der Begriff <em>Datensatz</em> wird im Deutschen mehrdeutig verwendet. Es ist nicht immer klar, ob ein Datensatz ein Zeile in einer Tabelle oder eine ganze Tabelle bezeichnet. Im Englishen wird der Begriff <em>Datensatz</em> entweder mit <em>data record</em> (etwa Dateneintrag) für eine Zeile in einer Tabelle benutzt. Die Begriffe <em>data set</em> (Datenmenge) oder <em>data frame</em> (Datenraster) bezeichnen eine ganze Tabelle.</p>
+<p>Der Begriff <em>Datensatz</em> wird im Deutschen mehrdeutig verwendet. Es ist nicht immer klar, ob ein Datensatz ein Zeile in einer Tabelle oder eine ganze Tabelle bezeichnet. Im Englischen wird der Begriff <em>Datensatz</em> entweder mit <em>data record</em> (etwa Dateneintrag) für eine Zeile in einer Tabelle benutzt. Die Begriffe <em>data set</em> (Datenmenge) oder <em>data frame</em> (Datenraster) bezeichnen eine ganze Tabelle.</p>
 </div>
 </div>
 <p>Die <em>Merkmale</em> beschreiben gemeinsam ein <em>Messereignis</em>. Weil es sich bei den Merkmalen eines Messereignisses um <em>zusammengehörende</em> Werte handelt, wird auch der Begriff <strong>Entität</strong> (gegebene Einheit; eindeutig identifizierbare, zusammenhängende Größe) verwendet.</p>
-<p>Messungen bilden einen Ausschnitt einer <strong>Grundgesamtheit</strong> ab. Eine Grundgesamtheit umfasst alle <em>prinziell</em> messbaren Entitäten. Eine Stichprobe ist eine <em>Teilmenge</em> der Grundgesamtheit, die nur die <em>tatsächlich gemessenen</em> Entitäten enthält.</p>
+<p>Messungen bilden einen Ausschnitt einer <strong>Grundgesamtheit</strong> ab. Eine Grundgesamtheit umfasst alle <em>prinzipiell</em> messbaren Entitäten. Eine Stichprobe ist eine <em>Teilmenge</em> der Grundgesamtheit, die nur die <em>tatsächlich gemessenen</em> Entitäten enthält.</p>
 <div id="def-grundgesamtheit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.6 </strong></span>Alle prinzipiell messbaren Entitäten bilden eine <strong>Grundgesamtheit</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 6.6</strong></span> Alle prinzipiell messbaren Entitäten bilden eine <strong>Grundgesamtheit</strong>.</p>
 </div>
 <div id="def-stichprobe" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.7 </strong></span>Eine <strong>Stichprobe</strong> ist die Gesamtheit der gemessenen Entitäten ab.</p>
+<p><span class="theorem-title"><strong>Definition 6.7</strong></span> Eine <strong>Stichprobe</strong> ist die Gesamtheit der gemessenen Entitäten ab.</p>
 </div>
 <p>Die <strong>Statistik</strong> befasst sich mit den Methoden, um von Stichproben auf die ursprüngliche <strong>Grundgesamtheit</strong> zu schliessen. Aus Sicht der Datenwissenschaft und Datenverarbeitung ist die Grundgesamtheit <em>unerheblich</em>, weil die nicht gemessenen Entitäten nicht in den Daten abgebildet sind und deshalb unbekannt bleiben müssen!</p>
 </section>
@@ -393,14 +402,18 @@ Hinweis
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="daten-normalisieren"><span class="header-section-number">6.1.3</span> Daten normalisieren</h3>
 <p>Ein Datensatz kann Werte aus einer oder mehreren Messungen beinhalten. Wenn mehrere <em>unabhängige</em> Messungen in einem Datensatz zusammengefasst werden, dann beschreiben die entsprechenden Vektoren die <em>gleichen Merkmale</em> aus unterschiedliche Messereignissen.</p>
 <div id="def-unabhängige-messungen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.8 </strong></span><strong>Unabhängige Messungen</strong> sind Messungen für die gleichen Merkmale zu unterschiedlichen Zeitpunkten.</p>
+<p><span class="theorem-title"><strong>Definition 6.8</strong></span> <strong>Unabhängige Messungen</strong> sind Messungen für die gleichen Merkmale zu unterschiedlichen Zeitpunkten.</p>
 </div>
 <p>Eine Stichprobe mit unabhängigen Messungen für die gleiche Entität ist <em>nicht normalisiert</em>.</p>
-<p><a href="#fig-nicht-normalform">Abbildung&nbsp;<span>6.1</span></a> zeigt einen Ausschnitt einer Stichprobe mit Werten aus mehreren unabhängigen Messungen bzw. Messereignissen. Jeder Vektor in dieser Stichprobe entspricht dabei unabhängigen Messungen.</p>
-<div id="fig-nicht-normalform" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/stichprobe_nicht_normal.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;6.1: Beispiel einer Stichprobe mit mehreren Messereignissen pro Datensatz</figcaption>
+<p><a href="#fig-nicht-normalform" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a> zeigt einen Ausschnitt einer Stichprobe mit Werten aus mehreren unabhängigen Messungen bzw. Messereignissen. Jeder Vektor in dieser Stichprobe entspricht dabei unabhängigen Messungen.</p>
+<div id="fig-nicht-normalform" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nicht-normalform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/stichprobe_nicht_normal.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nicht-normalform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6.1: Beispiel einer Stichprobe mit mehreren Messereignissen pro Datensatz
+</figcaption>
 </figure>
 </div>
 <p>Ein <strong>Messereignis</strong> bezeichnet das gleichzeitige Erheben zusammengehörender Daten. Wenn beispielsweise das gleiche Objekt zu unterschiedlichen Zeitpunkten gemessen wird, dann liegen <em>unabhängige Messereignisse</em> vor.</p>
@@ -419,13 +432,17 @@ Hinweis
 </div>
 </div>
 <div id="def-normalform" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.9 </strong></span>Die <strong>Normalform</strong> einer Stichprobe ist eine Tabelle, in der jedes Merkmal genau einmal vorkommt und alle Werte in einem Datensatz zum gleichen Messereignis gehören.</p>
+<p><span class="theorem-title"><strong>Definition 6.9</strong></span> Die <strong>Normalform</strong> einer Stichprobe ist eine Tabelle, in der jedes Merkmal genau einmal vorkommt und alle Werte in einem Datensatz zum gleichen Messereignis gehören.</p>
 </div>
-<p><a href="#fig-normalform">Abbildung&nbsp;<span>6.2</span></a> zeigt einen Ausschnitt der Normalform der Stichprobe aus <a href="#fig-nicht-normalform">Abbildung&nbsp;<span>6.1</span></a>. Die Normalform einer Stichprobe erscheint auf dem ersten Blick unübersichtlicher als Varianten mit mehreren Messereignissen pro Datensatz. Die Normalform hat jedoch den Vorteil, dass die Stichprobe <em>einfacher</em> verarbeitet werden kann.</p>
-<div id="fig-normalform" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/stichprobe_normalform.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;6.2: Beispiel einer Stichprobe in der Normalform</figcaption>
+<p><a href="#fig-normalform" class="quarto-xref">Abbildung&nbsp;<span>6.2</span></a> zeigt einen Ausschnitt der Normalform der Stichprobe aus <a href="#fig-nicht-normalform" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a>. Die Normalform einer Stichprobe erscheint auf dem ersten Blick unübersichtlicher als Varianten mit mehreren Messereignissen pro Datensatz. Die Normalform hat jedoch den Vorteil, dass die Stichprobe <em>einfacher</em> verarbeitet werden kann.</p>
+<div id="fig-normalform" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-normalform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/stichprobe_normalform.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normalform-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6.2: Beispiel einer Stichprobe in der Normalform
+</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -443,9 +460,9 @@ Praxis
 </div>
 </div>
 <div id="exm-room-temp" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 6.1 (Raumtemperatur und Helligkeit) </strong></span>Die am Montag um 13 Uhr gemessene Temperatur und Helligkeit gehören zum gleichen Messereignis. Wird die Messung am Dienstag um 8 Uhr wiederholt, dann gehört die Temperatur und Helligkeit ebenfalls zum gleichen Messereignis.</p>
+<p><span class="theorem-title"><strong>Beispiel 6.1 (Raumtemperatur und Helligkeit)</strong></span> Die am Montag um 13 Uhr gemessene Temperatur und Helligkeit gehören zum gleichen Messereignis. Wird die Messung am Dienstag um 8 Uhr wiederholt, dann gehört die Temperatur und Helligkeit ebenfalls zum gleichen Messereignis.</p>
 <p>Die Normalform dieser Daten wäre entsprechend:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Tag</th>
@@ -470,7 +487,7 @@ Praxis
 </tbody>
 </table>
 <p>Die Temperatur am Montag und 13 Uhr und am Dienstag um 8 Uhr sind <em>unabhängige</em> Messereignisse für die Temperatur. Werden die Werte nicht-normalisiert gegenübergestellt, können Menschen die Werte oft leichter vergleichen. Eine solche Tabelle sähe dann wie folgt aus:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -503,9 +520,9 @@ Praxis
 <section id="dateien-und-verzeichnisse" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="dateien-und-verzeichnisse"><span class="header-section-number">6.2.1</span> Dateien und Verzeichnisse</h3>
 <p>Datendateien sollten möglichst isoliert und vor versehentlichen überschreiben geschützt werden.</p>
-<p>Daten werden am Besten immer in eigenen Dateien abgelegt. Diese Dateien enthalten nur Werte und keine Umformungen oder Berechnungen. Wenn ein Projekt mehrere Datenerhebungen umfasst, dann sollten die Daten für jede Erhebung in einer eigenen Datei abgelegt werden. Hierzu sollte eine eindeutige Bezeichnung verwendet werden, die auf die Erhebung hinweist. Ein geeignetes Format für Dateinamen ist ein Datum-Kennungs-Format, die die Erhebung eindeutig identifiziert. Dabei wird das Datum in der Form <code>YYYY-MM-DD</code> angegeben, gefolgt von einer kurzen Bezeichnung der Erhebung.</p>
+<p>Daten werden am Besten immer in eigenen Dateien abgelegt. Diese Dateien enthalten nur Werte und keine Umformungen oder Berechnungen. Wenn ein Projekt mehrere Datenerhebungen umfasst, dann sollten die Daten für jede Erhebung in einer eigenen Datei abgelegt werden. Hierzu sollte eine eindeutige Bezeichnung verwendet werden, die auf die Erhebung hinweist. Ein geeignetes Format für Dateinamen ist ein Datum-Kennungs-Format, welches die Erhebung eindeutig identifiziert. Dabei wird das Datum in der Form <code>YYYY-MM-DD</code> angegeben, gefolgt von einer kurzen Bezeichnung der Erhebung.</p>
 <div id="exm-datum-kennung" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 6.2 (Dateiname im Datum-Kennungsformat) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 6.2 (Dateiname im Datum-Kennungsformat)</strong></span> &nbsp;</p>
 <pre><code>2020-10-01-erhebung-1.csv</code></pre>
 </div>
 <p>Durch die inverse Datumsschreibweise dieses Formats lassen sich die Dateien leicht nach Datum sortieren und schneller wiederfinden.</p>
@@ -532,7 +549,7 @@ Praxis
 <li>Die Speicherorte müssen <em>unabhängig</em> voneinander sein.</li>
 </ol>
 <p>Zum Beispiel ist eine externe Festplatte für Sicherungen eines Laptops kein geeigneter Speicherort, wenn beide Geräte im gleichen Rucksack transportiert werden. Wenn der Rucksack verloren geht oder gestohlen wird, wären die Daten auf der externen Festplatte ebenfalls verloren.</p>
-<p>Die <strong>Versionierung</strong> der Daten ein wichtiges Instrument zur Vermeidung von Datenverlusten. Moderne Versionierungssysteme arbeiten dabei zweistufig (s. <a href="../01-tool-chain/git_github.html"><span>Kapitel&nbsp;7</span></a>):</p>
+<p>Die <strong>Versionierung</strong> der Daten ein wichtiges Instrument zur Vermeidung von Datenverlusten. Moderne Versionierungssysteme arbeiten dabei zweistufig (s. <a href="../01-tool-chain/git_github.html" class="quarto-xref"><span>Kapitel 7</span></a>):</p>
 <ol type="1">
 <li>Die Daten werden lokal <em>versioniert</em>, so dass die Daten aus den Versionierungspunkten wiederhergestellt werden können.</li>
 <li>Die Versionen werden in der verteilten Versionsverwaltung <em>synchronisiert</em>. Dadurch werden die Daten automatisch <em>repliziert</em>.</li>
@@ -573,9 +590,9 @@ Datenbanken sind kein Ersatz für Sicherungen
 <p>Nach dem Importieren und vor dem Exportieren muss die <em>Datenintegrität</em> sichergestellt werden. Das bedeutet, dass zwischen allen Werten und Ergebnissen eine systematische Verbindung besteht. Werte dürfen deshalb nicht <em>willkürlich</em> verändert, gelöscht oder hinzugefügt werden.</p>
 <p>Ein grosses Problem bei der Arbeit mit Daten ist die <em>nachträgliche Datenmanipulation</em>. Dabei werden die erhobenen Daten verändert, wobei sich die Veränderung nicht einwandfrei reproduzieren lässt.</p>
 <div id="def-datenmanipulation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.10 </strong></span>Eine <strong>Datenmanipulation</strong> heisst jede Veränderung von Daten bei denen Werte unsystematisch hinzugefügt, beliebige Werte verändert oder gelöscht werden.</p>
+<p><span class="theorem-title"><strong>Definition 6.10</strong></span> Eine <strong>Datenmanipulation</strong> heisst jede Veränderung von Daten bei denen Werte unsystematisch hinzugefügt, beliebige Werte verändert oder gelöscht werden.</p>
 </div>
-<p>Weil nach einer Datenmanipulation die ursprünglichen Daten nicht mehr eindeutig reproduziert werden können, lassen sich die Ergebnisse nicht mehr bestätigen oder wiederlegen. Das kommt einem vollständigen Datenverlust gleich, denn alle vorliegenden Daten können manipuliert worden sein.</p>
+<p>Weil nach einer Datenmanipulation die ursprünglichen Daten nicht mehr eindeutig reproduziert werden können, lassen sich die Ergebnisse nicht mehr bestätigen oder widerlegen. Das kommt einem vollständigen Datenverlust gleich, denn alle vorliegenden Daten können manipuliert worden sein.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -601,7 +618,7 @@ Praxis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Generierte Werte dürfen nur über eine Kodierung (<a href="../11-daten-kodieren/kapitel.html"><span>Kapitel&nbsp;16</span></a>) mit den ursprünglichen Daten verknüpft werden. Die Kodierung muss so gestaltet sein, dass die ursprünglichen Daten jederzeit reproduziert werden können.</p>
+<p>Generierte Werte dürfen nur über eine Kodierung (<a href="../11-daten-kodieren/kapitel.html" class="quarto-xref"><span>Kapitel 16</span></a>) mit den ursprünglichen Daten verknüpft werden. Die Kodierung muss so gestaltet sein, dass die ursprünglichen Daten jederzeit reproduziert werden können.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -639,7 +656,7 @@ Keine Datenmanipulation
 </div>
 </div>
 <p>Es gibt zwei Arten der Datenmanipulation.</p>
-<p>Die <strong>absichtliche Manipulation</strong> von Daten erfordert <em>aktives Eingreifen</em> einer Person mit Zugang zu den Daten. ist ein schweres professionelles Delikt. Diese Art von Manipulation kann das Löschen von unpassenden Daten sein, das Verändern von Werten betreffen bzw. Werte für die Studienergebnisse <em>passend machen</em> oder auch neue Daten <em>erfinden</em>. Solche Datenmanipulationen wiegen wissenschaftlich oft schwerer als Plagiarismus und können bei professionellen Analysen als Urkundenfälschung gewertet werden.</p>
+<p>Die <strong>absichtliche Manipulation</strong> von Daten erfordert <em>aktives Eingreifen</em> einer Person mit Zugang zu den Daten ist ein schweres professionelles Delikt. Diese Art von Manipulation kann das Löschen von unpassenden Daten sein, das Verändern von Werten betreffen bzw. Werte für die Studienergebnisse <em>passend machen</em> oder auch neue Daten <em>erfinden</em>. Solche Datenmanipulationen wiegen wissenschaftlich oft schwerer als Plagiarismus und können bei professionellen Analysen als Urkundenfälschung gewertet werden.</p>
 <p>Die <strong>versehentliche Datenmanipulation</strong> kommt sehr viel häufiger vor als eine absichtliche Datenmanipulation. Die versehentliche Datenmanipulation kann viele Ursachen haben und reicht von der fehlerhaften Bedienung von Tools und Werkzeugen über Software-Fehler bis zum Überschreiben von Daten mit Ergebnissen.</p>
 <p>Eine sehr häufig vorkommende Form der versehentlichen Datenmanipulation ist die automatische Datentyperkennung von Excel. Dabei werden Daten beim Import oder bei der Eingabe in einer Excel-Arbeitsmappe in einen <em>unerwünschten</em> Datentyp geändert, wobei sich auch der Wert der Daten ändert. Wenn durchgehend mit Excel gearbeitet wird, müssen diese Fehler vorgebeugt werden. Diese Praktiken erfordern von allen Beteiligten eine grosse Arbeitsdisziplin, was sich im Alltag nicht immer fordern lässt. Deshalb ist es oft einfacher, die Daten in einem einfacheren Dateiformat (z.B. CSV oder JSON) zu erfassen und anschliessend diese Daten in Excel als externe Daten zu importieren.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -696,18 +713,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -739,11 +745,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -753,8 +798,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -766,7 +820,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -810,6 +987,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -835,6 +1013,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -896,12 +1100,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/02-daten-sammeln/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/02-daten-sammeln/kapitel.html" class="pagination-link" aria-label="Daten sammeln">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Daten sammeln</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/01-tool-chain/git_github.html" class="pagination-link">
+      <a href="../../kapitel/01-tool-chain/git_github.html" class="pagination-link" aria-label="Versionierung mit Git und GitHub">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Versionierung mit Git und GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -910,4 +1114,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

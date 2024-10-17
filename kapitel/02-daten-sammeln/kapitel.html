@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 5&nbsp; Daten sammeln</title>
+<title>5&nbsp; Daten sammeln – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -58,6 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -100,7 +101,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -109,6 +116,7 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -124,13 +132,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/02-daten-sammeln/kapitel.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Daten sammeln</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/02-daten-sammeln/kapitel.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Daten sammeln</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -139,12 +147,12 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -163,9 +171,9 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -192,9 +200,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,9 +247,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -298,9 +306,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -328,7 +336,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -349,12 +357,12 @@ div.csl-indent {
   <li><a href="#automatische-datenerhebung" id="toc-automatische-datenerhebung" class="nav-link" data-scroll-target="#automatische-datenerhebung"><span class="header-section-number">5.3.3</span> Automatische Datenerhebung</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/02-daten-sammeln/kapitel.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Daten sammeln</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-chapter-daten-sammeln" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Daten sammeln</span></span></h1>
 </div>
@@ -369,12 +377,14 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <p>Bevor Daten analysiert werden können, müssen sie zuerst gesammelt werden. Je nach dem Ziel und Quelle können Daten <em>unstrukturiert</em>, <em>semi-strukturiert</em> und <em>strukturiert</em> gesammelt werden. Das Ergebnis ist immer ein Datensatz, welcher Werte für die Datenanalyse bereitstellt. Je nach Vorgehensweise kommen unterschiedliche Werkzeuge zum automatisierten und manuellen Datensammeln in Frage.</p>
 <p>Das Ziel des Datensammelns ist das Erstellen von <em>Datensätzen</em>.</p>
 <div id="def-datensätze" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.1 </strong></span>Ein <strong>Datensatz</strong> umfasst zusammengehörende Werte.</p>
+<p><span class="theorem-title"><strong>Definition 5.1</strong></span> Ein <strong>Datensatz</strong> umfasst zusammengehörende Werte.</p>
 </div>
 <p>Beim Sammeln von Daten werden <em>Beobachtungen</em> erfasst und dokumentiert. Dabei entspricht ein Datensatz immer einer Beobachtung. Über den zugehörigen Datensatz sollte eine Beobachtung zu einem späteren Zeitpunkt nachvollziehbar sein. Das ist allerdings nur mithilfe der erfassten Daten möglich.</p>
 <p>Durch nicht erfasste Daten geht Information verloren. Dieser Informationsverlust ist grundsätzlich <em>unvermeidbar</em>, weil nicht jeder Aspekt einer Beobachtung in Daten kodiert oder erfasst wird. Manche Daten sind für die spätere Analyse von besonderer Bedeutung, weil ohne sie eine Auswertung unmöglich ist. Deshalb müssen die relevanten Daten <strong><em>vor</em></strong> der Datenerhebung bestimmt werden.</p>
@@ -383,11 +393,11 @@ div.csl-indent {
 <p>Welche Daten in einem Datensatz erfasst wurden bzw. erfasst werden sollen, werden in einem <strong>Datenschema</strong> festgehalten. Das Datenschema hat zwei Funktionen.</p>
 <ol type="1">
 <li>Es legt fest, welche Daten für einen Datensatz erhoben werden müssen. In dieser Funktion ist das Datenschema eine grobe Anleitung, welche Daten gesammelt werden sollen.</li>
-<li>Es dokumentiert, welche Daten in einem Datenssatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.</li>
+<li>Es dokumentiert, welche Daten in einem Datensatz vorliegen. Ein Datenschema hilft so Analysten, die Daten richtig auszuwerten und zu interpretieren.</li>
 </ol>
 <p>Ein Datenschema legt Felder für die Ablage der beobachteten Daten fest.</p>
 <p>Jedes Datenfeld erhält immer einen eindeutigen <strong>Namen</strong> für ein Merkmal. Diese Namen entsprechen immer den <em>Spaltenüberschriften</em> einer Datentabelle. Über den Namen können die erfassten Daten zugegriffen werden. Die Namen dienen der einfacheren Handhabung bei der digitalen Auswertung. Deshalb sollten diese Namen möglichst einfach und gleichzeitig die Daten etwas beschreiben. Damit beim Auswerten weniger Fehler passieren, sollten Namen nur die Zeichen <code>a-z</code>, <code>0-9</code> und <code>_</code> enthalten und mit einem Buchstaben beginnen.</p>
-<p>Zusätzlich kann ein Datenfeld einen <strong>Wertebereich</strong> haben. Ein Wertebereich legt die zulässigen Werte für ein Datenfeld fest. Für die automatisierte Auswertung kann es hilfreich sein, auch das <strong>Skalenniveau</strong> (s. <a href="../05-datentypen/kapitel.html#sec-skalenniveaus"><span>Kapitel&nbsp;8.2</span></a>) des Wertebereichs zu dokumentieren.</p>
+<p>Zusätzlich kann ein Datenfeld einen <strong>Wertebereich</strong> haben. Ein Wertebereich legt die zulässigen Werte für ein Datenfeld fest. Für die automatisierte Auswertung kann es hilfreich sein, auch das <strong>Skalenniveau</strong> (s. <a href="../05-datentypen/kapitel.html#sec-skalenniveaus" class="quarto-xref"><span>Kapitel 8.2</span></a>) des Wertebereichs zu dokumentieren.</p>
 <p>Falls die Daten eine <strong>Masseinheit</strong> haben, muss diese auch dokumentiert werden.</p>
 <p>Es ist üblich, für jedes Datenfeld eine <strong>Kurzbeschreibung</strong> anzugeben. Diese Beschreibung gibt zusätzliche Hinweise über die erfassten Werte. Die Beschreibung ist rein <em>informativ</em> und richtet sich an Menschen, die Daten für das Schema erheben oder diese Daten auswerten.</p>
 <p>Grundsätzlich können alle Datenfelder frei bestimmt werden. Einige Datenfelder sind für fast jede Studie gegeben. Zu diesen Datenfelder gehören beispielsweise der <em>Zeitpunkt der Beobachtung</em>, der <em>Ort der Beobachtung</em>, die <em>beobachtende Person</em> und die <em>Dauer der Beobachtung</em>. Bei der technischen Datenerfassung können weitere Felder durch die verwendeten Werkzeuge automatisch bereitgestellt werden. Deshalb sollten die technischen Möglichkeiten vor einer Datenerhebung geprüft werden, um das mehrfache abfragen der gleichen Daten zu vermeiden.</p>
@@ -403,11 +413,11 @@ div.csl-indent {
 <section id="unstrukturierte-daten" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="unstrukturierte-daten"><span class="header-section-number">5.2.1</span> Unstrukturierte Daten</h3>
 <div id="def-unstrukturierte-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.2 </strong></span><strong>Unstrukturierte Daten</strong> haben keinen festgelegten Wertebereich.</p>
+<p><span class="theorem-title"><strong>Definition 5.2</strong></span> <strong>Unstrukturierte Daten</strong> haben keinen festgelegten Wertebereich.</p>
 </div>
 <p>Typische unstrukturierte Daten sind Notizen, Transkripte gespochener Sprache oder Videos. Unstrukturierte Daten können Werte von Interesse enthalten, auf die jedoch nicht direkt zugegriffen werden kann.</p>
-<p>Unstrukturierte Daten haben den Vorteil, dass sie <em>Ergebnisoffen</em> ein. Dadurch sind unstrukturierte Daten offen für neue und unvorgesehene Information. Entsprechend werden Techniken, die unstrukturierte Daten erheben auch als <strong><em>offene</em></strong> Erhebungstechniken bezeichnet.</p>
-<p>Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Equivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden.</p>
+<p>Unstrukturierte Daten haben den Vorteil, dass sie <em>Ergebnisoffen</em> sind. Dadurch sind unstrukturierte Daten offen für neue und unvorhergesehene Information. Entsprechend werden Techniken, die unstrukturierte Daten erheben, auch als <strong><em>offene</em></strong> Erhebungstechniken bezeichnet.</p>
+<p>Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Äquivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -421,21 +431,25 @@ Hinweis
 <p>Unstrukturierte Daten erfordern immer zusätzliche Arbeitsschritte, bevor mit den in ihnen vorhandenen Daten gearbeitet werden kann. Diese Arbeitsschritte zusammenfassend werden <strong>Kodieren</strong> (engl. <strong>coding</strong>) genannt. Das Kodieren unstrukturierter Daten führt einheitliche Markierungen, die sog. <em>Annotationen</em>, ein, die eine Struktur über die Daten legen.</p>
 </div>
 </div>
-<p>Ohne vorbereitende Kodierung lassen sich unstrukturierte Daten kaum systematisch analysieren. Sehr häufig handelt es sich bei unstrukturierten Daten um Texte. Im <a href="../05-zeichenketten/kapitel.html">Kapitel&nbsp;<span>11</span></a> werden einfache Techniken zum Verarbeiten von unstrukturierten Daten beschrieben.</p>
+<p>Ohne vorbereitende Kodierung lassen sich unstrukturierte Daten kaum systematisch analysieren. Sehr häufig handelt es sich bei unstrukturierten Daten um Texte. Im <a href="../05-zeichenketten/kapitel.html" class="quarto-xref">Kapitel&nbsp;<span>11</span></a> werden einfache Techniken zum Verarbeiten von unstrukturierten Daten beschrieben.</p>
 </section>
 <section id="strukturierte-daten" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="strukturierte-daten"><span class="header-section-number">5.2.2</span> Strukturierte Daten</h3>
 <div id="def-strukturierte-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.3 </strong></span><strong>Strukturierte Daten</strong> haben einen festen Wertebereich.</p>
+<p><span class="theorem-title"><strong>Definition 5.3</strong></span> <strong>Strukturierte Daten</strong> haben einen festen Wertebereich.</p>
 </div>
 <p>Weil strukturierte Daten einen festen Wertebereich haben, ist sichergestellt, dass nur Werte innerhalb dieses <em>abgeschlossenen</em> Bereichs gültig sind. Deshalb werden Techniken, mit denen strukturierte Daten erhoben gelten auch als <strong><em>geschlossene</em></strong> Erhebungstechniken.</p>
-<p>Strukturierte Daten basieren immer auf einer festen Wertebereich, die Information kodiert. In dieser Struktur werden die Daten nach ihrer Bedeutung und ihren zulässigen Wertebereichen organisiert. Die feste Struktur macht strukturierte Daten innerhalb der Struktur weniger anfällig gegenüber Rauschen als unstrukturierte Daten.</p>
-<p>Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Informationen über diese Struktur kodieren. Das führt zu Equivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind.</p>
+<p>Strukturierte Daten basieren immer auf einem festen Wertebereich für die Kodierung von Information. In dieser Struktur werden die Daten nach ihrer Bedeutung und ihren zulässigen Wertebereichen organisiert. Die feste Struktur macht strukturierte Daten innerhalb der Struktur weniger anfällig gegenüber Rauschen als unstrukturierte Daten.</p>
+<p>Weil strukturierte Daten eine Struktur zur Informationskodierung vorgeben, lassen sich nur Information über diese Struktur kodieren. Das führt zu Äquivokation, weil nur die Teile der Information kodiert werden können, die in den Wertebereichen zulässig sind.</p>
 <p>Tabellen sind typische strukturierte Daten, die in Spalten und Zeilen organisiert sind.</p>
 <p>Strukturierte Daten sind nicht auf Tabellen beschränkt.</p>
-<div id="lst-structured-yaml" class="listing">
-<p>Listing&nbsp;5.1: Strukturierte Daten im YAML-Format</p>
-<div class="sourceCode" id="lst-structured-yaml" data-lst-cap="Strukturierte Daten im YAML-Format"><pre class="sourceCode YAML code-with-copy"><code class="sourceCode yaml"><span id="lst-structured-yaml-1"><a href="#lst-structured-yaml-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hamster</span><span class="kw">:</span><span class="at"> </span></span>
+<div id="lst-structured-yaml" class="YAML listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-structured-yaml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;5.1: Strukturierte Daten im YAML-Format
+</figcaption>
+<div aria-describedby="lst-structured-yaml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-structured-yaml"><pre class="sourceCode YAML code-with-copy"><code class="sourceCode yaml"><span id="lst-structured-yaml-1"><a href="#lst-structured-yaml-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hamster</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="lst-structured-yaml-2"><a href="#lst-structured-yaml-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Fred</span></span>
 <span id="lst-structured-yaml-3"><a href="#lst-structured-yaml-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">gewicht</span><span class="kw">:</span><span class="at"> </span><span class="dv">175</span></span>
 <span id="lst-structured-yaml-4"><a href="#lst-structured-yaml-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">zeit</span><span class="kw">:</span><span class="at"> 2023-04-11T10:20:30Z</span></span>
@@ -443,18 +457,24 @@ Hinweis
 <span id="lst-structured-yaml-6"><a href="#lst-structured-yaml-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">gewicht</span><span class="kw">:</span><span class="at"> </span><span class="dv">160</span></span>
 <span id="lst-structured-yaml-7"><a href="#lst-structured-yaml-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">zeit</span><span class="kw">:</span><span class="at"> 2023-04-12T09:10:11Z</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</figure>
+</div>
 </section>
 <section id="semi-strukturierte-daten" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="semi-strukturierte-daten"><span class="header-section-number">5.2.3</span> Semi-strukturierte Daten</h3>
 <p>Neben diesen zwei Arten existieren noch sog. semi-strukturierte Daten. Semistrukturierte Daten folgen einer logischen Struktur, die allerdings nicht durchgehend strickt eingehalten wird.</p>
 <div id="def-semi-strukturierte-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.4 </strong></span><strong>Semi-strukturierte Daten</strong> sind <em>unstrukturierte Daten</em>, die Markierungen für Werte beinhalten.</p>
+<p><span class="theorem-title"><strong>Definition 5.4</strong></span> <strong>Semi-strukturierte Daten</strong> sind <em>unstrukturierte Daten</em>, die Markierungen für Werte beinhalten.</p>
 </div>
 <p>Semi-strukturierte Daten werden oft für das Einbetten strukturierter Daten in unstrukturierte Datenfelder verwendet.</p>
-<p>Ein typisches Beispiel für semistrukturierte Daten sind Social-Media-Meldungen mit Hashtags und <code>@</code>-Nennungen. Mit dem Hash-Symbol (<code>#</code>) werden Themen und Inhalte hervorgehoben und mit dem <code>@</code>-Symbol werden Nutzende markiert. Durch die beiden Symbole wird eigendlich unstrukturierten Daten eine zusätzliche Struktur gegeben, auf welche zugegriffen werden kann. Eine Social-Media-Meldung kann keine, ein oder mehrere Hashtags und keine, eine oder mehrere Nennungen enthalten.</p>
-<div id="lst-zhaw-tweet" class="listing">
-<p>Listing&nbsp;5.2: Tweet mit Hashtag <span class="citation" data-cites="zhaw_zhaw_2023">(<a href="../../references.html#ref-zhaw_zhaw_2023" role="doc-biblioref">ZHAW, 2023</a>)</span></p>
-<pre id="lst-zhaw-tweet" data-lst-cap="Tweet mit Hashtag [@zhaw_zhaw_2023]"><code>Das neue Laborgebäude auf dem ZHAW-Campus Reidbach 
+<p>Ein typisches Beispiel für semistrukturierte Daten sind Social-Media-Meldungen mit Hashtags und <code>@</code>-Nennungen. Mit dem Hash-Symbol (<code>#</code>) werden Themen und Inhalte hervorgehoben und mit dem <code>@</code>-Symbol werden Nutzende markiert. Durch die beiden Symbole wird eigentlich unstrukturierten Daten eine zusätzliche Struktur gegeben, auf welche zugegriffen werden kann. Eine Social-Media-Meldung kann keine, ein oder mehrere Hashtags und keine, eine oder mehrere Nennungen enthalten.</p>
+<div id="lst-zhaw-tweet" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-zhaw-tweet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;5.2: Tweet mit Hashtag <span class="citation" data-cites="zhaw_zhaw_2023">(<a href="../../references.html#ref-zhaw_zhaw_2023" role="doc-biblioref">ZHAW, 2023</a>)</span>
+</figcaption>
+<div aria-describedby="lst-zhaw-tweet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="lst-zhaw-tweet"><code>Das neue Laborgebäude auf dem ZHAW-Campus Reidbach 
 in #Wädenswil wurde gestern eingeweiht. Genutzt wird der
 Neubau vom Institut für Lebensmittel- und Getränkeinnovation,
 wo unter einem Dach die gesamte Wertschöpfungskette von 
@@ -463,12 +483,20 @@ https://zhaw.ch/de/ueber-uns/aktuell/news/
 detailansicht-news/event-news/
 lebensmittelforschung-unter-einem-dach-vereint/</code></pre>
 </div>
-<p>Ein anderes Beispiel finden sich regelmässig in Bankmiteilungen im Feld “Verwendungszweck”. In diesem Feld werden oft zusätzliche Daten für die Kommunikation zwischen den Beteiligten einer Transaktion hinterlegt. <a href="#lst-semistructured">Listing&nbsp;<span>5.3</span></a> zeigt semistrukturierte Daten im Verwendungszweck von Banktransaktionen, diese können für eine Analyse verwendet werden.</p>
-<div id="lst-semistructured" class="listing">
-<p>Listing&nbsp;5.3: Semistrukturierte Daten</p>
-<pre id="lst-semistructured" data-lst-cap="Semistrukturierte Daten"><code>1   PV2332 PG386.5 SV375.26 
+</figure>
+</div>
+<p>Ein anderes Beispiel finden sich regelmässig in Bankmitteilungen im Feld “Verwendungszweck”. In diesem Feld werden oft zusätzliche Daten für die Kommunikation zwischen den Beteiligten einer Transaktion hinterlegt. <a href="#lst-semistructured" class="quarto-xref">Listing&nbsp;<span>5.3</span></a> zeigt semistrukturierte Daten im Verwendungszweck von Banktransaktionen, diese können für eine Analyse verwendet werden.</p>
+<div id="lst-semistructured" class="listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-semistructured-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;5.3: Semistrukturierte Daten
+</figcaption>
+<div aria-describedby="lst-semistructured-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="lst-semistructured"><code>1   PV2332 PG386.5 SV375.26 
 2   PG374.23
 3   Ref: 106030763221202, Knr: 783924</code></pre>
+</div>
+</figure>
 </div>
 <p>In diesem Beispiel sind einmal drei Werte, einmal ein Wert und einmal zwei Werte in einem Eintrag vorhanden. Dabei kommt die Buchstabenfolge <code>PG</code> einmal als zweiter Wert und einmal alleinstehend vor. Eine Behandlung als Tabelle dieser Werte ist wahrscheinlich nicht zielführend.</p>
 <p>Die Buchstabenfolgen <code>PV</code>, <code>PG</code> und <code>SV</code> sowie <code>Ref:</code> und <code>Knr:</code> erfüllen den gleichen Zweck, wie Symbole <code>#</code> und <code>@</code> in Social-Media-Meldungen. Diese Markierungen sind <em>Codes</em>, die wichtige Daten hervorheben und relativ leicht identifizieren lassen. Die Codes nehmen das Kodieren unstrukturierter Daten vorweg.</p>
@@ -495,13 +523,13 @@ Praxis
 <p>Es ist eine gute Idee, Messwerte in Tabellen zu erfassen und zusätzliche Notizen zu machen. Aus beiden ergeben sich Laborberichte, die wiederum zu Labortagebüchern wachsen. In der wissenschaftlichen Praxis sind die strukturierten Daten zwar das Hauptergebnis einer Untersuchung, aus den Notizen ergeben sich jedoch oft neue Einsichten, die sich nicht aus den strukturierten Daten herauslesen lassen.</p>
 </div>
 </div>
-<p>Neben Notizen sind <em>Transskripte</em> ein wichtiges Werkzeug der manuellen Datenerfassung. Transskripte sind eine Verschriftlichung einer anderen Aufzeichnung. Oft sind das Tonaufzeichnungen von Gesprächen oder Videoaufzeichnugen eines Experiments. Diese Aufzeichnungen liefern immer <em>unstrukturierte Daten</em>. Die ursprüngliche Aufzeichnung ist dabei <em>meistens</em> eine Primärquelle für die Daten. Das Transskript ist eine <em>abgeleitete Sekundärquelle</em> der Primärquelle. Weil beim Transskribieren die Primärquelle <em>neu kodiert</em> wird, muss beim Transskribieren besonders sorgfältig gearbeitet werden, um die usprünglichen Daten nicht zu sehr zu verfälschen.</p>
+<p>Neben Notizen sind <em>Transskripte</em> ein wichtiges Werkzeug der manuellen Datenerfassung. Transskripte sind eine Verschriftlichung einer anderen Aufzeichnung. Oft sind das Tonaufzeichnungen von Gesprächen oder Videoaufzeichnungen eines Experiments. Diese Aufzeichnungen liefern immer <em>unstrukturierte Daten</em>. Die ursprüngliche Aufzeichnung ist dabei <em>meistens</em> eine Primärquelle für die Daten. Das Transskript ist eine <em>abgeleitete Sekundärquelle</em> der Primärquelle. Weil beim Transskribieren die Primärquelle <em>neu kodiert</em> wird, muss beim Transskribieren besonders sorgfältig gearbeitet werden, um die ursprünglichen Daten nicht zu sehr zu verfälschen.</p>
 <p>Inzwischen gibt es brauchbare Werkzeuge zur Transskription von Mediendateien. Diese automatisch erstellten Transkripte müssen aber immer nachkontrolliert werden. Nur so wird das Risiko reduziert, dass sich die Bedeutung der Daten durch Transskriptionsfehler ändert.</p>
 </section>
 <section id="technisch-unterstützte-datenerhebung" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="technisch-unterstützte-datenerhebung"><span class="header-section-number">5.3.2</span> Technisch-unterstützte Datenerhebung</h3>
 <p>Bei der technisch-unterstützten Datenerhebung soll das manuelle Datensammeln durch technische Werkzeuge vereinfacht werden, indem bestimmte Daten automatisch erfasst werden. Ein wichtiges Instrument für die technisch-unterstützte Datenerhebung sind <em>Formulare</em>. Formulare sind strukturierte Dokumente zur systematischen und wiederholten manuellen Eingabe von Daten durch Menschen.</p>
-<p>Im Gegensatz zu Papierfromularen können digitale Formulare die Eingaben überprüfen und bieten unterschiedliche Eingabeformate. Digitale Formulare können auch automatisch Daten erfassen, die nicht direkt eingegeben werden, wie beispielsweise den Zeitpunkt der Eingabe. Die populärste Art der digitalen Formulare sind inzwischen online Formulare, weil sie die grösste Flexibilität bei einer vergleichsweise niedrigen Nutzungsschwelle bieten.</p>
+<p>Im Gegensatz zu Papierformularen können digitale Formulare die Eingaben überprüfen und bieten unterschiedliche Eingabeformate. Digitale Formulare können auch automatisch Daten erfassen, die nicht direkt eingegeben werden, wie beispielsweise den Zeitpunkt der Eingabe. Die populärste Art der digitalen Formulare sind inzwischen online Formulare, weil sie die grösste Flexibilität bei einer vergleichsweise niedrigen Nutzungsschwelle bieten.</p>
 <p>Es lassen sich zwei Arten von Diensten für online Formulare unterschieden:</p>
 <ol type="1">
 <li>Formulardienste, wie z.B. MS-Forms <span class="citation" data-cites="microsoft_office_2023">(<a href="../../references.html#ref-microsoft_office_2023" role="doc-biblioref">Microsoft, 2023</a>)</span> oder Google Forms <span class="citation" data-cites="google_google_2023">(<a href="../../references.html#ref-google_google_2023" role="doc-biblioref">Google, 2023</a>)</span>.</li>
@@ -510,7 +538,7 @@ Praxis
 <p>Der wesentliche Unterschied zwischen diesen Diensten sind zusätzliche Funktionen zur Datenerhebung. Survey-Dienste bieten zusätzliche Funktionen, wie die Anonymisierung der Daten, zusätzliche Daten über die Ausführung, Fragebogendokumentation oder die Unterstützung von wiederholten Befragungen.</p>
 <p>Alle Formulare erlauben die Eingabe von Daten mit <em>offenen</em> und <em>geschlossenen</em> Wertebereich sowie das Auslesen der Daten in tabellarischer Form. Für jedes ausgefüllte Formular wird dazu eine Zeile erstellt, wobei die Eingabefelder jeweils als eine Spalte abgebildet werden.</p>
 <div id="def-fragebogen-item" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.5 </strong></span>Eine Eingabemöglichkeit eines Formulars wird als <strong>Fragebogen-Item</strong> oder schlicht als <strong>Item</strong> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 5.5</strong></span> Eine Eingabemöglichkeit eines Formulars wird als <strong>Fragebogen-Item</strong> oder schlicht als <strong>Item</strong> bezeichnet.</p>
 </div>
 <p>Items mit offenen Wertebereich sind Langantworten und Dateien. Alle anderen Eingaben haben einen geschlossenen Wertebereich. Die sog. Kurzantworten erscheinen als offene Eingabefelder. Ihr Wertebereich kann aber durch Validierungsregeln eingeschränkt werden.</p>
 <p>Bei den Items mit geschlossenen Wertebereich kann zwischen einfachen und mehrfachen Eingaben unterschieden werden. Bei einfachen Eingaben kann nur eine Antwortmöglichkeit ausgewählt werden (sog. Single-Choice). Der Wertebereich dieser Items wird über die Antwortmöglichkeiten festgelegt.</p>
@@ -522,14 +550,14 @@ Praxis
 <p>Ein besonderes Grid-Item ist das <strong>Ranking</strong> oder <strong>Sortieren</strong>. Bei dieser Art von Items werden mehrere Antwortmöglichkeiten in <em>eine</em> Reihenfolge gebracht. Die Antwortmöglichkeiten werden als eigene Items gespeichert, wobei der Wertebereich für jede Antwortmöglichkeit durch die möglichen Ränge festgelegt ist. Diese Items haben einen <em>ordialen Wertebereich</em>.</p>
 <p>Eine Variante des Sortieren sind <strong>Zuordnungs-Items</strong>. Bei diesen Items muss jedem Wert aus einer Liste von Werten jeweils ein Wert aus einer zweiten Liste zugeordnet werden. Die Werte aus der ersten Liste werden als Items gespeichert und die Werte aus der zweiten Liste legen den Wertebereich der Items. Diese Items haben einen <em>nominalen Wertebereich</em>.</p>
 <p>Gelegentlich werden Fotos oder Bilder angeboten und die Teilnehmenden werden gebeten, Bereiche auf diesen Bildern auszuwählen. Dabei handelt es sich um eine Variante eines <strong>Multiple-Choice-Grids</strong>, bei dem die Antwortmöglichkeiten als Bilder dargestellt werden.</p>
-<p>Durch die Wahl der Fragetypen und dem Festlegen der Wertebereiche von Formular-Items werden wird die Information <em>kodiert</em>.</p>
+<p>Durch die Wahl der Fragetypen und dem Festlegen der Wertebereiche von Formular-Items wird die Information der Antworten <em>kodiert</em>.</p>
 </section>
 <section id="automatische-datenerhebung" class="level3" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="automatische-datenerhebung"><span class="header-section-number">5.3.3</span> Automatische Datenerhebung</h3>
 <p>Bei der automatischen Datenerhebung werden Daten automatisch erfasst und gespeichert.</p>
 <p>Bei der automatischen Datenerhebung werden grundsätzlich drei Kategorien unterschieden:</p>
 <ul>
-<li><p><strong>Snapshots</strong> erfassen eine Momentaufnahme eines Systems. Bei Snapshots handelt es sich immer um komplexe <em>strukturierte Daten</em>. Ein Snapshot kann beispielsweise ein Foto, ein MRI-Scan oder eine Gen-Sequenz sein. Ein Snapshot liefert einen <em>Datensatz</em>, der in der Regel sehr viele Werte umfassst. Snapshots werden oft von speziellen Geräten erfasst und gespeichert.</p></li>
+<li><p><strong>Snapshots</strong> erfassen eine Momentaufnahme eines Systems. Bei Snapshots handelt es sich immer um komplexe <em>strukturierte Daten</em>. Ein Snapshot kann beispielsweise ein Foto, ein MRI-Scan oder eine Gen-Sequenz sein. Ein Snapshot liefert einen <em>Datensatz</em>, der in der Regel sehr viele Werte umfasst. Snapshots werden oft von speziellen Geräten erfasst und gespeichert.</p></li>
 <li><p><strong>Metriken</strong> geben Auskunft über <em>Zustände</em> zu einem bestimmten Zeitpunkt. Oft werden Metriken in regelmässigen Abständen erfasst. Bei Metriken handelt es sich immer um einfache <em>strukturierte Daten</em>. Eine Metrik kann beispielsweise die Anzahl der Besucher einer Webseite zu einem bestimmten Zeitpunkt oder die Temperatur in einem Raum sein. Eine Metrik hat üblicherweise drei Eigenschaften:</p>
 <ul>
 <li><em>Name</em></li>
@@ -547,7 +575,7 @@ Praxis
 <p>Bei der automatischen Datenerhebung für Metriken und Logs werden meistens mehrere Systeme gemeinsam eingesetzt. Ein System erfasst die Daten und ein anderes System speichert die Daten in einer Datenbank. Die Daten werden in der Regel in einem <em>Datenstrom</em> bzw. <em>Zeitreihe</em> erfasst und gespeichert.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-google_google_2023" class="csl-entry" role="listitem">
 Google. (2023). <em>Google Forms</em>. <a href="https://docs.google.com/forms">https://docs.google.com/forms</a>
 </div>
@@ -597,18 +625,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -640,11 +657,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -654,8 +710,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -667,7 +732,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -711,6 +899,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -736,6 +925,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -797,12 +1012,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/01-tool-chain/project_doc.html" class="pagination-link">
+      <a href="../../kapitel/01-tool-chain/project_doc.html" class="pagination-link" aria-label="Dokumentation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dokumentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/03-daten-organisieren/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/03-daten-organisieren/kapitel.html" class="pagination-link" aria-label="Daten organisieren">
         <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daten organisieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -811,4 +1026,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

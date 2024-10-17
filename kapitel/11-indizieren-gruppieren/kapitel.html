@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 15&nbsp; Indizieren und Gruppieren</title>
+<title>15&nbsp; Indizieren und Gruppieren – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -71,13 +78,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/06-variablen/kapitel.html">Mathematik der Daten</a></li><li class="breadcrumb-item"><a href="../../kapitel/11-indizieren-gruppieren/kapitel.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Indizieren und Gruppieren</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/06-variablen/kapitel.html">Mathematik der Daten</a></li><li class="breadcrumb-item"><a href="../../kapitel/11-indizieren-gruppieren/kapitel.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Indizieren und Gruppieren</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -86,12 +93,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -110,9 +117,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -139,9 +146,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -186,9 +193,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -245,9 +252,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -275,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -296,12 +303,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#gruppieren" id="toc-gruppieren" class="nav-link" data-scroll-target="#gruppieren"><span class="header-section-number">15.3</span> Gruppieren</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/06-variablen/kapitel.html">Mathematik der Daten</a></li><li class="breadcrumb-item"><a href="../../kapitel/11-indizieren-gruppieren/kapitel.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Indizieren und Gruppieren</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-chapter-indizieren-gruppieren" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Indizieren und Gruppieren</span></span></h1>
 </div>
@@ -316,7 +323,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -334,10 +343,10 @@ Work in Progress
 <section id="indizieren" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="indizieren"><span class="header-section-number">15.1</span> Indizieren</h2>
 <div id="def-index" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.1 </strong></span>Ein <strong>Index</strong> bezeichnet Werte, mit denen sich ein oder mehrere Datensätze von anderen Datensätzen unterscheiden lassen.</p>
+<p><span class="theorem-title"><strong>Definition 15.1</strong></span> Ein <strong>Index</strong> bezeichnet Werte, mit denen sich ein oder mehrere Datensätze von anderen Datensätzen unterscheiden lassen.</p>
 </div>
 <div id="def-indizieren" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.2 </strong></span>Mit <strong>Indizieren</strong> wird die Arbeitsweise von Algorithmen bezeichnet, mit der Datensätze <em>identifiziert</em> werden.</p>
+<p><span class="theorem-title"><strong>Definition 15.2</strong></span> Mit <strong>Indizieren</strong> wird die Arbeitsweise von Algorithmen bezeichnet, mit der Datensätze <em>identifiziert</em> werden.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -354,13 +363,13 @@ Merke
 </div>
 <p>Es werden zwei Arten von Indizes unterschieden:</p>
 <div id="def-primaerindex" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.3 </strong></span>Ein <strong>Primärindex</strong> enthält nur eindeutige werte, mit denen einzelne Datensätze eindeutig identifiziert werden.</p>
+<p><span class="theorem-title"><strong>Definition 15.3</strong></span> Ein <strong>Primärindex</strong> enthält nur eindeutige werte, mit denen einzelne Datensätze eindeutig identifiziert werden.</p>
 </div>
 <div id="def-sekundaerindex" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.4 </strong></span>Ein <strong>Sekundärindex</strong> verwenden Werte, mit denen mehrere Datensätze identifiziert werden.</p>
+<p><span class="theorem-title"><strong>Definition 15.4</strong></span> Ein <strong>Sekundärindex</strong> verwenden Werte, mit denen mehrere Datensätze identifiziert werden.</p>
 </div>
 <div id="def-fremdschluessel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.5 </strong></span>Ein <strong>Fremdschlüssel</strong> ist ein <em>Sekundärindex</em> für <em>Querverweise</em> auf eine zweite Datenstruktur (eine sog. <em>Indextabelle</em> oder engl. <em>Lookup-Table</em>).</p>
+<p><span class="theorem-title"><strong>Definition 15.5</strong></span> Ein <strong>Fremdschlüssel</strong> ist ein <em>Sekundärindex</em> für <em>Querverweise</em> auf eine zweite Datenstruktur (eine sog. <em>Indextabelle</em> oder engl. <em>Lookup-Table</em>).</p>
 </div>
 <p>Mithilfe von <em>Fremdschlüsseln</em> lassen sich gemeinsame Daten in eine zweite Datenstruktur auslagern. Diese Datenstruktur wird oft als Indextabelle bezeichnet. In einer Indextabelle existiert für jeden eindeutigen Wert des Fremdschlüssels genau ein Datensatz.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -377,7 +386,7 @@ Merke
 </div>
 </div>
 <div id="def-gruppenindex" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.6 </strong></span>Ein <strong>Gruppenindex</strong> ist ein <em>Sekundärindex</em> zur Identifikation von Datensätzen mit <em>gemeinsamen Eigenschaften</em>.</p>
+<p><span class="theorem-title"><strong>Definition 15.6</strong></span> Ein <strong>Gruppenindex</strong> ist ein <em>Sekundärindex</em> zur Identifikation von Datensätzen mit <em>gemeinsamen Eigenschaften</em>.</p>
 </div>
 <p>Im Gegensatz zu einem Fremdschlüssel sind diese Eigenschaften Teil des Datensatzes.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -395,19 +404,23 @@ Merke
 </div>
 <p>Weil ein Index Werte über einen Datensatz enthält, gehört ein Index zum jeweiligen Datensatz und wird über einen <em>Indexvektor</em> in einer Stichprobe abgebildet.</p>
 <div id="def-indexvektor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.7 </strong></span>Ein <strong>Indexvektor</strong> bezeichnet einen Vektor, mit dessen Werten Datensätze identifiziert werden können.</p>
+<p><span class="theorem-title"><strong>Definition 15.7</strong></span> Ein <strong>Indexvektor</strong> bezeichnet einen Vektor, mit dessen Werten Datensätze identifiziert werden können.</p>
 </div>
 <div id="def-hash" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.8 </strong></span>Ein <strong>Hash</strong> bezeichnet einen Wert in einem Indexvektor.</p>
+<p><span class="theorem-title"><strong>Definition 15.8</strong></span> Ein <strong>Hash</strong> bezeichnet einen Wert in einem Indexvektor.</p>
 </div>
 <section id="existierende-indexvektoren." class="level3" data-number="15.1.1">
 <h3 data-number="15.1.1" class="anchored" data-anchor-id="existierende-indexvektoren."><span class="header-section-number">15.1.1</span> Existierende Indexvektoren.</h3>
 <p>Häufig liegen Indexvektoren bereits in einer Stichprobe vor.</p>
-<section id="beispiel-bestehende-primär--und-sekundärindizes" class="level4" data-number="15.1.1.1">
-<h4 data-number="15.1.1.1" class="anchored" data-anchor-id="beispiel-bestehende-primär--und-sekundärindizes"><span class="header-section-number">15.1.1.1</span> Beispiel bestehende Primär- und Sekundärindizes</h4>
-<div id="tbl-mtcars-index" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;15.1: Ausschnitt der <code>mtcars</code>-Stichprobe mit Primär- und Sekundärindizes</caption>
+<div id="exm-prime-sec-indices" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 15.1 (Bestehende Primär- und Sekundärindizes)</strong></span> &nbsp;</p>
+<div id="tbl-mtcars-index" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mtcars-index-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;15.1: Ausschnitt der <code>mtcars</code>-Stichprobe mit Primär- und Sekundärindizes
+</figcaption>
+<div aria-describedby="tbl-mtcars-index-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">modell</th>
@@ -510,15 +523,17 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
+</div>
 <p>Der Vektor <code>modell</code> ist der <strong>Primärindex</strong>, weil dieser Vektor nur Werte enthält, die einen Datensatz eindeutig identifizieren.</p>
 <p>Die Vektoren <code>cyl</code> (Zylinder), <code>vs</code> (Motortyp) und <code>am</code> (Automatikschaltung) sind <em>Sekundärindizes</em> und <em>Gruppenindizes</em>, die Modelle nach verschiedenen Kriterien zusammenfassen.</p>
-</section>
 </section>
 <section id="fehlende-indexvektoren" class="level3" data-number="15.1.2">
 <h3 data-number="15.1.2" class="anchored" data-anchor-id="fehlende-indexvektoren"><span class="header-section-number">15.1.2</span> Fehlende Indexvektoren</h3>
 <p>Gelegentlich liegen in einer Stichprobe keine Primär- oder Sekundärindizes vor oder die vorhandenen Indizes erlauben keine Zusammenfassungen für eine konkrete Fragestellung. In solchen Fällen muss ein entsprechender Index erzeugt werden.</p>
 <div id="def-hashing-funktion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.9 </strong></span>Eine Funktion, die <em>Hashes</em> für Indexvektoren erzeugt, heisst <strong>Hashing-Funktion</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 15.9</strong></span> Eine Funktion, die <em>Hashes</em> für Indexvektoren erzeugt, heisst <strong>Hashing-Funktion</strong>.</p>
 </div>
 <p>Hashing-Funktionen werden in der Industrie als Unterstützung zur Suche von Datensätzen in Datenbanken eingesetzt. Durch die geschickte Berechnung von Hashes beschleunigen diese Funktionen die Suche einzelner Werte um ein Vielfaches, indem sie den Bereich für die Suche einschränken. Deshalb haben viele Hashing-Funktionen ein anderes <strong>Anwendungsziel</strong> als die hier beschriebenen Hashing-Funktionen.</p>
 </section>
@@ -539,7 +554,7 @@ Merke
 </section>
 <section id="hashing-für-querverweise" class="level3" data-number="15.1.5">
 <h3 data-number="15.1.5" class="anchored" data-anchor-id="hashing-für-querverweise"><span class="header-section-number">15.1.5</span> Hashing für Querverweise</h3>
-<p>Beim Hashing für Querverweise gibt es zwei Stichproben. Die erste Stichprobe ist die Hauptstichprobe mit den eigentlichen Werten. Die zweite Stichprobe ist die Referenzstichprobe, die zusätzliche Informationen enthält. Ein Indexvektor für Querverweise in der ersten Stichprobe bezieht sich immer auf einen Primärindex aus der zweiten Stichprobe.</p>
+<p>Beim Hashing für Querverweise gibt es zwei Stichproben. Die erste Stichprobe ist die Hauptstichprobe mit den eigentlichen Werten. Die zweite Stichprobe ist die Referenzstichprobe, die zusätzliche Information enthält. Ein Indexvektor für Querverweise in der ersten Stichprobe bezieht sich immer auf einen Primärindex aus der zweiten Stichprobe.</p>
 <p>Die Hashing-Funktion muss deshalb einen Verweis zur zweiten Stichprobe herstellen. Diese Verbindung kann mit der gleichen Strategie erzeugt werden, wie beim Gruppieren. Dabei muss jedoch darauf geachtet werden, dass alle Zuordnungen des Primärvektors korrekt abgebildet sind.</p>
 </section>
 </section>
@@ -573,7 +588,7 @@ Wichtig
 </section>
 <section id="schritt-2-erzeugung-eines-eindeutigen-vektors" class="level4" data-number="15.2.0.2">
 <h4 data-number="15.2.0.2" class="anchored" data-anchor-id="schritt-2-erzeugung-eines-eindeutigen-vektors"><span class="header-section-number">15.2.0.2</span> Schritt 2: Erzeugung eines eindeutigen Vektors</h4>
-<p>Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Informationen über die Herkunft der Daten haben kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert sind.</p>
+<p>Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten liefern kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert wurden.</p>
 <p>Hierzu wird als Hashing-Funktion ein <em>Zufallszahlengenerator</em> verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als <em>Sortierindex</em>.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -592,11 +607,11 @@ Warnung
 <section id="schritt-3-mischen" class="level4" data-number="15.2.0.3">
 <h4 data-number="15.2.0.3" class="anchored" data-anchor-id="schritt-3-mischen"><span class="header-section-number">15.2.0.3</span> Schritt 3: Mischen</h4>
 <p>In diesem Schritt werden die Datensätze über den in Schritt 2 erzeugten Sortierindex angeordnet. Dabei wird ausgenutzt, dass ein Zufallszahlengenerator Werte in keiner bestimmten Reihenfolge erzeugt. Das Sortieren entlang dieses Index bringt die erzeugten Hashes in eine neue Reihenfolge. Dadurch werden die Werte effektiv gemischt. Die neue Reihenfolge ist wegen Schritt 2 zufällig.</p>
-<p>Das zufällige Mischen erzeugt Rauschen, welches Informationen überlagert, die sich aus der Reihenfolge der Daten ergeben könnten.</p>
+<p>Das zufällige Mischen erzeugt Rauschen, welches Information überlagert, die sich aus der Reihenfolge der Daten ergeben könnte.</p>
 </section>
 <section id="schritt-4-entfernen-des-sortierindex-und-exportieren-der-daten" class="level4" data-number="15.2.0.4">
 <h4 data-number="15.2.0.4" class="anchored" data-anchor-id="schritt-4-entfernen-des-sortierindex-und-exportieren-der-daten"><span class="header-section-number">15.2.0.4</span> Schritt 4: Entfernen des Sortierindex und exportieren der Daten</h4>
-<p>Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Informationen über den verwendeten Zufallsgenerator enthalten.</p>
+<p>Abschliessend muss der Indexvektor aus der Datenstruktur wieder entfernt werden, weil die Hashes Information über den verwendeten Zufallsgenerator enthalten.</p>
 </section>
 <section id="fazit" class="level3" data-number="15.2.1">
 <h3 data-number="15.2.1" class="anchored" data-anchor-id="fazit"><span class="header-section-number">15.2.1</span> Fazit</h3>
@@ -619,7 +634,7 @@ Praxis
 <section id="gruppieren" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="gruppieren"><span class="header-section-number">15.3</span> Gruppieren</h2>
 <div id="def-gruppieren" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15.10 </strong></span>Beim <strong>Gruppieren</strong> werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.</p>
+<p><span class="theorem-title"><strong>Definition 15.10</strong></span> Beim <strong>Gruppieren</strong> werden zusammengehörende Datensätze zusammengefasst, so dass nachfolgende Operationen die einzelnen Gruppen separat behandeln.</p>
 </div>
 <p>Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Eine gruppierte Operation verwendet nur die Werte innerhalb der gleichen Gruppe. Der Vorteil einer gruppierten Operation ist, dass die Operation für alle Gruppen <em>gleichzeitig</em> ausgeführt wird.</p>
 <p>Damit eine gruppierte Operationen durchgeführt werden können, müssen zusammengehörende Werte identifiziert werden. Das wird durch einen Sekundärindex möglich. <em>Eine Gruppierung wird durch gleiche Wert im Sekundärindex gebildet.</em> Gruppierungen werden verwendet, um repititive zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten weritergearbeitet werden.</p>
@@ -664,18 +679,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -707,11 +711,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -721,8 +764,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -734,7 +786,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -778,6 +953,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -803,6 +979,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -864,12 +1066,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/10-matrix-operationen/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/10-matrix-operationen/kapitel.html" class="pagination-link" aria-label="Matrix-Operationen">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Matrix-Operationen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/11-daten-kodieren/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/11-daten-kodieren/kapitel.html" class="pagination-link" aria-label="Daten kombinieren und kodieren">
         <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Daten kombinieren und kodieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -878,4 +1080,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

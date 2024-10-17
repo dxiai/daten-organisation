@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 18&nbsp; Daten beschreiben</title>
+<title>18&nbsp; Daten beschreiben – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -66,7 +67,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -75,13 +82,14 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -96,7 +104,34 @@ div.csl-indent {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -106,13 +141,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -121,12 +156,12 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -145,9 +180,9 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -174,9 +209,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -221,9 +256,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -280,9 +315,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -310,7 +345,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -334,12 +369,12 @@ div.csl-indent {
   <li><a href="#mad" id="toc-mad" class="nav-link" data-scroll-target="#mad"><span class="header-section-number">18.2.8</span> MAD</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-chapter-deskriptve-statistik" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></span></h1>
 </div>
@@ -354,13 +389,15 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
+
 <blockquote class="blockquote">
-<p>Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Informationen über den jeweiligen Untersuchungsgegenstand bekannt sind. <span class="citation" data-cites="bortz_statistik_2010">(<a href="../../references.html#ref-bortz_statistik_2010" role="doc-biblioref">Bortz &amp; Schuster, 2010, S. 25</a>)</span></p>
+<p>Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Information über den jeweiligen Untersuchungsgegenstand bekannt sind. <span class="citation" data-cites="bortz_statistik_2010">(<a href="../../references.html#ref-bortz_statistik_2010" role="doc-biblioref">Bortz &amp; Schuster, 2010, S. 25</a>)</span></p>
 </blockquote>
 <div id="def-deskriptive-statistik" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.1 </strong></span>Die <strong>deskriptive Statistik</strong> bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten.</p>
+<p><span class="theorem-title"><strong>Definition 18.1</strong></span> Die <strong>deskriptive Statistik</strong> bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten.</p>
 </div>
 <blockquote class="blockquote">
 <p>Die Aufgabe der Deskriptivstatistik ist es, Daten prägnant zusammenzufassen.</p>
@@ -385,10 +422,10 @@ Praxis
 <section id="umfänge" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="umfänge"><span class="header-section-number">18.1</span> Umfänge</h2>
 <div id="def-umfang" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.2 </strong></span>Ein <strong>Umfang</strong> bezeichnet die Anzahl von <em>gültigen Daten</em> vom gleichen Datentyp.</p>
+<p><span class="theorem-title"><strong>Definition 18.2</strong></span> Ein <strong>Umfang</strong> bezeichnet die Anzahl von <em>gültigen Daten</em> vom gleichen Datentyp.</p>
 </div>
 <div id="exm-vektor-umfang" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 18.1 (Vektorumfang) </strong></span>Der Umfang ähnelt der Länge eines Vektors, mit dem Unterschied, dass bei der Länge einer Datenstruktur auch ungültige Werte mitgezählt werden können. Wurden alle ungültigen Werte aus einem Vektor entfernt, dann ist der Umfang des Vektors gleich dessen Länge.</p>
+<p><span class="theorem-title"><strong>Beispiel 18.1 (Vektorumfang)</strong></span> Der Umfang ähnelt der Länge eines Vektors, mit dem Unterschied, dass bei der Länge einer Datenstruktur auch ungültige Werte mitgezählt werden können. Wurden alle ungültigen Werte aus einem Vektor entfernt, dann ist der Umfang des Vektors gleich dessen Länge.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -420,12 +457,16 @@ Merke
 <h3 data-number="18.1.1" class="anchored" data-anchor-id="universelle-kennzahlen"><span class="header-section-number">18.1.1</span> Universelle Kennzahlen</h3>
 <p>Zwei spezielle Umfänge ist der <strong>Stichprobenumfang</strong> und die <strong>Anzahl der Variablen</strong>. Weil sich diese beiden Werte für <em>alle Stichproben</em> bestimmen lassen, handelt es sich bei diesen beiden Umfängen um <em>universelle Kennzahlen</em> von Stichproben.</p>
 <div id="def-universelle-kennzahlen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.3 </strong></span>Mit <strong>universellen Kennzahlen</strong> sind abgeleitete Werte gemeint, die sich für <em>alle</em> Stichproben bestimmen lassen.</p>
+<p><span class="theorem-title"><strong>Definition 18.3</strong></span> Mit <strong>universellen Kennzahlen</strong> sind abgeleitete Werte gemeint, die sich für <em>alle</em> Stichproben bestimmen lassen.</p>
 </div>
-<div id="fig-stichprobenkennwerte" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/stichprobenkennwerte.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;18.1: Universelle Stichprobenkennwerte</figcaption>
+<div id="fig-stichprobenkennwerte" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-stichprobenkennwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/stichprobenkennwerte.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stichprobenkennwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;18.1: Universelle Stichprobenkennwerte
+</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -535,7 +576,7 @@ Merke
 <h3 data-number="18.1.2" class="anchored" data-anchor-id="variablenumfang"><span class="header-section-number">18.1.2</span> Variablenumfang</h3>
 <p>Wenn Statistiker von Stichprobenumfang sprechen, dann verweist das Wort <em>Stichprobe</em> sehr häufig auf die gerade behandelten Vektoren und <em>nicht unbedingt</em> auf alle gemeinsam gemessenen Merkmale. Deshalb muss für jede Variable auch der <strong>Variablenumfang</strong> bestimmt werden.</p>
 <div id="def-variablenumfang" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.4 </strong></span>Der <strong>Variablenumfang</strong> bezeichnet die Anzahl der gültigen Werte eines Vektors bzw. Merkmals.</p>
+<p><span class="theorem-title"><strong>Definition 18.4</strong></span> Der <strong>Variablenumfang</strong> bezeichnet die Anzahl der gültigen Werte eines Vektors bzw. Merkmals.</p>
 </div>
 <p>Zur Bestimmung des Variablenumfangs müssen alle fehlenden Werte aus dem entsprechenden Vektor entfernt werden, bevor der Umfang ermittelt wird. Deshalb ist es nicht unüblich, dass die einzelnen Merkmale voneinander und vom Stichprobenumfang abweichende Umfänge haben.</p>
 <p>Weil in den Entsprechend müssen fehlende Werte vor der Bestimmung des Variablenumfangs aus dem Vektor entfernt werden. Es ist normal, dass sich der Stichprobenumfang und die Variablenumfänge unterscheiden. Diese Unterschiede entstehen dadurch, dass nicht alle Messungen erfolgreich verlaufen. Zum Beispiel passiert es häufig, dass Teilnehmende bei einem Fragebogen nicht alle Fragen beantworten oder beantworten können. In solchen Fällen ist der Stichprobenumfang grösser als die jeweiligen Variablenumfänge. So kommt es regelmässig vor, dass verschiedene Variablenumfänge sich ebenfalls unterscheiden.</p>
@@ -544,7 +585,7 @@ Merke
 </section>
 <section id="kennwerte-der-skalenniveaus" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="kennwerte-der-skalenniveaus"><span class="header-section-number">18.2</span> Kennwerte der Skalenniveaus</h2>
-<p>Für Variablen wurden im <a href="../05-datentypen/kapitel.html"><span>Kapitel&nbsp;8</span></a> die folgenden Skalenniveaus eingeführt, um Daten nach den Beziehungen zwischen den Werten des Wertebereichs zu kategorisieren. Dabei wurden die folgenden Kategorien eingeführt:</p>
+<p>Für Variablen wurden im <a href="../05-datentypen/kapitel.html" class="quarto-xref"><span>Kapitel 8</span></a> die folgenden Skalenniveaus eingeführt, um Daten nach den Beziehungen zwischen den Werten des Wertebereichs zu kategorisieren. Dabei wurden die folgenden Kategorien eingeführt:</p>
 <ol type="1">
 <li>Nominalskalierte Daten</li>
 <li>Ordinalskalierte Daten</li>
@@ -568,12 +609,16 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="#tbl-beschreibende-kennwerte-pro-skalierung">Tabelle&nbsp;<span>18.1</span></a> zeigt die notwendigen Kennwerte für das entsprechende Skalenniveau. Die beschreibenden Kennwerte müssen für jedes gemessene Merkmal berichtet werden.</p>
+<p><a href="#tbl-beschreibende-kennwerte-pro-skalierung" class="quarto-xref">Tabelle&nbsp;<span>18.1</span></a> zeigt die notwendigen Kennwerte für das entsprechende Skalenniveau. Die beschreibenden Kennwerte müssen für jedes gemessene Merkmal berichtet werden.</p>
 </div>
 </div>
-<div id="tbl-beschreibende-kennwerte-pro-skalierung" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;18.1: Minimale beschreibende Kennwerte nach Skalennivaus</caption>
+<div id="tbl-beschreibende-kennwerte-pro-skalierung" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-beschreibende-kennwerte-pro-skalierung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;18.1: Minimale beschreibende Kennwerte nach Skalennivaus
+</figcaption>
+<div aria-describedby="tbl-beschreibende-kennwerte-pro-skalierung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -605,6 +650,8 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -620,7 +667,7 @@ Praxis
 </div>
 <section id="mittelwert" class="level3" data-number="18.2.1">
 <h3 data-number="18.2.1" class="anchored" data-anchor-id="mittelwert"><span class="header-section-number">18.2.1</span> Mittelwert</h3>
-<p>Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (<a href="#eq-mittelwert">Formel&nbsp;<span>18.1</span></a>).</p>
+<p>Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (<a href="#eq-mittelwert" class="quarto-xref">Formel&nbsp;<span>18.1</span></a>).</p>
 <p><span id="eq-mittelwert"><span class="math display">
 \bar{x} = \frac{\sum{v_i}}{n}
 \tag{18.1}</span></span></p>
@@ -709,7 +756,7 @@ Praxis
 <p>Weil für <strong>nominalskalierte Daten</strong> keine anderen Lagemasse zur Verfügung stehen, <strong>müssen</strong> die Häufigkeiten für dieses Skalenniveau immer angegeben werden!</p>
 </div>
 </div>
-<p>Es ist üblich neben der absoluten und relativen Verteilung <em>eines</em> Merkmals, auch die <strong>gemeinsamen Häufigkeiten</strong> von zwei nominalskalierten Merkmalen in Form von <em>Kontingenztabellen</em> (<a href="../10-matrix-operationen/kapitel.html"><span>Kapitel&nbsp;14</span></a>) anzugeben und damit die erhobenen Daten besser zu beschreiben.</p>
+<p>Es ist üblich neben der absoluten und relativen Verteilung <em>eines</em> Merkmals, auch die <strong>gemeinsamen Häufigkeiten</strong> von zwei nominalskalierten Merkmalen in Form von <em>Kontingenztabellen</em> (<a href="../10-matrix-operationen/kapitel.html" class="quarto-xref"><span>Kapitel 14</span></a>) anzugeben und damit die erhobenen Daten besser zu beschreiben.</p>
 <p>Für <strong>metrisch-skalierte Werte</strong> lassen sich die Häufigkeiten nicht so leicht bestimmen, wie für die anderen Skalennivaus. Zur Bestimmung der Häufigkeiten von metrisch-skalierten Daten, wird der Wertebereich in gleichgrosse Intervalle gegliedert. Anschliessend wird die Anzahl der Werte in jedem Intervall gezählt. Diese Intervalle erzeugen künstlich diskrete Wertebereiche.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -727,7 +774,7 @@ Praxis
 </section>
 <section id="bandbreite" class="level3" data-number="18.2.4">
 <h3 data-number="18.2.4" class="anchored" data-anchor-id="bandbreite"><span class="header-section-number">18.2.4</span> Bandbreite</h3>
-<p>Die <strong>Bandbreite</strong> der gemessenen Werte ergibt sich aus dem Abstand zwischen dem kleinsten und dem grössten gemessenen Wert. Entsprechend werden der kleinste und der grösste Wert als Kennwert für die Bandbreite angegeben. Gelegentlich ist es notwendig die Bandbreite als eigenen Wert aufzuführen. Das ist z.B. dann sinnvoll, um ähnliche Bandbreiten in unterschiedlichen Wertebereichen hervorzuheben. In solchen Fällen wird die Bandbreite als Differenz zwischen dem grössten und kleinsten Wert berechnet (<a href="#eq-bandbreite">Formel&nbsp;<span>18.2</span></a>).</p>
+<p>Die <strong>Bandbreite</strong> der gemessenen Werte ergibt sich aus dem Abstand zwischen dem kleinsten und dem grössten gemessenen Wert. Entsprechend werden der kleinste und der grösste Wert als Kennwert für die Bandbreite angegeben. Gelegentlich ist es notwendig die Bandbreite als eigenen Wert aufzuführen. Das ist z.B. dann sinnvoll, um ähnliche Bandbreiten in unterschiedlichen Wertebereichen hervorzuheben. In solchen Fällen wird die Bandbreite als Differenz zwischen dem grössten und kleinsten Wert berechnet (<a href="#eq-bandbreite" class="quarto-xref">Formel&nbsp;<span>18.2</span></a>).</p>
 <p><span id="eq-bandbreite"><span class="math display">
 bd = | x_{max} - x_{min} |
 \tag{18.2}</span></span></p>
@@ -749,7 +796,7 @@ Merke
 <h3 data-number="18.2.5" class="anchored" data-anchor-id="quantile-und-quartile"><span class="header-section-number">18.2.5</span> Quantile und Quartile</h3>
 <p>Quantile gliedern eine Verteilung in gleichgrosse Häufigkeiten und kennzeichnen die Wertintervalle, über welche sich diese Häufigkeiten erstrecken.</p>
 <div id="def-quantil" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.5 </strong></span>Ein <strong>Quantil</strong> ist der Wert, der zwei Bereiche mit gleichvielen Werten <em>trennt</em>. Das Quantil wird dem kleineren der beiden Wertebereiche zugerechnet.</p>
+<p><span class="theorem-title"><strong>Definition 18.5</strong></span> Ein <strong>Quantil</strong> ist der Wert, der zwei Bereiche mit gleichvielen Werten <em>trennt</em>. Das Quantil wird dem kleineren der beiden Wertebereiche zugerechnet.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -789,7 +836,7 @@ Achtung
 <section id="standardabweichung-und-varianz" class="level3" data-number="18.2.6">
 <h3 data-number="18.2.6" class="anchored" data-anchor-id="standardabweichung-und-varianz"><span class="header-section-number">18.2.6</span> Standardabweichung und Varianz</h3>
 <p>Ein besonderes Streumass für metrisch-skalierte Daten ist die <strong>Varianz</strong>. Die Varianz kennzeichnet die Variabilität der Werte relativ zum Mittelwert. Die Varianz ist immer ein positiver Wert.</p>
-<p>Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (<a href="#eq-varianz">Formel&nbsp;<span>18.3</span></a>).</p>
+<p>Die Varianz ist als der mittlere quadratische Abstand zum Mittelwert definiert (<a href="#eq-varianz" class="quarto-xref">Formel&nbsp;<span>18.3</span></a>).</p>
 <p><span id="eq-varianz"><span class="math display">
 var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
 \tag{18.3}</span></span></p>
@@ -805,7 +852,7 @@ var = \frac{1}{n} \sum{(x_i-\bar{x})^2}
 <h3 data-number="18.2.7" class="anchored" data-anchor-id="standardfehler"><span class="header-section-number">18.2.7</span> Standardfehler</h3>
 <p>Ein besonderer Kennwert ist der sog. Standardfehler.</p>
 <div id="def-standardfehler" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18.6 </strong></span>Der <strong>Standardfehler des Mittelwerts</strong> beschreibt den Bereich in welchem der (unbekannte) <em>echte Mittelwert µ</em> relativ zum <em>gemessenen Mittelwert <span class="math inline">\bar{x}</span></em> liegt.</p>
+<p><span class="theorem-title"><strong>Definition 18.6</strong></span> Der <strong>Standardfehler des Mittelwerts</strong> beschreibt den Bereich in welchem der (unbekannte) <em>echte Mittelwert µ</em> relativ zum <em>gemessenen Mittelwert <span class="math inline">\bar{x}</span></em> liegt.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -821,11 +868,11 @@ Merke
 </div>
 </div>
 <p>Der Standardfehler wird in der Praxis meist mit dem Symbol <strong><em>se</em></strong> abgekürzt. In der insbes. deutschsprachigen Literatur finden sich zusätzlich uneinheitliche Schreibweisen wie z.B. <span class="math inline">\sigma_{\bar{x}}</span> oder <span class="math inline">\sigma_{\hat{\vartheta}}</span>. Weil sich das Symbol <span class="math inline">\sigma</span> jedoch auf die <em>echte Standardabweichung</em> bezieht und der Standardfehler immer aus der <em>gemessene Standardabweichung (s)</em> hergeleitet wird, ist die im anglo-amerikanischen Raum verbreitete Schreibweise <strong><em>se</em></strong> für <em>standard error</em> vorzuziehen.</p>
-<p>Der Standardfehler wird über die <a href="#eq-standardfehler">Formel&nbsp;<span>18.4</span></a> bestimmt. Aus dieser Formel geht hervor, dass sich der Standardfehler aus der Standardabweichung und dem Variablenumfang herleitet. Weil die Standardabweichung nur für metrisch-skalierte Daten definiert ist, ist der Standardfehler ebenfalls nur für diese Skalierung definiert.</p>
+<p>Der Standardfehler wird über die <a href="#eq-standardfehler" class="quarto-xref">Formel&nbsp;<span>18.4</span></a> bestimmt. Aus dieser Formel geht hervor, dass sich der Standardfehler aus der Standardabweichung und dem Variablenumfang herleitet. Weil die Standardabweichung nur für metrisch-skalierte Daten definiert ist, ist der Standardfehler ebenfalls nur für diese Skalierung definiert.</p>
 <p><span id="eq-standardfehler"><span class="math display">
 se = \frac{s}{\sqrt{n}}
 \tag{18.4}</span></span></p>
-<p>Aus <a href="#eq-standardfehler">Formel&nbsp;<span>18.4</span></a> lässt sich ableiten, dass der Standardfehler mit zunehmenden Variablenumfang immer kleiner wird. Diese Eigenschaft hängt damit zusammen, dass je mehr Werte gemessen wurden, der gemessene Mittelwert sich immer mehr dem echten Mittelwert annähert.</p>
+<p>Aus <a href="#eq-standardfehler" class="quarto-xref">Formel&nbsp;<span>18.4</span></a> lässt sich ableiten, dass der Standardfehler mit zunehmenden Variablenumfang immer kleiner wird. Diese Eigenschaft hängt damit zusammen, dass je mehr Werte gemessen wurden, der gemessene Mittelwert sich immer mehr dem echten Mittelwert annähert.</p>
 </section>
 <section id="mad" class="level3" data-number="18.2.8">
 <h3 data-number="18.2.8" class="anchored" data-anchor-id="mad"><span class="header-section-number">18.2.8</span> MAD</h3>
@@ -835,14 +882,14 @@ se = \frac{s}{\sqrt{n}}
 <li>Der IQR muss anders interpretiert werden, als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.</li>
 </ol>
 <p>Für ordinalskalierte Daten ist also ein Streumass wünschenswert, das alle Werte berücksichtigt und sie relativ zum zentralen Lagemass des Medians beschreibt Dieses Mass ist die sog. <strong>Mittlere absolute Abweichung vom Median</strong> (MAD). Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Streuung der Werte.</p>
-<p>Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (<a href="#eq-mad">Formel&nbsp;<span>18.5</span></a>). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.</p>
+<p>Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (<a href="#eq-mad" class="quarto-xref">Formel&nbsp;<span>18.5</span></a>). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.</p>
 <p><span id="eq-mad"><span class="math display">
 MAD(x) = md(| x_i - md(x) |)
 \tag{18.5}</span></span></p>
 <p>Das Ergebnis zeigt die zentrale Tendenz für <em>alle Werte</em> unserer Stichprobe in Bezug auf den Median. Ist der Wert klein, dann weist das auf insgesamt dicht zusammenliegende Werte hin. Ist dieser Wert gross, dann weist das auf eine breit gestreute Werte hin. Der Vorteil der MAD ist, dass dieser Wert genau gleich wie die Standardabweichung interpretiert wird.</p>
 <div id="exm-mad" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 18.2 (MAD im Verhältnis zum IQR) </strong></span>&nbsp;</p>
-<table class="table">
+<p><span class="theorem-title"><strong>Beispiel 18.2 (MAD im Verhältnis zum IQR)</strong></span> &nbsp;</p>
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: right;">variable</th>
@@ -885,7 +932,7 @@ Achtung
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-bortz_statistik_2010" class="csl-entry" role="listitem">
 Bortz, J., &amp; Schuster, C. (2010). <em>Statistik für Human- und Sozialwissenschaftler</em> (7., vollständig überarbeitete und erweiterte Auflage). Springer.
 </div>
@@ -932,18 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -975,11 +1011,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -989,8 +1064,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1002,7 +1086,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1046,6 +1253,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1071,6 +1279,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1132,12 +1366,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/12-daten-formen/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/12-daten-formen/kapitel.html" class="pagination-link" aria-label="Daten umformen">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Daten umformen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/14-daten-visualisieren/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/14-daten-visualisieren/kapitel.html" class="pagination-link" aria-label="Daten visualisieren">
         <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Daten visualisieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1146,4 +1380,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

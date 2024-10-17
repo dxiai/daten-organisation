@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 3&nbsp; Informationstheorie</title>
+<title>3&nbsp; Informationstheorie – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -66,7 +67,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -75,6 +82,7 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -84,7 +92,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -99,7 +107,34 @@ div.csl-indent {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -109,13 +144,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-einleitung/kapitel.html">Ausgangslage und Vorbereitung</a></li><li class="breadcrumb-item"><a href="../../kapitel/01-information/kapitel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Informationstheorie</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-einleitung/kapitel.html">Ausgangslage und Vorbereitung</a></li><li class="breadcrumb-item"><a href="../../kapitel/01-information/kapitel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Informationstheorie</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -124,12 +159,12 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -148,9 +183,9 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -177,9 +212,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -224,9 +259,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -283,9 +318,9 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -313,7 +348,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -343,12 +378,12 @@ div.csl-indent {
   <li><a href="#symbole-und-kompression" id="toc-symbole-und-kompression" class="nav-link" data-scroll-target="#symbole-und-kompression"><span class="header-section-number">3.6</span> Symbole und Kompression</a></li>
   <li><a href="#merksatz-der-informationskodierung" id="toc-merksatz-der-informationskodierung" class="nav-link" data-scroll-target="#merksatz-der-informationskodierung"><span class="header-section-number">3.7</span> Merksatz der Informationskodierung</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-einleitung/kapitel.html">Ausgangslage und Vorbereitung</a></li><li class="breadcrumb-item"><a href="../../kapitel/01-information/kapitel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Informationstheorie</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-chapter-informationstheorie" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Informationstheorie</span></span></h1>
 </div>
@@ -363,7 +398,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <p>Die Arbeit mit Daten schliesst immer die Frage ein, ob diese Daten relevante Information verbergen. Dazu müssen zwei Konzepte erfasst werden:</p>
 <ol type="1">
@@ -398,7 +435,7 @@ Problem
 <h2 data-number="3.1" class="anchored" data-anchor-id="shannons-informationsproblem"><span class="header-section-number">3.1</span> Shannon’s Informationsproblem</h2>
 <p>Claude Shannon befasste sich in den 1940er Jahren mit den Herausforderungen der (damals) modernen Kommunikationstechnologien Telegraphie und Telefon. Diese Technologien übertragen Nachrichten über einen Nachrichten<em>kanal</em>. Ein solcher Kanal kann ein Kabel oder auch eine Funkfrequenz sein. Dieser Nachrichtenkanal wird als <em>Medium</em> bezeichnet.</p>
 <div id="def-kommunikation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.1 </strong></span>Als <em>Kommunikation</em> wird das Übertragen von Informationen über ein Medium bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 3.1</strong></span> Als <em>Kommunikation</em> wird das Übertragen von Information über ein Medium bezeichnet.</p>
 </div>
 <p>Diese analogen Technologien haben das Problem, dass sich Signale über längere Distanzen abschwächen. Dieser Effekt ergibt sich aus dem “Medium”, dass für eine Kommunikation verwendet wird. Ein Kabel hat z.B. eine Dämpfung, die mit der Länge des Kabels steigt. Je länger ein Kabel wird, desto grösser wird die Dämpfung. Die Dämpfung hat zur Folge, dass ein Signal leiser wird. Dadurch geht ein Teil des ursprünglichen Signals verloren. Dieser Prozess wird als “Equivocation” bezeichnet.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -411,7 +448,7 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Durch <em>Equivokation</em> gehen Informationen beim Übertragen verloren.</p>
+<p>Durch <em>Äquivokation</em> gehen Information beim Übertragen verloren.</p>
 </div>
 </div>
 <p>Ein zweites Problem analoger Kommunikationstechnologien sind äussere Störungen des Mediums. Wird z.B. ein Magnet an ein Kabel gehalten, werden die über das Kabel übertragenen Signale verzerrt. Solche Veränderungen des Signals werden als Rauschen (engl. <em>Noise</em>) bezeichnet. Rauschen entsteht auch zufällig mit zunehmender Länge eines Mediums.</p>
@@ -450,25 +487,29 @@ Problem
 <li>Das Empfangen und Dekodieren der Nachricht</li>
 <li>Ein Informationsziel, die Information aufnimmt</li>
 </ul>
-<p>Zusätzlich muss das <em>Rauschen</em> des Kanals berücksichtigt werden. Später wurde das Modell um die <em>Equivokation</em> erweitert <span class="citation" data-cites="shannon_communication_1949">(<a href="../../references.html#ref-shannon_communication_1949" role="doc-biblioref">Shannon, 1949</a>)</span>. Sowohl das Rauschen als auch die Equivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diesen Überlegungen ergibt sich das Kommunikationschema in <a href="#fig-shannon-model">Abbildung&nbsp;<span>3.1</span></a>.</p>
-<div class="cell" data-fig-width="100%">
+<p>Zusätzlich muss das <em>Rauschen</em> des Kanals berücksichtigt werden. Später wurde das Modell um die <em>Äquivokation</em> erweitert <span class="citation" data-cites="shannon_communication_1949">(<a href="../../references.html#ref-shannon_communication_1949" role="doc-biblioref">Shannon, 1949</a>)</span>. Sowohl das Rauschen als auch die Äquivokation müssen eigenständig berücksichtigt werden, weil diese die Kommunikation unkontrolliert beeinflussen. Aus diesen Überlegungen ergibt sich das Kommunikationschema in <a href="#fig-shannon-model" class="quarto-xref">Abbildung&nbsp;<span>3.1</span></a>.</p>
+<div class="cell" data-fig-width="100%" data-layout-align="default">
 <div class="cell-output-display">
-<div id="fig-shannon-model" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div id="fig-shannon-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shannon-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-shannon-model">flowchart LR
   a(Information) --&gt; b(Kodieren)
   b --&gt; c(Medium)
   c --&gt; f(Dekodieren)
   
-  c --&gt; e(Equivokation)
+  c --&gt; e(Äquivokation)
   r(Rauschen) --&gt; c
 
   f --&gt; g(Information)
 
 </pre>
 </div>
-<figcaption class="figure-caption">Abbildung&nbsp;3.1: Integriertes Kommunikationsmodell <span class="citation" data-cites="shannon_mathematical_1948 shannon_communication_1949">(<a href="../../references.html#ref-shannon_mathematical_1948" role="doc-biblioref">Shannon, 1948</a>; <a href="../../references.html#ref-shannon_communication_1949" role="doc-biblioref">Shannon, 1949</a>)</span></figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shannon-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3.1: Integriertes Kommunikationsmodell <span class="citation" data-cites="shannon_mathematical_1948 shannon_communication_1949">(<a href="../../references.html#ref-shannon_mathematical_1948" role="doc-biblioref">Shannon, 1948</a>; <a href="../../references.html#ref-shannon_communication_1949" role="doc-biblioref">Shannon, 1949</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -494,7 +535,7 @@ I(D) = P(D) - \epsilon
 </ul>
 <p>Umgangssprachlich lassen sich diese Terme folgenderweise umschreiben:</p>
 <div id="prp-information" class="theorem proposition">
-<p><span class="theorem-title"><strong>Satz 3.1 </strong></span>Information ergibt sich aus Daten, nachdem alle Fehler und Störungen in den Daten entfernt wurden.</p>
+<p><span class="theorem-title"><strong>Satz 3.1</strong></span> Information ergibt sich aus Daten, nachdem alle Fehler und Störungen in den Daten entfernt wurden.</p>
 </div>
 <section id="das-shannon-limit" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="das-shannon-limit"><span class="header-section-number">3.1.1</span> Das Shannon Limit</h3>
@@ -554,17 +595,21 @@ Merke
 </div>
 </div>
 <div id="def-basis-zahlensystem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.2 </strong></span>Die Zahl, die als Grundlage für ein Zahlensystem dient, wird als <strong>Basis</strong> des Zahlensystems bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 3.2</strong></span> Die Zahl, die als Grundlage für ein Zahlensystem dient, wird als <strong>Basis</strong> des Zahlensystems bezeichnet.</p>
 </div>
 <p>Beim in der Schulmathematik üblichen Dezimalsystem ist die Basis <code>10</code>.</p>
 <div id="def-zahlensystem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.3 </strong></span><strong>Zahlensysteme</strong> kodieren Zahlenwerte zu einer gegebenen Basis.</p>
+<p><span class="theorem-title"><strong>Definition 3.3</strong></span> <strong>Zahlensysteme</strong> kodieren Zahlenwerte zu einer gegebenen Basis.</p>
 </div>
 <section id="die-wichtigsten-zahlensysteme" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="die-wichtigsten-zahlensysteme"><span class="header-section-number">3.3.1</span> Die wichtigsten Zahlensysteme</h3>
-<div id="tbl-namen-zahlensysteme" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.1: Namen und Beispiele von Zahlensystemen</caption>
+<div id="tbl-namen-zahlensysteme" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-namen-zahlensysteme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.1: Namen und Beispiele von Zahlensystemen
+</figcaption>
+<div aria-describedby="tbl-namen-zahlensysteme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -611,12 +656,18 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Das Duodezimalsystem und das Sexagesimalsystem treffen wir im Alltag bei Datums- und Zeitwerten, bei Winkeln sowie in der Musik an. Im Deutschen lässt sich das Duodezimalsystem noch an den Zahlworten elf (<code>11</code>) und zwölf (<code>12</code>) erkennen.</p>
 <p>Das binäre Zahlensystem stellt die Grundlage für digitale Computer dar, weil es nur zwei Werte für die Darstellung von Zahlen benötigt. D.h. alle Werte lassen sich als Vielfache von zweier-Potenzen abbilden. Claude Shannon hat bereits 1938 erkannt, dass diese Darstellung sich direkt die Zustände “ein” und “aus” von Schaltern übersetzen lässt, sodass sich alle Berechnungen mit Hilfe der <a href="@08-boolsche-algebra"><em>Boolschen Algebra</em></a> mit einfachen Schaltungen realisieren lassen. Daraus ergibt sich, dass das kleinste Bit der Informationstheorie sich im Binären-Zahlensystem abbilden lässt.</p>
 <p>Die Zahlensysteme Oktal und Hexadezimal sind für die Abbildung von Werten in Digitalcomputern von besonderer Bedeutung, weil es sich jeweils um ganzzahlige 2er Potenzen handelt.</p>
-<div id="tbl-bin-hex-oct" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.2: 2er-Potenzen der wichtigsten Zahlensysteme digitaler Systeme</caption>
+<div id="tbl-bin-hex-oct" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bin-hex-oct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.2: 2er-Potenzen der wichtigsten Zahlensysteme digitaler Systeme
+</figcaption>
+<div aria-describedby="tbl-bin-hex-oct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Name</th>
@@ -643,6 +694,8 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Der Exponent der 2er-Potenz der Basis zeigt an, wie viele Stellen im Binärsystem (Bits) mit dem jeweiligen System abgebildet werden können. Ein Byte bildet per Konvention zwei Stellen im Hexadezimalsystem oder 8 Bit ab.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -658,9 +711,13 @@ Hinweis
 </div>
 </div>
 <p><strong>Beispiele</strong></p>
-<div id="tbl-dec-hex-bountaries" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.3: Darstellung von Zahlenwerten im Dezimal- und Hexadezimalsystem</caption>
+<div id="tbl-dec-hex-bountaries" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dec-hex-bountaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.3: Darstellung von Zahlenwerten im Dezimal- und Hexadezimalsystem
+</figcaption>
+<div aria-describedby="tbl-dec-hex-bountaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Dezimal</th>
@@ -711,6 +768,8 @@ Hinweis
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 </section>
 <section id="binärzahlen" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="binärzahlen"><span class="header-section-number">3.3.2</span> Binärzahlen</h3>
@@ -730,9 +789,13 @@ Hinweis
 <p>Daraus folgt, dass für jede Ziffer genau zwei Symbole (Ziffern) zur Verfügung stehen: <code>0</code> und <code>1</code>.</p>
 <p>Wie in anderen Zahlensystemen entspricht eine Stelle im Binärsystem einer Potenz zur gegebenen Basis. Das ist bei Binärwerten <code>2</code>. Jede Stelle für eine Ziffer kann also einer 2er-Potenz gleichgesetzt werden.</p>
 <p>Die Besonderheit des Binärsystems ist, dass alle Werte als Summe von 2er-Potenzen dargestellt werden können. Diese Summe wird als <em>additive Darstellung</em> bezeichnet.</p>
-<div id="tbl-binary-additiv" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.4: Binärzahlen und ihre additive Darstellung</caption>
+<div id="tbl-binary-additiv" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-binary-additiv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.4: Binärzahlen und ihre additive Darstellung
+</figcaption>
+<div aria-describedby="tbl-binary-additiv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Wert</th>
@@ -841,14 +904,20 @@ Hinweis
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Aus dieser Tabelle kann man ablesen, dass die Ziffer <code>1</code> im Binärsystem bedeutet, dass die 2er-Potenz an der entsprechenden Stelle aktiv ist.</p>
 <p>Jede Ziffer im Binärsystem kann ausserdem als eigenständiges Symbol einer Nachricht verstanden werden. Weil im Binärsystem nur die beiden Ziffern <code>0</code> und <code>1</code> möglich sind, müssen beim Dekodieren nur diese Beiden Werte unterschieden werden. Jedes andere Zahlensystem kodiert Zahlen mit mehr als zwei Ziffern.</p>
 <section id="er-potenzen-und-speichergrössen" class="level4" data-number="3.3.2.1">
 <h4 data-number="3.3.2.1" class="anchored" data-anchor-id="er-potenzen-und-speichergrössen"><span class="header-section-number">3.3.2.1</span> 2er-Potenzen und Speichergrössen</h4>
 <p>Nach diesem Prinzip werden auch die Kapazitäten von Datenspeichern als 2er-Potenzen beschrieben.</p>
-<div id="tbl-speichergroessen" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.5: Speichergrössen in 2er-Potenzen</caption>
+<div id="tbl-speichergroessen" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-speichergroessen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.5: Speichergrössen in 2er-Potenzen
+</figcaption>
+<div aria-describedby="tbl-speichergroessen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Name</th>
@@ -884,6 +953,8 @@ Hinweis
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -925,9 +996,13 @@ Warnung
 <li>Gibt es für die jeweilige Basis keine Ziffernsymbole für die Ganzzahl mehr, wird die nächsthöhere Stelle um <code>1</code> erhöht.</li>
 </ol>
 <p><strong>Beispiele</strong></p>
-<div id="tbl-darstellung-zahenwerte" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.6: Darstellung von Zahlenwerten in verschiedenen Zahlensystemen</caption>
+<div id="tbl-darstellung-zahlenwerte" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-darstellung-zahlenwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.6: Darstellung von Zahlenwerten in verschiedenen Zahlensystemen
+</figcaption>
+<div aria-describedby="tbl-darstellung-zahlenwerte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Dezimal</th>
@@ -1012,6 +1087,8 @@ Warnung
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 </section>
 </section>
 <section id="sec-wissenschaftliche-schreibweise" class="level2" data-number="3.4">
@@ -1033,9 +1110,13 @@ Hinweis
 <p>Bei kleinen Zahlen wird ähnlich vorgegangen: Die erste Ziffer ungleich <code>0</code> wird vor ein Komma gesetzt und alle folgenden Stellen danach. Anschliessend werden alle Nullen und die Ziffer vor dem Komma gezählt und als negative 10er-Potenz angegeben.</p>
 <p>Neben der ausführlichen wissenschaftlichen Schreibweise wird regelmässig eine abgekürzte Notation verwendet. In dieser Notation wird der Teil <span class="math inline">\cdot 10</span> durch ein <code>e</code> oder <code>E</code> ersetzt. Dieses <code>E</code> steht für <em>Exponent</em>.</p>
 <p><strong>Beispiele:</strong></p>
-<div id="tbl-wiss-notation" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.7: Beispiele für die wissenschaftliche Notation verschiedener Zahlenwerte</caption>
+<div id="tbl-wiss-notation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-wiss-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.7: Beispiele für die wissenschaftliche Notation verschiedener Zahlenwerte
+</figcaption>
+<div aria-describedby="tbl-wiss-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -1071,11 +1152,13 @@ Hinweis
 </tr>
 <tr class="odd">
 <td style="text-align: right;">0.00000000007234</td>
-<td style="text-align: right;"><span class="math inline">7.234 \cdot 10^-11</span></td>
+<td style="text-align: right;"><span class="math inline">7.234 \cdot 10^{-11}</span></td>
 <td style="text-align: right;">7.234e-11</td>
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <p>Die Stärke der wissenschaftlichen Notation ist die Darstellung sehr grosser oder sehr kleiner Zahlen</p>
 <p>Mit dieser Schreibweise lassen sich auch schnell Grössenunterschiede zwischen Werten abschätzen: Dazu wird die Differenz der 10er-Potenzen zweier Zahlen gebildet. Dazu wird die kleinere 10er-Potenz von der grösseren subtrahiert. Das Ergebnis ist wieder eine 10er-Potenz.</p>
@@ -1087,7 +1170,7 @@ Hinweis
 <section id="sec-serialisierung" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="sec-serialisierung"><span class="header-section-number">3.4.1</span> Serialisierung</h3>
 <div id="def-serialisierung" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.4 </strong></span>Ein Zahlenwert kann bei einer Darstellung zu einer Basis in mehreren Ziffern erfolgen. Diese Zifferndarstellung wird als <strong>Serialisierung</strong> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 3.4</strong></span> Ein Zahlenwert kann bei einer Darstellung zu einer Basis in mehreren Ziffern erfolgen. Diese Zifferndarstellung wird als <strong>Serialisierung</strong> bezeichnet.</p>
 </div>
 <p><em>Serialisierung</em> bedeutet, dass die Ziffern eines Werts <em>in einer bestimmten Reihenfolge</em> dargestellt werden. Jede Ziffer einer solchen Darstellung können wir uns als ein <em>Symbol</em> einer Nachricht vorstellen.</p>
 <p>Weil ein Zahlenwert in verschiedenen Zahlensystemen dargestellt werden kann, ergibt sich daraus der folgende Merksatz:</p>
@@ -1136,9 +1219,13 @@ Merke
 <li>UTF-8 - kodiert alle gängigen und viele historische Schriftsysteme inkl. Emojis dynamisch mit 8 bis zu 32 Bit <span class="citation" data-cites="isoiec_jtc_1sc_2_information_2020 the_unicode_consortium_unicode_2022">(<a href="../../references.html#ref-isoiec_jtc_1sc_2_information_2020" role="doc-biblioref">ISO/IEC JTC 1/SC 2, 2020</a>; <a href="../../references.html#ref-the_unicode_consortium_unicode_2022" role="doc-biblioref">The Unicode Consortium, 2022</a>, Section 3.9)</span>.</li>
 </ul>
 <p>Diese Kodierungen sind bis zum Code 01111111 (oder 0x7F) identisch. Die Symbole in diesem Bereich werden deshalb als <em>ASCII-Codes</em> bezeichnet.</p>
-<div id="tbl-ascii-codes" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.8: Vollständige ASCII-Kodierungstabelle <span class="citation" data-cites="american_national_standards_institute_code_1977">(<a href="../../references.html#ref-american_national_standards_institute_code_1977" role="doc-biblioref">American National Standards Institute, 1977, S. 8</a>)</span></caption>
+<div id="tbl-ascii-codes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ascii-codes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.8: Vollständige ASCII-Kodierungstabelle <span class="citation" data-cites="american_national_standards_institute_code_1977">(<a href="../../references.html#ref-american_national_standards_institute_code_1977" role="doc-biblioref">American National Standards Institute, 1977, S. 8</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-ascii-codes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -1332,10 +1419,16 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Neben Buchstaben werden auch sog. <em>nicht-druckbare Zeichen</em> wie Buchstaben, Satzzeichen und Ziffern kodiert. Dazu gehören u.a. Leerzeichen, Tabulatoren und Zeilenumbrüche. Viele dieser besonderen Buchstaben haben heute keine Bedeutung mehr. In der folgenden Tabelle sind die aktuell verwendeten nicht-druckbaren Zeichen mit <code>*</code> markiert.</p>
-<div id="tbl-ascii-sonderzeichen" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.9: ASCII-Sonderzeichen <span class="citation" data-cites="american_national_standards_institute_code_1977">(<a href="../../references.html#ref-american_national_standards_institute_code_1977" role="doc-biblioref">American National Standards Institute, 1977, S. 9</a>)</span></caption>
+<div id="tbl-ascii-sonderzeichen" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ascii-sonderzeichen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.9: ASCII-Sonderzeichen <span class="citation" data-cites="american_national_standards_institute_code_1977">(<a href="../../references.html#ref-american_national_standards_institute_code_1977" role="doc-biblioref">American National Standards Institute, 1977, S. 9</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-ascii-sonderzeichen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 35%">
 <col style="width: 35%">
@@ -1522,6 +1615,8 @@ Merke
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Die Zeichen für Löschen (<code>BS</code> und <code>DEL</code>) und Funktionsumstellung (<code>ESC</code>) finden sich nicht mehr in Zeichenketten und Dateien. Sie dienen inzwischen nur als Steuerzeichen für die Eingabe mit der Tastatur.</p>
 <p>Das Zeichen für das Dateiende (<code>EOF</code> bzw. unter Windows <code>SUB</code>) ist kein kodiertes Zeichen in einer Zeichenkette, sondern wird vom Betriebssystem gesetzt. Dieses Symbol findet sich nicht in einer Datei und sollte nicht eingefügt werden.</p>
 <p>Normalerweise werden nicht-druckbare Zeichen nicht in Zeichenketten dargestellt, obwohl sie in der Zeichenkette enthalten sind.</p>
@@ -1597,10 +1692,14 @@ Hinweis
 K = \frac{k}{l(N)}
 </span></p>
 <p>Im Beispiel haben alle Nachrichten die Länge <code>10</code>.</p>
-<p>Daraus ergeben sich die Kompressionsgrade für unterschiedliche, gleich lange Zeichenketten in <a href="#tbl-kompressionsgrade">Tabelle&nbsp;<span>3.10</span></a>.</p>
-<div id="tbl-kompressionsgrade" class="anchored">
-<table class="table">
-<caption>Tabelle&nbsp;3.10: Kompressionsgrade verschiedener Zeichenketten</caption>
+<p>Daraus ergeben sich die Kompressionsgrade für unterschiedliche, gleich lange Zeichenketten in <a href="#tbl-kompressionsgrade" class="quarto-xref">Tabelle&nbsp;<span>3.10</span></a>.</p>
+<div id="tbl-kompressionsgrade" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kompressionsgrade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.10: Kompressionsgrade verschiedener Zeichenketten
+</figcaption>
+<div aria-describedby="tbl-kompressionsgrade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Nachricht</th>
@@ -1627,6 +1726,8 @@ K = \frac{k}{l(N)}
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Die Kompressionsgrade stehen im umgekehrten Verhältnis zum Informationsgehalt (<span class="math inline">I_g</span>) einer Nachricht. Es gilt also:</p>
 <p><span class="math display">
 I_g = \frac{1}{K} = \frac{l(N)}{k}
@@ -1650,7 +1751,7 @@ Merke
 <h2 data-number="3.7" class="anchored" data-anchor-id="merksatz-der-informationskodierung"><span class="header-section-number">3.7</span> Merksatz der Informationskodierung</h2>
 <p>Ausgehend von der Informationstheorie bestehen Nachrichten aus Symbolen. Symbole können Sätze, Worte, Wortkombinationen, Buchstaben oder Buchstabenfolgen sein. Ein Symbol repräsentiert einen Teil einer Nachricht.</p>
 <div id="def-bit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.5 </strong></span>Ein Symbol einer Nachricht wird als <strong>Bit</strong> (dt. <em>Teil</em>) bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 3.5</strong></span> Ein Symbol einer Nachricht wird als <strong>Bit</strong> (dt. <em>Teil</em>) bezeichnet.</p>
 </div>
 <p>In den vorherigen Abschnitten haben wir wichtige Erkenntnisse abgeleitet:</p>
 <ol type="1">
@@ -1658,7 +1759,7 @@ Merke
 <li>Zahlensysteme <strong>kodieren</strong> Zahlenwerte zu einer Basis.</li>
 <li>Die Basis eines Zahlensystems legt fest, wie viele Ziffern für Zahlenwerte zur Verfügung stehen.</li>
 <li>Die kleinste Basis für ein Zahlensystem ist 2.</li>
-<li>Beliebige Symbole als Zahlenwerte abgebildet werden können.</li>
+<li>Beliebige Symbole können als Zahlenwerte abgebildet werden .</li>
 <li>Ziffern sind Symbole.</li>
 </ol>
 <p>Daraus ergibt sich der folgende Merksatz.</p>
@@ -1677,7 +1778,7 @@ Merke
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-american_national_standards_institute_code_1977" class="csl-entry" role="listitem">
 American National Standards Institute. (1977). <em>Code for Information Interchange</em> (<span>ANSI</span> X3.4-1977). <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf">https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub1-2-1977.pdf</a>
 </div>
@@ -1738,18 +1839,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1781,11 +1871,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1795,8 +1924,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1808,7 +1946,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1852,6 +2113,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1877,6 +2139,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1938,12 +2226,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/01-tool-chain/tastatur.html" class="pagination-link">
+      <a href="../../kapitel/01-tool-chain/tastatur.html" class="pagination-link" aria-label="Tastatur und Tastaturkürzel">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tastatur und Tastaturkürzel</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/01-tool-chain/project_doc.html" class="pagination-link">
+      <a href="../../kapitel/01-tool-chain/project_doc.html" class="pagination-link" aria-label="Dokumentation">
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dokumentation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1952,4 +2240,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

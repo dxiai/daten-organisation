@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 8&nbsp; Datentypen</title>
+<title>8&nbsp; Datentypen – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -56,13 +62,14 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -77,7 +84,34 @@ ul.task-list li input[type="checkbox"] {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,13 +121,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/05-datentypen/kapitel.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datentypen</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/05-datentypen/kapitel.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datentypen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -102,12 +136,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -126,9 +160,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -155,9 +189,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -202,9 +236,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -261,9 +295,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -291,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -318,12 +352,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#sec-matrix-vektor-formen" id="toc-sec-matrix-vektor-formen" class="nav-link" data-scroll-target="#sec-matrix-vektor-formen"><span class="header-section-number">8.4</span> Vektorformen von Matrizen</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/01-tool-chain/project_doc.html">Datenquellen</a></li><li class="breadcrumb-item"><a href="../../kapitel/05-datentypen/kapitel.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datentypen</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-datentypen" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datentypen</span></span></h1>
 </div>
@@ -338,7 +372,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="fundamentale-datentypen" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="fundamentale-datentypen"><span class="header-section-number">8.1</span> Fundamentale Datentypen</h2>
@@ -352,26 +388,26 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Diese Datentypen beschreiben jeweils einzelne Werte.</p>
 <div id="def-fundamentale-datentypen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.1 </strong></span><strong>Fundamentale Datentypen</strong> heissen Datentypen, die Eigenschaften für einzelne Werte festlegen.</p>
+<p><span class="theorem-title"><strong>Definition 8.1</strong></span> <strong>Fundamentale Datentypen</strong> heissen Datentypen, die Eigenschaften für einzelne Werte festlegen.</p>
 </div>
 <div id="def-skalar" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.2 </strong></span>Ein Wert von einem fundamentalen Datentyp heisst <strong>Skalar</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 8.2</strong></span> Ein Wert von einem fundamentalen Datentyp heisst <strong>Skalar</strong>.</p>
 </div>
 <p>Die fundamentalen Datentypen legen die allgemeinen Wertebereiche fest, auf welchen die speziellen Wertebereiche der Datenschemata aufbauen.</p>
 <section id="undefinierte-werte" class="level3" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="undefinierte-werte"><span class="header-section-number">8.1.1</span> Undefinierte Werte</h3>
 <p>Gelegentlich fehlen Werte in den Daten oder wurden bei der Datenverarbeitung (noch) nicht zugewiesen. In diesen Fällen werden die “fehlenden” Werte nicht ignoriert, sondern als <strong>undefinierte Werte</strong> festgehalten.</p>
 <div id="def-undefinierte-werte" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.3 </strong></span>Als <strong>undefinierte Werte</strong> die keine Werte repräsentieren.</p>
+<p><span class="theorem-title"><strong>Definition 8.3</strong></span> Als <strong>undefinierte Werte</strong> die keine Werte repräsentieren.</p>
 </div>
-<p>In den meisten Programmiersprachen kennen für undefinierte Werte eine konstanten Wert. Dieser Wert ist in der Regel vom beliebigen Datentyp.</p>
+<p>In den meisten Programmiersprachen werden undefinierte Werte auf einen konstanten Wert abgebildet. Dieser Wert ist in der Regel vom beliebigen Datentyp.</p>
 </section>
 <section id="zahlen" class="level3" data-number="8.1.2">
 <h3 data-number="8.1.2" class="anchored" data-anchor-id="zahlen"><span class="header-section-number">8.1.2</span> Zahlen</h3>
 <div id="def-zahlenwerte" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.4 </strong></span>Als <strong>Zahlenwerte</strong> werden nummerische Werte bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 8.4</strong></span> Als <strong>Zahlenwerte</strong> werden nummerische Werte bezeichnet.</p>
 </div>
-<p>Zahlenwerte können verschiedene Darstellungen haben, ohne dass sich der <em>Wert</em> der Zahl verändert (s. <a href="../11-daten-kodieren/kapitel.html"><span>Kapitel&nbsp;16</span></a>).</p>
+<p>Zahlenwerte können verschiedene Darstellungen haben, ohne dass sich der <em>Wert</em> der Zahl verändert (s. <a href="../11-daten-kodieren/kapitel.html" class="quarto-xref"><span>Kapitel 16</span></a>).</p>
 <p>Zahlenwerte können in zwei Klassen unterteilt werden:</p>
 <ul>
 <li><em>Ganze Zahlen</em></li>
@@ -388,7 +424,7 @@ Warnung
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ein Teil der reellen Zahlen sind die <em>Gleitkommazahlen</em>. Gleitkommazahlen arbeiten wie die wissenschaftliche Schreibweise von Zahlen (s. <a href="../01-information/kapitel.html#sec-wissenschaftliche-schreibweise">Abschnitt&nbsp;<span>3.4</span></a>) mit einer Basis und einer Potenz, durch welche die Grössenordnung einer Zahl definiert ist.</p>
+<p>Ein Teil der reellen Zahlen sind die <em>Gleitkommazahlen</em>. Gleitkommazahlen arbeiten wie die wissenschaftliche Schreibweise von Zahlen (s. <a href="../01-information/kapitel.html#sec-wissenschaftliche-schreibweise" class="quarto-xref">Abschnitt&nbsp;<span>3.4</span></a>) mit einer Basis und einer Potenz, durch welche die Grössenordnung einer Zahl definiert ist.</p>
 <p>Alle reellen Zahlen werden in Computern grundsätzlich als Gleitkommazahlen abgebildet. Dadurch wird der mögliche Zahlenraum prinzipiell erweitert. Zahlen lassen sich so nicht mehr mit beliebiger Genauigkeit behandeln. Deshalb kann mit Gleitkommazahlen nicht immer exakt gerechnet werden. Das ist immer dann der Fall, wenn sehr kleine und sehr grosse Zahlen miteinander verrechnet werden. In solchen Fällen kann es zu unerwarteten Rundungsfehlern kommen.</p>
 <p>Falls sehr genaue Berechnungen notwendig sind, dann müssen spezielle Bibliotheken verwendet werden, die mit der entsprechenden Genauigkeit umgehen können.</p>
 </div>
@@ -397,20 +433,20 @@ Warnung
 <section id="wahrheitswerte" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="wahrheitswerte"><span class="header-section-number">8.1.3</span> Wahrheitswerte</h3>
 <div id="def-wahrheitswerte" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.5 </strong></span>Als <strong>Wahrheitswerte</strong> werden die Werte <code>Wahr</code> (<code>True</code>) und <code>Falsch</code> (<code>False</code>) bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 8.5</strong></span> Als <strong>Wahrheitswerte</strong> werden die Werte <code>Wahr</code> (<code>True</code>) und <code>Falsch</code> (<code>False</code>) bezeichnet.</p>
 </div>
 <p>Weil es nur zwei Wahrheitswerte gibt, werden sind Wahrheitswerte ein <strong>binärer Datentyp</strong>.</p>
 <p>In den meisten Programmiersprachen lassen sich Zahlenwerte als Wahrheitswerte verwenden. Dabei wird die Zahl <code>0</code> als <code>Falsch</code> und alle anderen Zahlen als <code>Wahr</code> interpretiert.</p>
-<p>Wahrheitswerte werden meistens zur Steuerung der Programmlogik verwendet (s. <a href="../08-boolsche-operationen/kapitel.html"><span>Kapitel&nbsp;12</span></a>).</p>
+<p>Wahrheitswerte werden meistens zur Steuerung der Programmlogik verwendet (s. <a href="../08-boolsche-operationen/kapitel.html" class="quarto-xref"><span>Kapitel 12</span></a>).</p>
 </section>
 <section id="zeichenketten" class="level3" data-number="8.1.4">
 <h3 data-number="8.1.4" class="anchored" data-anchor-id="zeichenketten"><span class="header-section-number">8.1.4</span> Zeichenketten</h3>
 <div id="def-zeichenketten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.6 </strong></span>Als <strong>Zeichenketten</strong> werden Werte bezeichnet, die aus einer Zeichenfolge bestehen. Dazu gehören Buchstaben, Ziffern, sowie Leer-, Satz- und Sonderzeichen.</p>
+<p><span class="theorem-title"><strong>Definition 8.6</strong></span> Als <strong>Zeichenketten</strong> werden Werte bezeichnet, die aus einer Zeichenfolge bestehen. Dazu gehören Buchstaben, Ziffern, sowie Leer-, Satz- und Sonderzeichen.</p>
 </div>
 <p>Zeichenketten setzen sich aus Symbolen zusammen, weshalb Zeichenketten eine <em>Länge</em> haben. Die Länge einer Zeichenkette entspricht der Anzahl ihrer Symbole. Entsprechend hat jedes Symbol eine eindeutige <em>Position</em> in der Zeichenkette.</p>
 <p>Zeichenketten werden für alle Werte verwendet, die nicht als Zahlenwerte oder Wahrheitswerte dargestellt werden können. Gelegentlich müssen Zahlen als Zeichenketten dargestellt werden, um sie in einem bestimmten Format auszugeben oder für mathematische Operationen zu sperren.</p>
-<p>In den meisten Programmiersprachen müssen Zeichenketten besonders markiert werden, damit sie von anderen Datentypen und Bezeichnern unterschieden werden können (s. <a href="../06-variablen/kapitel.html"><span>Kapitel&nbsp;10</span></a>). Die Markierung erfolgt meistens durch Anführungszeichen.</p>
+<p>In den meisten Programmiersprachen müssen Zeichenketten besonders markiert werden, damit sie von anderen Datentypen und Bezeichnern unterschieden werden können (s. <a href="../06-variablen/kapitel.html" class="quarto-xref"><span>Kapitel 10</span></a>). Die Markierung erfolgt meistens durch Anführungszeichen.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -429,7 +465,7 @@ Hinweis
 <section id="fehlerwerte" class="level3" data-number="8.1.5">
 <h3 data-number="8.1.5" class="anchored" data-anchor-id="fehlerwerte"><span class="header-section-number">8.1.5</span> Fehlerwerte</h3>
 <div id="def-Fehlerwerte" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.7 </strong></span>Als <strong>Fehlerwerte</strong> werden Werte bezeichnet, die Fehler repräsentieren.</p>
+<p><span class="theorem-title"><strong>Definition 8.7</strong></span> Als <strong>Fehlerwerte</strong> werden Werte bezeichnet, die Fehler repräsentieren.</p>
 </div>
 <p>Fehlerwerte unterscheiden sich von den anderen Datentypen. Mit ihnen eine Programmierumgebung oder eine Programmiersprache an, dass ein Fehler aufgetreten ist oder eine unzulässige Operation ausgeführt wurde. Für die meisten Programmiersprachen sind die möglichen Fehler von Operationen und Funktionen dokumentiert.</p>
 <p>Fehlerwerte können nicht mit anderen Datentypen verknüpft werden. Wird ein Fehlerwert mit einem anderen Datentyp verknüpft, dann wird der Fehlerwert als Ergebnis zurückgegeben.</p>
@@ -472,7 +508,7 @@ Hinweis
 <section id="diskrete-daten" class="level3" data-number="8.2.1">
 <h3 data-number="8.2.1" class="anchored" data-anchor-id="diskrete-daten"><span class="header-section-number">8.2.1</span> Diskrete Daten</h3>
 <div id="def-diskrete-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.8 </strong></span>Wenn ein Wertebereich nur eindeutige Werte enthält, dann heisst der Wertebereich <em>diskret</em>.</p>
+<p><span class="theorem-title"><strong>Definition 8.8</strong></span> Wenn ein Wertebereich nur eindeutige Werte enthält, dann heisst der Wertebereich <em>diskret</em>.</p>
 </div>
 <p>Ganze Zahlen, Wahrheitswerte, Zeichenketten und Fehlerwerte haben immer diskrete Wertebereiche. Undefinierte Werte umfassen nur einen einzigen Wert und können je nach Kontext diskret oder kontinuierlich sein.</p>
 <p>Es werden drei Arten von diskreten Daten unterschieden:</p>
@@ -485,14 +521,14 @@ Hinweis
 <section id="nominalskalierte-daten" class="level4" data-number="8.2.1.1">
 <h4 data-number="8.2.1.1" class="anchored" data-anchor-id="nominalskalierte-daten"><span class="header-section-number">8.2.1.1</span> Nominalskalierte Daten</h4>
 <div id="def-nominalskaliert" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.9 </strong></span>Lassen sich alle Werte in einem Wertebereich eindeutig voneinander unterscheiden, dann liegt ein <strong>nominalskalierter Wertebereich</strong> vor.</p>
+<p><span class="theorem-title"><strong>Definition 8.9</strong></span> Lassen sich alle Werte in einem Wertebereich eindeutig voneinander unterscheiden, dann liegt ein <strong>nominalskalierter Wertebereich</strong> vor.</p>
 </div>
 <p><em>Nominalskalierte Daten</em> können nur durch Gleichheit oder Ungleichheit voneinander unterschieden werden. Nominalskalierte Daten können nur über Häufigkeiten zusammengefasst werden.</p>
 </section>
 <section id="ordinalskalierte-daten" class="level4" data-number="8.2.1.2">
 <h4 data-number="8.2.1.2" class="anchored" data-anchor-id="ordinalskalierte-daten"><span class="header-section-number">8.2.1.2</span> Ordinalskalierte Daten</h4>
 <div id="def-ordinalskaliert" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.10 </strong></span>Lassen sich alle Werte eines nominalskalierten Wertebereichs in eine eindeutige Reihenfolge sortieren, dann liegt ein <strong>ordinalskalierter Wertebereich</strong> vor.</p>
+<p><span class="theorem-title"><strong>Definition 8.10</strong></span> Lassen sich alle Werte eines nominalskalierten Wertebereichs in eine eindeutige Reihenfolge sortieren, dann liegt ein <strong>ordinalskalierter Wertebereich</strong> vor.</p>
 </div>
 <p>Ordinale Daten sind eine Untermenge der nominalen Daten, bei der sich die Werte im Wertebereich <em>sortieren</em> lassen. Dadurch kann jedem Wert ein <em>eindeutiger Rang</em> zugewiesen werden. Der Rang markiert die <em>Position</em> eines Werts im <em>sortierten Wertebereich</em>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -512,7 +548,7 @@ Hinweis
 <section id="binäre-daten" class="level4" data-number="8.2.1.3">
 <h4 data-number="8.2.1.3" class="anchored" data-anchor-id="binäre-daten"><span class="header-section-number">8.2.1.3</span> Binäre Daten</h4>
 <div id="def-binaere-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.11 </strong></span>Hat ein Wertebereich genau zwei Werte, dann liegt ein <strong>binärer Wertebereich</strong> vor.</p>
+<p><span class="theorem-title"><strong>Definition 8.11</strong></span> Hat ein Wertebereich genau zwei Werte, dann liegt ein <strong>binärer Wertebereich</strong> vor.</p>
 </div>
 <p>Binäre Wertebereiche sind ein Sonderfall unter den diskreten Daten, denn sie können entweder nominal- oder ordinalskaliert sein.</p>
 <p>Ein binärer Wertebereich ist ordinalskaliert, wenn die zulässigen Werte sortierbar sind. Ein häufiger Fall eines ordinalen binären Wertebereichs sind <em>vorher-nachher</em>-Markierungen.</p>
@@ -534,13 +570,13 @@ Merke
 <section id="intervallskalierte-daten" class="level4" data-number="8.2.1.4">
 <h4 data-number="8.2.1.4" class="anchored" data-anchor-id="intervallskalierte-daten"><span class="header-section-number">8.2.1.4</span> Intervallskalierte Daten</h4>
 <div id="def-invervalskalierte-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.12 </strong></span>Haben alle Werte in einem Wertebereich die gleichen Abstände, ist der Wertebereich <strong>intervallskaliert</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 8.12</strong></span> Haben alle Werte in einem Wertebereich die gleichen Abstände, ist der Wertebereich <strong>intervallskaliert</strong>.</p>
 </div>
 <p>Intervallskalierte Daten sind über die <em>Differenz</em> definiert: Werden zwei beliebige benachbarte Wertepaare ausgewählt, dann muss die Differenz zwischen Paaren, zwischen den beiden kleineren Werten und zwischen den beiden grösseren Werten jeweils zueinander gleich sein. Benachbarte Werte unterscheiden sich im Rang um <span class="math inline">1</span>.</p>
 <blockquote class="blockquote">
 <div id="exm-intervallskaliert" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 8.1 </strong></span>Aus dem ordinalskalierten Wertebereich der ganzen Zahlen <span class="math inline">\mathbb{I}</span> werden die Werte <code>1</code>, <code>2</code>, <code>5</code> und <code>6</code> gewählt. Die Wertepaare <code>1</code> und <code>2</code> sowie <code>5</code> und <code>6</code> sind benachbart.</p>
-<p>Wenn der Wertebereich intervallskaliert ist, dann müssen beide Gleichungen in <a href="#eq-intervallskaliert">Formel&nbsp;<span>8.1</span></a> gelten.</p>
+<p><span class="theorem-title"><strong>Beispiel 8.1</strong></span> Aus dem ordinalskalierten Wertebereich der ganzen Zahlen <span class="math inline">\mathbb{I}</span> werden die Werte <code>1</code>, <code>2</code>, <code>5</code> und <code>6</code> gewählt. Die Wertepaare <code>1</code> und <code>2</code> sowie <code>5</code> und <code>6</code> sind benachbart.</p>
+<p>Wenn der Wertebereich intervallskaliert ist, dann müssen beide Gleichungen in <a href="#eq-intervallskaliert" class="quarto-xref">Formel&nbsp;<span>8.1</span></a> gelten.</p>
 <p><span id="eq-intervallskaliert"><span class="math display">
 2 - 1 = 6 - 5 \Leftrightarrow 1 = 1 \\ und \\
 6 - 2 = 5 - 1 \Leftrightarrow 4 = 4
@@ -567,7 +603,7 @@ Wichtig
 <h3 data-number="8.2.2" class="anchored" data-anchor-id="kontinuierliche-daten"><span class="header-section-number">8.2.2</span> Kontinuierliche Daten</h3>
 <p>Lässt ein Wertebereich beliebige Abstufungen zwischen Werten zu, dann heisst dieser Wertebereich <em>kontinuierlich</em>.</p>
 <div id="def-kontinuierliche-daten" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.13 </strong></span><strong>Kontinuierliche Daten</strong> liegen vor, wenn alle Werte im Wertebereich <em>sortierbar</em> sind, die <em>gleichen Abstände</em> haben und die Verhältnisse von Werten ebenfalls im Wertebereich liegen.</p>
+<p><span class="theorem-title"><strong>Definition 8.13</strong></span> <strong>Kontinuierliche Daten</strong> liegen vor, wenn alle Werte im Wertebereich <em>sortierbar</em> sind, die <em>gleichen Abstände</em> haben und die Verhältnisse von Werten ebenfalls im Wertebereich liegen.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -579,13 +615,13 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Kontinierliche Daten</em> werden auch als <em>metrische Daten</em>, <em>varianzskalierte Daten</em> oder <em>kardinale Skalenniveaus</em> bezeichnet.</p>
+<p><em>Kontinuierliche Daten</em> werden auch als <em>metrische Daten</em>, <em>varianzskalierte Daten</em> oder <em>kardinale Skalenniveaus</em> bezeichnet.</p>
 </div>
 </div>
-<p><a href="#def-kontinuierliche-daten">Definition&nbsp;<span>8.13</span></a> verweist auf die Verhältnisse zwischen zwei Werten. Das Verhältnis ist das Gleiche wie ein Bruch bzw. die Division. Bei diskreten Daten können die Verhältnisse zwischen beliebigen Wertepaaren nicht so gebildet werden, dass auch alle Verhältnisse im gleichen diskreten Wertebereich liegen.</p>
+<p><a href="#def-kontinuierliche-daten" class="quarto-xref">Definition&nbsp;<span>8.13</span></a> verweist auf die Verhältnisse zwischen zwei Werten. Das Verhältnis ist das Gleiche wie ein Bruch bzw. die Division. Bei diskreten Daten können die Verhältnisse zwischen beliebigen Wertepaaren nicht so gebildet werden, dass auch alle Verhältnisse im gleichen diskreten Wertebereich liegen.</p>
 <blockquote class="blockquote">
 <div id="exm-kont-daten" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 8.2 </strong></span>Gegeben sind die Werte <code>1</code>, <code>2</code>, <code>3</code> und <code>4</code> aus dem <em>intervallskalierten</em> Wertebereich der ganzen Zahlen <span class="math inline">\mathbb{I}</span>.</p>
+<p><span class="theorem-title"><strong>Beispiel 8.2</strong></span> Gegeben sind die Werte <code>1</code>, <code>2</code>, <code>3</code> und <code>4</code> aus dem <em>intervallskalierten</em> Wertebereich der ganzen Zahlen <span class="math inline">\mathbb{I}</span>.</p>
 <p>Die Verhältnisse zwischen diesen Werten sind <span class="math inline">\frac{1}{2}</span>, <span class="math inline">\frac{1}{3}</span>, <span class="math inline">\frac{1}{4}</span>, <span class="math inline">\frac{2}{1}</span>, <span class="math inline">\frac{2}{3}</span>, <span class="math inline">\frac{2}{4}</span>, <span class="math inline">\frac{3}{1}</span>, <span class="math inline">\frac{3}{2}</span>, <span class="math inline">\frac{3}{4}</span>, <span class="math inline">\frac{4}{1}</span>, <span class="math inline">\frac{4}{2}</span> und <span class="math inline">\frac{4}{3}</span>. Nur die Verhältnisse <span class="math inline">\frac{2}{1}</span>, <span class="math inline">\frac{3}{1}</span>, <span class="math inline">\frac{4}{1}</span> und <span class="math inline">\frac{4}{2}</span> sind wieder ganze Zahlen und würden zum Wertebereich gehören.</p>
 <p>Wäre der Wertebereich mit <span class="math inline">\mathbb{R}</span> festgelegt worden, dann liegen alle Verhältnisse ebenfalls im Wertebereich von <span class="math inline">\mathbb{R}</span>. Daraus folgt, dass <span class="math inline">\mathbb{R}</span> ein <em>kontinuierlicher Wertebereich</em> ist.</p>
 </div>
@@ -610,7 +646,7 @@ Praxis
 <h2 data-number="8.3" class="anchored" data-anchor-id="sec-chapter-datenstrukturen"><span class="header-section-number">8.3</span> Datenstrukturen</h2>
 <p>Aus fundamentalen Datentypen können <em>komplexe Datentypen</em> zusammengesetzt werden, um mehrere Werte zusammenzufassen. Komplexe Datentypen können ausserdem wiederum komplexe Datentypen enthalten. So lassen sich komplexe Strukturen bilden.</p>
 <div id="def-datenstruktur" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.14 </strong></span>Eine <strong>Datenstruktur</strong> ist ein Datentyp, in dem mehrere Werte zusammengefasst werden können.</p>
+<p><span class="theorem-title"><strong>Definition 8.14</strong></span> Eine <strong>Datenstruktur</strong> ist ein Datentyp, in dem mehrere Werte zusammengefasst werden können.</p>
 </div>
 <p>Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einzelner Wert behandeln. Dadurch haben Datenstrukturen eine Reihe von Vorteilen:</p>
 <ul>
@@ -618,17 +654,17 @@ Praxis
 <li>Datenstrukturen können <em>verschachtelt</em> werden, um noch komplexere Strukturen zu bilden.</li>
 <li>Datenstrukturen können als Sammlung von Einzelwerten betrachtet werden, welche getrennt verarbeitet werden können.</li>
 </ul>
-<p>Durch diese Eigentschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet.</p>
+<p>Durch diese Eigenschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet.</p>
 <section id="eindimensionale-datenstrukturen" class="level3" data-number="8.3.1">
 <h3 data-number="8.3.1" class="anchored" data-anchor-id="eindimensionale-datenstrukturen"><span class="header-section-number">8.3.1</span> Eindimensionale Datenstrukturen</h3>
 <p><em>Datenfelder</em> (engl. <em>arrays</em>) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine <em>eindeutige Position</em> hat. Die Position eines Wertes wird durch einen <em>Index</em> angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren <strong>Länge</strong>. Die Länge und die Idizes einer Datenstruktur sind natürliche Zahlen.</p>
 <p>Über die zusammengefassten Datentypen lassen sich zwei Arten von Datenfeldern unterscheiden.</p>
 <div id="def-vektor" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.15 </strong></span><strong>Vektoren</strong> sind Datenfelder mit Werten vom <em>gleichen Datentyp</em>.</p>
+<p><span class="theorem-title"><strong>Definition 8.15</strong></span> <strong>Vektoren</strong> sind Datenfelder mit Werten vom <em>gleichen Datentyp</em>.</p>
 </div>
 <p>Weil alle Werte in einem Vektor vom gleichen Datentyp sind, sind Vektoren <em>homogene Datenstrukturen</em>.</p>
 <div id="def-liste" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.16 </strong></span><strong>Listen</strong> sind Datenfelder mit Werten mit <em>beliebigen Datentypen</em>.</p>
+<p><span class="theorem-title"><strong>Definition 8.16</strong></span> <strong>Listen</strong> sind Datenfelder mit Werten mit <em>beliebigen Datentypen</em>.</p>
 </div>
 <p>Weil die Datentypen der Listenwerte nicht festgelegt sind, sind Listen <em>heterogene Datenstrukturen</em>.</p>
 </section>
@@ -636,16 +672,16 @@ Praxis
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="mehrdimensionale-datentypen"><span class="header-section-number">8.3.2</span> Mehrdimensionale Datentypen</h3>
 <p>Die Logik der komplexen Datentypen erlaubt die Verknüpfung von Listen und Vektoren zu noch komplexeren Strukturen.</p>
 <div id="def-geschachtelte-liste" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.17 </strong></span>Eine <strong>geschachtelte Liste</strong> ist eine Liste, die aus beliebigen anderen Datenfeldern (d.h. Listen oder Vektoren) besteht, wobei die eingebetteten Datenfelder <em>unterschiedliche Längen</em> haben können.</p>
+<p><span class="theorem-title"><strong>Definition 8.17</strong></span> Eine <strong>geschachtelte Liste</strong> ist eine Liste, die aus beliebigen anderen Datenfeldern (d.h. Listen oder Vektoren) besteht, wobei die eingebetteten Datenfelder <em>unterschiedliche Längen</em> haben können.</p>
 </div>
 <p>Ein <strong>Spezialfall</strong> der geschachtelten Liste sind <strong>Listen, die Vektoren mit <em>gleicher Länge</em> schachteln</strong>. Diese Spezialfälle haben besondere Namen:</p>
 <div id="def-liste-komplex" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.18 </strong></span>Eine <strong>Datenrahmen</strong> (engl. <em>data frame</em>) verknüpft mehrere gleichlange Vektoren mit <em>unterschiedlichen Datentypen</em>.</p>
+<p><span class="theorem-title"><strong>Definition 8.18</strong></span> Eine <strong>Datenrahmen</strong> (engl. <em>data frame</em>) verknüpft mehrere gleichlange Vektoren mit <em>unterschiedlichen Datentypen</em>.</p>
 </div>
-<p>Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als <em>hetreogene Datenstrukturen</em>.</p>
+<p>Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als <em>heterogene Datenstrukturen</em>.</p>
 <p>Die gleiche Logik lässt sich auch auf Vektoren anwenden. In diesem Fall ist der <strong>Spezialfall</strong> ein <strong>Vektor, der Vektoren gleicher Länge und des gleichen Datentyps schachtelt</strong>. Diese Datenstruktur hat ebenfalls einen eigenen Namen:</p>
 <div id="def-matrix-structure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.19 </strong></span>Eine <strong>Matrix</strong> verknüpft mehrere gleichlange Vektoren vom Datentyp <em>Zahlen</em>. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.</p>
+<p><span class="theorem-title"><strong>Definition 8.19</strong></span> Eine <strong>Matrix</strong> verknüpft mehrere gleichlange Vektoren vom Datentyp <em>Zahlen</em>. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.</p>
 </div>
 <p>Weil alle Vektoren in einer Matrix vom gleichen Datentyp sind, sind Matrizen <em>homogene Datenstrukturen</em>.</p>
 <p>Eine Matrix hat eine Höhe (oft als <em>m</em> Zeilen gekennzeichnet) und eine Breite (oft als <em>n</em> Spalten gekennzeichnet). Die Anzahl der Zeilen und Spalten müssen natürliche Zahlen sein. Daraus folgt, dass nur Matrizen existieren, für die m und n &gt; 0 gilt.</p>
@@ -664,7 +700,7 @@ Hinweis
 </div>
 </div>
 <div id="def-quadratische-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.20 </strong></span>Eine Matrix mit gleichvielen Spalten und Zeilen wird als <strong>quadratische Matrix</strong> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 8.20</strong></span> Eine Matrix mit gleichvielen Spalten und Zeilen wird als <strong>quadratische Matrix</strong> bezeichnet.</p>
 </div>
 <p>Für eine quadratische Matrix gilt immer <span class="math inline">m = n</span>.</p>
 <p>Der Wert an einer Position in einer Matrix ist durch den Zeilen- und Spaltenindex eindeutig identifiziert.</p>
@@ -681,10 +717,10 @@ a_{m1} &amp; a_{m2} &amp;  \cdots &amp;  a_{mn}
 <section id="sec-matrix-vektor-formen" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="sec-matrix-vektor-formen"><span class="header-section-number">8.4</span> Vektorformen von Matrizen</h2>
 <p>Neben der üblichen Schreibweise von Matrizen, können Matrizen auch als <em>Vektoren</em> dargestellt werden. Dabei handelt es sich um eine besondere Schreibweise der Matrix, die <em>Vektorform einer Matrix</em> genannt wird. Für jede Matrix gibt es immer <em>zwei</em> Vektorformen. Die eine Vektorform fügt die Werte einer Matrix <em>spaltenweise</em> aneinander, die andere Vektorform fügt die Werte <em>zeilenweise</em> aneinander.</p>
-<p>Die Vektorform einer Matrix kann nur gebildet werden, weil wegen <a href="#def-matrix-structure">Definition&nbsp;<span>8.19</span></a> die Datentypen aller Werte in einer Matrix gleich sind. Deshalb wird die Bedingung aus <a href="#def-vektor">Definition&nbsp;<span>8.15</span></a> für die Vektorform einer Matrix erfüllt.</p>
+<p>Die Vektorform einer Matrix kann nur gebildet werden, weil wegen <a href="#def-matrix-structure" class="quarto-xref">Definition&nbsp;<span>8.19</span></a> die Datentypen aller Werte in einer Matrix gleich sind. Deshalb wird die Bedingung aus <a href="#def-vektor" class="quarto-xref">Definition&nbsp;<span>8.15</span></a> für die Vektorform einer Matrix erfüllt.</p>
 <blockquote class="blockquote">
 <div id="exm-vektorform" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 8.3 </strong></span>Vektorformen einer Matrix</p>
+<p><span class="theorem-title"><strong>Beispiel 8.3</strong></span> Vektorformen einer Matrix</p>
 <p>Für die folgende Matrix <span class="math inline">A</span> mit <span class="math inline">m = 3</span> Zeilen und <span class="math inline">n = 2</span> Spalten soll in ihre Vektorform überführt werden.</p>
 <p><span class="math display">
 A = \begin{bmatrix}
@@ -768,18 +804,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -811,11 +836,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -825,8 +889,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -838,7 +911,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -882,6 +1078,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -907,6 +1104,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -968,12 +1191,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/01-tool-chain/git_github.html" class="pagination-link">
+      <a href="../../kapitel/01-tool-chain/git_github.html" class="pagination-link" aria-label="Versionierung mit Git und GitHub">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Versionierung mit Git und GitHub</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../kapitel/04-dateiformate/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/04-dateiformate/kapitel.html" class="pagination-link" aria-label="Dateiformate">
         <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Dateiformate</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -982,4 +1205,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Daten und Information - 19&nbsp; Daten visualisieren</title>
+<title>19&nbsp; Daten visualisieren – Daten und Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -56,13 +62,14 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -77,7 +84,34 @@ ul.task-list li input[type="checkbox"] {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -87,13 +121,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/14-daten-visualisieren/kapitel.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Daten visualisieren</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/14-daten-visualisieren/kapitel.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Daten visualisieren</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -102,12 +136,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Daten und Information</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/dxiai/daten-organisation" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dxiai/daten-organisation" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -126,9 +160,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ausgangslage und Vorbereitung</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -155,9 +189,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Datenquellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -202,9 +236,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Mathematik der Daten</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -261,9 +295,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Deskriptive Datenanalyse</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -291,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -328,12 +362,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#teildiagramme" id="toc-teildiagramme" class="nav-link" data-scroll-target="#teildiagramme"><span class="header-section-number">19.4.4</span> Teildiagramme</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action">Problem melden</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../kapitel/13-daten-beschreiben/kapitel.html">Deskriptive Datenanalyse</a></li><li class="breadcrumb-item"><a href="../../kapitel/14-daten-visualisieren/kapitel.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Daten visualisieren</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span id="sec-chapter-daten-visualisieren" class="quarto-section-identifier"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Daten visualisieren</span></span></h1>
 </div>
@@ -348,7 +382,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Die Datenvisualisierung ist ein wichtiges Werkzeug für die Datenanalyse. Die Datenvisualisierung hilft Systematiken zu erkennen, Beziehungen zu verstehen und Strukturen zu erfassen, die in strukturierten Daten nicht direkt nachvollzogen werden können. Sie ist ein wesentliches Instrument für die Kommunikation von Daten, weil sich graphische Darstellungen leichter erfassen lassen als strukturierte Daten.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -364,7 +400,7 @@ Merke
 <p>Die Datenvisualisierung ist ein Hilfsmittel zur Analyse und zur Kommunikation. Sie ist kein Selbstzweck und stellt <em>keine</em> Analyse dar. Die Datenvisualisierung kann helfen, Daten vor einer weiterführenden Analyse zu verstehen.</p>
 </div>
 </div>
-<p>Die Datenvisualisierung kann Informationstheoretisch betrachtet werden. Dabei werden die Werte visuell <em>kodiert</em>. Dieser Vorgang folgt den gleichen informationstheoretischen Prinzipien wie die Datenverarbeitung. Entsprechend muss die Datenvisualisierung als eine Form der Informationskodierung verstanden werden. Aus dieser Einsicht folgt konsequent, dass Information bei der Visualisierung zwangsläufig durch Rauschen und Equivokation verloren geht. Gleichzeitig müssen Visualisierungen nicht nur erstellt sondern auch gelesen und systematisch interpretiert werden. Bei wissenschaftlichen Visualisierungen werden spezielle visuelle Codes verwendet, um Werte und ihre Beziehungen zueinander sichtbar zu machen.</p>
+<p>Die Datenvisualisierung kann Informationstheoretisch betrachtet werden. Dabei werden die Werte visuell <em>kodiert</em>. Dieser Vorgang folgt den gleichen informationstheoretischen Prinzipien wie die Datenverarbeitung. Entsprechend muss die Datenvisualisierung als eine Form der Informationskodierung verstanden werden. Aus dieser Einsicht folgt konsequent, dass Information bei der Visualisierung zwangsläufig durch Rauschen und Äquivokation verloren geht. Gleichzeitig müssen Visualisierungen nicht nur erstellt sondern auch gelesen und systematisch interpretiert werden. Bei wissenschaftlichen Visualisierungen werden spezielle visuelle Codes verwendet, um Werte und ihre Beziehungen zueinander sichtbar zu machen.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -380,21 +416,25 @@ Künstlerische Freiheit
 </div>
 <section id="aufbau-eines-diagramms" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="aufbau-eines-diagramms"><span class="header-section-number">19.1</span> Aufbau eines Diagramms</h2>
-<p>Eine Visualisierung ist in ein <em>Diagramm</em> eingebettet. Ein Diagramm enthält meist mehr Elemente als die eigentliche Visualisierung. <a href="#fig-labelled-diag">Abbildung&nbsp;<span>19.1</span></a> zeigt die wichtigsten Elemente eines Diagramms.</p>
-<p><strong>Jedes</strong> Diagramm umfasst den <strong>Darstellungsbereich</strong> mit den <strong>Datenpunkten</strong> (s. <a href="../03-daten-organisieren/kapitel.html#def-messereignis">Definition&nbsp;<span>6.5</span></a>), <strong>Achsen</strong> für die <em>Hauptdimensionen</em> mit <strong>Achsmarkierungen</strong> für die Position ausgewählter Werte im Wertebereich der Dimension und <strong>Achsbeschriftungen</strong>, die die <em>Hauptdimensionen</em> kennzeichnen.</p>
+<p>Eine Visualisierung ist in ein <em>Diagramm</em> eingebettet. Ein Diagramm enthält meist mehr Elemente als die eigentliche Visualisierung. <a href="#fig-labelled-diag" class="quarto-xref">Abbildung&nbsp;<span>19.1</span></a> zeigt die wichtigsten Elemente eines Diagramms.</p>
+<p><strong>Jedes</strong> Diagramm umfasst den <strong>Darstellungsbereich</strong> mit den <strong>Datenpunkten</strong> (s. <a href="../03-daten-organisieren/kapitel.html#def-messereignis" class="quarto-xref">Definition&nbsp;<span>6.5</span></a>), <strong>Achsen</strong> für die <em>Hauptdimensionen</em> mit <strong>Achsmarkierungen</strong> für die Position ausgewählter Werte im Wertebereich der Dimension und <strong>Achsbeschriftungen</strong>, die die <em>Hauptdimensionen</em> kennzeichnen.</p>
 <p><em>Komplexe</em> Diagramme erfordern zusätzlich eine <strong>Legende</strong> für <strong>jede</strong> dargestellte Nebendimension.</p>
 <p><em>Optional</em> können Visualisierungen mit einer erklärenden <strong>Überschrift</strong> versehen werden. Ebenfalls <em>optional</em> sind <strong>Hilfslinien</strong>, die die <em>Orientierung</em> im Wertebereich der <em>Hauptdimensionen</em> erleichtern.</p>
-<div id="fig-labelled-diag" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/plot_example_beschriftet.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.1: Komponenten eines Diagramms am Beispiel eines Ballondiagramms</figcaption>
+<div id="fig-labelled-diag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-labelled-diag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/plot_example_beschriftet.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-labelled-diag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.1: Komponenten eines Diagramms am Beispiel eines Ballondiagramms
+</figcaption>
 </figure>
 </div>
 <section id="haupt--und-nebendimensionen" class="level3" data-number="19.1.1">
 <h3 data-number="19.1.1" class="anchored" data-anchor-id="haupt--und-nebendimensionen"><span class="header-section-number">19.1.1</span> Haupt- und Nebendimensionen</h3>
 <p>Für eine Visualisierung müssen immer zuerst die darzustellenden Merkmale ausgewählt werden.</p>
 <div id="def-dimensionen" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.1 </strong></span>Eine <strong>Dimension</strong> eines Diagramms entspricht einem dargestellten <em>Merkmal</em> der verwendeten Stichprobe.</p>
+<p><span class="theorem-title"><strong>Definition 19.1</strong></span> Eine <strong>Dimension</strong> eines Diagramms entspricht einem dargestellten <em>Merkmal</em> der verwendeten Stichprobe.</p>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -411,12 +451,12 @@ Warnung
 </div>
 <p>Beim Visualisieren werden <em>Haupt-</em> und <em>Nebendimensionen</em> unterschieden.</p>
 <div id="def-viz-hauptdimension" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.2 </strong></span>Eine <strong>Hauptdimension</strong> eines Diagramms bildet den Wertebereich eines Merkmals als eine <em>horizontale oder vertikale Länge</em> ab.</p>
+<p><span class="theorem-title"><strong>Definition 19.2</strong></span> Eine <strong>Hauptdimension</strong> eines Diagramms bildet den Wertebereich eines Merkmals als eine <em>horizontale oder vertikale Länge</em> ab.</p>
 </div>
 <p>Die Hauptdimensionen legen die <strong>Position</strong> der <em>Datenpunkte</em> in der Visualisierung fest.</p>
 <p>Jede Visualisierung hat <em>mindestens eine</em> Hauptdimension.</p>
 <div id="def-viz-nebendimension" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.3 </strong></span><strong>Nebendimensionen</strong> eines Diagramms bilden den Wertebereich eines Merkmals als <em>visuelle Eigenschaften</em> von Datenpunkten ab.</p>
+<p><span class="theorem-title"><strong>Definition 19.3</strong></span> <strong>Nebendimensionen</strong> eines Diagramms bilden den Wertebereich eines Merkmals als <em>visuelle Eigenschaften</em> von Datenpunkten ab.</p>
 </div>
 <p>Visuelle Eigenschaften können <em>Grösse</em>, <em>Form</em> oder <em>Farbe</em> von Datenpunkte sein.</p>
 <p>Nebendimensionen werden nicht in allen Diagrammen verwendet.</p>
@@ -428,10 +468,10 @@ Warnung
 </section>
 <section id="achsen" class="level3" data-number="19.1.3">
 <h3 data-number="19.1.3" class="anchored" data-anchor-id="achsen"><span class="header-section-number">19.1.3</span> Achsen</h3>
-<p>Die <strong>Achsen</strong> markieren die <em>Hauptdimensionen</em> eines Diagramms. Es sollten nicht mehr als zwei Hauptdimensionen in einem Diagramm verwendet werden, weil sich aus der Darstellung nicht mehr erkennen lässt, welche Achse zu welchen visuellen Elementen grhört.</p>
+<p>Die <strong>Achsen</strong> markieren die <em>Hauptdimensionen</em> eines Diagramms. Es sollten nicht mehr als zwei Hauptdimensionen in einem Diagramm verwendet werden, weil sich aus der Darstellung nicht mehr erkennen lässt, welche Achse zu welchen visuellen Elementen gehört.</p>
 <p>Die horizontale Achse wird per Konvention <strong>x-Achse</strong> und die vertikale Achse <strong>y-Achse</strong> genannt.</p>
 <p>Achsen sollten mit den wichtigsten Werten an <strong>Achsmarkierungen</strong> beschriftet werden und müssen eine aussagekräftige <strong>Achsbeschriftung</strong> haben. Die meisten Analyseumgebungen übernehmen standardmässig den Titel des Datenvektors.</p>
-<p>Für <strong>nominalskalierte Wertebereiche</strong> müssen <strong>alle</strong> dargestellten Werte über eine Achsmarkierung beschriftet werden. Bei sehr vielen Werten kann es vorkommen, dass diese Markierungen unleserlich werden. In diesem Fall sollten die Werte alphabetisch oder nummerisch sortiert werden und nur markannte Werte (z.B. jeden fünften Wert) hervorgehoben werden. In diesem Fall muss auf den vollständigen Wertebereich verwiesen werden, damit die Datenpunkte eindeutig identifiziert werden können.</p>
+<p>Für <strong>nominalskalierte Wertebereiche</strong> müssen <strong>alle</strong> dargestellten Werte über eine Achsmarkierung beschriftet werden. Bei sehr vielen Werten kann es vorkommen, dass diese Markierungen unleserlich werden. In diesem Fall sollten die Werte alphabetisch oder nummerisch sortiert werden und nur markante Werte (z.B. jeden fünften Wert) hervorgehoben werden. In diesem Fall muss auf den vollständigen Wertebereich verwiesen werden, damit die Datenpunkte eindeutig identifiziert werden können.</p>
 <p>Bei <strong>ordinalskalierten Wertebereichen</strong> müssen die <strong>Extreme des Wertebereichs</strong> beschriftet werden. Gegebenenfalls sollte auch der <em>Mittelpunkt</em> des Wertebereichs auf der Achse beschriftet werden.</p>
 <p>Bei <strong>kontinuierlichen Wertebereichen</strong> sollten Werte in <strong>regelmässigen Abständen</strong> markiert und beschriftet werden. Diese genauen Abstände hängen vom Umfang des dargestellten Intervalls ab.</p>
 </section>
@@ -462,7 +502,7 @@ Praxis
 <section id="histogramme" class="level3" data-number="19.2.1">
 <h3 data-number="19.2.1" class="anchored" data-anchor-id="histogramme"><span class="header-section-number">19.2.1</span> Histogramme</h3>
 <div id="def-histogramm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.4 </strong></span>Ein Histogramm zeigt die Häufigkeiten einer Variablen mithilfe von Balken an. Umgangssprachlich werden Histogramme auch als <em>Balkendiagramme</em> bezeichnet.</p>
+<p><span class="theorem-title"><strong>Definition 19.4</strong></span> Ein Histogramm zeigt die Häufigkeiten einer Variablen mithilfe von Balken an. Umgangssprachlich werden Histogramme auch als <em>Balkendiagramme</em> bezeichnet.</p>
 </div>
 <p>Die Höhe der Balken entspricht der Häufigkeit der Werte. Ein Histogramm macht die Verteilung einer Variable sichtbar.</p>
 <ul>
@@ -470,10 +510,14 @@ Praxis
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-histogram-cont" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-histogram-cont-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.2: Beispiel für ein Histogramm für einen kontinuierlichen Wertebereich</figcaption>
+<div id="fig-visual-histogram-cont" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-histogram-cont-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-histogram-cont-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-histogram-cont-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.2: Beispiel für ein Histogramm für einen kontinuierlichen Wertebereich
+</figcaption>
 </figure>
 </div>
 </div>
@@ -483,15 +527,19 @@ Praxis
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-histogram-discrete" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-histogram-discrete-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.3: Beispiel für ein Histogramm für einen diskreten Wertebereich</figcaption>
+<div id="fig-visual-histogram-discrete" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-histogram-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-histogram-discrete-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-histogram-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.3: Beispiel für ein Histogramm für einen diskreten Wertebereich
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Die Reihenfolge der Balken ist nicht beliebig. Die Balken werden für alle ordinalskalierten Wertebereiche in der Reihenfolge der Werte bzw. der Intervalle angeordnet. Nominalskalierte Wertebereiche haben keine natürliche Reihenfolgen. Deshalb werden die Balken eines Histogramms für nominalskalierte Wertebereiche in der Reihenfolge der Häufigkeiten angeordnet.</p>
+<p>Die Reihenfolge der Balken ist nicht beliebig. Die Balken werden für alle ordinalskalierten Wertebereiche in der Reihenfolge der Werte bzw. der Intervalle angeordnet. Nominalskalierte Wertebereiche haben keine natürlichen Reihenfolgen. Deshalb werden die Balken eines Histogramms für nominalskalierte Wertebereiche in der Reihenfolge der Häufigkeiten angeordnet.</p>
 <p>Eine Sonderform eines Histogramms ist das sog. <em>Kreis-</em> bzw. <em>Tortendiagramm</em>. Ein Tortendiagramm ist ein Histogramm, bei dem die Balken durch Kreissegmente ersetzt werden. Die Grösse der Kreissegmente entspricht dem Anteil der Häufigkeit an der Gesamthäufigkeit.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -503,14 +551,14 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ein Histogramm ist einem Kreisdiagramm immer vorzuziehen. Kreisdiagramme sollten nur verwendet werden, wenn wenige Kreissegmente vorhanden sind. Dabei sollten entweder ein Kreissegment besonders hervorstechen oder alle Segmente ungefährt <em>gleichverteilt</em> sein.</p>
+<p>Ein Histogramm ist einem Kreisdiagramm immer vorzuziehen. Kreisdiagramme sollten nur verwendet werden, wenn wenige Kreissegmente vorhanden sind. Dabei sollten entweder ein Kreissegment besonders hervorstechen oder alle Segmente ungefähr <em>gleichverteilt</em> sein.</p>
 </div>
 </div>
 </section>
 <section id="boxplot" class="level3" data-number="19.2.2">
 <h3 data-number="19.2.2" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">19.2.2</span> Boxplot</h3>
 <div id="def-boxplot" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.5 </strong></span>Ein <strong>Boxplot</strong> stellt die Grösse der Verteilungsintervalle von Daten als Rechteck und Linien dar. Aussergewöhneliche Werte (Ausreisser) werden als Punkte dargestellt.</p>
+<p><span class="theorem-title"><strong>Definition 19.5</strong></span> Ein <strong>Boxplot</strong> stellt die Grösse der Verteilungsintervalle von Daten als Rechteck und Linien dar. Aussergewöhnliche Werte (Ausreisser) werden als Punkte dargestellt.</p>
 </div>
 <p><strong>Box-Whisker-Diagramm</strong> und <strong>Kastengrafik</strong> sind gebräuchliche Synonyme für Boxplots.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -523,17 +571,21 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Boxplots dürfen nur für ordinal- oder kontinuierlichskalierte Wertebereiche verwendet werden.</p>
+<p>Boxplots dürfen nur für ordinal- oder kontinuierlich skalierte Wertebereiche verwendet werden.</p>
 </div>
 </div>
 <p>Ein Boxplot hat nur eine Achse für den Wertebereich der dargestellten Werte. Die zweite Achse in einem einfachen Boxplot ist nur notwendig, um das Rechteck zeichnen zu können und hat sonst keine Bedeutung.</p>
 <p>Ein Boxplot gliedert die vorliegenden Daten in vier gleichgrosse Bereiche. Diese Bereiche heisse Quartile. Jedes Quartil umfasst jeweils ein Viertel der Werte. Die beiden mittleren Quartile werden als zwei Rechtecke dargestellt. Die Länge der beiden Rechtecke heisst <strong>Interquartilsabstand</strong>. Die Linie die am Übergang zwischen den beiden Rechtecken entsteht markiert den <em>Median</em> der Verteilung. Ausreisser sind Werte, die um mehr als das 1.5-fache des Interquartilsabstands von der nächsten Quartilsgrenze entfernt sind.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-boxplot-single" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-boxplot-single-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.4: Beispiel für einen Boxplot</figcaption>
+<div id="fig-visual-boxplot-single" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-boxplot-single-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-boxplot-single-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-boxplot-single-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.4: Beispiel für einen Boxplot
+</figcaption>
 </figure>
 </div>
 </div>
@@ -542,10 +594,10 @@ Merke
 </section>
 <section id="dichtediagramme" class="level3" data-number="19.2.3">
 <h3 data-number="19.2.3" class="anchored" data-anchor-id="dichtediagramme"><span class="header-section-number">19.2.3</span> Dichtediagramme</h3>
-<p>Boxplots und Histogramme fassen die Werte immer zu Intervallen zusammen. Dadurch lässt sich die genaue Verteilung der Daten nicht genau nachvollziehen. Bei <strong>kontinuierlichen Wertebereichen</strong> zeichen die Intervalle nicht immer ein akkurates Bild der Verteilung. Eine detailliertere Annäherung als ein Histogramm liefert die <em>Dichtefunktion</em> einer Verteilung.</p>
+<p>Boxplots und Histogramme fassen die Werte immer zu Intervallen zusammen. Dadurch lässt sich die genaue Verteilung der Daten nicht genau nachvollziehen. Bei <strong>kontinuierlichen Wertebereichen</strong> zeigen die Intervalle nicht immer ein akkurates Bild der Verteilung. Eine detailliertere Annäherung als ein Histogramm liefert die <em>Dichtefunktion</em> einer Verteilung.</p>
 <p>Die <em>Dichtefunktion</em> liefert die Wahrscheinlichkeiten, mit der Werte in einer Verteilung auftreten, als eine stetige Funktion von Wahrscheinlichkeitswerten. Weil nicht alle Werte in den Daten vorkommen, ist die Dichtefunktion eine <strong><em>Annäherung</em></strong> an die wahrscheinlichste Verteilung der dargestellten Werte.</p>
 <div id="def-dichteplot" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.6 </strong></span><strong>Dichtediagramme</strong> sind eine Visualisierung der <em>Dichtefunktion</em> einer Verteilung und zeigen die Wahrscheinlichkeiten mit denen Werte eines <em>kontinuierlichen</em> Wertebereichs in einer Verteilung vorkommen.</p>
+<p><span class="theorem-title"><strong>Definition 19.6</strong></span> <strong>Dichtediagramme</strong> sind eine Visualisierung der <em>Dichtefunktion</em> einer Verteilung und zeigen die Wahrscheinlichkeiten mit denen Werte eines <em>kontinuierlichen</em> Wertebereichs in einer Verteilung vorkommen.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -562,10 +614,14 @@ Merke
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-density" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-density-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.5: Beispiel eines Dichtediagramms</figcaption>
+<div id="fig-visual-density" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-density-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.5: Beispiel eines Dichtediagramms
+</figcaption>
 </figure>
 </div>
 </div>
@@ -589,10 +645,14 @@ Merke
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-violin" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-violin-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.6: Beispiel eines violinplot</figcaption>
+<div id="fig-visual-violin" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-violin-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.6: Beispiel eines violinplot
+</figcaption>
 </figure>
 </div>
 </div>
@@ -605,16 +665,16 @@ Merke
 <section id="funktionsdiagramme" class="level3" data-number="19.3.1">
 <h3 data-number="19.3.1" class="anchored" data-anchor-id="funktionsdiagramme"><span class="header-section-number">19.3.1</span> Funktionsdiagramme</h3>
 <div id="def-funktionsdiagramm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.7 </strong></span>Ein <strong>Funktionsdiagramm</strong> stellt die Parameter und die Ergebnisse einer oder mehrerer (mathematischer) Funktionen gegenüber.</p>
+<p><span class="theorem-title"><strong>Definition 19.7</strong></span> Ein <strong>Funktionsdiagramm</strong> stellt die Parameter und die Ergebnisse einer oder mehrerer (mathematischer) Funktionen gegenüber.</p>
 </div>
 <p>In Funktionsdiagrammen werden die Parameter einer Funktion ihren Ergebnissen gegenübergestellt. Zwischen diesen Werten gibt es eine Beziehung, die durch die verwendete Funktion festgelegt wird.</p>
 <div id="def-funktionale-abhängigkeit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.8 </strong></span>Die Parametern und den Ergebnissen eine Funktion sind <strong><em>funktional abhängig</em></strong>. Für den Spezialfall einer linearen Funktion sind die Werte <strong>linear ahbängig</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 19.8</strong></span> Die Parametern und den Ergebnissen eine Funktion sind <strong><em>funktional abhängig</em></strong>. Für den Spezialfall einer linearen Funktion sind die Werte <strong>linear abhängig</strong>.</p>
 </div>
-<p>Funktionsdiagramme visualisieren also die funktionale Abhängigkeit zwischen Parametern und Ergenissen von Funktionen.</p>
+<p>Funktionsdiagramme visualisieren also die funktionale Abhängigkeit zwischen Parametern und Ergebnissen von Funktionen.</p>
 <p>Für ein Funktionsdiagramm wird neben der Funktion zusätzlich ein Parameterintervall benötigt. Das Parameterintervall bildet die Grundlage für den Darstellungsbereich. Anschliessend wird eine Wertetabelle für das Parameterintervall erstellt. Diese Tabelle enthält zwei Vektoren:</p>
 <ul>
-<li>Eine <em>Sequenz</em> (s <a href="../09-vektor-operationen/kapitel.html#sec-sequenzen"><span>Kapitel&nbsp;13.1</span></a>) zwischen der Unter- und der Obergrenze des Parameterintervalls.</li>
+<li>Eine <em>Sequenz</em> (s <a href="../09-vektor-operationen/kapitel.html#sec-sequenzen" class="quarto-xref"><span>Kapitel 13.1</span></a>) zwischen der Unter- und der Obergrenze des Parameterintervalls.</li>
 <li>Die Funktionsergebnisse für alle Werte gewählten Parameterintervall.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -632,17 +692,21 @@ Praxis
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-math-funcs" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-math-funcs-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.7: Beispiel eines Funktionsplots mit einer linearen und einer quadratischen Funktionen</figcaption>
+<div id="fig-visual-math-funcs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-math-funcs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-math-funcs-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-math-funcs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.7: Beispiel eines Funktionsplots mit einer linearen und einer quadratischen Funktionen
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Bei der Datenvisualisierung werden Funktionsdiagramme zur Vorhersage oder zum Vergleich der Werte eines Vektors durch die Werte eines anderen Vektors verwendet.</p>
 <div id="def-modell" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.9 </strong></span>Ein <strong><em>Modell</em></strong> ist eine Funktion, die eine Beziehung zwischen Variablen als funktionale Anhängigkeit beschreibt.</p>
+<p><span class="theorem-title"><strong>Definition 19.9</strong></span> Ein <strong><em>Modell</em></strong> ist eine Funktion, die eine Beziehung zwischen Variablen als funktionale Anhängigkeit beschreibt.</p>
 </div>
 </section>
 <section id="beziehungen" class="level3" data-number="19.3.2">
@@ -671,10 +735,14 @@ Achtung
 <p>Die Werte der ersten Variablen werden z.B. auf der x-Achse abgetragen, die Werte der zweiten Variablen auf der y-Achse. Die Punkte werden dann an der entsprechenden Stelle im Koordinatensystem dargestellt. Die Wahl der Achse ist beliebig.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-points" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-points-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.8: Beispiel eines Streudiagramms</figcaption>
+<div id="fig-visual-points" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-points-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-points-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.8: Beispiel eines Streudiagramms
+</figcaption>
 </figure>
 </div>
 </div>
@@ -685,10 +753,14 @@ Achtung
 <p>Wenn beide Variablen diskrete Wertebereiche haben, haben die Punkte im Streudiagramm die Tendenz, dass sich die Punkte zu überlagern, weil es nur eine begrenzte Anzahl möglichen Wertepaaren gibt. Um dieses Problem zu umgehen, wird eine besondere Variante des Streudiagramms eingesetzt: Das sog. <em>Jitter-Diagramm</em> (etwa <em>Zitterdiagramm</em>). Ein Jitter-Diagramm ist eine Variante von Streudiagrammen.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-points-discrete" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-points-discrete-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.9: Beispiel eines Streudiagramms mit überlagernden Punkten aus zwei diskreten Variablen</figcaption>
+<div id="fig-visual-points-discrete" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-points-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-points-discrete-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-points-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.9: Beispiel eines Streudiagramms mit überlagernden Punkten aus zwei diskreten Variablen
+</figcaption>
 </figure>
 </div>
 </div>
@@ -697,10 +769,14 @@ Achtung
 <p>Durch das zufällige Positionieren werden die Punkte aufgelockert und die Beziehung der Variablen wird sichtbar. Die Grösse des Bereichs wird so gewählt, dass sich mehrere Bereiche <em>nicht überlappen</em>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-jitter-labelled" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-jitter-labelled-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.10: Beispiel eines Jitter-Diagramms mit zwei diskreten Variablen. Jitter-Bereiche sind Rot hervorgehoben.</figcaption>
+<div id="fig-visual-jitter-labelled" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-jitter-labelled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-jitter-labelled-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-jitter-labelled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.10: Beispiel eines Jitter-Diagramms mit zwei diskreten Variablen. Jitter-Bereiche sind Rot hervorgehoben.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -723,16 +799,20 @@ Praxis
 <section id="liniendiagramme" class="level4" data-number="19.3.2.3">
 <h4 data-number="19.3.2.3" class="anchored" data-anchor-id="liniendiagramme"><span class="header-section-number">19.3.2.3</span> Liniendiagramme</h4>
 <div id="def-liniendiagramm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.10 </strong></span>Ein <strong><em>Liniendiagramm</em></strong> eine Variante eines Streudiagramms, bei dem aufeinanderfolgende Punkte durch eine Linie verbunden werden.</p>
+<p><span class="theorem-title"><strong>Definition 19.10</strong></span> Ein <strong><em>Liniendiagramm</em></strong> eine Variante eines Streudiagramms, bei dem aufeinanderfolgende Punkte durch eine Linie verbunden werden.</p>
 </div>
 <p>Liniendiagramme werden verwendet, wenn die Werte einer Variablen in einer bestimmten Reihenfolge zueinander stehen. Die Werte werden dann auf der entsprechenden Achse in der entsprechenden Reihenfolge abgetragen. Die Punkte werden dann durch eine Linie verbunden.</p>
 <p>Liniendiagramme werden häufig verwendet, um die Entwicklung von Variablen über die Zeit darzustellen.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-lines" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-lines-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.11: Beispiel eines Liniendiagramms (DAX Index 1991-1998)</figcaption>
+<div id="fig-visual-lines" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-lines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-lines-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-lines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.11: Beispiel eines Liniendiagramms (DAX Index 1991-1998)
+</figcaption>
 </figure>
 </div>
 </div>
@@ -755,17 +835,21 @@ Achtung
 <section id="ausgleichsgeraden" class="level3" data-number="19.3.3">
 <h3 data-number="19.3.3" class="anchored" data-anchor-id="ausgleichsgeraden"><span class="header-section-number">19.3.3</span> Ausgleichsgeraden</h3>
 <div id="def-liniendiagramm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.11 </strong></span>Eine <strong>Ausgleichsgerade</strong> ist ein Funktionsdiagramm einer Funktion, welche die Ergebnisse einer linearen Funktion zu den tatsächlichen Werten <em>minimiert</em>.</p>
+<p><span class="theorem-title"><strong>Definition 19.11</strong></span> Eine <strong>Ausgleichsgerade</strong> ist ein Funktionsdiagramm einer Funktion, welche die Ergebnisse einer linearen Funktion zu den tatsächlichen Werten <em>minimiert</em>.</p>
 </div>
 <p><em>Ausgleichsgeraden</em> verwenden <em>lineare Funktionen</em> in der Form <span class="math inline">ax + c</span>. Die Funktion einer Ausgleichsgeraden <em>minimiert</em> die Funktionsergebnisse mit den tatsächlichen Werten.</p>
 <p>Eine Ausgleichsgerade darf nicht willkürlich gezogen werden, sondern muss aus den gemessenen Werten ermittelt werden. Eine Ausgleichsgerade sollte immer gemeinsam mit den tatsächlichen Werten der Variablen dargestellt werden.</p>
 <p>Die <em>Funktion</em> einer Ausgleichsgeraden ist ein <em>einfaches</em> Modell für die gefundenen Daten. Die Beziehung zwischen den Variablen wird in diesem Modell als <em>lineare Abhängigkeit</em> abgebildet.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-bsp-streudiagramm-mit-ausgleich" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-bsp-streudiagramm-mit-ausgleich-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.12: Beispiel einer Ausgleichsgeraden in einem Streudiagramm</figcaption>
+<div id="fig-bsp-streudiagramm-mit-ausgleich" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bsp-streudiagramm-mit-ausgleich-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-bsp-streudiagramm-mit-ausgleich-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsp-streudiagramm-mit-ausgleich-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.12: Beispiel einer Ausgleichsgeraden in einem Streudiagramm
+</figcaption>
 </figure>
 </div>
 </div>
@@ -777,10 +861,14 @@ Achtung
 <p>Diese Form von kombinierten Diagrammen tritt sehr häufig in Verbindung mit Sekundärindizes auf. Dabei werden Verteilungen von gruppierten Werten gegenübergestellt.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-boxplot-multiple" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-boxplot-multiple-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.13: Beispiel eines Diagramms mit diskreten und kontinuierlichen Variablen</figcaption>
+<div id="fig-visual-boxplot-multiple" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-boxplot-multiple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-boxplot-multiple-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-boxplot-multiple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.13: Beispiel eines Diagramms mit diskreten und kontinuierlichen Variablen
+</figcaption>
 </figure>
 </div>
 </div>
@@ -845,10 +933,14 @@ Hinweis
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-color-coding-discrete" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-color-coding-discrete-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.14: Beispiel für die Farbkodierung einer dritten diskreten Dimension</figcaption>
+<div id="fig-visual-color-coding-discrete" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-color-coding-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-color-coding-discrete-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-color-coding-discrete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.14: Beispiel für die Farbkodierung einer dritten diskreten Dimension
+</figcaption>
 </figure>
 </div>
 </div>
@@ -861,10 +953,14 @@ Hinweis
 <p>Farbgradienten haben den Nachteil, dass die meisten Menschen farbliche Unterschiede nicht stufenlos unterscheiden können. Deshalb sollten Farbgradienten nur verwendet werden, wenn die exakten Werte für die Visualisierung von untergeordneter Rolle sind.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-color-coding-gradient" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-color-coding-gradient-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.15: Beispiel für die Farbkodierung mit einem Farbgradienten</figcaption>
+<div id="fig-visual-color-coding-gradient" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-color-coding-gradient-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-color-coding-gradient-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-color-coding-gradient-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.15: Beispiel für die Farbkodierung mit einem Farbgradienten
+</figcaption>
 </figure>
 </div>
 </div>
@@ -889,16 +985,20 @@ Hinweis
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-size-coding" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-size-coding-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.16: Beispiel für die Grössenkodierung einer dritten diskreten Dimension</figcaption>
+<div id="fig-visual-size-coding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-size-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-size-coding-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-size-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.16: Beispiel für die Grössenkodierung einer dritten diskreten Dimension
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div id="def-bubblechart" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19.12 </strong></span>Ein <strong>Bubble-Chart</strong> oder <strong>Ballondiagramm</strong> ist ein <em>Streudiagramm</em> mit zusätzlichen grössenkodierten Werten.</p>
+<p><span class="theorem-title"><strong>Definition 19.12</strong></span> Ein <strong>Bubble-Chart</strong> oder <strong>Ballondiagramm</strong> ist ein <em>Streudiagramm</em> mit zusätzlichen grössenkodierten Werten.</p>
 </div>
 </section>
 <section id="form-kodierung" class="level3" data-number="19.4.3">
@@ -920,10 +1020,14 @@ Hinweis
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-form-coding" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-form-coding-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.17: Beispiel für die Formkodierung für Punkte und Linien</figcaption>
+<div id="fig-visual-form-coding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-form-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-form-coding-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-form-coding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.17: Beispiel für die Formkodierung für Punkte und Linien
+</figcaption>
 </figure>
 </div>
 </div>
@@ -931,14 +1035,18 @@ Hinweis
 </section>
 <section id="teildiagramme" class="level3" data-number="19.4.4">
 <h3 data-number="19.4.4" class="anchored" data-anchor-id="teildiagramme"><span class="header-section-number">19.4.4</span> Teildiagramme</h3>
-<p>Mit Teildiagrammen werden die Werte entlang einer Variablen in Daten-Segmente getrennt und anschliessend werden die die restlichen Variablen für jedes Segment einzeln visualisiert. Diese Teildiagramme heissen <em>Facetten</em>.</p>
+<p>Mit Teildiagrammen werden die Werte entlang einer Variablen in Daten-Segmente getrennt und anschliessend werden die restlichen Variablen für jedes Segment einzeln visualisiert. Diese Teildiagramme heissen <em>Facetten</em>.</p>
 <p>Solche Facetten können nur mithilfe <em>diskreter Daten</em> gebildet werden. Jede Facette <em>muss eine Überschrift</em> haben, die den Wert der Nebendimension zeigt, der die dargestellten Datenpunkte zusammenfasst.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-visual-facets" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="kapitel_files/figure-html/fig-visual-facets-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;19.18: Beispiel die Gliederung in Teildiagramme mithilfe einer dritten diskreten Dimension</figcaption>
+<div id="fig-visual-facets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-visual-facets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kapitel_files/figure-html/fig-visual-facets-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visual-facets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19.18: Beispiel die Gliederung in Teildiagramme mithilfe einer dritten diskreten Dimension
+</figcaption>
 </figure>
 </div>
 </div>
@@ -985,18 +1093,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1028,11 +1125,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1042,8 +1178,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1055,7 +1200,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1099,6 +1367,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1124,6 +1393,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1185,12 +1480,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../kapitel/13-daten-beschreiben/kapitel.html" class="pagination-link">
+      <a href="../../kapitel/13-daten-beschreiben/kapitel.html" class="pagination-link" aria-label="Daten beschreiben">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Daten beschreiben</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../references.html" class="pagination-link">
+      <a href="../../references.html" class="pagination-link" aria-label="Referenzen">
         <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1199,4 +1494,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
