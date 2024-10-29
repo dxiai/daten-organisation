@@ -317,8 +317,6 @@ Als **Filter** werden Funktionen bezeichnet, die Werte eines Vektors mithilfe ei
 
 Ein Vektor ist gefiltert, wenn der logische Ausdruck für alle Werte `Wahr` ergibt. Als Konsequenz werden alle Werte aus einem Vektor entfernt, für die der logische Ausdruck `Falsch` ergibt. 
 
-<!-- BEISPIEL filtern über einen Vektor -->
-
 ::: {.callout-note}
 ## Merke
 Durch das Filtern wird die Länge von Vektoren verändert. Das Ergebnis ist immer höchstens so lang wie der ursprüngliche ungefilterte Vektor.
@@ -328,7 +326,6 @@ Der logische Ausdruck muss sich nicht auf die Werte des Vektors beziehen. Damit 
 
 Weil die Vektoren von Stichprobenobjekten immer die gleiche Länge haben, lassen sich Filter zum Auswählen von Datensätzen verwenden.
 
-<!-- BEISPIEL -->
 
 ## Selektieren
 
@@ -394,14 +391,11 @@ $$
 v_{Vorgänger} \ge v_{Nachfolger}
 $$ {#eq-sort-desc}
 
-<!-- BEISPIEL asc und desc -->
 
 ### Sortieren für Fortgeschrittene
 
 Wie beim Filtern können sich die logischen Ausdrücke beim Sortieren auf andere Vektoren beziehen. Dabei wird ebenfalls ein Referenzvektor benötigt. Die Sortierung des Vektors erfolgt entsprechend der Positionen im Referenzvektor. Deshalb müssen Referenzvektoren immer die gleiche Länge wie die Sortiervektoren haben.
 
-<!-- BEISPIEL -->
 
 Beim Sortieren können komplexe logische Ausdrücke für spezielle Sortiuerungen eingesetzt werden. Dabei muss beachtet werden, dass diese Ausdrücke eine eindeutige Reihenfolge zulassen. 
 
-<!-- BEISPIEL -->
