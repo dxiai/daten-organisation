@@ -121,7 +121,7 @@ format:
     # - extra.scss
     toc: true
     html-math-method: katex
-  # pdf:
-  #   papersize: a4
+  pdf:
+    papersize: a4
 
 csl: _contrib/apa.csl
