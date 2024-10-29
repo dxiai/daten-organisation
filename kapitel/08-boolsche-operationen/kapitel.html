@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,10 +57,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ed6da6eef3892af8a4b5ed59bfb951f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -914,7 +914,6 @@ Abbildung&nbsp;12.2: Schema eines linearen Entscheidungsbaum mit zwei Entscheidu
 <p><span class="theorem-title"><strong>Definition 12.5</strong></span> Als <strong>Filter</strong> werden Funktionen bezeichnet, die Werte eines Vektors mithilfe eines logischen Ausdrucks auswählen.</p>
 </div>
 <p>Ein Vektor ist gefiltert, wenn der logische Ausdruck für alle Werte <code>Wahr</code> ergibt. Als Konsequenz werden alle Werte aus einem Vektor entfernt, für die der logische Ausdruck <code>Falsch</code> ergibt.</p>
-<!-- BEISPIEL filtern über einen Vektor -->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -930,7 +929,6 @@ Merke
 </div>
 <p>Der logische Ausdruck muss sich nicht auf die Werte des Vektors beziehen. Damit Werte mit einem solchen logischen Ausdruck ausgewählt werden können, bedarf es einen Referenzvektor mit gleicher Länge. Ein Wert wird mit dieser Technik ausgewählt, wenn der logische Ausdruck für den Wert an der gleichen Position im Referenzvektor <code>Wahr</code> ergibt.</p>
 <p>Weil die Vektoren von Stichprobenobjekten immer die gleiche Länge haben, lassen sich Filter zum Auswählen von Datensätzen verwenden.</p>
-<!-- BEISPIEL -->
 </section>
 <section id="selektieren" class="level2" data-number="12.6">
 <h2 data-number="12.6" class="anchored" data-anchor-id="selektieren"><span class="header-section-number">12.6</span> Selektieren</h2>
@@ -1005,13 +1003,10 @@ v_{Vorgänger} \le v_{Nachfolger}
 <p><span id="eq-sort-desc"><span class="math display">
 v_{Vorgänger} \ge v_{Nachfolger}
 \tag{12.6}</span></span></p>
-<!-- BEISPIEL asc und desc -->
 <section id="sortieren-für-fortgeschrittene" class="level3" data-number="12.7.1">
 <h3 data-number="12.7.1" class="anchored" data-anchor-id="sortieren-für-fortgeschrittene"><span class="header-section-number">12.7.1</span> Sortieren für Fortgeschrittene</h3>
 <p>Wie beim Filtern können sich die logischen Ausdrücke beim Sortieren auf andere Vektoren beziehen. Dabei wird ebenfalls ein Referenzvektor benötigt. Die Sortierung des Vektors erfolgt entsprechend der Positionen im Referenzvektor. Deshalb müssen Referenzvektoren immer die gleiche Länge wie die Sortiervektoren haben.</p>
-<!-- BEISPIEL -->
 <p>Beim Sortieren können komplexe logische Ausdrücke für spezielle Sortiuerungen eingesetzt werden. Dabei muss beachtet werden, dass diese Ausdrücke eine eindeutige Reihenfolge zulassen.</p>
-<!-- BEISPIEL -->
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
