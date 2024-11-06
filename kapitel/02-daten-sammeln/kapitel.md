@@ -56,11 +56,11 @@ Beim Daten sammeln werden drei Arten von Daten unterschieden:
 
 :::
 
-Typische unstrukturierte Daten sind Notizen, Transkripte gespochener Sprache oder Videos. Unstrukturierte Daten können Werte von Interesse enthalten, auf die jedoch nicht direkt zugegriffen werden kann.
+Typische unstrukturierte Daten sind Notizen, Transkripte gesprochener Sprache oder Videos. Unstrukturierte Daten können Werte von Interesse enthalten, auf die jedoch nicht direkt zugegriffen werden kann.
 
 Unstrukturierte Daten haben den Vorteil, dass sie *Ergebnisoffen* sind. Dadurch sind unstrukturierte Daten offen für neue und unvorhergesehene Information. Entsprechend werden Techniken, die unstrukturierte Daten erheben, auch als ***offene*** Erhebungstechniken bezeichnet. 
 
-Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Äquivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierte Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden. 
+Diese Offenheit hat ihren Preis, denn unstrukturierte Daten sind anfällig gegenüber Rauschen und Äquivokation. Ausserdem können einzelne Werte nicht direkt aus unstrukturierten Daten abgelesen werden, sondern müssen (oft umständlich) aus den Daten extrahiert werden. 
 
 ::: {.callout-note}
 
@@ -98,7 +98,7 @@ hamster:
 ### Semi-strukturierte Daten
 
 Neben diesen zwei Arten existieren noch sog. semi-strukturierte Daten. 
-Semistrukturierte Daten folgen einer logischen Struktur, die allerdings nicht durchgehend strickt eingehalten wird.
+Semistrukturierte Daten folgen einer logischen Struktur, die allerdings nicht durchgehend strikt eingehalten wird.
 
 ::: {#def-semi-strukturierte-daten}
 
@@ -143,16 +143,16 @@ Die eigentliche Datensammlung kann manuell, technisch unterstützt oder automati
 
 In der Laborarbeit ist die Erfassung von Messwerten in Tabellen oder Listen üblich. Dabei werden die Werte von Hand direkt in eine Tabelle oder Liste eingetragen. So erfasste Tabellen oder Listen sind *strukturierte Daten*. Beim Eintragen der Daten muss darauf geachtet werden, dass die Werte an der richtigen Stelle eingetragen werden, weil solche Fehler oft unerkannt bleiben und eine nachträgliche Korrektur oft nicht möglich ist.
 
-Die einfachste Form der manuellen Datenerfassung sind *Notizen*. Notizen sind persönliche Aufzeichnungen über die eigene Arbeit bzw. über Beobachtungen bei der Arbeit. Diese Daten sind entweder *unstrukturiert* oder *semi-strukturiert*. Sie erlauben eine grosse Flexibilität falls die Daten nicht vorstrukturiert werden können oder die Struktur weitgehend unbekannt ist. Notizen lassen sich schwer *objektivisieren*, weil sie immer einen subjektiven Anteil der Person haben, welche die Notiz verfasst hat.
+Die einfachste Form der manuellen Datenerfassung sind *Notizen*. Notizen sind persönliche Aufzeichnungen über die eigene Arbeit bzw. über Beobachtungen bei der Arbeit. Diese Daten sind entweder *unstrukturiert* oder *semi-strukturiert*. Sie erlauben eine grosse Flexibilität, falls die Daten nicht vorstrukturiert werden können oder die Struktur weitgehend unbekannt ist. Notizen lassen sich schwer *objektivisieren*, weil sie immer einen subjektiven Anteil der Person haben, welche die Notiz verfasst hat.
 
 ::: {.callout-tip}
 ## Praxis
 Es ist eine gute Idee, Messwerte in Tabellen zu erfassen und zusätzliche Notizen zu machen. Aus beiden ergeben sich Laborberichte, die wiederum zu Labortagebüchern wachsen. In der wissenschaftlichen Praxis sind die strukturierten Daten zwar das Hauptergebnis einer Untersuchung, aus den Notizen ergeben sich jedoch oft neue Einsichten, die sich nicht aus den strukturierten Daten herauslesen lassen. 
 ::: 
 
-Neben Notizen sind *Transskripte* ein wichtiges Werkzeug der manuellen Datenerfassung. Transskripte sind eine Verschriftlichung einer anderen Aufzeichnung. Oft sind das Tonaufzeichnungen von Gesprächen oder Videoaufzeichnungen eines Experiments. Diese Aufzeichnungen liefern immer *unstrukturierte Daten*. Die ursprüngliche Aufzeichnung ist dabei *meistens* eine Primärquelle für die Daten. Das Transskript ist eine *abgeleitete Sekundärquelle* der Primärquelle. Weil beim Transskribieren die Primärquelle *neu kodiert* wird, muss beim Transskribieren besonders sorgfältig gearbeitet werden, um die ursprünglichen Daten nicht zu sehr zu verfälschen. 
+Neben Notizen sind *Transskripte* ein wichtiges Werkzeug der manuellen Datenerfassung. Transskripte sind eine Verschriftlichung einer anderen Aufzeichnung. Oft sind das Tonaufzeichnungen von Gesprächen oder Videoaufzeichnungen eines Experiments. Diese Aufzeichnungen liefern immer *unstrukturierte Daten*. Die ursprüngliche Aufzeichnung ist dabei *meistens* eine Primärquelle für die Daten. Das Transskript ist eine *abgeleitete Sekundärquelle* der Primärquelle. Weil beim Transkribieren die Primärquelle *neu kodiert* wird, muss beim Transkribieren besonders sorgfältig gearbeitet werden, um die ursprünglichen Daten nicht zu sehr zu verfälschen. 
 
-Inzwischen gibt es brauchbare Werkzeuge zur Transskription von Mediendateien. Diese automatisch erstellten Transkripte müssen aber immer nachkontrolliert werden. Nur so wird das Risiko reduziert, dass sich die Bedeutung der Daten durch Transskriptionsfehler ändert.
+Inzwischen gibt es brauchbare Werkzeuge zur Transkription von Mediendateien. Diese automatisch erstellten Transkripte müssen aber immer nachkontrolliert werden. Nur so wird das Risiko reduziert, dass sich die Bedeutung der Daten durch Transskriptionsfehler ändert.
 
 ### Technisch-unterstützte Datenerhebung
 
@@ -179,17 +179,17 @@ Bei den Items mit geschlossenen Wertebereich kann zwischen einfachen und mehrfac
 
 *Skalen* sind **Single-Choice-Items** für einen *ordinalen Wertebereich*. Oft werden die Antwortmöglichkeiten mit einem Rang versehen. 
 
-Ein Spezialfall der Skalen ist die **Likert-Skala**, bei der eine lineare Skala mit einer Bewertung zwischen zwei Extremwerten versehen wird. Die Extrem-Pole sollten möglichst weit auseinander gewählt werden. Z.B. *"trifft absolut nicht zu"* und *"trifft voll und ganz zu"* und ***nicht*** *"trifft nicht zu"* und *"trifft zu"*. Obwohl Likert-Skalen *subjketive Ansichten* messen, wird der Wertebereich meist als *intervallskalierter Wertebereich* behandlet. 
+Ein Spezialfall der Skalen ist die **Likert-Skala**, bei der eine lineare Skala mit einer Bewertung zwischen zwei Extremwerten versehen wird. Die Extrem-Pole sollten möglichst weit auseinander gewählt werden. Z.B. *"trifft absolut nicht zu"* und *"trifft voll und ganz zu"* und ***nicht*** *"trifft nicht zu"* und *"trifft zu"*. Obwohl Likert-Skalen *subjektive Ansichten* messen, wird der Wertebereich meist als *intervallskalierter Wertebereich* behandelt. 
 
 Bei mehrfachen Eingaben können mehrere Antwortmöglichkeiten ausgewählt werden. Mehrfache Eingaben werden auch als **Multiple-Choice-Items** bezeichnet. Im Gegensatz zu Single-Choice-Items haben Multiple-Choice-Items *immer* einen *binären Wertebereich*. Das bedeutet, dass jede Antwortmöglichkeit nur zwei Werte annehmen kann: *ausgewählt* oder *nicht ausgewählt*. Intern werden Multiple-Choice-Items als separate Items gespeichert und auch so tabellarisch dargestellt. Ein Multiple-Choice-Item hat deshalb immer eine *Ja/Nein*-Frage als Grundlage, wobei die fehlende Auswahl durch einen nicht vorhandenen Eintrag repräsentiert wird.
 
-Die sog. **Grid-Items** oder **Fragebatterien** sind Items, bei denen mehrere Fragen mit der gleichen Antwortmöglichkeiten gestellt werden. Entsprechend haben diese Items den *gleichen Wertebereich*. Zu den Grid-Items sind oft als Skalen oder als Multiple-Choice-Items organisiert. Diese Items werden oft als Matrix dargestellt, wobei die Fragen als Zeilen und die Antwortmöglichkeiten als Spalten dargestellt werden. Intern werden die einzelnen Fragen von Grid-Items als separate Items gespeichert und werden auch tabellarisch so abgebildet. Dabei gelten die gleichen Regeln wie bei einfachen Single-Choice- und Multiple-Choice-Items. 
+Die sog. **Grid-Items** oder **Fragebatterien** sind Items, bei denen mehrere Fragen mit den gleichen Antwortmöglichkeiten gestellt werden. Entsprechend haben diese Items den *gleichen Wertebereich*. Zu den Grid-Items sind oft als Skalen oder als Multiple-Choice-Items organisiert. Diese Items werden oft als Matrix dargestellt, wobei die Fragen als Zeilen und die Antwortmöglichkeiten als Spalten dargestellt werden. Intern werden die einzelnen Fragen von Grid-Items als separate Items gespeichert und werden auch tabellarisch so abgebildet. Dabei gelten die gleichen Regeln wie bei einfachen Single-Choice- und Multiple-Choice-Items. 
 
 Eine Fragebatterie aus Likert-Skalen wird **Semantisches Differential** genannt. Oft handelt es sich bei den Items um *Aussagen*, die über die gleiche Skala bewertet werden. 
 
-Ein besonderes Grid-Item ist das **Ranking** oder **Sortieren**. Bei dieser Art von Items werden mehrere Antwortmöglichkeiten in *eine* Reihenfolge gebracht. Die Antwortmöglichkeiten werden als eigene Items gespeichert, wobei der Wertebereich für jede Antwortmöglichkeit durch die möglichen Ränge festgelegt ist. Diese Items haben einen *ordialen Wertebereich*.
+Ein besonderes Grid-Item ist das **Ranking** oder **Sortieren**. Bei dieser Art von Items werden mehrere Antwortmöglichkeiten in *eine* Reihenfolge gebracht. Die Antwortmöglichkeiten werden als eigene Items gespeichert, wobei der Wertebereich für jede Antwortmöglichkeit durch die möglichen Ränge festgelegt ist. Diese Items haben einen *ordinalen Wertebereich*.
 
-Eine Variante des Sortieren sind **Zuordnungs-Items**. Bei diesen Items muss jedem Wert aus einer Liste von Werten jeweils ein Wert aus einer zweiten Liste zugeordnet werden. Die Werte aus der ersten Liste werden als Items gespeichert und die Werte aus der zweiten Liste legen den Wertebereich der Items. Diese Items haben einen *nominalen Wertebereich*.
+Eine Variante des Sortierens sind **Zuordnungs-Items**. Bei diesen Items muss jedem Wert aus einer Liste von Werten jeweils ein Wert aus einer zweiten Liste zugeordnet werden. Die Werte aus der ersten Liste werden als Items gespeichert und die Werte aus der zweiten Liste legen den Wertebereich der Items. Diese Items haben einen *nominalen Wertebereich*.
 
 Gelegentlich werden Fotos oder Bilder angeboten und die Teilnehmenden werden gebeten, Bereiche auf diesen Bildern auszuwählen. Dabei handelt es sich um eine Variante eines **Multiple-Choice-Grids**, bei dem die Antwortmöglichkeiten als Bilder dargestellt werden.
 
