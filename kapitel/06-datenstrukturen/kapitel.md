@@ -20,7 +20,7 @@ Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einz
 
 Durch diese Eigenschaften sind Datenstrukturen besonders gut für die Datenorganisation geeignet. 
 
-*Datenfelder* (engl. *arrays*) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine *eindeutige Position* hat. Die Position eines Wertes wird durch einen *Index* angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren **Länge**. Die Länge und die Idizes einer Datenstruktur sind natürliche Zahlen.
+*Datenfelder* (engl. *arrays*) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine *eindeutige Position* hat. Die Position eines Wertes wird durch einen *Index* angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren **Länge**. Die Länge und die Indizes einer Datenstruktur sind natürliche Zahlen.
 
 Über die zusammengefassten Datentypen lassen sich zwei Arten von Datenfeldern unterscheiden.
 
@@ -53,7 +53,7 @@ Eine **Datenrahmen** (engl. *data frame*) verknüpft mehrere gleichlange Vektore
 Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als *heterogene Datenstrukturen*.
 
 ::: {#def-matrix-structure}
-Eine **Matrix** verknüpft mehrere gleichlange Vektoren vom Datentyp *Zahlen*. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.
+Eine **Matrix** verknüpft mehrere gleichlange Vektoren des Datentyps *Zahlen*. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.
 :::
 
 Weil alle Vektoren in einer Matrix vom gleichen Datentyp sind, sind Matrizen *homogene Datenstrukturen*. 
