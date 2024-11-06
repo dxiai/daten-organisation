@@ -234,7 +234,7 @@ Die *meisten* Operatoren sind unär oder binär. Unäre Operatoren haben nur ein
 
 Bei Operatoren wird zwischen *Präfix*, *Infix* und *Postfix* unterschieden. Präfix-Operatoren stehen vor den Parametern, Infix-Operatoren zwischen den Parametern und Postfix-Operatoren stehen nach den Parametern. Die Grundrechenarten sind Infix-Operatoren.
 
-### Precedence - Prioriät von Operatoren
+### Precedence - Priorität von Operatoren
 
 In komplexen Operationen ist nicht immer eindeutig, welche Parameter zu welchem Operator gehören. Damit richtig gerechnet wird, besteht zwischen den Operatoren eine Hierarchie, in welcher jeder Operator eine bestimmte Priorität für die Ausführung hat. Das bedeutet, dass ein Operator mit höherer Priorität vor einem Operator mit niedrigerer Priorität ausgeführt wird. Bei Operatoren mit gleicher Priorität wird **immer** der am weitesten links stehende Operator zuerst ausgeführt.
 
@@ -284,7 +284,7 @@ $$
 $$
 :::
 
-Die *Modulo*-Operation gibt den Rest nach der Ganzzahldivision zurück. Das Ergebnis von Modulo ist die *Differenz des Dividenden* bis zum Ergebnis der Ganzzahldivision mulipliziert mit dem Divisor.
+Die *Modulo*-Operation gibt den Rest nach der Ganzzahldivision zurück. Das Ergebnis von Modulo ist die *Differenz des Dividenden* bis zum Ergebnis der Ganzzahldivision multipliziert mit dem Divisor.
 
 ::: {#exm-modulo}
 ## Modulo-Operation
@@ -344,7 +344,7 @@ $$
 
 #### Der Index-Operator
 
-In der Mathematik werden Idicees durch tieferstellen gekennzeichnet.  Ein Index wird dann verwendet, wenn ein Bezeichner auf eine Datenstruktur verweist. Der Index bezeichnet den Wert an der entsprechende Position in der Datenstruktur. Am Beispiel des Summe-Operators wird dies in @eq-index-sum verdeutlicht.
+In der Mathematik werden Indices durch tieferstellen gekennzeichnet.  Ein Index wird dann verwendet, wenn ein Bezeichner auf eine Datenstruktur verweist. Der Index bezeichnet den Wert an der entsprechenden Position in der Datenstruktur. Am Beispiel des Summe-Operators wird dies in @eq-index-sum verdeutlicht.
 
 $$
 \sum_{i=1}^{n} x_i \cdot y_i
@@ -429,7 +429,7 @@ $$
 \end{aligned}
 $$ {#eq-nelem-division2}
 
-Auch dieser Weg führt zu keinem Ergebnis für das neutrale Element, weil e_n *ein* Element des Definitionsbereich sein muss. In diesem Fall muss dieser Wert eine Zahl sein. Die Lösung $e_n = a^2$ liefert für unterschiedliche Werte für $a$ verschiedene Werte für $e_n$. Deshalb kann $a^2$ keine Lösung für das neutrale Element sein. 
+Auch dieser Weg führt zu keinem Ergebnis für das neutrale Element, weil e_n *ein* Element des Definitionsbereichs sein muss. In diesem Fall muss dieser Wert eine Zahl sein. Die Lösung $e_n = a^2$ liefert für unterschiedliche Werte für $a$ verschiedene Werte für $e_n$. Deshalb kann $a^2$ keine Lösung für das neutrale Element sein. 
 
 Aus diesen Betrachtungen folgt, dass die Division kein neutrales Element hat, weil über beide Definitionen des neutralen Elements kein eindeutiges Ergebnis für die Division gefunden wurde.
 
@@ -517,7 +517,7 @@ $$
 f \to potenz \circ subtraktion
 $$ {#eq-circ-funkdef}
 
-Ausgehend vom allgemeinen Vekettungsoperator hat sich in den Datenwissenschaften ein **spezieller Verkettungsoperator** ($\triangleright$) für die Praxis als bedeutsam herausgestellt. Bei dieser Verkettung folgt die *Ausführungsreihenfolge* dem *Fluss der Daten* durch eine Funktionskette von **links** nach **rechts**. Dabei wird angenommen, dass das Ergebnis einer vorangehenden Funktion der *erste* Parameter der nachfolgenden Funktion ist. Bei den nachfolgenden Funktionen wird in dieser Notation der erste Parameter bei nachfolgenden Funktionen weggelassen. Ansonsten bleiben die Funktionsaufrufe unverändert. @eq-spez-fktkette zeigt diese Schreibweise mit dem speziellen Verkettungsoperator für die Funktionskette aus @eq-problemzerlegung-kette.
+Ausgehend vom allgemeinen Verkettungsoperator hat sich in den Datenwissenschaften ein **spezieller Verkettungsoperator** ($\triangleright$) für die Praxis als bedeutsam herausgestellt. Bei dieser Verkettung folgt die *Ausführungsreihenfolge* dem *Fluss der Daten* durch eine Funktionskette von **links** nach **rechts**. Dabei wird angenommen, dass das Ergebnis einer vorangehenden Funktion der *erste* Parameter der nachfolgenden Funktion ist. Bei den nachfolgenden Funktionen wird in dieser Notation der erste Parameter bei nachfolgenden Funktionen weggelassen. Ansonsten bleiben die Funktionsaufrufe unverändert. @eq-spez-fktkette zeigt diese Schreibweise mit dem speziellen Verkettungsoperator für die Funktionskette aus @eq-problemzerlegung-kette.
 
 $$
 f(a, b) \to subtraktion(a, b) \triangleright potenz(2)
@@ -567,7 +567,7 @@ Mit diesem Wissen lassen sich die Eigenschaften von Funktionen in Funktionskette
 
 ## Funktionen als Werte {#sec-funktionen-als-werte}
 
-Bei der Substitution im [Abschnitt @sec-substitution] wurde eine Teiloperation einem Bezeichner zugewiesen, der anschliessend wie eine normale Variable behandlet wurde. Gleichzeitigt war dieser Bezeicher eine Funktion für die substituierte Teiloperation. Diese Überlegungen behandeln Funktionen genau gleich wie andere Datentypen. 
+Bei der Substitution im [Abschnitt @sec-substitution] wurde eine Teiloperation einem Bezeichner zugewiesen, der anschliessend wie eine normale Variable behandelt wurde. Gleichzeitigt war dieser Bezeichner eine Funktion für die substituierte Teiloperation. Diese Überlegungen behandeln Funktionen genau gleich wie andere Datentypen. 
 
 Der Datentyp *Funktion* gibt einen gültigen Wertebereich vor. Die Symbole dieses Wertebereichs sind jedoch nicht Zahlen oder Zeichenfolgen, sondern Funktionen. Der Bezeichner einer Funktion kann so durch Zuweisung geändert werden, ***ohne*** die Funktion anzuwenden. 
 
@@ -581,7 +581,7 @@ Im Internet und (seltener) in der Literatur werden anonyme Funktionen auch als *
 *Eine Lambda-Funktion unterscheidet sich nicht von anderen Funktionen!*
 :::
 
-Dieser besondere Datentyp kann wie jeder andere Datentyp für Parameter und Ergebnisse von Funktionen verwendet werden.
+Dieser besondere Datentyp kann, wie jeder andere Datentyp für Parameter und Ergebnisse von Funktionen verwendet werden.
 
 ### Callback-Funktionen
 
@@ -635,7 +635,7 @@ Die beiden Bezeichner enthalten nun eigene Versionen der $closure$-Funktion.
 
 Jede Anwendung von $pDef$  erzeugt eine *neue* Funktion. Dabei ist der Bezeichner $closure$ auf den Geltungsbereich von $pDef$ beschränkt. Deshalb kann dieser nach dem Anwenden der Funktion $pDef$ nicht direkt verwendet werden. 
 
-Die erzeugten Funktionen lassen sich wie andere Funktionen über ihre Bezeichner anweden. Im aktuellen Beispiel ergeben sich so die Gleichungen in @eq-closure-results.
+Die erzeugten Funktionen lassen sich wie andere Funktionen über ihre Bezeichner anwenden. Im aktuellen Beispiel ergeben sich so die Gleichungen in @eq-closure-results.
 
 $$
 \begin{aligned}
@@ -674,9 +674,9 @@ $$
 f_{id} \circ F = F \circ f_{id} = F
 $$ {#eq-f_id_zusammenfassung}
 
-Diese Beziehung erfüllt die Kriterien für das neutrale Element aus @eq-neutrales-element für den allgemeinenen Verkettungsoperator.
+Diese Beziehung erfüllt die Kriterien für das neutrale Element aus @eq-neutrales-element für den allgemeinen Verkettungsoperator.
 
-Für die spezielle Funktionsverkettung vereinfachen sich diese überlegungen, weil nur der erste Parameter $P_1$ und nicht die ganze Parameterliste $P$ betrachtet werden muss. Wie oben beschrieben, darf die restliche Parameterliste der Funktion $F$ nicht vernachlässigt werden.  
+Für die spezielle Funktionsverkettung vereinfachen sich diese Überlegungen, weil nur der erste Parameter $P_1$ und nicht die ganze Parameterliste $P$ betrachtet werden muss. Wie oben beschrieben, darf die restliche Parameterliste der Funktion $F$ nicht vernachlässigt werden.  
 
 Für den Fall, dass die Identitätsfunktion die vorangehende Funktion ist, gilt @eq-id-fkt-chain-left. Die Identitätsfunktion betrifft also nur den ersten Parameter von $F$. Wegen der Definition der Identitätsfunktion gilt die Gleichung $f_{id}(P_1) = P_1$. 
 
