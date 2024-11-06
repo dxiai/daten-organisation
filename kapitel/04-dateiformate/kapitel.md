@@ -15,7 +15,7 @@ Ein **Datenstrom** ist eine Folge von binärkodierten Bits.
 
 Ein Datenstrom ist also immer eine Abfolge von `0` und `1` Werten. Diese Abfolgen sind eine *Datenserialisierung* (s. [Abschnitt @sec-serialisierung]). Für die Interpretation werden diese Abfolgen in Gruppen zusammengefasst. Üblich sind Gruppen von 8-Bit (dem sog. *Byte*), 16-Bit, 32-Bit oder 64-Bit. 
 
-Datenströme können eine *feste Länge* haben. In diesem Fall wird die Länge eines Datenstroms wird *Byte* angegegeben. 
+Datenströme können eine *feste Länge* haben. In diesem Fall wird die Länge eines Datenstroms wird *Byte* angegeben. 
 
 ::: {#def-datei}
 Eine **Datei** ist ein Datenstrom mit fester Länge, der von einem Speichermedium geladen wird.
@@ -23,7 +23,7 @@ Eine **Datei** ist ein Datenstrom mit fester Länge, der von einem Speichermediu
 
 Weil eine Datei auf einem Speichermedium gespeichert ist, kann der Datenstrom aus einer Datei wiederholt abgerufen werden. Deshalb gehören Dateien zu den sog. ***persistenten Datenströmen***. Persistente Datenströme liefern also *dauerhafte Daten*. 
 
-Nicht alle Datenströme sind persistent. Deshalb ist es wichtig, die Art eines Datenstroms zu kennen, denn bei nicht-persisten oder **flüchtigen Datenströmen** kann auf die Daten nur einmal zugegriffen werden. *Flüchtige Datenströme* sind kommen vorwiegend bei der *automatischen Datenerfassung* vor. In diesem Fällen entspricht jeder Zugriff auf den Datenstrom einer Messung, wobei es nicht möglich ist, eine Messung zu wiederholen.
+Nicht alle Datenströme sind persistent. Deshalb ist es wichtig, die Art eines Datenstroms zu kennen, denn bei nicht-persistent oder **flüchtigen Datenströmen** kann auf die Daten nur einmal zugegriffen werden. *Flüchtige Datenströme* sind kommen vorwiegend bei der *automatischen Datenerfassung* vor. In diesem Fällen entspricht jeder Zugriff auf den Datenstrom einer Messung, wobei es nicht möglich ist, eine Messung zu wiederholen.
 
 
 ## Dateien verwenden
@@ -78,7 +78,7 @@ Das Auswählen von Daten bezieht sich ausschliesslich auf die interne Datenstruk
 Das Schreiben von Daten aus einer Datenstruktur in einen Datenstrom heisst **Exportieren**.
 :::
 
-Beim Exportieren werden die Daten aus einer Datenstruktur in einen Datenstrom *serialisiert*. Eine Funktion die eine Datenstruktur in einen Datenstrom überführt, heisst **Serialisierer**.
+Beim Exportieren werden die Daten aus einer Datenstruktur in einen Datenstrom *serialisiert*. Eine Funktion, die eine Datenstruktur in einen Datenstrom überführt, heisst **Serialisierer**.
 
 Ähnlich wie beim Importieren muss auch beim Exportieren existiert für jedes Datenformat ein geeigneter Serializer. Die Wahl eines Serialisierers hängt von der späteren Verwendung der Serialisierung ab. 
 
@@ -91,7 +91,7 @@ Einige Dateiformat sind sehr komplex. Dadurch sind unvollständige Serialisierun
 ::: {.callout-tip}
 ## Praxis
 
-Beim Exportieren von Daten die vorher importiert wurde dürfen die ursprüngliche Daten nicht überschrieben werden, weil sonst Daten verloren gehen können. Stattdessen sollten Daten beim Exportieren in eine separate Datei geschrieben werden.
+Beim Exportieren von Daten die vorher importiert wurde dürfen die ursprünglichen Daten nicht überschrieben werden, weil sonst Daten verloren gehen können. Stattdessen sollten Daten beim Exportieren in eine separate Datei geschrieben werden.
 :::
 
 
@@ -103,7 +103,7 @@ Eine Textformat legt fest, dass alle Werte in einer Datei als Zeichenkettensymbo
 
 Die Bits einer Textdatei sind nach einem festgelegten Standard kodiert (s. [@sec-zeichenkodierung]). Dadurch kann der Inhalt einer Textdatei immer zuverlässig gelesen und interpretiert werden. Inzwischen verwenden alle modernen Betriebssysteme einheitlich den Kodierungsstandard UTF-8 [@isoiec_jtc_1sc_2_information_2020; @the_unicode_consortium_unicode_2022].
 
-Textdateien haben den grossen Vorteil, dass die Dekodierung der Bits automatisch erfolgt. Eine Programm oder eine Funktion kann also direkt auf die kodierten Symbole zugreifen. 
+Textdateien haben den grossen Vorteil, dass die Dekodierung der Bits automatisch erfolgt. Ein Programm oder eine Funktion kann also direkt auf die kodierten Symbole zugreifen. 
 
 ::: {.callout-note}
 ## Textkodierungen
@@ -279,16 +279,16 @@ Osterwalder|Urs|01.01.1970|Bern|1.78
 
 Excel-Arbeitsmappen (`xlsx`) fassen mehrere Tabellen zusammen. Excel-Arbeitsmappen werden als komprimiertes Dateiarchiv gespeichert. Deshalb wird das Format von EXCEL-Arbeitsmappen als *Binärformat* bezeichnet. 
 
-Anders als bei Textdateien in denen nur die Werte und deren Struktur kodiert wird, werden bei EXCEL-Arbeitsmappen auch *komplexe Formatierungen*, *Grafiken* und die *Berechnungen* kodiert [@carpenter_ms-xlsx_2023]. Die einzelnen Arbeitsblätter werden zwar als Mengenkodierung behandelt, das eigentliche Dateiformat folgt einer Baumstruktur. 
+Anders als bei Textdateien, in denen nur die Werte und deren Struktur kodiert wird, werden bei EXCEL-Arbeitsmappen auch *komplexe Formatierungen*, *Grafiken* und die *Berechnungen* kodiert [@carpenter_ms-xlsx_2023]. Die einzelnen Arbeitsblätter werden zwar als Mengenkodierung behandelt, das eigentliche Dateiformat folgt einer Baumstruktur. 
 
 Excel-Arbeitsmappen fassen mehrere benannte Arbeitsblätter zusammen. Ein Arbeitsblatt ist eine Struktur aus Zeilen und Spalten, die *tabellarisch* organisiert ist. Dadurch ist es möglich, dass mehrere *Tabellen* auf einem Arbeitsblatt vorhanden sind. Falls diese Tabellen nicht explizit als Datentyp `Tabelle` markiert wurden, muss diese Kodierung separat dokumentiert werden.
 
 ::: {.callout-tip}
 ## Praxis
 
-Um Excel-Arbeitsmappen mit anderen Programmiersprachen zu verarbeiten muss die Struktur der Arbeitsmappe berücksichtigt werden. Daten sind immer nur über das Arbeitsblatt zugreifbar. Deshalb muss immer zuerst ein Arbeitsblatt ausgewählt werden, bevor auf die Daten zugegriffen werden kann. 
+Um Excel-Arbeitsmappen mit anderen Programmiersprachen zu verarbeiten, muss die Struktur der Arbeitsmappe berücksichtigt werden. Daten sind immer nur über das Arbeitsblatt zugreifbar. Deshalb muss immer zuerst ein Arbeitsblatt ausgewählt werden, bevor auf die Daten zugegriffen werden kann. 
 
-Arbeitsblätter haben immer zwei Modi: Den *Wertemodus* und den *Formelmodus*. Der gewünschte Moduls muss programmatisch festgelegt werden. 
+Arbeitsblätter haben immer zwei Modi: Den *Wertemodus* und den *Formelmodus*. Das gewünschte Modul muss programmatisch festgelegt werden. 
 
 Im Wertemodus werden die Werte der Zellen angezeigt. Im Formelmodus werden die Formeln der Zellen angezeigt. Wenn eine Zelle nur einen Wert aber keine Formel enthält, wird auch im Formelmodus der Wert bereitgestellt.
 :::
@@ -440,7 +440,7 @@ Die Kodierung von Werten als Attribute findet sich nur noch in älteren XML-Doku
 Aus den Beispielen wird deutlich, dass die Kodierung im XML-Format zwar sehr flexibel ist, aber auch sehr komplex werden kann und wenig speichereffizient ist. Das kann ein Problem werden, wenn viele Daten zwischen Rechnern übertragen werden müssen. Deshalb wird XML heute nur noch für Anwendungen verwendet, bei denen die Flexibilität der Kodierung wichtiger ist als die Speichereffizienz.
 
 ::: {.callout-note}
-Eine Anwendung, die alle Daten im XML-Format speichert ist *Excel*. Diese Daten werden aber hinter den Kulissen in einem Binärformat gespeichert. Deshalb ist es nicht möglich, Excel-Arbeitsmappen direkt als XML-Dateien zu öffnen.
+Eine Anwendung, die alle Daten im XML-Format speichert, ist *Excel*. Diese Daten werden aber hinter den Kulissen in einem Binärformat gespeichert. Deshalb ist es nicht möglich, Excel-Arbeitsmappen direkt als XML-Dateien zu öffnen.
 :::
 
 ### HTML 
@@ -519,7 +519,7 @@ Tabellarische Strukturen lassen sich in JSON auf zwei Arten abbilden:
 - Als Liste von Objekten
 - Als Objekt mit Listen
 
-Die erste Variante ist die gebräuchlichste, weil beim die Bedeutung der zusammenhängenden Werte durch die Schlüssel meistens einfacher verarbeitet werden kann.
+Die erste Variante ist die gebräuchlichste, weil bei der Bedeutung der zusammenhängenden Werte durch die Schlüssel meistens einfacher verarbeitet werden kann.
 
 ::: {#exm-json-liste-von-objekten}
 ## Tabellenstruktur im JSON-Format als Liste von Objekten
@@ -631,7 +631,7 @@ Daten in separator-strukturierte Textdateien oder im YAML-Format lassen sich bes
 
 Bei XML- und JSON-Daten ist die Situation etwas komplexer: Diese Formate sind nicht zeilenorientiert und die gleiche Struktur kann auf unterschiedliche Arten im gleichen Format serialisiert werden. Dadurch wird die Versionierung dieser Dateiformate erschwert. 
 
-Die Versionierung von Binärformaten ist noch komplexer, weil Versionierungssystem diese Formate nicht auf der Inhaltsebene unterstützen. Deshalb ist es üblich, Daten in diesem Formaten vor der Versionierung in ein zeilenorientiertes Format überführt werden. Das betrifft sehr häufig Excel-Arbeitsmappen, weil sich die Binärdaten bei jedem *Zugriff* ändern, ohne dass die Daten selbst verändert wurden. 
+Die Versionierung von Binärformaten ist noch komplexer, weil Versionierungssystem diese Formate nicht auf der Inhaltsebene unterstützen. Deshalb ist es üblich, Daten in diesen Formaten vor der Versionierung in ein zeilenorientiertes Format überführt werden. Das betrifft sehr häufig Excel-Arbeitsmappen, weil sich die Binärdaten bei jedem *Zugriff* ändern, ohne dass die Daten selbst verändert wurden. 
 
 ::: {.callout-tip}
 ## Praxis
