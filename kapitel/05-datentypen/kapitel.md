@@ -246,7 +246,7 @@ Eine **Datenstruktur** ist ein Datentyp, in dem mehrere Werte zusammengefasst we
 
 Weil eine Datenstruktur ebenfalls ein Datentyp ist, lässt sie sich wie ein einzelner Wert behandeln. Dadurch haben Datenstrukturen eine Reihe von Vorteilen: 
 
-- Datenstrukturen können als *Einheit* behadelt werden.
+- Datenstrukturen können als *Einheit* behandelt werden.
 - Datenstrukturen können *verschachtelt* werden, um noch komplexere Strukturen zu bilden.
 - Datenstrukturen können als Sammlung von Einzelwerten betrachtet werden, welche getrennt verarbeitet werden können.
 
@@ -254,7 +254,7 @@ Durch diese Eigenschaften sind Datenstrukturen besonders gut für die Datenorgan
 
 ### Eindimensionale Datenstrukturen
 
-*Datenfelder* (engl. *arrays*) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine *eindeutige Position* hat. Die Position eines Wertes wird durch einen *Index* angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren **Länge**. Die Länge und die Idizes einer Datenstruktur sind natürliche Zahlen.
+*Datenfelder* (engl. *arrays*) sind eine besondere Datenstruktur. Datenfelder fassen Werte so zusammen, dass jeder Wert eine *eindeutige Position* hat. Die Position eines Wertes wird durch einen *Index* angegeben. Die Anzahl der Werte in einer Datenstruktur ist deren **Länge**. Die Länge und die Indizes einer Datenstruktur sind natürliche Zahlen.
 
 Über die zusammengefassten Datentypen lassen sich zwei Arten von Datenfeldern unterscheiden.
 
