@@ -154,7 +154,7 @@ Boxplots dürfen nur für ordinal- oder kontinuierlich skalierte Wertebereiche v
 
 Ein Boxplot hat nur eine Achse für den Wertebereich der dargestellten Werte. Die zweite Achse in einem einfachen Boxplot ist nur notwendig, um das Rechteck zeichnen zu können und hat sonst keine Bedeutung.
 
-Ein Boxplot gliedert die vorliegenden Daten in vier gleichgrosse Bereiche. Diese Bereiche heisse Quartile. Jedes Quartil umfasst jeweils ein Viertel der Werte. Die beiden mittleren Quartile werden als zwei Rechtecke dargestellt. Die Länge der beiden Rechtecke heisst **Interquartilsabstand**. Die Linie die am Übergang zwischen den beiden Rechtecken entsteht markiert den *Median* der Verteilung. Ausreisser sind Werte, die um mehr als das 1.5-fache des Interquartilsabstands von der nächsten Quartilsgrenze entfernt sind.
+Ein Boxplot gliedert die vorliegenden Daten in vier gleichgrosse Bereiche. Diese Bereiche heisse Quartile. Jedes Quartil umfasst jeweils ein Viertel der Werte. Die beiden mittleren Quartile werden als zwei Rechtecke dargestellt. Die Länge der beiden Rechtecke heisst **Interquartilsabstand**. Die Linie, die am Übergang zwischen den beiden Rechtecken entsteht, markiert den *Median* der Verteilung. Ausreisser sind Werte, die um mehr als das 1.5-fache des Interquartilsabstands von der nächsten Quartilsgrenze entfernt sind.
 
 ```{r}
 #| label: fig-visual-boxplot-single
@@ -237,12 +237,12 @@ Für ein Funktionsdiagramm wird neben der Funktion zusätzlich ein Parameterinte
 ::: {.callout-tip}
 ## Praxis
 
-Viele Visualisierungsumgebungen erstellen die Wertetabelle automatich vor der Visualisierung einer Funktion. 
+Viele Visualisierungsumgebungen erstellen die Wertetabelle automatisch vor der Visualisierung einer Funktion. 
 :::
 
 ```{r}
 #| label: fig-visual-math-funcs
-#| fig-cap: Beispiel eines Funktionsplots mit einer linearen und einer quadratischen Funktionen 
+#| fig-cap: Beispiel eines Funktionsplots mit einer linearen und einer quadratischen Funktion 
 
 # library(ggplot2)
 
@@ -264,7 +264,7 @@ Werden die Werte von zwei Variablen gegenübergestellt, dann wird die Beziehung 
 
 ::: {.callout-important}
 ## Achtung
-Gelegentlich werden Beziehungen zwischen Variablen mit Balken dargestellt. Diese Darstellung ist unzulässt. Balken sollten ausschliesslich zur Darstellung von Häufigkeiten verwendet werden.
+Gelegentlich werden Beziehungen zwischen Variablen mit Balken dargestellt. Diese Darstellung ist unzulässig. Balken sollten ausschliesslich zur Darstellung von Häufigkeiten verwendet werden.
 :::
 
 Beziehungen zwischen Variablen können auf verschiedene Arten dargestellt werden.
@@ -314,10 +314,10 @@ mtcars |> ggplot(aes(gear, cyl)) + geom_jitter() + geom_tile(color="red", fill =
 ::: {.callout-tip}
 ## Praxis
 
-Bei der Grösse des Jitter-Bereichs sollte etwas Abstand zu den umgebenden Bereichen gelassen werden. Dadurcht entsteht ein Leerraum, welcher keine Punkte enthält, so lassen sich die einzelnen Bereiche optisch leichter voneinander abgrenzen.
+Bei der Grösse des Jitter-Bereichs sollte etwas Abstand zu den umgebenden Bereichen gelassen werden. Dadurch entsteht ein Leerraum, welcher keine Punkte enthält, so lassen sich die einzelnen Bereiche optisch leichter voneinander abgrenzen.
 :::
 
-Beim Lesen eines Jitter-Diagramm muss beachtet werden, dass der Bereich für die Punkte dem zugehörigen diskreten Wert entspricht. Durch die Anordnung der Punkte in einem Jitter-Diagramm kann der Eindruck einer Beziehung zwischen zwei Variablen visuell entstehen, ohne dass diese Beziehung tatsächlich existiert.
+Beim Lesen eines Jitter-Diagramms muss beachtet werden, dass der Bereich für die Punkte dem zugehörigen diskreten Wert entspricht. Durch die Anordnung der Punkte in einem Jitter-Diagramm kann der Eindruck einer Beziehung zwischen zwei Variablen visuell entstehen, ohne dass diese Beziehung tatsächlich existiert.
 
 #### Liniendiagramme
 
@@ -325,7 +325,7 @@ Beim Lesen eines Jitter-Diagramm muss beachtet werden, dass der Bereich für die
 Ein ***Liniendiagramm*** eine Variante eines Streudiagramms, bei dem aufeinanderfolgende Punkte durch eine Linie verbunden werden. 
 :::
 
-Liniendiagramme werden verwendet, wenn die Werte einer Variablen in einer bestimmten Reihenfolge zueinander stehen. Die Werte werden dann auf der entsprechenden Achse in der entsprechenden Reihenfolge abgetragen. Die Punkte werden dann durch eine Linie verbunden. 
+Liniendiagramme werden verwendet, wenn die Werte einer Variablen in einer bestimmten Reihenfolge zueinanderstehen. Die Werte werden dann auf der entsprechenden Achse in der entsprechenden Reihenfolge abgetragen. Die Punkte werden dann durch eine Linie verbunden. 
 
 Liniendiagramme werden häufig verwendet, um die Entwicklung von Variablen über die Zeit darzustellen.
 
@@ -346,7 +346,7 @@ suppressMessages(print(diag))
 ::: {.callout-warning}
 ## Achtung
 
-Wenn die Werte einer Variablen nicht in einer festen Reihenfolge zueinander stehen, dann dürfen die Werte nicht durch eine Linie verbunden werden! In diesem Fall muss ein Streudiagramm verwendet werden.
+Wenn die Werte einer Variablen nicht in einer festen Reihenfolge zueinanderstehen, dann dürfen die Werte nicht durch eine Linie verbunden werden! In diesem Fall muss ein Streudiagramm verwendet werden.
 :::
 
 ### Ausgleichsgeraden
@@ -403,7 +403,7 @@ Für Beziehungen zwischen mehr als zwei Variablen muss für die zusätzlichen Va
 - Grössenkodierung
 - Form-Kodierung
 
-Diese Varianten können kombiniert werden, um zusätzliche Daten in eine Visualisierungzu integrieren. 
+Diese Varianten können kombiniert werden, um zusätzliche Daten in eine Visualisierung zu integrieren. 
 
 ::: {.callout-warning}
 ## Wichtig
@@ -418,7 +418,7 @@ Bei der farblichen Kodierung werden die dargestellten Werte in Farben oder Farbt
 Bei diskreten Wertebereichen sollten für die farbliche Kodierung Farben bzw. Farbtöne verwendet werden, die sich voneinander unterscheiden lassen. 
 
 ::: {.callout-note}
-Die farblichen Kodierung sollte sparsam eingesetzt werden, weil die menschliche Farbwahrnehmung stark variiert. Eine vermeintlich gut gewählter Farbton lässt möglicherweise von den Adressaten einer Visualisierung nicht von anderen verwendeten Farben unterscheinde. Dadurch kann die Darstellung nicht wie vorgesehen dekodiert werden. 
+Die farbliche Kodierung sollte sparsam eingesetzt werden, weil die menschliche Farbwahrnehmung stark variiert. Eine vermeintlich gut gewählter Farbton lässt möglicherweise von den Adressaten einer Visualisierung nicht von anderen verwendeten Farben unterscheiden. Dadurch kann die Darstellung nicht wie vorgesehen dekodiert werden. 
 :::
 
 #### Farbliche Kodierung von diskreten Wertebereichen
@@ -468,7 +468,7 @@ mtcars |>
 Bei der Grössenkodierung werden die Punkte von Streudiagrammen entsprechend eines dritten Werts vergrössert oder verkleinert. 
 
 ::: {.callout-note}
-Eine Grössenkodierung eigent sich gut für kontinuierliche Wertebereiche. Obwohl sich ordinalskalierte Wertebereiche ebenfalls so darstellen lassen, sollte das möglichst vermieden werden, weil bei dieser Darstellungsform verborgen wird, dass es sich um diskrete Daten handelt.
+Eine Grössenkodierung eignet sich gut für kontinuierliche Wertebereiche. Obwohl sich ordinalskalierte Wertebereiche ebenfalls so darstellen lassen, sollte das möglichst vermieden werden, weil bei dieser Darstellungsform verborgen wird, dass es sich um diskrete Daten handelt.
 ::: 
 
 ```{r}
@@ -491,7 +491,7 @@ Ein **Bubble-Chart** oder **Ballondiagramm** ist ein *Streudiagramm* mit zusätz
 
 ### Form-Kodierung
 
-Über die Form von Punkten oder Linien können zuätzliche Werte in Diagrammen abgebildet werden. Formen eignen sich nur für diskrete Wertebereiche.
+Über die Form von Punkten oder Linien können zusätzliche Werte in Diagrammen abgebildet werden. Formen eignen sich nur für diskrete Wertebereiche.
 
 Normalerweise wird die Kodierung für Punkte oder für Linien verwendet.
 
