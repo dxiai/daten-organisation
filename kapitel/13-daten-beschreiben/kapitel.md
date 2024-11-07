@@ -8,7 +8,7 @@ execute:
 ---
 # Daten beschreiben {#sec-chapter-deskriptve-statistik}
 
-> Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Information über den jeweiligen Untersuchungsgegenstand bekannt sind. [@bortz_statistik_2010, S. 25]
+> Die Anwendung statistischer Verfahren setzt voraus, dass quantitative Information über den jeweiligen Untersuchungsgegenstand bekannt ist. [@bortz_statistik_2010, S. 25]
 
 ::: {#def-deskriptive-statistik}
 Die **deskriptive Statistik** bezeichnet die Vorgehensweisen und die erforderlichen Kennzahlen zum Beschreiben von Daten. 
@@ -65,7 +65,7 @@ Mit **universellen Kennzahlen** sind abgeleitete Werte gemeint, die sich für *a
 In **jeder** (wissenschaftlichen) Arbeit, in der Daten präsentiert werden, **müssen** die beiden universellen Kennwerte angegeben werden. Fehlen diese Kennwerte, dann ist die Arbeit *unvollständig*.
 :::
 
-Der **Stichprobenumfang** entspricht der Anzahl der Datensätze einer Stichprobe. Oft wird der Stichprobenumfang **zwei Mal** berichtet. Zuerst wird der unbereinigte Stichprobenumfang berichtet. Diese beinhalte alle Datensätze der Stichprobe, was der Anzahl der durchgeführten Messungen entspricht. Anschliessend werden alle ungültigen Datensätze entfernt und die verbleibenden Datensätze nocheinmal gezählt. Sind beide Werte gleich, dann darf der Stichprobenumfang nur einmal berichtet werden.
+Der **Stichprobenumfang** entspricht der Anzahl der Datensätze einer Stichprobe. Oft wird der Stichprobenumfang **zwei Mal** berichtet. Zuerst wird der unbereinigte Stichprobenumfang berichtet. Diese beinhalte alle Datensätze der Stichprobe, was der Anzahl der durchgeführten Messungen entspricht. Anschliessend werden alle ungültigen Datensätze entfernt und die verbleibenden Datensätze noch einmal gezählt. Sind beide Werte gleich, dann darf der Stichprobenumfang nur einmal berichtet werden.
 
 ::: {.callout-important}
 ## Achtung
@@ -134,7 +134,7 @@ Für Variablen wurden im @sec-datentypen die folgenden Skalenniveaus eingeführt
 
 Ein wichtiges Merkmal der Skalenniveaus sind die zulässigen Operationen über die Daten, woraus sich die zulässigen Kennwerte ableiten. Diese Kennwerte heissen **Lagemasse**, weil sie ein Mass für die Struktur der Werteverteilung darstellen. Weil die Skalenniveaus hierarchisch organisiert sind, beschreiben die Kennzahlen für Verteilungen des allgemeinere Skalennivaus automatisch auch Verteilungen der spezielleren Skalennivaus. Für metrisch-skalierte Daten gelten also automatisch auch die Kennzahlen für ordinalskalierte und nominalskalierte Daten. Für ordinalskalierte Daten gelten automatisch auch die Kennzahlen für nominalskalierte Daten, aber *nicht* die für metrisch-skalierte Daten.
 
-**Nominalskalierte Daten** lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden. Daraus ergeben sich **absolute Häufigkeiten**. Werden absolute Häufigkeiten auf das Intervall 0-100 normalisiert, dann spricht man von **relativen Häufigkeiten**.  Weil es keine Beziehungen zwischen verschiedenen nominalskalierten Werten gibt, können nur die beiden Kennwerte der absuluten und relativen Häufigkeiten berichtet werden. Formal liesse sich auch noch der Modus bestimmen. Der Modus ist der am häufigsten vorkommende Wert, der sich direkt aus den absoluten bzw. relativen Häufigkeiten ergibt. In der Praxis wird der Modus nicht separat berichtet, sondern nur zusammen mit allen anderen relativen und absoluten Häufigkeiten.
+**Nominalskalierte Daten** lassen sich nur über die Ungleichheit unterscheiden. Gleiche Werte dieser Datenkategorie dürfen nur gezählt werden. Daraus ergeben sich **absolute Häufigkeiten**. Werden absolute Häufigkeiten auf das Intervall 0-100 normalisiert, dann spricht man von **relativen Häufigkeiten**.  Weil es keine Beziehungen zwischen verschiedenen nominalskalierten Werten gibt, können nur die beiden Kennwerte der absoluten und relativen Häufigkeiten berichtet werden. Formal liesse sich auch noch der Modus bestimmen. Der Modus ist der am häufigsten vorkommende Wert, der sich direkt aus den absoluten bzw. relativen Häufigkeiten ergibt. In der Praxis wird der Modus nicht separat berichtet, sondern nur zusammen mit allen anderen relativen und absoluten Häufigkeiten.
 
 **Ordinalskalierte Daten** lassen sich sortieren, so dass für jeden Wert eines Wertebereichs Grösser-Kleiner-Beziehungen zu allen anderen Werten festgelegt werden können. Entsprechend lassen sich die Werte auf eine Weise nummerieren, so dass die Nummerierung der Reihenfolge der Werte im Wertebereich widerspiegelt. Über diese Nummerierung lassen sich beliebige ordinalskalierte Werte auswerten und zusätzliche Kennwerte bestimmen:
 
@@ -164,7 +164,7 @@ Die Kennwerte müssen **für alle** gemessenen Variablen zusammen mit dem Variab
 
 ### Mittelwert
 
-Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittlichen Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmmt (@eq-mittelwert).
+Der Mittelwert bzw. arithmetische Mittel kennzeichnet der durchschnittliche Wert einer Verteilung. Der Mittelwert wird aus der Summe aller Werte geteilt durch die Anzahl der Werte bestimmt (@eq-mittelwert).
 
 $$
 \bar{x} = \frac{\sum{v_i}}{n}
@@ -230,7 +230,7 @@ Für **metrisch-skalierte Werte** lassen sich die Häufigkeiten nicht so leicht 
 
 ::: {.callout-tip}
 ## Praxis
-Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als Histogram dargestellt und nicht separat angegeben. 
+Die Häufigkeiten von metrisch-skalierten Daten werden normalerweise nur als Histogramm dargestellt und nicht separat angegeben. 
 :::
 
 ### Bandbreite
@@ -268,14 +268,14 @@ Ein besonderes Quantil ist der **Median**. Weil der Median auch als zentrales La
 
 Zur Bestimmung der Quantile müssen die gemessenen Werte sortiert werden. Entsprechend lassen sich Quantile nur für ordinal- und metrisch-skalierte Daten bestimmen. 
 
-Weil die Anzahl der Werte in einem Intervall fest ist, lassen sich über die Abstände zwischen den Quantilen Rückschlüsse über die Verteilung der gemessenen Werte ziehen: Sind die Abstände zwischen den Quantilen klein (oder auch `0`), dann liegen viele Werte in diesem kleinen Bereich. Weil die Quantile die Verteilung beschreiben sind auch sie **Streumasse einer Verteilung**.
+Weil die Anzahl der Werte in einem Intervall fest ist, lassen sich über die Abstände zwischen den Quantilen Rückschlüsse über die Verteilung der gemessenen Werte ziehen: Sind die Abstände zwischen den Quantilen klein (oder auch `0`), dann liegen viele Werte in diesem kleinen Bereich. Weil die Quantile die Verteilung beschreiben, sind auch sie **Streumasse einer Verteilung**.
 
 Eine häufig verwendete Variante der Quantile sind die **Quartile**. Diese Teilen die Verteilung in vier Bereiche, die gleich viele Werte enthalten. Als Quartil wird den Wert bezeichnet, der zwei dieser Bereiche trennt. Das 50%-Quartil ist identisch mit dem Median und wird deshalb **nicht** als Quartil bezeichnet. Es gibt also **zwei** Quartile. 
 
-- Das 25%-Quartil markiert das Ende der kleinsten Viertels der Werte. 
+- Das 25%-Quartil markiert das Ende des kleinsten Viertels der Werte. 
 - Das 75%-Quartil markiert das Ende der kleinsten drei-Viertel der Werte.
 
-Die Differenz zwischen dem 75%- und dem 25%-Quartil heisst Interquartilabstand oder angekürzt **IQR** (für engl. *interquartile Range*). 
+Die Differenz zwischen dem 75%- und dem 25%-Quartil heisst Interquartilabstand oder abgekürzt **IQR** (für engl. *interquartile Range*). 
 
 ### Standardabweichung und Varianz
 
@@ -289,12 +289,12 @@ $$ {#eq-varianz}
 
 Wie auch beim Mittelwert werden zwei Arten der Varianz unterschieden: 
 
-1. Die *echte Varianz*, die mit dem grichischen Buchstaben Sigma ($\sigma^2$) gekennzeichnet wird
+1. Die *echte Varianz*, die mit dem griechischen Buchstaben Sigma ($\sigma^2$) gekennzeichnet wird
 2. Die *gemessene Varianz* ($s^2$)
 
 Weil die Varianz vorzeichenlos ist und durch das Quadrieren nicht die gleiche Masseinheit hat wie die Werte, lassen sich die Varianz und die Werte nicht direkt miteinander vergleichen.
 
-Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die **Standardabweichung**. Die **Standardabweichung** hängt direkt mit der Varianz zusuammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte. 
+Besser wäre ein Kennwert für die Streuung um den Mittelwert, der direkt mit den Werten vergleichbar ist. Ein solcher Kennwert ist die **Standardabweichung**. Die **Standardabweichung** hängt direkt mit der Varianz zusammen: Sie ist die Wurzel der Varianz und hat die gleiche Masseinheit wie die Werte. 
 
 ### Standardfehler
 
@@ -324,11 +324,11 @@ Aus @eq-standardfehler lässt sich ableiten, dass der Standardfehler mit zunehme
 Der Interquartilsabstand (IQR) ist ein *Standardmass*, dass sich aus den Quartilsgrenzen ergibt. *Standardmass* bedeutet in diesem Fall, dass für Studien vorausgesetzt wird, dass dieser Wert für ordinal- und z.T. auch für metrisch-skalierte Daten berichtet wird. Der IQR hat jedoch zwei wichtige Nachteile: 
 
 1. Der IQR gibt aber nur über einen Teil der Stichprobe Auskunft, nämlich genau über die Hälfte der Stichprobe. Das liegt daran, dass der IQR in den Grenzen der beiden Quartile definiert ist. Weil zwischen den beiden Quartilen einer Stichprobe nur die Hälfte der Werte liegt, bleibt die andere Hälfte der Werte unberücksichtigt. 
-2. Der IQR muss anders interpretiert werden, als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.
+2. Der IQR muss anders interpretiert werden als die Varianz bzw. die Standardabweichung. Während die Standardabweichung alle Werte in Beziehung zum zentralen Lagemass des Mittelwerts setzt, gibt der IQR an über wie viele Werte sich die Hälfte der Daten verteilt.
 
 Für ordinalskalierte Daten ist also ein Streumass wünschenswert, das alle Werte berücksichtigt und sie relativ zum zentralen Lagemass des Medians beschreibt Dieses Mass ist die sog. **Mittlere absolute Abweichung vom Median** (MAD).  Wie der IQR oder die Standardabweichung ist dieses Mass ein Kennwert für die Streuung der Werte. 
 
-Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Median definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (@eq-mad). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.
+Die MAD ist wie auch die Standardabweichung in Relation zum zentralen Lagemass des Medians definiert: Die MAD ist der Median der absoluten Abstände zum Median der Daten (@eq-mad). Es werden die absoluten Abstände verwendet, um ein vorzeichenloses Ergebnis zu erhalten. Gleichzeitig stellt der Absolutbetrag der Differenz sicher, dass sich die Werte nicht gegenseitig aufheben. Ohne den Absolutbetrag ist das möglich, weil jeweils die Hälfte der Werte ober- und unterhalb des Medians liegen. Weil für ordinalskalierte Werte die Verhältnisse und Differenzen nicht sichergestellt sind, werden für die MAD keine Multiplikationen oder Divisionen verwendet.
 
 $$
 MAD(x) = md(| x_i - md(x) |)
