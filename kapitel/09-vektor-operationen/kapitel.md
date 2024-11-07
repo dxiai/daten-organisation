@@ -152,7 +152,7 @@ $$
 v \circ \varnothing = \varnothing \circ v = v
 $$ {#eq-konkatenation-leerer-vektor}
 
-Ein Skalar kann als Vektor mit der Länge `1` aufgefasst werden. Die Konkatenation eines Vektors mit einem Skalart ergibt einen Vektor, der um `1` länger als der ursprüngliche Vektor ist.  Es gilt also @eq-konkatenation-einzelner-wert.
+Ein Skalar kann als Vektor mit der Länge `1` aufgefasst werden. Die Konkatenation eines Vektors mit einem Skalar ergibt einen Vektor, der um `1` länger als der ursprüngliche Vektor ist.  Es gilt also @eq-konkatenation-einzelner-wert.
 
 $$
 v \circ a \Leftrightarrow v \circ \{ a \}
@@ -179,7 +179,7 @@ $$
 ## Transformationen
 
 ::: {#def-transformation}
-Eine **Transformation** bezeichnet eine Umformung der Element eines Vektors, wobei die Länge des Vektors unverändert bleibt. 
+Eine **Transformation** bezeichnet eine Umformung der Elemente eines Vektors, wobei die Länge des Vektors unverändert bleibt. 
 ::: 
 
 Eine Transformation erfordert also immer eine Funktion, die auf die Elemente des Vektors angewandt wird. Diese Funktion wird für jedes Element des Vektors separat ausgeführt. Dadurch ist sichergestellt, dass es für jedes Element des Vektors genau ein Ergebnis gibt.
@@ -306,7 +306,7 @@ Beim Aggregieren hängen die Operationen von der jeweiligen vorangehenden Operat
 >
 > Diese Schreibweise legt fest, dass die Vektorelemente quadriert werden müssen. Dabei handelt es sich um eine Transformation mit einem Skalar (`2`) und der Potenz als Transformationsfunktion. Diese vorgelagerte Transformation erzeugt einen impliziten Vektor mit den quadrierten Elementen $\{1, 4, 9, 16, 25\}$. 
 >
-> Die Reduktionsfunktion der Summe ist die Addition (`+`). Beim Reduzieren werden die Elemente des impliziten Vektors nacheinander addiert. Dabei wird das Element mit dem bisherigen Ergebnis *reduziert*. Beim ersten Schritt liegt noch kein Ergenis vor, weshalb das Element direkt übernommen wird. Dadurch ergeben sich in diesem Beispiel die folgenden Reduktionsschritte. 
+> Die Reduktionsfunktion der Summe ist die Addition (`+`). Beim Reduzieren werden die Elemente des impliziten Vektors nacheinander addiert. Dabei wird das Element mit dem bisherigen Ergebnis *reduziert*. Beim ersten Schritt liegt noch kein Ergebnis vor, weshalb das Element direkt übernommen wird. Dadurch ergeben sich in diesem Beispiel die folgenden Reduktionsschritte. 
 >
 > $$
 > \begin{aligned}
@@ -355,7 +355,7 @@ Nicht immer muss der Umfang des gesamten Vektors bestimmt werden. Stattdessen so
 
 ### Zählen durch Summieren
 
-Beim Zählen durch Summieren geht eine Transformation in die Werte `0` und `1` mithilfe eines logischen Ausdurcks einer Summen-Aggregation unmittelbar voraus.
+Beim Zählen durch Summieren geht eine Transformation in die Werte `0` und `1` mithilfe eines logischen Ausdrucks einer Summen-Aggregation unmittelbar voraus.
 
 Gelegentlich werden nicht alle Elemente einer Datenstruktur gezählt, sondern nur diejenigen, die bestimmte Bedingungen erfüllen.
 
@@ -375,7 +375,7 @@ Die Transformation in die Werte `0` und `1` durch einen logischen Ausdruck wird 
 
 ### Zählen durch Filtern
 
-Beim Zählen durch Filtern wird die Summe über die zählbaren Einheiten durch eine Filter-Aggregation zusammegefasst. Nach dem Filtern bleibt ein Vektor mit den zählbaren Einheiten übrig, der keine nicht-zählbaren Elemente enthält. Die Länge dieses Vektors entspricht der Anzahl der zählbaren Einheiten.
+Beim Zählen durch Filtern wird die Summe über die zählbaren Einheiten durch eine Filter-Aggregation zusammengefasst. Nach dem Filtern bleibt ein Vektor mit den zählbaren Einheiten übrig, der keine nicht-zählbaren Elemente enthält. Die Länge dieses Vektors entspricht der Anzahl der zählbaren Einheiten.
 
 ::: {.callout-note}
 ## Merke
