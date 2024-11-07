@@ -25,7 +25,7 @@ Lässt sich durch wiederholtes Umformen die ursprüngliche Datenstruktur nicht e
 
 ::: {.callout-note}
 ## Merke
-Jede *partielle Umformung* führt zu Informationsverlusst durch *Äquivokation*.
+Jede *partielle Umformung* führt zu Informationsverlust durch *Äquivokation*.
 :::
 
 ## Transponieren
@@ -37,9 +37,9 @@ Jede *partielle Umformung* führt zu Informationsverlusst durch *Äquivokation*.
 Es gibt zwei Arten des Transponierens.
 
 1. Das Transponieren von Matrizen, bei dem die Zeilen und Spalten vertauscht werden. Dabei bleibt die grundsätzliche Struktur der Daten erhalten. 
-2. Das Transponieren von Daten, bei mehrere Vektoren zu einem Vektor zusammengefasst werden oder ein Vektor in mehrere Vektoren aufgegliedert wird. Weil sich die Struktur der Daten verändert, wird diese Operation auch als **Reshaping** oder **Pivoting** bezeichnet.
+2. Das Transponieren von Daten, bei mehreren Vektoren zu einem Vektor zusammengefasst werden oder ein Vektor in mehrere Vektoren aufgegliedert wird. Weil sich die Struktur der Daten verändert, wird diese Operation auch als **Reshaping** oder **Pivoting** bezeichnet.
 
-@sec-chapter-matrix-operationen zeigt das Transponieren von **Matrizen**. Bei dieser Operation werden die Zeilen- und die Spaltenindizes vertauscht. Diese Operation darf nur auf Matrizen angewandt werden. Jede Matrix kann transponiert werden. Wird eine transponierte Matrix nocheinmal transponiert, dann ist das Ergebnis die ursprüngliche Matrix. Daraus folgt, das das Transponieren immer *umkehrbar* ist.
+@sec-chapter-matrix-operationen zeigt das Transponieren von **Matrizen**. Bei dieser Operation werden die Zeilen- und die Spaltenindizes vertauscht. Diese Operation darf nur auf Matrizen angewandt werden. Jede Matrix kann transponiert werden. Wird eine transponierte Matrix noch einmal transponiert, dann ist das Ergebnis die ursprüngliche Matrix. Daraus folgt, dass das Transponieren immer *umkehrbar* ist.
 
 Die zweite Art des Transponierens wird auf **Datenrahmen** angewendet. 
 
@@ -63,7 +63,7 @@ Die Breitform verteilt die Werte über mehrere Vektoren. In der Langform sind di
 > | v1 | 7 |
 > | v2 | 8 |
 > 
-> Durch das Auffächern werden die Werte entsprechend der Werte im Namensvektor auf neue Vektoren aufgeteilt. Wir transponieren also entlang der Namen. So erhalten wir die Breitform der Stichprobe. 
+> Durch das Auffächern werden die Werte entsprechend den Werten im Namensvektor auf neue Vektoren aufgeteilt. Wir transponieren also entlang der Namen. So erhalten wir die Breitform der Stichprobe. 
 > 
 > | v1 | v2 | v3 |
 > | ---: | ---: | ---: |
@@ -101,7 +101,7 @@ Beim Transponieren in die Vektorform werden mehrere Vektoren zu einem Vektor zus
 > | Juli | 17000 | Verkauf | 
 > | Juli | -5000 |  Kosten |
 > 
-> In diesem Beispiel erkennen wir, dass die Werte der nicht transponierten Vektoren in der Langform der Stichprobe mehrfach auftreten.
+> In diesem Beispiel erkennen wir, dass die Werte, der nicht transponierten Vektoren in der Langform der Stichprobe mehrfach auftreten.
 > :::
 
 ::: {.callout-note}
