@@ -229,7 +229,7 @@ $$
 \end{aligned}
 $$ {#eq-in-operator-log-comb}
 
-In vielen Fällen sind die zu prüfende Elemente in $B$ nicht vorab bekannt oder die Anzahl der Elemente variiert. In diesem Fall ist eine explizite `ODER`-Operation nicht möglich. Auch in weniger komplexen Fällen, empfiehlt es sich, die `ODER`-Operation zu vermeiden und die Existenzprüfung vorzuziehen, weil sie die Lesbarkeit eines logischen Ausdrucks erhöht. 
+In vielen Fällen sind die zu prüfenden Elemente in $B$ nicht vorab bekannt oder die Anzahl der Elemente variiert. In diesem Fall ist eine explizite `ODER`-Operation nicht möglich. Auch in weniger komplexen Fällen, empfiehlt es sich, die `ODER`-Operation zu vermeiden und die Existenzprüfung vorzuziehen, weil sie die Lesbarkeit eines logischen Ausdrucks erhöht. 
 
 
 @eq-in-operator-ex1 zeigt die Anwendung des $\in$-Operators.

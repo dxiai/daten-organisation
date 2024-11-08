@@ -53,7 +53,7 @@ Eine **Datenrahmen** (engl. *data frame*) verknüpft mehrere gleichlange Vektore
 Ein Datenrahmen kann als eine Liste von Vektoren mit gleicher Länge verstanden werden. Diese Datenstruktur muss eine Liste sein, weil die einzelnen Vektoren unterschiedliche Datentypen haben können. Entsprechend gelten Datenrahmen ebenfalls als *heterogene Datenstrukturen*.
 
 ::: {#def-matrix-structure}
-Eine **Matrix** verknüpft mehrere gleichlange Vektoren des Datentyps *Zahlen*. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.
+Eine **Matrix** verknüpft mehrere gleichlange Vektoren mit dem Datentyp *Zahlen*. Die Länge der Vektoren einer Matrix muss mindestens 1 sein.
 :::
 
 Weil alle Vektoren in einer Matrix vom gleichen Datentyp sind, sind Matrizen *homogene Datenstrukturen*. 

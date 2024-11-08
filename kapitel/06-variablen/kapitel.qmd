@@ -344,7 +344,7 @@ $$
 
 #### Der Index-Operator
 
-In der Mathematik werden Indices durch tieferstellen gekennzeichnet.  Ein Index wird dann verwendet, wenn ein Bezeichner auf eine Datenstruktur verweist. Der Index bezeichnet den Wert an der entsprechenden Position in der Datenstruktur. Am Beispiel des Summe-Operators wird dies in @eq-index-sum verdeutlicht.
+In der Mathematik werden Indizes durch tieferstellen gekennzeichnet.  Ein Index wird dann verwendet, wenn ein Bezeichner auf eine Datenstruktur verweist. Der Index bezeichnet den Wert an der entsprechenden Position in der Datenstruktur. Am Beispiel des Summe-Operators wird dies in @eq-index-sum verdeutlicht.
 
 $$
 \sum_{i=1}^{n} x_i \cdot y_i
