@@ -393,12 +393,12 @@ div.csl-indent {
 <p><span class="theorem-title"><strong>Definition 9.1</strong></span> Ein <strong>Datenstrom</strong> ist eine Folge von binärkodierten Bits.</p>
 </div>
 <p>Ein Datenstrom ist also immer eine Abfolge von <code>0</code> und <code>1</code> Werten. Diese Abfolgen sind eine <em>Datenserialisierung</em> (s. <a href="../01-information/kapitel.html#sec-serialisierung" class="quarto-xref">Abschnitt&nbsp;<span>3.4.1</span></a>). Für die Interpretation werden diese Abfolgen in Gruppen zusammengefasst. Üblich sind Gruppen von 8-Bit (dem sog. <em>Byte</em>), 16-Bit, 32-Bit oder 64-Bit.</p>
-<p>Datenströme können eine <em>feste Länge</em> haben. In diesem Fall wird die Länge eines Datenstroms wird <em>Byte</em> angegegeben.</p>
+<p>Datenströme können eine <em>feste Länge</em> haben. In diesem Fall wird die Länge eines Datenstroms wird <em>Byte</em> angegeben.</p>
 <div id="def-datei" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9.2</strong></span> Eine <strong>Datei</strong> ist ein Datenstrom mit fester Länge, der von einem Speichermedium geladen wird.</p>
 </div>
 <p>Weil eine Datei auf einem Speichermedium gespeichert ist, kann der Datenstrom aus einer Datei wiederholt abgerufen werden. Deshalb gehören Dateien zu den sog. <strong><em>persistenten Datenströmen</em></strong>. Persistente Datenströme liefern also <em>dauerhafte Daten</em>.</p>
-<p>Nicht alle Datenströme sind persistent. Deshalb ist es wichtig, die Art eines Datenstroms zu kennen, denn bei nicht-persisten oder <strong>flüchtigen Datenströmen</strong> kann auf die Daten nur einmal zugegriffen werden. <em>Flüchtige Datenströme</em> sind kommen vorwiegend bei der <em>automatischen Datenerfassung</em> vor. In diesem Fällen entspricht jeder Zugriff auf den Datenstrom einer Messung, wobei es nicht möglich ist, eine Messung zu wiederholen.</p>
+<p>Nicht alle Datenströme sind persistent. Deshalb ist es wichtig, die Art eines Datenstroms zu kennen, denn bei nicht-persistent oder <strong>flüchtigen Datenströmen</strong> kann auf die Daten nur einmal zugegriffen werden. <em>Flüchtige Datenströme</em> sind kommen vorwiegend bei der <em>automatischen Datenerfassung</em> vor. In diesem Fällen entspricht jeder Zugriff auf den Datenstrom einer Messung, wobei es nicht möglich ist, eine Messung zu wiederholen.</p>
 <section id="dateien-verwenden" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="dateien-verwenden"><span class="header-section-number">9.1</span> Dateien verwenden</h2>
 <section id="importieren" class="level3" data-number="9.1.1">
@@ -463,7 +463,7 @@ Wichtig
 <div id="def-export-data" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9.5</strong></span> Das Schreiben von Daten aus einer Datenstruktur in einen Datenstrom heisst <strong>Exportieren</strong>.</p>
 </div>
-<p>Beim Exportieren werden die Daten aus einer Datenstruktur in einen Datenstrom <em>serialisiert</em>. Eine Funktion die eine Datenstruktur in einen Datenstrom überführt, heisst <strong>Serialisierer</strong>.</p>
+<p>Beim Exportieren werden die Daten aus einer Datenstruktur in einen Datenstrom <em>serialisiert</em>. Eine Funktion, die eine Datenstruktur in einen Datenstrom überführt, heisst <strong>Serialisierer</strong>.</p>
 <p>Ähnlich wie beim Importieren muss auch beim Exportieren existiert für jedes Datenformat ein geeigneter Serializer. Die Wahl eines Serialisierers hängt von der späteren Verwendung der Serialisierung ab.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -489,7 +489,7 @@ Praxis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Beim Exportieren von Daten die vorher importiert wurde dürfen die ursprüngliche Daten nicht überschrieben werden, weil sonst Daten verloren gehen können. Stattdessen sollten Daten beim Exportieren in eine separate Datei geschrieben werden.</p>
+<p>Beim Exportieren von Daten die vorher importiert wurde dürfen die ursprünglichen Daten nicht überschrieben werden, weil sonst Daten verloren gehen können. Stattdessen sollten Daten beim Exportieren in eine separate Datei geschrieben werden.</p>
 </div>
 </div>
 </section>
@@ -500,7 +500,7 @@ Praxis
 <p><span class="theorem-title"><strong>Definition 9.6</strong></span> Eine Textformat legt fest, dass alle Werte in einer Datei als Zeichenkettensymbole interpretiert werden müssen.</p>
 </div>
 <p>Die Bits einer Textdatei sind nach einem festgelegten Standard kodiert (s. <a href="../01-information/kapitel.html#sec-zeichenkodierung" class="quarto-xref"><span>Kapitel 3.5</span></a>). Dadurch kann der Inhalt einer Textdatei immer zuverlässig gelesen und interpretiert werden. Inzwischen verwenden alle modernen Betriebssysteme einheitlich den Kodierungsstandard UTF-8 <span class="citation" data-cites="isoiec_jtc_1sc_2_information_2020 the_unicode_consortium_unicode_2022">(<a href="../../references.html#ref-isoiec_jtc_1sc_2_information_2020" role="doc-biblioref">ISO/IEC JTC 1/SC 2, 2020</a>; <a href="../../references.html#ref-the_unicode_consortium_unicode_2022" role="doc-biblioref">The Unicode Consortium, 2022</a>)</span>.</p>
-<p>Textdateien haben den grossen Vorteil, dass die Dekodierung der Bits automatisch erfolgt. Eine Programm oder eine Funktion kann also direkt auf die kodierten Symbole zugreifen.</p>
+<p>Textdateien haben den grossen Vorteil, dass die Dekodierung der Bits automatisch erfolgt. Ein Programm oder eine Funktion kann also direkt auf die kodierten Symbole zugreifen.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -722,7 +722,7 @@ Osterwalder|Urs|01.01.1970|Bern|1.78</code></pre>
 <section id="excel-arbeitsmappen" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="excel-arbeitsmappen"><span class="header-section-number">9.7</span> Excel-Arbeitsmappen</h2>
 <p>Excel-Arbeitsmappen (<code>xlsx</code>) fassen mehrere Tabellen zusammen. Excel-Arbeitsmappen werden als komprimiertes Dateiarchiv gespeichert. Deshalb wird das Format von EXCEL-Arbeitsmappen als <em>Binärformat</em> bezeichnet.</p>
-<p>Anders als bei Textdateien in denen nur die Werte und deren Struktur kodiert wird, werden bei EXCEL-Arbeitsmappen auch <em>komplexe Formatierungen</em>, <em>Grafiken</em> und die <em>Berechnungen</em> kodiert <span class="citation" data-cites="carpenter_ms-xlsx_2023">(<a href="../../references.html#ref-carpenter_ms-xlsx_2023" role="doc-biblioref">Carpenter, 2023</a>)</span>. Die einzelnen Arbeitsblätter werden zwar als Mengenkodierung behandelt, das eigentliche Dateiformat folgt einer Baumstruktur.</p>
+<p>Anders als bei Textdateien, in denen nur die Werte und deren Struktur kodiert wird, werden bei EXCEL-Arbeitsmappen auch <em>komplexe Formatierungen</em>, <em>Grafiken</em> und die <em>Berechnungen</em> kodiert <span class="citation" data-cites="carpenter_ms-xlsx_2023">(<a href="../../references.html#ref-carpenter_ms-xlsx_2023" role="doc-biblioref">Carpenter, 2023</a>)</span>. Die einzelnen Arbeitsblätter werden zwar als Mengenkodierung behandelt, das eigentliche Dateiformat folgt einer Baumstruktur.</p>
 <p>Excel-Arbeitsmappen fassen mehrere benannte Arbeitsblätter zusammen. Ein Arbeitsblatt ist eine Struktur aus Zeilen und Spalten, die <em>tabellarisch</em> organisiert ist. Dadurch ist es möglich, dass mehrere <em>Tabellen</em> auf einem Arbeitsblatt vorhanden sind. Falls diese Tabellen nicht explizit als Datentyp <code>Tabelle</code> markiert wurden, muss diese Kodierung separat dokumentiert werden.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -734,8 +734,8 @@ Praxis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Um Excel-Arbeitsmappen mit anderen Programmiersprachen zu verarbeiten muss die Struktur der Arbeitsmappe berücksichtigt werden. Daten sind immer nur über das Arbeitsblatt zugreifbar. Deshalb muss immer zuerst ein Arbeitsblatt ausgewählt werden, bevor auf die Daten zugegriffen werden kann.</p>
-<p>Arbeitsblätter haben immer zwei Modi: Den <em>Wertemodus</em> und den <em>Formelmodus</em>. Der gewünschte Moduls muss programmatisch festgelegt werden.</p>
+<p>Um Excel-Arbeitsmappen mit anderen Programmiersprachen zu verarbeiten, muss die Struktur der Arbeitsmappe berücksichtigt werden. Daten sind immer nur über das Arbeitsblatt zugreifbar. Deshalb muss immer zuerst ein Arbeitsblatt ausgewählt werden, bevor auf die Daten zugegriffen werden kann.</p>
+<p>Arbeitsblätter haben immer zwei Modi: Den <em>Wertemodus</em> und den <em>Formelmodus</em>. Das gewünschte Modul muss programmatisch festgelegt werden.</p>
 <p>Im Wertemodus werden die Werte der Zellen angezeigt. Im Formelmodus werden die Formeln der Zellen angezeigt. Wenn eine Zelle nur einen Wert aber keine Formel enthält, wird auch im Formelmodus der Wert bereitgestellt.</p>
 </div>
 </div>
@@ -852,7 +852,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Eine Anwendung, die alle Daten im XML-Format speichert ist <em>Excel</em>. Diese Daten werden aber hinter den Kulissen in einem Binärformat gespeichert. Deshalb ist es nicht möglich, Excel-Arbeitsmappen direkt als XML-Dateien zu öffnen.</p>
+<p>Eine Anwendung, die alle Daten im XML-Format speichert, ist <em>Excel</em>. Diese Daten werden aber hinter den Kulissen in einem Binärformat gespeichert. Deshalb ist es nicht möglich, Excel-Arbeitsmappen direkt als XML-Dateien zu öffnen.</p>
 </div>
 </div>
 </section>
@@ -929,7 +929,7 @@ Praxis
 <li>Als Liste von Objekten</li>
 <li>Als Objekt mit Listen</li>
 </ul>
-<p>Die erste Variante ist die gebräuchlichste, weil beim die Bedeutung der zusammenhängenden Werte durch die Schlüssel meistens einfacher verarbeitet werden kann.</p>
+<p>Die erste Variante ist die gebräuchlichste, weil bei der Bedeutung der zusammenhängenden Werte durch die Schlüssel meistens einfacher verarbeitet werden kann.</p>
 <div id="exm-json-liste-von-objekten" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 9.15 (Tabellenstruktur im JSON-Format als Liste von Objekten)</strong></span> &nbsp;</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
@@ -1025,7 +1025,7 @@ Warnung
 <p>Bei der Versionierung von Daten spielt das Dateiformat eine zentrale Rolle.</p>
 <p>Daten in separator-strukturierte Textdateien oder im YAML-Format lassen sich besonders einfach versionieren, weil sie als zeilenorientierte Formate direkt von den Versionierungssystemen unterstützt werden.</p>
 <p>Bei XML- und JSON-Daten ist die Situation etwas komplexer: Diese Formate sind nicht zeilenorientiert und die gleiche Struktur kann auf unterschiedliche Arten im gleichen Format serialisiert werden. Dadurch wird die Versionierung dieser Dateiformate erschwert.</p>
-<p>Die Versionierung von Binärformaten ist noch komplexer, weil Versionierungssystem diese Formate nicht auf der Inhaltsebene unterstützen. Deshalb ist es üblich, Daten in diesem Formaten vor der Versionierung in ein zeilenorientiertes Format überführt werden. Das betrifft sehr häufig Excel-Arbeitsmappen, weil sich die Binärdaten bei jedem <em>Zugriff</em> ändern, ohne dass die Daten selbst verändert wurden.</p>
+<p>Die Versionierung von Binärformaten ist noch komplexer, weil Versionierungssystem diese Formate nicht auf der Inhaltsebene unterstützen. Deshalb ist es üblich, Daten in diesen Formaten vor der Versionierung in ein zeilenorientiertes Format überführt werden. Das betrifft sehr häufig Excel-Arbeitsmappen, weil sich die Binärdaten bei jedem <em>Zugriff</em> ändern, ohne dass die Daten selbst verändert wurden.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

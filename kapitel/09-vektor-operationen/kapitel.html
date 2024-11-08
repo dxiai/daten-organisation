@@ -508,7 +508,7 @@ v\circ w = \{1;2;3\} \circ \{4;5;6\} = \{1;2;3;4;5;6\}
 <p><span id="eq-konkatenation-leerer-vektor"><span class="math display">
 v \circ \varnothing = \varnothing \circ v = v
 \tag{13.3}</span></span></p>
-<p>Ein Skalar kann als Vektor mit der Länge <code>1</code> aufgefasst werden. Die Konkatenation eines Vektors mit einem Skalart ergibt einen Vektor, der um <code>1</code> länger als der ursprüngliche Vektor ist. Es gilt also <a href="#eq-konkatenation-einzelner-wert" class="quarto-xref">Formel&nbsp;<span>13.4</span></a>.</p>
+<p>Ein Skalar kann als Vektor mit der Länge <code>1</code> aufgefasst werden. Die Konkatenation eines Vektors mit einem Skalar ergibt einen Vektor, der um <code>1</code> länger als der ursprüngliche Vektor ist. Es gilt also <a href="#eq-konkatenation-einzelner-wert" class="quarto-xref">Formel&nbsp;<span>13.4</span></a>.</p>
 <p><span class="math display">
 v \circ a \Leftrightarrow v \circ \{ a \}
 </span></p>
@@ -531,7 +531,7 @@ a \circ v &amp;= a \circ \{v_1; v_2; \dots; v_n\} \\
 <section id="transformationen" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="transformationen"><span class="header-section-number">13.3</span> Transformationen</h2>
 <div id="def-transformation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13.10</strong></span> Eine <strong>Transformation</strong> bezeichnet eine Umformung der Element eines Vektors, wobei die Länge des Vektors unverändert bleibt.</p>
+<p><span class="theorem-title"><strong>Definition 13.10</strong></span> Eine <strong>Transformation</strong> bezeichnet eine Umformung der Elemente eines Vektors, wobei die Länge des Vektors unverändert bleibt.</p>
 </div>
 <p>Eine Transformation erfordert also immer eine Funktion, die auf die Elemente des Vektors angewandt wird. Diese Funktion wird für jedes Element des Vektors separat ausgeführt. Dadurch ist sichergestellt, dass es für jedes Element des Vektors genau ein Ergebnis gibt.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -655,7 +655,7 @@ Merke
 \sum_{i=1}^5 v_i^2
 </span></p>
 <p>Diese Schreibweise legt fest, dass die Vektorelemente quadriert werden müssen. Dabei handelt es sich um eine Transformation mit einem Skalar (<code>2</code>) und der Potenz als Transformationsfunktion. Diese vorgelagerte Transformation erzeugt einen impliziten Vektor mit den quadrierten Elementen <span class="math inline">\{1, 4, 9, 16, 25\}</span>.</p>
-<p>Die Reduktionsfunktion der Summe ist die Addition (<code>+</code>). Beim Reduzieren werden die Elemente des impliziten Vektors nacheinander addiert. Dabei wird das Element mit dem bisherigen Ergebnis <em>reduziert</em>. Beim ersten Schritt liegt noch kein Ergenis vor, weshalb das Element direkt übernommen wird. Dadurch ergeben sich in diesem Beispiel die folgenden Reduktionsschritte.</p>
+<p>Die Reduktionsfunktion der Summe ist die Addition (<code>+</code>). Beim Reduzieren werden die Elemente des impliziten Vektors nacheinander addiert. Dabei wird das Element mit dem bisherigen Ergebnis <em>reduziert</em>. Beim ersten Schritt liegt noch kein Ergebnis vor, weshalb das Element direkt übernommen wird. Dadurch ergeben sich in diesem Beispiel die folgenden Reduktionsschritte.</p>
 <p><span class="math display">
 \begin{aligned}
 \sum{v^2} = \sum_{i=1}^5 v_i^2 &amp;= 1^2 + 2^2 + 3^2 + 4^2 + 5^2 \\
@@ -704,7 +704,7 @@ Mathematik vs.&nbsp;Datenwisssenschaft
 </ul>
 <section id="zählen-durch-summieren" class="level3" data-number="13.5.1">
 <h3 data-number="13.5.1" class="anchored" data-anchor-id="zählen-durch-summieren"><span class="header-section-number">13.5.1</span> Zählen durch Summieren</h3>
-<p>Beim Zählen durch Summieren geht eine Transformation in die Werte <code>0</code> und <code>1</code> mithilfe eines logischen Ausdurcks einer Summen-Aggregation unmittelbar voraus.</p>
+<p>Beim Zählen durch Summieren geht eine Transformation in die Werte <code>0</code> und <code>1</code> mithilfe eines logischen Ausdrucks einer Summen-Aggregation unmittelbar voraus.</p>
 <p>Gelegentlich werden nicht alle Elemente einer Datenstruktur gezählt, sondern nur diejenigen, die bestimmte Bedingungen erfüllen.</p>
 <div id="def-abzählen" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13.15</strong></span> Es wird vom <strong>Abzählen</strong> gesprochen, wenn zum Zählen eine <strong>Summe über die zählbaren Einheiten</strong> gebildet wird.</p>
@@ -727,7 +727,7 @@ Merke
 </section>
 <section id="zählen-durch-filtern" class="level3" data-number="13.5.2">
 <h3 data-number="13.5.2" class="anchored" data-anchor-id="zählen-durch-filtern"><span class="header-section-number">13.5.2</span> Zählen durch Filtern</h3>
-<p>Beim Zählen durch Filtern wird die Summe über die zählbaren Einheiten durch eine Filter-Aggregation zusammegefasst. Nach dem Filtern bleibt ein Vektor mit den zählbaren Einheiten übrig, der keine nicht-zählbaren Elemente enthält. Die Länge dieses Vektors entspricht der Anzahl der zählbaren Einheiten.</p>
+<p>Beim Zählen durch Filtern wird die Summe über die zählbaren Einheiten durch eine Filter-Aggregation zusammengefasst. Nach dem Filtern bleibt ein Vektor mit den zählbaren Einheiten übrig, der keine nicht-zählbaren Elemente enthält. Die Länge dieses Vektors entspricht der Anzahl der zählbaren Einheiten.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

@@ -401,7 +401,7 @@ Merke
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jede <em>partielle Umformung</em> führt zu Informationsverlusst durch <em>Äquivokation</em>.</p>
+<p>Jede <em>partielle Umformung</em> führt zu Informationsverlust durch <em>Äquivokation</em>.</p>
 </div>
 </div>
 <section id="transponieren" class="level2" data-number="17.1">
@@ -412,9 +412,9 @@ Merke
 <p>Es gibt zwei Arten des Transponierens.</p>
 <ol type="1">
 <li>Das Transponieren von Matrizen, bei dem die Zeilen und Spalten vertauscht werden. Dabei bleibt die grundsätzliche Struktur der Daten erhalten.</li>
-<li>Das Transponieren von Daten, bei mehrere Vektoren zu einem Vektor zusammengefasst werden oder ein Vektor in mehrere Vektoren aufgegliedert wird. Weil sich die Struktur der Daten verändert, wird diese Operation auch als <strong>Reshaping</strong> oder <strong>Pivoting</strong> bezeichnet.</li>
+<li>Das Transponieren von Daten, bei mehreren Vektoren zu einem Vektor zusammengefasst werden oder ein Vektor in mehrere Vektoren aufgegliedert wird. Weil sich die Struktur der Daten verändert, wird diese Operation auch als <strong>Reshaping</strong> oder <strong>Pivoting</strong> bezeichnet.</li>
 </ol>
-<p><a href="../10-matrix-operationen/kapitel.html" class="quarto-xref"><span>Kapitel 14</span></a> zeigt das Transponieren von <strong>Matrizen</strong>. Bei dieser Operation werden die Zeilen- und die Spaltenindizes vertauscht. Diese Operation darf nur auf Matrizen angewandt werden. Jede Matrix kann transponiert werden. Wird eine transponierte Matrix nocheinmal transponiert, dann ist das Ergebnis die ursprüngliche Matrix. Daraus folgt, das das Transponieren immer <em>umkehrbar</em> ist.</p>
+<p><a href="../10-matrix-operationen/kapitel.html" class="quarto-xref"><span>Kapitel 14</span></a> zeigt das Transponieren von <strong>Matrizen</strong>. Bei dieser Operation werden die Zeilen- und die Spaltenindizes vertauscht. Diese Operation darf nur auf Matrizen angewandt werden. Jede Matrix kann transponiert werden. Wird eine transponierte Matrix noch einmal transponiert, dann ist das Ergebnis die ursprüngliche Matrix. Daraus folgt, dass das Transponieren immer <em>umkehrbar</em> ist.</p>
 <p>Die zweite Art des Transponierens wird auf <strong>Datenrahmen</strong> angewendet.</p>
 <p>Beim Transponieren eines Datenrahmens wird zwischen der <strong>Vektorform</strong> bzw. <em>Langform</em> und der <strong>Matrixform</strong> bzw. <em>Breitform</em> unterschieden. Es ist üblich, dass beim Transponieren nicht alle Vektoren des Datenrahmens transponiert werden. Für die nicht transponierten Vektoren gilt, dass diese Werte in der Langform für jeden transponierten Wert wiederholt werden und in der Breitform gleiche Werte zu einem Wert zusammengefasst werden. Dabei gilt, dass ein Primärindex der <em>Matrixform</em> zum Sekundärindex der <em>Vektorform</em> wird und umgekehrt.</p>
 <p>Die Breitform verteilt die Werte über mehrere Vektoren. In der Langform sind diese Werte in <em>einem</em> Vektor mit zusätzlichen Sekundärindex zusammengefasst.</p>
@@ -463,7 +463,7 @@ Merke
 </tr>
 </tbody>
 </table>
-<p>Durch das Auffächern werden die Werte entsprechend der Werte im Namensvektor auf neue Vektoren aufgeteilt. Wir transponieren also entlang der Namen. So erhalten wir die Breitform der Stichprobe.</p>
+<p>Durch das Auffächern werden die Werte entsprechend den Werten im Namensvektor auf neue Vektoren aufgeteilt. Wir transponieren also entlang der Namen. So erhalten wir die Breitform der Stichprobe.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -584,7 +584,7 @@ Merke
 </tr>
 </tbody>
 </table>
-<p>In diesem Beispiel erkennen wir, dass die Werte der nicht transponierten Vektoren in der Langform der Stichprobe mehrfach auftreten.</p>
+<p>In diesem Beispiel erkennen wir, dass die Werte, der nicht transponierten Vektoren in der Langform der Stichprobe mehrfach auftreten.</p>
 </div>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled">
