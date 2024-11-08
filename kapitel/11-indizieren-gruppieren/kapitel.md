@@ -150,9 +150,9 @@ Beim Anonymisieren müssen alle Vektoren entfernt werden, über die der Ursprung
 
 #### Schritt 2: Erzeugung eines eindeutigen Vektors
 
-Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten liefern kann. So etwas kann beipielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert wurden. 
+Für die Anonymisierung müssen die Daten in eine neue Reihenfolge gebracht werden, weil die Reihenfolge der Daten Information über die Herkunft der Daten liefern kann. So etwas kann beispielsweise vorkommen, wenn die Daten in der alphabetischen Reihenfolge von Namen sortiert wurden. 
 
-Hierzu wird als Hashing-Funktion ein *Zufallszahlengenerator* verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird,bezeichnet man ihn als *Sortierindex*.
+Hierzu wird als Hashing-Funktion ein *Zufallszahlengenerator* verwendet. Dabei ist es nicht notwendig einen bestimmten Wertebereich einzuhalten. Ein Zufallszahlengenerator stellt nicht sicher, dass die generierten Werte eindeutig sind. Deshalb ist der erzeugte Vektor kein Primärindex im eigentlichen Sinn. Weil dieser Index nur für die Erzeugung einer neuen Reihenfolge benötigt wird, bezeichnet man ihn als *Sortierindex*.
 
 ::: {.callout-warning}
 Als Hashing-Funktion dürfen nur Zufallsgeneratoren für gleichverteilte Werte eingesetzt werden, weil nur so eine Klumpung von Werten vermieden werden kann, weil alle Werte im Erzeugungsintervall gleich wahrscheinlich sind. Es auch zu beachten, dass der Wertebereich des Zufallsgenerators viel grösser ist als die Anzahl der vorliegenden Datensätze.
@@ -185,7 +185,7 @@ Beim **Gruppieren** werden zusammengehörende Datensätze zusammengefasst, so da
 
 Beim Gruppieren wird mindestens ein Sekundärindex benötigt, über den die Datensätze zu Gruppen zusammengefasst werden können. Eine gruppierte Operation verwendet nur die Werte innerhalb der gleichen Gruppe.  Der Vorteil einer gruppierten Operation ist, dass die Operation für alle Gruppen *gleichzeitig* ausgeführt wird. 
 
-Damit eine gruppierte Operationen durchgeführt werden können, müssen zusammengehörende Werte identifiziert werden. Das wird durch einen Sekundärindex möglich. *Eine Gruppierung wird durch gleiche Wert im Sekundärindex gebildet.*  Gruppierungen werden verwendet, um repititive zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten weritergearbeitet werden.
+Damit eine gruppierte Operation durchgeführt werden können, müssen zusammengehörende Werte identifiziert werden. Das wird durch einen Sekundärindex möglich. *Eine Gruppierung wird durch gleiche Wert im Sekundärindex gebildet.*  Gruppierungen werden verwendet, um repititive zu vermeiden. Ein weiterer Vorteil des Filterns ist, dass die Datenstruktur unverändert bleibt. Dadurch kann eine Gruppierung nach einer Operation wieder aufgehoben werden und es kann mit allen Daten weitergearbeitet werden.
 
 
 Die Überlegungen des Gruppierens lassen sich auf mehrere Sekundärindizes verallgemeinern: In solchen Fällen werden die Gruppen über die Permutationen der Werte der Sekundärindizes gebildet. In der Regel werden nur die in den Daten *vorhandenen* Permutationen im Ergebnis einer gruppierten Operation berücksichtigt. Deshalb kann es notwendig sein, fehlende Permutationen nachträglich zu erzeugen, um nachgelagerte Analysen durchführen zu können.   

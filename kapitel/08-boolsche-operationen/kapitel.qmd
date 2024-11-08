@@ -136,7 +136,7 @@ $$
 
 ### Boole'sche Arithmetik {#sec-boole-arithmetik}
 
-Obwohl die Arbeit von Geoge Boole wegweisend für die Logik als mathematische Disziplin war, konzentrierte sich seine Arbeit auf der Übersetzung von logischen Aussagen in *arithmetische* Ausdrücke. Die Boole'sche Arithmetik ist eine Erweiterung der Arithmetik. Dabei werden logische Ausdrücke mithilfe der Grundrechenarten in berechenbare Ausdrücke übersetzt. 
+Obwohl die Arbeit von George Boole wegweisend für die Logik als mathematische Disziplin war, konzentrierte sich seine Arbeit auf der Übersetzung von logischen Aussagen in *arithmetische* Ausdrücke. Die Boole'sche Arithmetik ist eine Erweiterung der Arithmetik. Dabei werden logische Ausdrücke mithilfe der Grundrechenarten in berechenbare Ausdrücke übersetzt. 
 
 Die Boole'schen Arithmetik im engeren Sinn basiert auf der Übersetzung von Wahrheitswerten in Zahlen. Dabei wird `WAHR` als `1` und `FALSCH` als `0`. 
 
@@ -218,9 +218,9 @@ Zusätzlich sind die kombinierten Vergleiche wichtig:
 
 Bei Vergleichsoperatoren muss darauf geachtet werden, dass die Operanden vom gleichen Typ sind. Eine Zahl kann nicht mit einer Zeichenkette verglichen werden.
 
-Für logische Ausdrücke sind direkte Vergleiche zwischen zwei Werten nicht immer geeignet. Immer wenn der gleiche Wert mit mehreren anderen verglichen werden muss werden logische Ausdrücke mit direkten Vergleichen schnell komplex. Für solche Vergleiche ist der *Existenz*-Vergleich wichtig. Dabei wird der Wert `WAHR` zurückgegeben, wenn der linke Operand ein Element des rechten Operanden ist. 
+Für logische Ausdrücke sind direkte Vergleiche zwischen zwei Werten nicht immer geeignet. Immer wenn der gleiche Wert mit mehreren anderen verglichen werden muss, werden logische Ausdrücke mit direkten Vergleichen schnell komplex. Für solche Vergleiche ist der *Existenz*-Vergleich wichtig. Dabei wird der Wert `WAHR` zurückgegeben, wenn der linke Operand ein Element des rechten Operanden ist. 
 
-Die *Existenz* wird mithilfe des $\in$-Operators überprüft. Der $\in$-Operator ist ein spezieller Vergleichsoperator, der `Wahr` zurückgibt, wenn der linke Operand im rechten Operand vorkommt. Dabei steht der linke Operand für den *Suchwert* und der rechte Operand für den *Suchbereich*. Der Suchbereich ist dabei immer eine Menge bzw. ein Vektor. Der Vergleich der beiden Operanden wird formal als $a \in B$ geschrieben, wobei $B$ eine Menge bzw. ein Vektor von Werten ist. Dieser Vergleich entspricht einer `ODER`-Operation, mit der die Elemente des Vektors $B$ einzeln mit dem Wert $a$ auf Gleichheit geprüft werden, wie @eq-in-operator-log-comb zeigt.
+Die *Existenz* wird mithilfe des $\in$-Operators überprüft. Der $\in$-Operator ist ein spezieller Vergleichsoperator, der `Wahr` zurückgibt, wenn der linke Operand im rechten Operanden vorkommt. Dabei steht der linke Operand für den *Suchwert* und der rechte Operand für den *Suchbereich*. Der Suchbereich ist dabei immer eine Menge bzw. ein Vektor. Der Vergleich der beiden Operanden wird formal als $a \in B$ geschrieben, wobei $B$ eine Menge bzw. ein Vektor von Werten ist. Dieser Vergleich entspricht einer `ODER`-Operation, mit der die Elemente des Vektors $B$ einzeln mit dem Wert $a$ auf Gleichheit geprüft werden, wie @eq-in-operator-log-comb zeigt.
 
 $$
 \begin{aligned}
@@ -287,10 +287,10 @@ graph TB
   c --->|Falsch| g([Ergebnis Falsch-Falsch])
 ```
 
-Ein oft vorkommender Speziallfall von Entscheidungsbäumen sind verschachtelte Entscheidungen, die so arrangiert sind, dass jeder logische Ausdruck genau ein Ergebnis auswählt. 
+Ein oft vorkommender Spezialfall von Entscheidungsbäumen sind verschachtelte Entscheidungen, die so arrangiert sind, dass jeder logische Ausdruck genau ein Ergebnis auswählt. 
 
 ::: {#def-linearer-entscheidungsbaum} 
-Ein *Entscheidungsbaum*, der für einen logischen Ausdruck mindestens ein Ergebnis und höchstens einen nachfolgende Entscheidung, heisst **linearer Entscheidungsbaum**.
+Ein *Entscheidungsbaum*, der für einen logischen Ausdruck mindestens ein Ergebnis und höchstens eine nachfolgende Entscheidung, heisst **linearer Entscheidungsbaum**.
 :::
 
 *Lineare Entscheidungsbäume* können das Ergebnis sowohl für den `Wahr` oder den `Falsch`-Fall festlegen. Per Konvention werden die logischen Ausdrücke linearer Entscheidungsbäume so formuliert, dass die Ergebnisse immer für den Fall `Wahr` und die nachfolgende Entscheidung immer für den Fall `Falsch` folgen. @fig-lin-entscheidungsbaum zeigt das Schema eines linearen Entscheidungsbaums mit zwei Entscheidungen.
@@ -397,5 +397,5 @@ $$ {#eq-sort-desc}
 Wie beim Filtern können sich die logischen Ausdrücke beim Sortieren auf andere Vektoren beziehen. Dabei wird ebenfalls ein Referenzvektor benötigt. Die Sortierung des Vektors erfolgt entsprechend der Positionen im Referenzvektor. Deshalb müssen Referenzvektoren immer die gleiche Länge wie die Sortiervektoren haben.
 
 
-Beim Sortieren können komplexe logische Ausdrücke für spezielle Sortiuerungen eingesetzt werden. Dabei muss beachtet werden, dass diese Ausdrücke eine eindeutige Reihenfolge zulassen. 
+Beim Sortieren können komplexe logische Ausdrücke für spezielle Sortierungen eingesetzt werden. Dabei muss beachtet werden, dass diese Ausdrücke eine eindeutige Reihenfolge zulassen. 
 

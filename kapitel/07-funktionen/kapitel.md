@@ -99,7 +99,7 @@ In **R** existiert eine Funktion `identity()` mit der Eigenschaft der Identität
 
 #### Chaining in R
 
-> Modernes R stellt den  Operator `%>%` zur einfachen Funktionsverkettung bereit. Dieser Operator ist für Sie erst dann verfügbar, *nachdem* Sie die Bibliothek `tidyverse` mit `library(tidyverse)` in Ihre Arbeitsumgebung eingebunden haben.
+> Modernes R stellt den Operator `%>%` zur einfachen Funktionsverkettung bereit. Dieser Operator ist für Sie erst dann verfügbar, *nachdem* Sie die Bibliothek `tidyverse` mit `library(tidyverse)` in Ihre Arbeitsumgebung eingebunden haben.
 > 
 > Der Operator `%>%` verkettet das Ergebnis einer vorangehenden Operation mit dem *ersten Parameter* der nachfolgenden Operation.
 
@@ -154,7 +154,7 @@ Anschliessend können wir diesen neuen Namen für Funktionsaufrufe verwenden.
 csvDaten = lese_csv_datei("beispieldaten.csv")
 ```
 
-Weil R-Operatoren auch Funktionen sind, können wir auch diese umbenennen und als Funktionen verwenden. Weil aber die Operatoren von R als besondere Symbole erkannt werden, müssen wir die Operatoren "schützen", damit wir den Namen des Operators und nicht den Operator selbst aufrufen können. Mit dem Akzent-Zeichen (Backtick, `` ` ``) können wir ein Symbol davor schützen, dass R es "wie gewohnt" ausführt. Wir können also den `+`-Operator wie folgt  in eine Funktion mit dem Namen `plus` umwandeln:
+Weil R-Operatoren auch Funktionen sind, können wir auch diese umbenennen und als Funktionen verwenden. Weil aber die Operatoren von R als besondere Symbole erkannt werden, müssen wir die Operatoren "schützen", damit wir den Namen des Operators und nicht den Operator selbst aufrufen können. Mit dem Akzent-Zeichen (Backtick, `` ` ``) können wir ein Symbol davor schützen, dass R es "wie gewohnt" ausführt. Wir können also den `+`-Operator wie folgt in eine Funktion mit dem Namen `plus` umwandeln:
 
 ```R
 plus = `+`
