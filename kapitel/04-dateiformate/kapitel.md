@@ -45,7 +45,7 @@ Das Importieren von Daten folgt immer in mehreren Schritten:
 Beim ersten Schritt werden die Symbole eines Datenstroms in eine geeignete Datenstruktur überführt. Dabei werden die gelesenen Symbole überprüft, ob es sich um Werte oder um eine Trennmarkierung handelt. Die Werte werden entsprechend ihrer Position im Datenstrom oder über Markierungen einer Datenstruktur zugeordnet.
 
 ::: {#def-import-parsing}
-Die Zuordnung von Werten in einem Datenstrom zu einer Datenstruktur wird **Parsen** genannt. Eine Funktion, die einen Datenstrom in eine Datenstruktur überführt, heisst **Parser**.
+Die Zuordnung von Werten in einem Datenstrom zu einer Datenstruktur wird **parsen** genannt. Eine Funktion, die einen Datenstrom in eine Datenstruktur überführt, heisst **Parser**.
 :::
 
 Jedes Dateiformat erfordert einen eigenen *Parser*. Wird ein ungeeigneter  *Parser* verwendet, dann werden die Daten nicht korrekt importiert und können nicht weiterverarbeitet werden, weil die Datenstruktur nicht die Organisation der Daten wiedergibt. Deshalb muss beim Importieren immer ein passender Parser für das vorliegende Dateiformat verwendet werden. 
@@ -86,7 +86,7 @@ Beim Exportieren werden die Daten aus einer Datenstruktur in einen Datenstrom *s
 Es ist üblich, die gleichen Daten in verschiedenen Formaten zu serialisieren.
 :::
 
-Einige Dateiformat sind sehr komplex. Dadurch sind unvollständige Serialisierungen möglich. Eine unvollständige Serialisierung kann zu Datenverlusten führen. Deshalb sollte für gängige Dateiformate immer ein existierender Serializer verwendet werden.
+Einige Dateiformate sind sehr komplex. Dadurch sind unvollständige Serialisierungen möglich. Eine unvollständige Serialisierung kann zu Datenverlusten führen. Deshalb sollte für gängige Dateiformate immer ein existierender Serializer verwendet werden.
 
 ::: {.callout-tip}
 ## Praxis
