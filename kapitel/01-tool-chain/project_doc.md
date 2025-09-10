@@ -100,7 +100,7 @@ Ein Laborprotokoll dokumentiert den Ablauf und alle Ergebnisse eines Experiments
 
 Ein Laborprotokoll ist eine *technische Dokumentation* einer Untersuchung oder eines Experiments. Diese Dokumentation ist der Beleg für die sachgemässe Durchführung einer Untersuchung. Bei Untersuchungen, die mehr als eine Arbeitssitzung oder -Schicht benötigen, sollten Laborprotokolle pro Sitzung bzw. Schicht erstellt werden.
 
-::: {.callout-warning}
+::: {.callout-caution}
 Laborprotokolle sind Teil von Complience-Anforderungen und werden oft von Auftraggebern und/oder Behörden verlangt. In diesen Anforderungen werden die zwingend zu dokumentierenden Teile festgelegt. Unterliegen bestimmte Untersuchungen einer Complience-Anforderung, dann müssen diese Anforderungen eingehalten werden, selbst wenn diese nicht explizit gefordert wurde. Stellt sich bei einer Überprüfung heraus, dass ein notwendiges Laborprotokoll fehlt, unvollständig ist oder falsche Angaben zur Durchführung enthält, dann kann dies unter Umständen rechtliche Konsequenzen haben.
 ::: 
 
@@ -124,9 +124,9 @@ Ein Laborprotokoll besteht in der Regel aus den folgenden Teilen.
 
 Grundsätzlich gilt, dass alle Abschnitte vorhanden sein müssen. Enthält ein Abschnitt keine Informationen, dann kann dieser Leer bleiben. Es ist aber üblich, einen das Fehlen der Information explizit zu kennzeichnen (z.B. durch das Wort "Ohne" oder "Keine"). Dadurch wird sichergestellt, dass auch im Nachhinein nachvollziehbar ist, dass fehlende Informationen nicht einfach vergessen wurden. 
 
-::: {.callout-warning}
+::: {.callout-caution}
 ## Medizinische und pharmakologische Untersuchungen
-Für Untersuchungen im medizinischen oder pharmakologischen Umfeld gelten besondere Anforderungen an die Protokollierung von Studien. Für diese Untersuchungen existieren standardisierte Vorlagen, die zwingend zu verwenden sind[@swissethics_studienprotokolle_2025].
+Für Untersuchungen im medizinischen oder pharmakologischen Umfeld gelten besondere Anforderungen an die Studienprotokollierung. Für diese Untersuchungen existieren standardisierte Vorlagen, die zwingend zu verwenden sind [@swissethics_studienprotokolle_2025].
 :::
 
 ### Materialliste
