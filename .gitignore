@@ -79,3 +79,4 @@ _freeze/
 **/*.pdf
 **/*.toc
 site_libs/
+dxi-skript.bib.old

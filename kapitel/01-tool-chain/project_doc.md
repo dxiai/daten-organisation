@@ -6,9 +6,9 @@ abstract: |
     
     Die **technische Projektdokumentation** dokumentiert die Organisation und Struktur eines Projekts. 
     
-    **Labor- und Arbeitsberichte** dokumentieren den Ablauf und alle Ergebnisse eines Projekts. 
+    **Labor- und Arbeitsprotokolle** dokumentieren den Ablauf und alle Ergebnisse einzelner Arbeitsschritte eines Projekts. 
     
-    Ein **Projektbericht** dokumentiert die Ausgangslage, die Methode, die Ergebnisse und die Schlussfolgerungen eines Projekts. Projektberichte greifen oft auf die technische Projektdokumentation und auf Laborberichte zurück.
+    Ein **Projektbericht** dokumentiert die Ausgangslage, die Methode, die Ergebnisse und die Schlussfolgerungen eines Projekts. Projektberichte greifen oft auf die technische Projektdokumentation und auf Laborprotokolle zurück.
 
     Dieses Kapitel beschreibt die Anforderungen und die Funktion der Projektdokumentation.
 
@@ -94,19 +94,21 @@ Neben der Verwendung und Vertraulichkeit ist auch die **Urheberschaft** zu dokum
 `git`-Hosting-Plattformen erstellen inzwischen die Autorenliste automatisch aus den Commits. Zusätzlich wird auch der Umfang der Beiträge dokumentiert.
 :::
 
-## Labor- und Arbeitsbericht
+## Labor- und Arbeitsprotokoll
 
-Ein Laborbericht dokumentiert den Ablauf und alle Ergebnisse eines Experiments oder einer Untersuchung. Ein Laborbericht ist eine *technische Dokumentation* einer Untersuchung oder eines Experiments. Diese Dokumentation ist der Beleg für die sachgemässe Durchführung einer Untersuchung. Bei Untersuchungen, die mehr als eine Arbeitssitzung oder -Schicht benötigen, sollten Laborberichte pro Sitzung bzw. Schicht erstellt werden.
+Ein Laborprotokoll dokumentiert den Ablauf und alle Ergebnisse eines Experiments oder einer Untersuchung im Labor. Analog dazu werden Arbeiten im Feld (d.h. ausserhalb von Laboratorien) in Arbeitsprotokollen dokumentiert. Da sich die Grundstruktur beider Protokolle sehr ähnlich ist, wird im Folgenden nur von Laborprotokollen geschrieben.
+
+Ein Laborprotokoll ist eine *technische Dokumentation* einer Untersuchung oder eines Experiments. Diese Dokumentation ist der Beleg für die sachgemässe Durchführung einer Untersuchung. Bei Untersuchungen, die mehr als eine Arbeitssitzung oder -Schicht benötigen, sollten Laborprotokolle pro Sitzung bzw. Schicht erstellt werden.
 
 ::: {.callout-warning}
-Laborberichte sind Teil von Complience-Anforderungen und werden oft von Auftraggebern oder Behörden verlangt. In diesen Anforderungen werden die zwingend zu dokumentierenden Teile festgelegt. Unterliegen bestimmte Untersuchungen einer Complience-Anforderung, dann müssen diese Anforderungen eingehalten werden, selbst wenn diese nicht explizit gefordert wurde. Stellt sich später heraus, dass ein vorliegender Laborbericht unvollständig ist oder falsche Angaben zur Durchführung enthält, dann kann dies unter Umständen als Urkundenfälschung gewertet werden.
+Laborprotokolle sind Teil von Complience-Anforderungen und werden oft von Auftraggebern und/oder Behörden verlangt. In diesen Anforderungen werden die zwingend zu dokumentierenden Teile festgelegt. Unterliegen bestimmte Untersuchungen einer Complience-Anforderung, dann müssen diese Anforderungen eingehalten werden, selbst wenn diese nicht explizit gefordert wurde. Stellt sich bei einer Überprüfung heraus, dass ein notwendiges Laborprotokoll fehlt, unvollständig ist oder falsche Angaben zur Durchführung enthält, dann kann dies unter Umständen rechtliche Konsequenzen haben.
 ::: 
 
-Laborberichte sollten am Besten während oder unmittelbar nach einer Untersuchung erstellt werden. Werden regelmässig Laborberichte erstellt, bietet sich die Verwendung einer Versionierung mit `git` an. 
+Laborprotokolle sollten am Besten während oder unmittelbar nach einer Untersuchung erstellt werden. Werden regelmässig Laborprotokolle erstellt, bietet sich die Verwendung einer Versionierung mit `git` an. 
 
-Bei der Verwendung von Laborberichten wird angenommen, dass undokumentierte Materialien nicht verwendet wurden und nicht dokumentierte Arbeitsschritte oder Ereignisse nicht stattgefunden haben. Ein fehlender oder unvollständiger Laborbericht entspricht einer nicht ordnungsgemäss durchgeführten Untersuchung.
+Bei der Verwendung von Laborprotokollen wird angenommen, dass undokumentierte Materialien nicht verwendet wurden und nicht dokumentierte Arbeitsschritte oder Ereignisse nicht stattgefunden haben. Ein unvollständiges Laborprotokoll entspricht einer nicht ordnungsgemäss durchgeführten Untersuchung. Fehlt das Protokoll, dann ist das oft gleichbedeutend mit einer nicht durchgeführten Untersuchung.
 
-Ein Laborbericht besteht aus den folgenden Teilen.
+Ein Laborprotokoll besteht in der Regel aus den folgenden Teilen.
 
 - Titel
 - Beteiligte Untersuchende
@@ -119,6 +121,13 @@ Ein Laborbericht besteht aus den folgenden Teilen.
 - Fehlerdiskussion
 - Beobachtungen
 - Besondere Ereignisse
+
+Grundsätzlich gilt, dass alle Abschnitte vorhanden sein müssen. Enthält ein Abschnitt keine Informationen, dann kann dieser Leer bleiben. Es ist aber üblich, einen das Fehlen der Information explizit zu kennzeichnen (z.B. durch das Wort "Ohne" oder "Keine"). Dadurch wird sichergestellt, dass auch im Nachhinein nachvollziehbar ist, dass fehlende Informationen nicht einfach vergessen wurden. 
+
+::: {.callout-warning}
+## Medizinische und pharmakologische Untersuchungen
+Für Untersuchungen im medizinischen oder pharmakologischen Umfeld gelten besondere Anforderungen an die Protokollierung von Studien. Für diese Untersuchungen existieren standardisierte Vorlagen, die zwingend zu verwenden sind[@swissethics_studienprotokolle_2025].
+:::
 
 ### Materialliste
 
@@ -144,7 +153,7 @@ Der Versuchsaufbau beschreibt die Anordnung der Materialien und Geräte bei der 
 Die Software für die Auswertung ist *kein* Teil des Versuchsaufbaus.
 :::
 
-Bei wiederholten Durchführungen mit dem gleichen Versuchsaufbau kann der Versuchsaufbau in einem separaten Dokument oder in einem separaten Abschnitt dokumentiert werden. Dieses Dokument ist dann für alle Versuchsdurchführungen mit dem gleichen Versuchsaufbau gültig und muss in *allen zugehörigen Laborberichten* referenziert werden.
+Bei wiederholten Durchführungen mit dem gleichen Versuchsaufbau kann der Versuchsaufbau in einem separaten Dokument oder in einem separaten Abschnitt dokumentiert werden. Dieses Dokument ist dann für alle Versuchsdurchführungen mit dem gleichen Versuchsaufbau gültig und muss in *allen zugehörigen Laborprotokollen* referenziert werden.
 
 ### Durchführung und Ablauf
 
@@ -178,7 +187,7 @@ Messausfälle oder nicht durchgeführte Messungen sind nicht Teil der Fehlerdisk
 
 ### Besondere Ereignisse
 
-In einem Laborbericht werden grundsätzlich alle besonderen Ereignisse dokumentiert. Besondere Ereignisse sind Ereignisse, die nicht zum normalen Ablauf gehören oder für das Experiment nicht zu erwarten waren. Beispiele für besondere Ereignisse sind:
+In einem Laborprotokoll werden grundsätzlich alle besonderen Ereignisse dokumentiert. Besondere Ereignisse sind Ereignisse, die nicht zum normalen Ablauf gehören oder für das Experiment nicht zu erwarten waren. Beispiele für besondere Ereignisse sind:
 
 - Ungewöhnliche Messwerte und Messausfälle
 - Ungewöhnliche Geräusche, Gerüche oder Verfärbungen
@@ -193,7 +202,7 @@ Falls keine besonderen Ereignisse aufgetreten sind, können diese Teile weggelas
 
 ### Beobachtungen und Notizen
 
-Laborberichte sind eine wichtige Quelle für Innovation und Erkenntnisse. Deshalb sollten Beobachtungen, Erfahrungen und andere Notizen in Laborberichten festgehalten werden. Dadurch wird sichergestellt, dass dieser Teil der Dokumentation nicht von der Untersuchtung getrennt und so dekontextualisiert wird. 
+Laborprotokolle sind eine wichtige Quelle für Innovation und Erkenntnisse. Deshalb sollten Beobachtungen, Erfahrungen und andere Notizen in Laborprotokollen festgehalten werden. Dadurch wird sichergestellt, dass dieser Teil der Dokumentation nicht von der Untersuchtung getrennt und so dekontextualisiert wird. 
 
 ## Projektbericht
 
@@ -234,7 +243,7 @@ Die Methode umfasst nur die systematische Vorgehensweise, aber keine technische 
 
 ### Ergebnisse
 
-Der Abschnitt Ergebnisse fasst alle erhobenen Messungen zusammen. Dabei werden die Messwerte in Tabellen und Diagrammen dargestellt. Alle in diesem Abschnitt präsentierten Daten sollten sich direkt aus Laborberichten ableiten lassen.
+Der Abschnitt Ergebnisse fasst alle erhobenen Messungen zusammen. Dabei werden die Messwerte in Tabellen und Diagrammen dargestellt. Alle in diesem Abschnitt präsentierten Daten sollten sich direkt aus Laborprotokollen ableiten lassen.
 
 Im Abschnitt Ergebnisse werden selten die gemessenen Rohdaten als Tabelle präsentiert. Sollten die Rohdaten für die Interpretation bedeutsam sein, dann sollten diese Daten in einem Anhang getrennt präsentiert werden.
 
