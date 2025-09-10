@@ -70,7 +70,7 @@ Per Konvention wird die **Vertraulichkeit** und **Verwendungsrechte** in der Dat
 
 ::: {.callout-caution}
 ## Achtung
-Fehlt eine Lizenzdatei, ist das Projekt nicht lizenzlos, sondern unterliegt dem gesetzlichen Urheberrecht am Wohnsitz der Projektbeteiligten. Damit ein Projekt lizenzlos veröffentlicht werden kann, muss dieses explizit in der Lizenzdatei festgehalten werden. Ein Beispiel für eine solchen Vermerk ist die sog. [MIT Lizenz](https://opensource.org/license/mit/).
+Fehlt eine Lizenzdatei, ist das Projekt nicht lizenzlos, sondern unterliegt dem gesetzlichen Urheberrecht am Wohnsitz der Projektbeteiligten. Damit ein Projekt lizenzlos veröffentlicht werden kann, muss dieses explizit in der Lizenzdatei festgehalten werden. Ein Beispiel für eine solchen Vermerk ist die sog. [MIT Lizenz](https://opensource.org/license/mit/) [@mit_technology_licensing_office_exploring_nodate].
 :::
 
 
