@@ -674,7 +674,7 @@ Für komplexe Projekte wird diese Organisationsstrategie normalerweise mit dem G
 
 #### Projektrepo
 
-Die Projektrepo-Strategie ist eine Variante der Monorepo-Strategie für komplexe Projekte, mit klar getrennten aber voneinander abhängigen Projektteilen. Dazu werden einzelene Projektteile in eigene Repositories ausgegliedert und als *`git`-Submodule* in das Haupt-Repository eingebunden. Solche Submodule können unabhängig vom Haupt-Projekt entwickelt werden und auch in anderen Projekten wiederverwendet werden. Die Integration eines Submoduls erfolgt für einen bestimmten Commit oder ein bestimmtes Tag. Dadurch wird eine differenziertere Qualitätskontrolle möglich. 
+Die Projektrepo-Strategie ist eine Variante der Monorepo-Strategie für komplexe Projekte, mit klar getrennten aber voneinander abhängigen Projektteilen. Dazu werden einzelene Projektteile in eigene Repositories ausgegliedert und als *`git`-Submodule* in das Haupt-Repository eingebunden. Solche Submodule können unabhängig vom Hauptprojekt entwickelt werden und auch in anderen Projekten wiederverwendet werden. Die Integration eines Submoduls erfolgt für einen bestimmten Commit oder ein bestimmtes Tag. Dadurch wird eine differenziertere Qualitätskontrolle möglich. 
 
 #### Microrepo
 
@@ -683,3 +683,19 @@ Bei der Microrepo-Strategie werden alle Projektteile in eigenen Repositories una
 Bei der Microrepo-Strategie werden Daten, Code und Konfiguration grundsätzlich immer voneinander getrennt und werden in eigenen Repositories verwaltet. Damit ist diese Strategie die Antithese zum Monorepo. Die Integration der Komponenten erfolgt über das lokale Dateisystem oder über Packetmanager und `git`-Tags.
 
 Diese Strategie eignet sich für Datenprojekte, Projekte mit wenigen direkten Abhähngigkeiten oder Projekte mit verschiedenen Anwendungsgebieten (engl. Deployments). Durch klar getrennte Repositories lassen sich die einzelnen Komponenten in unterschiedlichen Kontexten problemlos unabhängig voneinander publizieren und anpassen. Deshalb ist diese Strategie besonders für Projekte mit sensitiven Daten, wie z.B. Patientendaten, oder Konfigurationen, wie beispielsweise Passwörtern, geeignet, bei denen die Datenverarbeitung keine sensitiven Teile hat.
+
+## git and Visual Studio Code
+
+GitHub existieren zwei Varianten der Hosting-Plattform. Die öffentliche `git`-Hosting Plattform ist `GitHub.com`. Daneben gibt es **GitHub Enterprise** Server. Dabei handelt es sich um eine nicht öffentliche `git`-Hosting-Plattformen auf der gleichen Software-Grundlage wie `GitHub.com`. Diese Variante wird häufig von Unternehmen verwendet, die zwar git und GitHub verwenden wollen, aber keine öffentliche Präsenz für ihre Daten- und Code-Projekte wünschen oder haben dürfen. Beide Varianten werden von Visual Studio Code für das Versionsmanagement direkt unterstützt. Damit das reibungsfrei funktioniert, muss man Visual Studio Code mit dem eigenen Account an beiden Plattformen anmelden.
+
+Am elegantesten geht die Anmeldung an GitHub und GitHub Enterprise Servern mithilfe der Erweiterung `GitHub Pull Requests`. 
+
+Sobald diese Erweiterung installiert ist, kann man sich mit einem GitHub Enterprise Server verbinden. 
+
+Dazu muss der GitHub Enterprise Server zuerst in den Einstellungen konfiguriert werden: Unter der Einstellug `GitHub-Enterprise: Uri` muss die Server URL eingetragen werden. 
+
+Anschliessend erscheint im Menu `Accounts` die Möglichkeit, sich mit diesem Server zu verbinden.
+
+Beim Verbinden wird ein Code angezeigt, der für die Verbindung benötigt wird. Im entsprechenden Dialog muss `Copy & Continue to GitHub` ausgewählt werden. Dieser Dialog leitet auf die Seite des GitHub Enterprise Servers um. 
+
+Auf dem GitHub Server muss Visual Studio Code der Zugriff freigegeben werden. Ist das Erfolgt erscheinen alle angemeldeten Server im Accounts-Menu.
