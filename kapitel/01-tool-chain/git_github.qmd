@@ -688,7 +688,7 @@ Diese Strategie eignet sich für Datenprojekte, Projekte mit wenigen direkten Ab
 
 GitHub existieren zwei Varianten der Hosting-Plattform. Die öffentliche `git`-Hosting Plattform ist `GitHub.com`. Daneben gibt es **GitHub Enterprise** Server. Dabei handelt es sich um eine nicht öffentliche `git`-Hosting-Plattformen auf der gleichen Software-Grundlage wie `GitHub.com`. Diese Variante wird häufig von Unternehmen verwendet, die zwar git und GitHub verwenden wollen, aber keine öffentliche Präsenz für ihre Daten- und Code-Projekte wünschen oder haben dürfen. Beide Varianten werden von Visual Studio Code für das Versionsmanagement direkt unterstützt. Damit das reibungsfrei funktioniert, muss man Visual Studio Code mit dem eigenen Account an beiden Plattformen anmelden.
 
-Am elegantesten geht die Anmeldung an GitHub und GitHub Enterprise Servern mithilfe der Erweiterung `GitHub Pull Requests`. 
+Am elegantesten geht die Anmeldung an GitHub und GitHub Enterprise Servern mithilfe der Erweiterung `GitHub Pull Requests`. Diese Erweiterung muss installiert werden, um den vollen GitHub-Funktionsumfang zu nutzen. 
 
 Sobald diese Erweiterung installiert ist, kann man sich mit einem GitHub Enterprise Server verbinden. 
 
