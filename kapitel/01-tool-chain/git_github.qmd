@@ -607,7 +607,7 @@ Eine Datei wird von der Versionierung ausgeschlossen, wenn eine der folgenden Re
 Die folgenden Namesmuster sind gebräuchlich:
 
 - `*/dateiname` - eine Datei oder ein Verzeichnis mit einem bestimmten Namen liegt in einem Verzeichnis im Projektverzeichnis. 
-- `**/dateiname` - eine Datei oder ein Verzeichnis liegt an beliebiger Stelle im Projekt
+- `**/dateiname` - eine Datei oder ein Verzeichnis liegt an beliebiger Stelle im Repository.
 - `*.tmp` - alle Dateien oder Verzeichnisse im Projektverzeichnis, die auf `.tmp` enden. 
 - `bild*` - alle Dateien oder Verzeichnisse im Projektverzeichnis, die mit `bild` beginnen. 
 
@@ -615,9 +615,8 @@ Die folgenden Namesmuster sind gebräuchlich:
 Gelegentlich kommt es vor, dass festgestellt wird, dass eine oder mehrere Dateien ignoriert werden soll, obwohl sie bereits in die Versionierung aufgenommen wurde. In diesem Fall erscheit es, als ob `.gitignore` nicht funktioniert. Das liegt daran, dass `git` eine Datei nur ignoriert, wenn diese nicht in der Versionierung erfasst wurde.  Um eine bereits erfasste Datei zu irgnorieren, muss diese Datei aus dem Versionsdatenbank mit `git rm` entfernt werden.
 :::
 
-**Beispiel**
-
-Das folgende Beispiel zeigt typische `.gitignore`-Datei für ein R-Projekt. 
+:::{#exm-gitignore}
+## Eine typische `.gitignore`-Datei für ein R-Projekt. 
 
 ```YAML
 # Ignore MacOS Filesystem Metadata
@@ -653,6 +652,13 @@ _book
 .quarto/
 /.quarto/
 ```
+:::
+
+::: {.callout-tip}
+## MacOS Ordnerinformation
+
+MacOS legt verdeckt Ordnerinformationen in Verzeichnissen an. Diese Dateien enthalten keine projektrelevanten Daten und sollten nicht versioniert werden. Diese Dateien haben immer den Namen `.DS_Store` und können in jedem Verzeichnis erscheinen. Deshalb sollte die Zeile mit dem Inhalt `**/.DS_Store` immer Bestandteil der `.gitignore`-Datei sein. 
+:::
 
 ### Repository-Organisation
 
@@ -686,6 +692,8 @@ Diese Strategie eignet sich für Datenprojekte, Projekte mit wenigen direkten Ab
 
 ## git and Visual Studio Code
 
+### Anmeldung
+
 GitHub existieren zwei Varianten der Hosting-Plattform. Die öffentliche `git`-Hosting Plattform ist `GitHub.com`. Daneben gibt es **GitHub Enterprise** Server. Dabei handelt es sich um eine nicht öffentliche `git`-Hosting-Plattformen auf der gleichen Software-Grundlage wie `GitHub.com`. Diese Variante wird häufig von Unternehmen verwendet, die zwar git und GitHub verwenden wollen, aber keine öffentliche Präsenz für ihre Daten- und Code-Projekte wünschen oder haben dürfen. Beide Varianten werden von Visual Studio Code für das Versionsmanagement direkt unterstützt. Damit das reibungsfrei funktioniert, muss man Visual Studio Code mit dem eigenen Account an beiden Plattformen anmelden.
 
 Am elegantesten geht die Anmeldung an GitHub und GitHub Enterprise Servern mithilfe der Erweiterung `GitHub Pull Requests`. Diese Erweiterung muss installiert werden, um den vollen GitHub-Funktionsumfang zu nutzen. 
@@ -699,3 +707,71 @@ Anschliessend erscheint im Menu `Accounts` die Möglichkeit, sich mit diesem Ser
 Beim Verbinden wird ein Code angezeigt, der für die Verbindung benötigt wird. Im entsprechenden Dialog muss `Copy & Continue to GitHub` ausgewählt werden. Dieser Dialog leitet auf die Seite des GitHub Enterprise Servers um. 
 
 Auf dem GitHub Server muss Visual Studio Code der Zugriff freigegeben werden. Ist das Erfolgt erscheinen alle angemeldeten Server im Accounts-Menu.
+
+### Arbeitsbereiche
+
+Visual Studio Code arbeitet mit sog. Arbeitsbereichen oder *Workspaces*. Wird mit mehreren Repositories gearbeitet, dann werden die Repositories einzeln dem Arbeitsbereich zugewiesen. 
+
+::: {.callout-important}
+## Achtung ☠️☠️ 
+
+Auch wenn es auf den ersten Blick einfacher aussieht, sollte ***nie*** das übergeordnete Verzeichnis, in welchem die gewünschten Repositories, direkt in Visual Studio Code geöffnet werden. Dadurch wird die Arbeit mit Daten in den Repositories und die Zusammenarbeit **stark** erschwert! 
+:::
+
+Um mehrere Repositories in Visual Studio Code zu öffnen, wird zuerst Visual Studio Code ohne eine Datei oder Respotory geöffnet. Visual Studio Code erstellt so einen neuen Arbeitsbereich. 
+
+Anschliessend wird das erste Repository mit `Ordner öffnen` in den Arbeitsbereich geladen. Dieses Repository wird dann zu oberst im Arbeitsbereich stehen. Die Reihenfolge der Repositories lässt sich später durch Ziehen mit der Maus auch noch anpassen.
+
+Anschliessend werden alle weiteren Repositories einzeln über das Kontextmenu `Ordner zum Arbeitsbereich hinzufügen` eingebunden werden. Dieser Menupunkt führt zu einem Auswahldialog, in welchem die Ordner der Repositories ausgewählt werden können.
+
+![VSC Kontextmenu mit `Ordner zum Arbeitsbereich hinzufügen`](figures/vsc_add_workspace.png)
+
+::: {.callout-tip}
+## Praxis
+Weil das Einbinden mehrerer Repositories in Visual Studio Code recht umständlich ist, bietet es sich an, die Arbeitsbereiche abzuspeichern. So kann die Arbeitsumgebung für mehrere Projekte getrennt gehalten und der gespeicherte Stand direkt geöffnet werden. Dazu muss ein Arbeitsbereich in einer Datei gespeichert werden. Visual Studio Code bietet das Speichern eines Arbeitsbereichs jeweils beim Schliessen des jeweiligen Arbeitsbereichsfensters an.
+
+Es ist hilfreich solche Arbeitsbereiche in ein separaten Repository abzulegen und ebenfalls zu versionieren. Über ein solches Projekt lassen sich die Visual Studio Code-Einstellungen über mehrere Rechner leicht teilen.
+::: 
+
+### Ausführungskontext
+
+Der Ausführungskontext bezeichnet die Umgebung in denen Programme gestartet werden. Dazu gehört das Start-Verzeichnis, Systemparameter und vieles mehr. Programme nutzen automatisch diesen Ausführungskontext, um Dateien auf dem jeweiligen System zu finden.
+
+Beim Ausführen von Code verwendet Visual Studio Code als Ausführungskontext jeweils den am weitesten übergeordneten Ordner eines Programms im Arbeitsbereich. Idealerweise ist dieser Ordner das Repository-Verzeichnis. Das ist deshalb praktisch, weil innerhalb eines Repositories die Organisation und Position aller Dateien bekannt ist. Diese Voraussetzung gilt nicht für die dem Repository übergeordneten Verzeichnisse, die beliebige Namen haben können. Dadurch kann beim datenorientierten Programmieren keine sichere Annahme über die Dateistruktur gemacht werden und der Code muss für jeden Rechner angepasst werden, auf welchem der Code laufen soll. Diese zusätzliche Arbeit gilt es zu vermeiden.
+
+Macht der Code in einem Repository keine zusätzlichen Vorgaben an den Ausführungskontext jenseits des Repositories, dann wird das Repository als *selbst-bezogen* oder *self-contained* bezeichnet. Damit Visual Studio Code solchen selbst-bezogenen Code korrekt ausführen kann, muss das gewünschte Repository als Ordner dem aktuellen Arbeitsbereich hinzugefügt werden.
+
+## Repositories im Dateisystem
+
+`git`-Repositories umfassen nicht nur den aktuellen Stand der Arbeit, sondern immer die vollständige Versionsverlauf eines Projekts. Dadurch ist es möglich auch ohne Datenverbindung an Projekten zu arbeiten. Aus diesem Grund verbrauchen diese Repositories schnell recht viel Speicherplatz. Entsprechend sollten `git`-Repositories ***nicht*** gleichzeitig mit Cloud-Speichern wie OneDrive, iCloud oder Google Drive synchronisiert werden. 
+
+Unabhängig von der Repository-Organisation arbeitet man regelmässig mit mehreren Repositories. Damit diese nicht versehentlich in einem Cloud-Speicher landen, hat sich die folgende Strategie bewährt: 
+
+Es sollte ein eigener Ordner für Repositories direkt im Heimatverzeichnis erstellt werden (Siehe Kasten). Geeignete Namen für dieses übergeordnete Verzeichnis sind z.B. `Repositories`, `Code` oder `Src`. In diese Verzeichnis werden die eigentlichlichen `git`-Repositories gecloned. Gegebenenfalls ist es sinnvoll zusätzliche Unterverzeichnisse für Repository-Gruppen zu erstellen. 
+
+Wurde im Heimatverzeichnis ein entsprechend bezeichnetes Verzeichnis angelegt, so wird dieses von den Cloud-Speicher-Systemen ignoriert. 
+
+![Heimatverzeichnis mit `code`-Verzeichnis unter MacOS](figures/macos_home_with_code.png)
+
+![Heimatverzeichnis mit `Repositories`-Verzeichnis unter Windows](figures/win_home_with_repositories.png)
+
+::: {.callout-caution}
+## Achtung
+Repositories sollten **nie** auf dem Desktop oder im Verzeichnis `Dokumente` oder im Synchronisationsordner der bevorzugten Cloud-Speicher abgelegt werden, weil diese mit der Cloud synchronisiert werden.
+:::
+
+::: {.callout-note}
+## Das Heimatverzeichnis
+
+Alle modernen Betriebssysteme sind sogenannte *Mehrnutzersysteme*. D.h. es können mehrere Nutzer das gleiche System verwenden, wobei jede Person einen eigenen Arbeitsbereich zur Ablage von Dateien hat. Das Verzeichnis, in welchem dieser Arbeitsbereich gespeichert wird, heisst *Heimatverzeichnis* oder *Home-Verzeichnis*.
+
+In der Standardeinstellung von Windows und MacOS ist es jedoch nicht intuitiv, das eigene Heimatverzeichnis zu finden.
+
+Unter Windows wählt man dazu im **Explorer** den Schnellzugriff für das `Desktop` aus, tippt anschliessen auf den Pfeil nach oben. Im der folgenden Ansicht taucht ein Verzeichnis mit den Namen des aktuellen Anwender*In auf. Auf dieses Verzeichnis muss doppeltgeklickt werden, um das Heimatverzeichnis zu erreichen. 
+
+![Navigation zum Heimatverzeichnis unter Windows](figures/win_homedir.png)
+
+Unter MacOS wählt man im **Finder** in den Favoriten den `Schreibtisch` aus. Anschliessend tippt man auf der Tastatur die Kombination `Command + 🔼`, um in das Heimatverzeichnis zu gelangen.
+
+Das Heimatverzeichnis sollte für den einfachen Zugriff im Schnellzugriffsbereich abgelegt werden. Dazu wird sowohl unter MacOS als auch unter Windows der Ordner mit der Maus in den jeweiligen Schnellzugriffsbereich gezogen. 
+:::
