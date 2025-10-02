@@ -377,6 +377,13 @@ div.csl-indent {
   <li><a href="#dateien-und-verzeichnisse-von-der-versionierung-ausschliessen" id="toc-dateien-und-verzeichnisse-von-der-versionierung-ausschliessen" class="nav-link" data-scroll-target="#dateien-und-verzeichnisse-von-der-versionierung-ausschliessen"><span class="header-section-number">7.4.2</span> Dateien und Verzeichnisse von der Versionierung ausschliessen</a></li>
   <li><a href="#repository-organisation" id="toc-repository-organisation" class="nav-link" data-scroll-target="#repository-organisation"><span class="header-section-number">7.4.3</span> Repository-Organisation</a></li>
   </ul></li>
+  <li><a href="#git-and-visual-studio-code" id="toc-git-and-visual-studio-code" class="nav-link" data-scroll-target="#git-and-visual-studio-code"><span class="header-section-number">7.5</span> git and Visual Studio Code</a>
+  <ul class="collapse">
+  <li><a href="#anmeldung" id="toc-anmeldung" class="nav-link" data-scroll-target="#anmeldung"><span class="header-section-number">7.5.1</span> Anmeldung</a></li>
+  <li><a href="#arbeitsbereiche" id="toc-arbeitsbereiche" class="nav-link" data-scroll-target="#arbeitsbereiche"><span class="header-section-number">7.5.2</span> Arbeitsbereiche</a></li>
+  <li><a href="#ausführungskontext" id="toc-ausführungskontext" class="nav-link" data-scroll-target="#ausführungskontext"><span class="header-section-number">7.5.3</span> Ausführungskontext</a></li>
+  </ul></li>
+  <li><a href="#repositories-im-dateisystem" id="toc-repositories-im-dateisystem" class="nav-link" data-scroll-target="#repositories-im-dateisystem"><span class="header-section-number">7.6</span> Repositories im Dateisystem</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dxiai/daten-organisation/issues/new" class="toc-action"><i class="bi bi-github"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -912,15 +919,15 @@ Achtung
 <p>Die folgenden Namesmuster sind gebräuchlich:</p>
 <ul>
 <li><code>*/dateiname</code> - eine Datei oder ein Verzeichnis mit einem bestimmten Namen liegt in einem Verzeichnis im Projektverzeichnis.</li>
-<li><code>**/dateiname</code> - eine Datei oder ein Verzeichnis liegt an beliebiger Stelle im Projekt</li>
+<li><code>**/dateiname</code> - eine Datei oder ein Verzeichnis liegt an beliebiger Stelle im Repository.</li>
 <li><code>*.tmp</code> - alle Dateien oder Verzeichnisse im Projektverzeichnis, die auf <code>.tmp</code> enden.</li>
 <li><code>bild*</code> - alle Dateien oder Verzeichnisse im Projektverzeichnis, die mit <code>bild</code> beginnen.</li>
 </ul>
 <div id="callout-note">
 <p>Gelegentlich kommt es vor, dass festgestellt wird, dass eine oder mehrere Dateien ignoriert werden soll, obwohl sie bereits in die Versionierung aufgenommen wurde. In diesem Fall erscheit es, als ob <code>.gitignore</code> nicht funktioniert. Das liegt daran, dass <code>git</code> eine Datei nur ignoriert, wenn diese nicht in der Versionierung erfasst wurde. Um eine bereits erfasste Datei zu irgnorieren, muss diese Datei aus dem Versionsdatenbank mit <code>git rm</code> entfernt werden.</p>
 </div>
-<p><strong>Beispiel</strong></p>
-<p>Das folgende Beispiel zeigt typische <code>.gitignore</code>-Datei für ein R-Projekt.</p>
+<div id="exm-gitignore" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 7.1 (Eine typische <code>.gitignore</code>-Datei für ein R-Projekt.)</strong></span> &nbsp;</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ignore MacOS Filesystem Metadata</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="ot">**/.DS_Store</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -953,6 +960,20 @@ Achtung
 <span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="at">_book</span></span>
 <span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a><span class="at">.quarto/</span></span>
 <span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="at">/.quarto/</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+MacOS Ordnerinformation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>MacOS legt verdeckt Ordnerinformationen in Verzeichnissen an. Diese Dateien enthalten keine projektrelevanten Daten und sollten nicht versioniert werden. Diese Dateien haben immer den Namen <code>.DS_Store</code> und können in jedem Verzeichnis erscheinen. Deshalb sollte die Zeile mit dem Inhalt <code>**/.DS_Store</code> immer Bestandteil der <code>.gitignore</code>-Datei sein.</p>
+</div>
+</div>
 </section>
 <section id="repository-organisation" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="repository-organisation"><span class="header-section-number">7.4.3</span> Repository-Organisation</h3>
@@ -971,13 +992,129 @@ Achtung
 </section>
 <section id="projektrepo" class="level4" data-number="7.4.3.2">
 <h4 data-number="7.4.3.2" class="anchored" data-anchor-id="projektrepo"><span class="header-section-number">7.4.3.2</span> Projektrepo</h4>
-<p>Die Projektrepo-Strategie ist eine Variante der Monorepo-Strategie für komplexe Projekte, mit klar getrennten aber voneinander abhängigen Projektteilen. Dazu werden einzelene Projektteile in eigene Repositories ausgegliedert und als <em><code>git</code>-Submodule</em> in das Haupt-Repository eingebunden. Solche Submodule können unabhängig vom Haupt-Projekt entwickelt werden und auch in anderen Projekten wiederverwendet werden. Die Integration eines Submoduls erfolgt für einen bestimmten Commit oder ein bestimmtes Tag. Dadurch wird eine differenziertere Qualitätskontrolle möglich.</p>
+<p>Die Projektrepo-Strategie ist eine Variante der Monorepo-Strategie für komplexe Projekte, mit klar getrennten aber voneinander abhängigen Projektteilen. Dazu werden einzelene Projektteile in eigene Repositories ausgegliedert und als <em><code>git</code>-Submodule</em> in das Haupt-Repository eingebunden. Solche Submodule können unabhängig vom Hauptprojekt entwickelt werden und auch in anderen Projekten wiederverwendet werden. Die Integration eines Submoduls erfolgt für einen bestimmten Commit oder ein bestimmtes Tag. Dadurch wird eine differenziertere Qualitätskontrolle möglich.</p>
 </section>
 <section id="microrepo" class="level4" data-number="7.4.3.3">
 <h4 data-number="7.4.3.3" class="anchored" data-anchor-id="microrepo"><span class="header-section-number">7.4.3.3</span> Microrepo</h4>
 <p>Bei der Microrepo-Strategie werden alle Projektteile in eigenen Repositories unabhängig voneinander geführt, so dass nur der jeweilige Projektteil und die zugehörige Konfiguration in einem Repository vorliegen.</p>
 <p>Bei der Microrepo-Strategie werden Daten, Code und Konfiguration grundsätzlich immer voneinander getrennt und werden in eigenen Repositories verwaltet. Damit ist diese Strategie die Antithese zum Monorepo. Die Integration der Komponenten erfolgt über das lokale Dateisystem oder über Packetmanager und <code>git</code>-Tags.</p>
 <p>Diese Strategie eignet sich für Datenprojekte, Projekte mit wenigen direkten Abhähngigkeiten oder Projekte mit verschiedenen Anwendungsgebieten (engl. Deployments). Durch klar getrennte Repositories lassen sich die einzelnen Komponenten in unterschiedlichen Kontexten problemlos unabhängig voneinander publizieren und anpassen. Deshalb ist diese Strategie besonders für Projekte mit sensitiven Daten, wie z.B. Patientendaten, oder Konfigurationen, wie beispielsweise Passwörtern, geeignet, bei denen die Datenverarbeitung keine sensitiven Teile hat.</p>
+</section>
+</section>
+</section>
+<section id="git-and-visual-studio-code" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="git-and-visual-studio-code"><span class="header-section-number">7.5</span> git and Visual Studio Code</h2>
+<section id="anmeldung" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="anmeldung"><span class="header-section-number">7.5.1</span> Anmeldung</h3>
+<p>GitHub existieren zwei Varianten der Hosting-Plattform. Die öffentliche <code>git</code>-Hosting Plattform ist <code>GitHub.com</code>. Daneben gibt es <strong>GitHub Enterprise</strong> Server. Dabei handelt es sich um eine nicht öffentliche <code>git</code>-Hosting-Plattformen auf der gleichen Software-Grundlage wie <code>GitHub.com</code>. Diese Variante wird häufig von Unternehmen verwendet, die zwar git und GitHub verwenden wollen, aber keine öffentliche Präsenz für ihre Daten- und Code-Projekte wünschen oder haben dürfen. Beide Varianten werden von Visual Studio Code für das Versionsmanagement direkt unterstützt. Damit das reibungsfrei funktioniert, muss man Visual Studio Code mit dem eigenen Account an beiden Plattformen anmelden.</p>
+<p>Am elegantesten geht die Anmeldung an GitHub und GitHub Enterprise Servern mithilfe der Erweiterung <code>GitHub Pull Requests</code>. Diese Erweiterung muss installiert werden, um den vollen GitHub-Funktionsumfang zu nutzen.</p>
+<p>Sobald diese Erweiterung installiert ist, kann man sich mit einem GitHub Enterprise Server verbinden.</p>
+<p>Dazu muss der GitHub Enterprise Server zuerst in den Einstellungen konfiguriert werden: Unter der Einstellug <code>GitHub-Enterprise: Uri</code> muss die Server URL eingetragen werden.</p>
+<p>Anschliessend erscheint im Menu <code>Accounts</code> die Möglichkeit, sich mit diesem Server zu verbinden.</p>
+<p>Beim Verbinden wird ein Code angezeigt, der für die Verbindung benötigt wird. Im entsprechenden Dialog muss <code>Copy &amp; Continue to GitHub</code> ausgewählt werden. Dieser Dialog leitet auf die Seite des GitHub Enterprise Servers um.</p>
+<p>Auf dem GitHub Server muss Visual Studio Code der Zugriff freigegeben werden. Ist das Erfolgt erscheinen alle angemeldeten Server im Accounts-Menu.</p>
+</section>
+<section id="arbeitsbereiche" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="arbeitsbereiche"><span class="header-section-number">7.5.2</span> Arbeitsbereiche</h3>
+<p>Visual Studio Code arbeitet mit sog. Arbeitsbereichen oder <em>Workspaces</em>. Wird mit mehreren Repositories gearbeitet, dann werden die Repositories einzeln dem Arbeitsbereich zugewiesen.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Achtung ☠️☠️
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Auch wenn es auf den ersten Blick einfacher aussieht, sollte <strong><em>nie</em></strong> das übergeordnete Verzeichnis, in welchem die gewünschten Repositories, direkt in Visual Studio Code geöffnet werden. Dadurch wird die Arbeit mit Daten in den Repositories und die Zusammenarbeit <strong>stark</strong> erschwert!</p>
+</div>
+</div>
+<p>Um mehrere Repositories in Visual Studio Code zu öffnen, wird zuerst Visual Studio Code ohne eine Datei oder Respotory geöffnet. Visual Studio Code erstellt so einen neuen Arbeitsbereich.</p>
+<p>Anschliessend wird das erste Repository mit <code>Ordner öffnen</code> in den Arbeitsbereich geladen. Dieses Repository wird dann zu oberst im Arbeitsbereich stehen. Die Reihenfolge der Repositories lässt sich später durch Ziehen mit der Maus auch noch anpassen.</p>
+<p>Anschliessend werden alle weiteren Repositories einzeln über das Kontextmenu <code>Ordner zum Arbeitsbereich hinzufügen</code> eingebunden werden. Dieser Menupunkt führt zu einem Auswahldialog, in welchem die Ordner der Repositories ausgewählt werden können.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/vsc_add_workspace.png" class="img-fluid figure-img"></p>
+<figcaption>VSC Kontextmenu mit <code>Ordner zum Arbeitsbereich hinzufügen</code></figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Praxis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Weil das Einbinden mehrerer Repositories in Visual Studio Code recht umständlich ist, bietet es sich an, die Arbeitsbereiche abzuspeichern. So kann die Arbeitsumgebung für mehrere Projekte getrennt gehalten und der gespeicherte Stand direkt geöffnet werden. Dazu muss ein Arbeitsbereich in einer Datei gespeichert werden. Visual Studio Code bietet das Speichern eines Arbeitsbereichs jeweils beim Schliessen des jeweiligen Arbeitsbereichsfensters an.</p>
+<p>Es ist hilfreich solche Arbeitsbereiche in ein separaten Repository abzulegen und ebenfalls zu versionieren. Über ein solches Projekt lassen sich die Visual Studio Code-Einstellungen über mehrere Rechner leicht teilen.</p>
+</div>
+</div>
+</section>
+<section id="ausführungskontext" class="level3" data-number="7.5.3">
+<h3 data-number="7.5.3" class="anchored" data-anchor-id="ausführungskontext"><span class="header-section-number">7.5.3</span> Ausführungskontext</h3>
+<p>Der Ausführungskontext bezeichnet die Umgebung in denen Programme gestartet werden. Dazu gehört das Start-Verzeichnis, Systemparameter und vieles mehr. Programme nutzen automatisch diesen Ausführungskontext, um Dateien auf dem jeweiligen System zu finden.</p>
+<p>Beim Ausführen von Code verwendet Visual Studio Code als Ausführungskontext jeweils den am weitesten übergeordneten Ordner eines Programms im Arbeitsbereich. Idealerweise ist dieser Ordner das Repository-Verzeichnis. Das ist deshalb praktisch, weil innerhalb eines Repositories die Organisation und Position aller Dateien bekannt ist. Diese Voraussetzung gilt nicht für die dem Repository übergeordneten Verzeichnisse, die beliebige Namen haben können. Dadurch kann beim datenorientierten Programmieren keine sichere Annahme über die Dateistruktur gemacht werden und der Code muss für jeden Rechner angepasst werden, auf welchem der Code laufen soll. Diese zusätzliche Arbeit gilt es zu vermeiden.</p>
+<p>Macht der Code in einem Repository keine zusätzlichen Vorgaben an den Ausführungskontext jenseits des Repositories, dann wird das Repository als <em>selbst-bezogen</em> oder <em>self-contained</em> bezeichnet. Damit Visual Studio Code solchen selbst-bezogenen Code korrekt ausführen kann, muss das gewünschte Repository als Ordner dem aktuellen Arbeitsbereich hinzugefügt werden.</p>
+</section>
+</section>
+<section id="repositories-im-dateisystem" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="repositories-im-dateisystem"><span class="header-section-number">7.6</span> Repositories im Dateisystem</h2>
+<p><code>git</code>-Repositories umfassen nicht nur den aktuellen Stand der Arbeit, sondern immer die vollständige Versionsverlauf eines Projekts. Dadurch ist es möglich auch ohne Datenverbindung an Projekten zu arbeiten. Aus diesem Grund verbrauchen diese Repositories schnell recht viel Speicherplatz. Entsprechend sollten <code>git</code>-Repositories <strong><em>nicht</em></strong> gleichzeitig mit Cloud-Speichern wie OneDrive, iCloud oder Google Drive synchronisiert werden.</p>
+<p>Unabhängig von der Repository-Organisation arbeitet man regelmässig mit mehreren Repositories. Damit diese nicht versehentlich in einem Cloud-Speicher landen, hat sich die folgende Strategie bewährt:</p>
+<p>Es sollte ein eigener Ordner für Repositories direkt im Heimatverzeichnis erstellt werden (Siehe Kasten). Geeignete Namen für dieses übergeordnete Verzeichnis sind z.B. <code>Repositories</code>, <code>Code</code> oder <code>Src</code>. In diese Verzeichnis werden die eigentlichlichen <code>git</code>-Repositories gecloned. Gegebenenfalls ist es sinnvoll zusätzliche Unterverzeichnisse für Repository-Gruppen zu erstellen.</p>
+<p>Wurde im Heimatverzeichnis ein entsprechend bezeichnetes Verzeichnis angelegt, so wird dieses von den Cloud-Speicher-Systemen ignoriert.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/macos_home_with_code.png" class="img-fluid figure-img"></p>
+<figcaption>Heimatverzeichnis mit <code>code</code>-Verzeichnis unter MacOS</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/win_home_with_repositories.png" class="img-fluid figure-img"></p>
+<figcaption>Heimatverzeichnis mit <code>Repositories</code>-Verzeichnis unter Windows</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Achtung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Repositories sollten <strong>nie</strong> auf dem Desktop oder im Verzeichnis <code>Dokumente</code> oder im Synchronisationsordner der bevorzugten Cloud-Speicher abgelegt werden, weil diese mit der Cloud synchronisiert werden.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Das Heimatverzeichnis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Alle modernen Betriebssysteme sind sogenannte <em>Mehrnutzersysteme</em>. D.h. es können mehrere Nutzer das gleiche System verwenden, wobei jede Person einen eigenen Arbeitsbereich zur Ablage von Dateien hat. Das Verzeichnis, in welchem dieser Arbeitsbereich gespeichert wird, heisst <em>Heimatverzeichnis</em> oder <em>Home-Verzeichnis</em>.</p>
+<p>In der Standardeinstellung von Windows und MacOS ist es jedoch nicht intuitiv, das eigene Heimatverzeichnis zu finden.</p>
+<p>Unter Windows wählt man dazu im <strong>Explorer</strong> den Schnellzugriff für das <code>Desktop</code> aus, tippt anschliessen auf den Pfeil nach oben. Im der folgenden Ansicht taucht ein Verzeichnis mit den Namen des aktuellen Anwender*In auf. Auf dieses Verzeichnis muss doppeltgeklickt werden, um das Heimatverzeichnis zu erreichen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/win_homedir.png" class="img-fluid figure-img"></p>
+<figcaption>Navigation zum Heimatverzeichnis unter Windows</figcaption>
+</figure>
+</div>
+<p>Unter MacOS wählt man im <strong>Finder</strong> in den Favoriten den <code>Schreibtisch</code> aus. Anschliessend tippt man auf der Tastatur die Kombination <code>Command + 🔼</code>, um in das Heimatverzeichnis zu gelangen.</p>
+<p>Das Heimatverzeichnis sollte für den einfachen Zugriff im Schnellzugriffsbereich abgelegt werden. Dazu wird sowohl unter MacOS als auch unter Windows der Ordner mit der Maus in den jeweiligen Schnellzugriffsbereich gezogen.</p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -985,8 +1122,6 @@ Achtung
 GitHub Inc. (o.&nbsp;J.). <em><span>GitHub</span> flow</em>. <a href="https://docs.github.com/en/get-started/quickstart/github-flow">https://docs.github.com/en/get-started/quickstart/github-flow</a>
 </div>
 </div>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
