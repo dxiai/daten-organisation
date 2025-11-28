@@ -92,7 +92,7 @@ Um aus einem normalen Verzeichnis ein `git`-Repository zu erstellen, muss das Ve
 git init
 ```
 
-`git`-Repositories können aus zwei Arten synchronisiert werden: Durch Clone und durch Forks. Jedes Kopie eines `git`-Repositories enthält immer alle Versionen des Projekts. Wird ein Repository auf einen anderen Computer synchronisiert, dann wird das entfernte Repository als **Remote** bezeichnet. Handelt es sich bei diesem Repository um ein Quell-Repository, dann wird dieses auch als **Upstream**-Repository bezeichnet. Die lokale Variante des Repositories wird auch als **Downstream**-Repository bezeichnet. 
+`git`-Repositories können aus zwei Arten synchronisiert werden: Durch Clone und durch Forks. Jede Kopie eines `git`-Repositories enthält immer alle Versionen des Projekts. Wird ein Repository auf einen anderen Computer synchronisiert, dann wird das entfernte Repository als **Remote** bezeichnet. Handelt es sich bei diesem Repository um ein Quell-Repository, dann wird dieses auch als **Upstream**-Repository bezeichnet. Die lokale Variante des Repositories wird auch als **Downstream**-Repository bezeichnet. 
 
 Zwei gleichwertige Kopien eines Repositories werden als **Clone** bezeichnet. Gleichwertig bedeutet, dass die Versionen zwischen diesen Repositories direkt synchronisierbar sind.
 
