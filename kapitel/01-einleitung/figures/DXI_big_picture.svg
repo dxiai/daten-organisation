@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="-700.1743 -291 1880.0764 1216.4277" width="1880.0764" height="1216.4277">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="-615.4946 -291 1795.3967 1216.4277" width="1795.3967" height="1216.4277">
   <defs>
     <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -2 5 4" markerWidth="5" markerHeight="4" color="#a5a5a5">
       <g>
@@ -18,20 +18,20 @@
       </g>
     </marker>
   </defs>
-  <g id="Canvas_1" fill="none" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-dasharray="none">
+  <g id="Canvas_1" stroke-opacity="1" fill-opacity="1" stroke="none" fill="none" stroke-dasharray="none">
     <title>Canvas 1</title>
     <g id="Canvas_1_structures">
       <title>structures</title>
       <g id="Graphic_240">
         <path d="M -21 -281 L 707.4596 -281 C 712.4302 -281 716.4596 -276.97056 716.4596 -272 L 716.4596 78 C 716.4596 82.97056 712.4302 87 707.4596 87 L -21 87 C -25.970563 87 -30 82.97056 -30 78 L -30 -272 C -30 -276.97056 -25.970563 -281 -21 -281 Z" fill="#dadada"/>
         <text transform="translate(-5 -256)" fill="black">
-          <tspan font-family="Arial" font-weight="bold" font-size="32" fill="black" x="122.40948" y="29">Organisation &amp; Versionierung</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="32" fill="black" x="122.40948" y="29" xml:space="preserve">Organisation &amp; Versionierung</tspan>
         </text>
       </g>
       <g id="Graphic_221">
         <path d="M 19 -188 L 667.4596 -188 C 672.4302 -188 676.4596 -183.97056 676.4596 -179 L 676.4596 60.90909 C 676.4596 65.87965 672.4302 69.90909 667.4596 69.90909 L 19 69.90909 C 14.029437 69.90909 10 65.87965 10 60.90909 L 10 -179 C 10 -183.97056 14.029437 -188 19 -188 Z" fill="#999"/>
         <text transform="translate(35 -163)" fill="white">
-          <tspan font-family="Arial" font-weight="bold" font-size="32" fill="white" x="210.4251" y="29">Dateiformate</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="32" fill="white" x="210.4251" y="29" xml:space="preserve">Dateiformate</tspan>
         </text>
       </g>
     </g>
@@ -47,7 +47,7 @@
         <path d="M 882.479 196.88977 L 1104.979 196.88977 C 1109.9496 196.88977 1113.979 200.9192 1113.979 205.88977 L 1113.979 263.38977 C 1113.979 268.36033 1109.9496 272.38977 1104.979 272.38977 L 882.479 272.38977 C 877.5085 272.38977 873.479 268.36033 873.479 263.38977 L 873.479 205.88977 C 873.479 200.9192 877.5085 196.88977 882.479 196.88977 Z" fill="white"/>
         <path d="M 882.479 196.88977 L 1104.979 196.88977 C 1109.9496 196.88977 1113.979 200.9192 1113.979 205.88977 L 1113.979 263.38977 C 1113.979 268.36033 1109.9496 272.38977 1104.979 272.38977 L 882.479 272.38977 C 877.5085 272.38977 873.479 268.36033 873.479 263.38977 L 873.479 205.88977 C 873.479 200.9192 877.5085 196.88977 882.479 196.88977 Z" stroke="#a5a5a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
         <text transform="translate(878.479 218.1654)" fill="#a5a5a5">
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#a5a5a5" x="34.67871" y="26">Modellieren</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#a5a5a5" x="34.67871" y="26" xml:space="preserve">Modellieren</tspan>
         </text>
       </g>
       <g id="Line_45">
@@ -75,16 +75,18 @@
         <path d="M 179.1572 394.5293 L 507.3024 394.5293 C 512.27296 394.5293 516.3024 398.55874 516.3024 403.5293 L 516.3024 648.0293 C 516.3024 652.9999 512.27296 657.0293 507.3024 657.0293 L 179.1572 657.0293 C 174.18664 657.0293 170.1572 652.9999 170.1572 648.0293 L 170.1572 403.5293 C 170.1572 398.55874 174.18664 394.5293 179.1572 394.5293 Z" stroke="#005493" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
       </g>
       <g id="Graphic_120">
-        <path d="M 211.2298 544.5293 L 475.2298 544.5293 C 480.20036 544.5293 484.2298 548.55874 484.2298 553.5293 L 484.2298 611.0293 C 484.2298 615.9999 480.20036 620.0293 475.2298 620.0293 L 211.2298 620.0293 C 206.25924 620.0293 202.2298 615.9999 202.2298 611.0293 L 202.2298 553.5293 C 202.2298 548.55874 206.25924 544.5293 211.2298 544.5293 Z" fill="white"/>
-        <text transform="translate(207.2298 549.3306)" fill="#005493">
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="52.200195" y="26">Anpassen &amp; </tspan>
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="9.507324" y="58.94873">Problemzerlegung</tspan>
+        <path d="M 211.2298 535.6404 L 475.2298 535.6404 C 480.20036 535.6404 484.2298 539.66985 484.2298 544.6404 L 484.2298 602.1404 C 484.2298 607.111 480.20036 611.1404 475.2298 611.1404 L 211.2298 611.1404 C 206.25924 611.1404 202.2298 607.111 202.2298 602.1404 L 202.2298 544.6404 C 202.2298 539.66985 206.25924 535.6404 211.2298 535.6404 Z" fill="white"/>
+        <text transform="translate(207.2298 507.49295)" fill="#005493">
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="67.493164" y="26" xml:space="preserve">Variablen, </tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="53.842773" y="58.94873" xml:space="preserve">Funktionen, </tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="36.100098" y="91.89746" xml:space="preserve">Operationen &amp;</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="24.021484" y="124.84619" xml:space="preserve">Funktionsketten</tspan>
         </text>
       </g>
       <g id="Graphic_119">
-        <path d="M 231.9798 431.5293 L 454.4798 431.5293 C 459.45036 431.5293 463.4798 435.55874 463.4798 440.5293 L 463.4798 498.0293 C 463.4798 502.99987 459.45036 507.0293 454.4798 507.0293 L 231.9798 507.0293 C 227.00924 507.0293 222.9798 502.99987 222.9798 498.0293 L 222.9798 440.5293 C 222.9798 435.55874 227.00924 431.5293 231.9798 431.5293 Z" fill="#005493"/>
-        <text transform="translate(227.9798 452.80494)" fill="white">
-          <tspan font-family="Arial" font-size="29" fill="white" x="45.921875" y="26">Bereinigen</tspan>
+        <path d="M 231.9798 415.97375 L 454.4798 415.97375 C 459.45036 415.97375 463.4798 420.0032 463.4798 424.97375 L 463.4798 482.47375 C 463.4798 487.4443 459.45036 491.47375 454.4798 491.47375 L 231.9798 491.47375 C 227.00924 491.47375 222.9798 487.4443 222.9798 482.47375 L 222.9798 424.97375 C 222.9798 420.0032 227.00924 415.97375 231.9798 415.97375 Z" fill="#005493"/>
+        <text transform="translate(227.9798 437.2494)" fill="white">
+          <tspan font-family="Arial" font-size="29" fill="white" x="45.921875" y="26" xml:space="preserve">Bereinigen</tspan>
         </text>
       </g>
       <g id="Line_116">
@@ -94,7 +96,7 @@
         <path d="M 389.84 -32 L 612.34 -32 C 617.31056 -32 621.34 -27.970563 621.34 -23 L 621.34 34.5 C 621.34 39.470563 617.31056 43.5 612.34 43.5 L 389.84 43.5 C 384.86944 43.5 380.84 39.470563 380.84 34.5 L 380.84 -23 C 380.84 -27.970563 384.86944 -32 389.84 -32 Z" fill="white"/>
         <path d="M 389.84 -32 L 612.34 -32 C 617.31056 -32 621.34 -27.970563 621.34 -23 L 621.34 34.5 C 621.34 39.470563 617.31056 43.5 612.34 43.5 L 389.84 43.5 C 384.86944 43.5 380.84 39.470563 380.84 34.5 L 380.84 -23 C 380.84 -27.970563 384.86944 -32 389.84 -32 Z" stroke="#005493" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
         <text transform="translate(385.84 -10.724365)" fill="#005493">
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="69.32861" y="26">Export</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="69.32861" y="26" xml:space="preserve">Export</tspan>
         </text>
       </g>
       <g id="Line_112">
@@ -104,7 +106,7 @@
         <path d="M 54.84 -32 L 277.34 -32 C 282.31056 -32 286.34 -27.970563 286.34 -23 L 286.34 34.5 C 286.34 39.470563 282.31056 43.5 277.34 43.5 L 54.84 43.5 C 49.86944 43.5 45.84 39.470563 45.84 34.5 L 45.84 -23 C 45.84 -27.970563 49.86944 -32 54.84 -32 Z" fill="white"/>
         <path d="M 54.84 -32 L 277.34 -32 C 282.31056 -32 286.34 -27.970563 286.34 -23 L 286.34 34.5 C 286.34 39.470563 282.31056 43.5 277.34 43.5 L 54.84 43.5 C 49.86944 43.5 45.84 39.470563 45.84 34.5 L 45.84 -23 C 45.84 -27.970563 49.86944 -32 54.84 -32 Z" stroke="#005493" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
         <text transform="translate(50.84 -10.724365)" fill="#005493">
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="70.14282" y="26">Import</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="70.14282" y="26" xml:space="preserve">Import</tspan>
         </text>
       </g>
       <g id="Line_44">
@@ -114,23 +116,23 @@
         <path d="M 933.4021 714.5293 L 1155.9021 714.5293 C 1160.8727 714.5293 1164.9021 718.5587 1164.9021 723.5293 L 1164.9021 781.0293 C 1164.9021 785.9999 1160.8727 790.0293 1155.9021 790.0293 L 933.4021 790.0293 C 928.4316 790.0293 924.4021 785.9999 924.4021 781.0293 L 924.4021 723.5293 C 924.4021 718.5587 928.4316 714.5293 933.4021 714.5293 Z" fill="white"/>
         <path d="M 933.4021 714.5293 L 1155.9021 714.5293 C 1160.8727 714.5293 1164.9021 718.5587 1164.9021 723.5293 L 1164.9021 781.0293 C 1164.9021 785.9999 1160.8727 790.0293 1155.9021 790.0293 L 933.4021 790.0293 C 928.4316 790.0293 924.4021 785.9999 924.4021 781.0293 L 924.4021 723.5293 C 924.4021 718.5587 928.4316 714.5293 933.4021 714.5293 Z" stroke="#005493" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
         <text transform="translate(929.4021 735.8049)" fill="#005493">
-          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="26.048096" y="26">Visualisieren</tspan>
+          <tspan font-family="Arial" font-weight="bold" font-size="29" fill="#005493" x="26.048096" y="26" xml:space="preserve">Visualisieren</tspan>
         </text>
       </g>
     </g>
     <g id="Canvas_1_konzepte">
       <title>konzepte</title>
       <g id="Graphic_106">
-        <text transform="translate(-530.6179 310.62465)" fill="black">
-          <tspan font-family="Arial" font-size="32" fill="black" x="0" y="29">Zählen</tspan>
+        <text transform="translate(-600.4946 318.8625)" fill="black">
+          <tspan font-family="Arial" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Zählen</tspan>
         </text>
       </g>
       <g id="Line_111">
-        <line x1="-427.7741" y1="343.47763" x2="-370.14004" y2="358.7937" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <line x1="-497.65086" y1="346.3608" x2="-421.78574" y2="358.98794" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
       <g id="Graphic_81">
         <text transform="translate(-307.74055 165.87097)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Kodieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Kodieren</tspan>
         </text>
       </g>
       <g id="Line_83">
@@ -138,7 +140,7 @@
       </g>
       <g id="Graphic_191">
         <text transform="translate(-258.55655 661.7023)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Gruppieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Gruppieren</tspan>
         </text>
       </g>
       <g id="Line_194">
@@ -146,17 +148,17 @@
       </g>
       <g id="Graphic_241">
         <text transform="translate(-438.5468 678.8356)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Filtern</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Filtern</tspan>
         </text>
       </g>
       <g id="Graphic_242">
         <text transform="translate(-576.8945 511)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Entscheiden</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Entscheiden</tspan>
         </text>
       </g>
       <g id="Graphic_243">
         <text transform="translate(-530.3299 602.4757)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Sortieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Sortieren</tspan>
         </text>
       </g>
       <g id="Line_244">
@@ -170,39 +172,23 @@
       </g>
       <g id="Graphic_247">
         <text transform="translate(-397.98205 824.4849)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Transponieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Transponieren</tspan>
         </text>
       </g>
       <g id="Line_248">
         <line x1="-198.37122" y1="819.4849" x2="-69.99749" y2="788.5528" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
-      <g id="Graphic_249">
-        <text transform="translate(24.388375 824.4849)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Matrizen erzeugen</tspan>
-        </text>
-      </g>
-      <g id="Line_250">
-        <line x1="112.3631" y1="819.4849" x2="59.551225" y2="791.5933" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      </g>
-      <g id="Graphic_264">
-        <text transform="translate(-685.1743 436.5293)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Matrixoperationen</tspan>
-        </text>
-      </g>
-      <g id="Line_265">
-        <line x1="-468.0102" y1="431.5293" x2="-370.71546" y2="405.84056" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      </g>
       <g id="Graphic_266">
         <text transform="translate(-424.93505 232.06274)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Randomisieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Randomisieren</tspan>
         </text>
       </g>
       <g id="Line_267">
-        <line x1="-204.7163" y1="264.42814" x2="-81.28274" y2="279.6006" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <line x1="-204.7163" y1="264.42814" x2="-73.298365" y2="280.58205" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       </g>
       <g id="Graphic_268">
         <text transform="translate(-221.28175 873.3809)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Hierarchisieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Hierarchisieren</tspan>
         </text>
       </g>
       <g id="Line_269">
@@ -212,18 +198,18 @@
     <g id="Canvas_1_Techniken_2">
       <title>Techniken 2</title>
       <g id="Graphic_239">
-        <text transform="translate(-76.28274 272.72866)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29">Umwandeln</tspan>
+        <text transform="translate(-68.298365 272.72866)" fill="black">
+          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Projizieren</tspan>
         </text>
       </g>
       <g id="Graphic_238">
         <text transform="translate(-416.78574 363.7937)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29">Zusammenfassen</tspan>
+          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Zusammenfassen</tspan>
         </text>
       </g>
       <g id="Graphic_237">
         <text transform="translate(-318.97043 556.67005)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29">Strukturieren</tspan>
+          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Strukturieren</tspan>
         </text>
       </g>
       <g id="Line_234">
@@ -240,12 +226,12 @@
       </g>
       <g id="Graphic_228">
         <text transform="translate(-64.99749 749.5464)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29">Umformen</tspan>
+          <tspan font-family="Arial" font-style="italic" font-weight="bold" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Umformen</tspan>
         </text>
       </g>
       <g id="Graphic_223">
         <text transform="translate(-172.54336 121.87097)" fill="black">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29">Identität</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="black" x="0" y="29" xml:space="preserve">Identität</tspan>
         </text>
       </g>
       <g id="Line_222">
@@ -253,12 +239,12 @@
       </g>
       <g id="Graphic_254">
         <text transform="translate(435.7636 -103.10515)" fill="white">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="white" x="0" y="29">Bäume</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="white" x="0" y="29" xml:space="preserve">Bäume</tspan>
         </text>
       </g>
       <g id="Graphic_253">
         <text transform="translate(142.31569 -103.10515)" fill="white">
-          <tspan font-family="Arial" font-style="italic" font-size="32" fill="white" x="0" y="29">Mengen</tspan>
+          <tspan font-family="Arial" font-style="italic" font-size="32" fill="white" x="0" y="29" xml:space="preserve">Mengen</tspan>
         </text>
       </g>
     </g>

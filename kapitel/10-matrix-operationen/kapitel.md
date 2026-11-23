@@ -233,11 +233,27 @@ a_2 \cdot m_{21} & a_2 \cdot m_{22} & a_2 \cdot m_{23}
 \end{aligned}
 $$
 
-## Matrixmultiplikation/ Kreuzprodukt
+## Matrixmultiplikation
 
-Das Kreuzprodukt ist eine andere Variante zwei Matrizen zu multiplizieren. Dabei werden zwei Matrizen A und B über Kreuz multipliziert. Dazu muss gegeben sein, dass die Matrix A gleich viel Spalten hat, wie Matrix B Zeilen. Es muss also gelten, dass wir eine m x n-Matrix mit einer n x p-Matrix multiplizieren, wobei n für beide Matrizen gleich sein muss. Sind diese Voraussetzungen nicht erfüllt, kann das Kreuzprodukt nicht gebildet werden.
+Neben dem Produkt-Transformation gibt es noch eine andere Variante zwei Matrizen zu multiplizieren. Dabei werden zwei Matrizen A und B "über Kreuz" multipliziert. Dazu muss gegeben sein, dass die Matrix A gleich viel Spalten hat, wie Matrix B Zeilen. Es muss also gelten, dass wir eine m x n-Matrix mit einer n x p-Matrix multiplizieren, wobei n für beide Matrizen gleich sein muss. Sind diese Voraussetzungen nicht erfüllt, kann das Matrixprodukt nicht gebildet werden.
 
-Das Kreuzprodukt ist wie folgt definiert: 
+::: {.callout-warning}
+## Notation!
+
+In der Geometrie und der Mathematik wird das Punktprodukt und die Matrixmultiplikation mit den gleichen Symbolen für andere Operationen verwendet. Der Multiplikationspunkt ($\cdot$) wird dort für das Skalarprodukt verwendet und das Kreuz ($\times$) wird für das Kreuzprodukt verwendet. 
+
+Alle Programmiersprachen implementieren die paarweise Multiplikation als `*` (entsprechend dem $\cdot$) und die Matrixmultiplikation als **Summenprodukt**. Zur Unterscheidung der Matrixmultiplikation von der paarweisen Multiplikation wird hier das $\times$ für die Matrixmultiplikation verwendet.   
+:::
+
+:::{.callout-warning}
+# Terminologie
+
+Auch wenn bei der Matrixmultiplikation *über-kreuz* multipliziert wird, darf diese Rechnung nicht 
+mit dem Kreuzprodukt aus der Geometrie verwechselt werden. Das Kreuzprodukt ist nur für Vektoren der Länge 3 definiert. 
+
+:::
+
+Die Matrixmultiplikation ist wie folgt definiert: 
 
 $$
 \begin{aligned}
@@ -264,15 +280,15 @@ b_{n1} & b_{n2} & \cdots & b_{np} \\
 \end{aligned}
 $$
 
-Das Ergebnis eines Kreuzprodukts ist immer eine Matrix mit m-Zeilen und p-Spalten.
+Das Ergebnis dieses Produkts ist immer eine Matrix mit m-Zeilen und p-Spalten.
 
-Aus der Definition des Kreuzprodukts zeigt sich, dass die Operanden beim Kreuzprodukt nur vertauscht werden können, wenn beide Matrizen quadratisch sind. Dabei gilt für beliebige Matrizen ausserdem @eq-kreuzprodukt-nicht-kommutativ.
+Aus der Definition der Matrixmultiplikation zeigt sich, dass die Operanden genau dann vertauscht werden können, wenn beide Matrizen quadratisch sind. Dabei gilt für beliebige Matrizen ausserdem @eq-kreuzprodukt-nicht-kommutativ.
 
 $$
 A \times B \ne B \times A
 $$ {#eq-kreuzprodukt-nicht-kommutativ}
 
-Das Kreuzprodukt hat ein *neutrales Element*: Die **Identitätsmatrix** $I$.  Die Identitätsmatrix ist eine quadratische Matrix, die an den Positionen der abfallenden Diagonalen den Wert 1 und sonst den Wert 0 hat. 
+Die Matrixmultiplikation hat ein *neutrales Element*: Die **Identitätsmatrix** $I$.  Die Identitätsmatrix ist eine quadratische Matrix, die an den Positionen der abfallenden Diagonalen den Wert 1 und sonst den Wert 0 hat. 
 
 ::: {#exm-3d-id-matrix}
 ## 3x3 Einheitsmatrix
@@ -292,9 +308,19 @@ $$
 A \times I = I \times A = A
 $$ {#eq-id-matrix-kreuzprodukt}
 
-### Kreuzprodukt für Vektoren
+### Matrixmultiplikation für Vektoren
 
-Aus der Anforderung für das Kreuzprodukt folgt direkt das Kreuzprodukt für Vektoren, die wir als m x 1- sowie als 1 x p-Matrizen verstehen können. Es gilt also: n = 1. Deshalb mussten wir für das Einmaleins-Beispiel den zweiten Vektor *transponieren*. Dadurch vereinfacht sich die komplizierte Formel des Kreuzprodukts auf die paarweise-überkreuzte Multiplikation. 
+Aus der Anforderung für die Matrixmulitplikation folgt die Operation für für Vektoren, die wir als m x 1- sowie als 1 x p-Matrizen verstehen können. Es gilt also: n = 1. Deshalb mussten wir für das Einmaleins-Beispiel den zweiten Vektor *transponieren*. Dadurch vereinfacht sich die komplizierte Formel der Matrixmultiplikation auf die paarweise-überkreuzte Multiplikation. 
+
+### Direkte Matrixmultiplikation für Vektoren
+
+Für den Fall dass zwei Vektoren direkt mit einander multipliziert werden, ist das Ergebnis ein Skalar. Die Operation $v_1 \times v_2$ entspricht der sog. Skalarmultiplikation und ist wie folgt definiert: 
+
+$$
+v_1 \times v_2 = \sum{v_{1i}v_{2i}}
+$$
+
+Diese Operation entspricht dem Skalarprodukt der Mathematik, weil das Ergebnis eine $1\times1$ Matrix ist. Die Operation ist nur für Vektoren definiert.
 
 ### Inverse Matrix
 
@@ -318,23 +344,23 @@ Bevor die Inverse einer Matrix bestimmt wird, muss sicher gestellt werden, dass 
 
 Die Inverse Matrix wird für verschiedene Anwendungen benötigt und wird deshalb von den meisten Softwarepaketen bereitgestellt. Es ist deshalb selten notwendig, eine inverse Matrix selbst zu berechnen.
 
-### Anwendungen des Kreuzprodukts
+### Anwendungen der Matrixmultiplikation
 
-Das Kreuzprodukt verbindet die Multiplikation von Werten mit einer Summenbildung. Besteht eine der beiden Matrizen nur als den Werten `0` und `1`, so entfallen alle Terme des Kreuzprodukts, in denen mit der `0` multipliziert wird. Ausserdem reduzieren sich die rechtlichen Terme auf die verbleibenden Werte der anderen Matrix. Diese Eigenschaft des Kreuzprodukts lässt sich für die Summenbildung ausnutzen.
+Die Matrixmultiplikation verbindet die Multiplikation von Werten mit einer Summenbildung. Besteht eine der beiden Matrizen nur als den Werten `0` und `1`, so entfallen alle Terme der Matrixmulitplikation, in denen mit der `0` multipliziert wird. Ausserdem reduzieren sich die restlichen Terme auf die verbleibenden Werte der anderen Matrix. Diese Eigenschaft der Matrixmulitplikation lässt sich für die Summenbildung ausnutzen.
 
 #### Zeilen- und Spaltensummen berechnen
 
-Zwei spezielle Summen sind die Zeilen- und Spaltensummen. Dabei wird eine zusätzliche Eigenschaft des Kreuzprodukts ausgenutzt: Das Ergebnis des Kreuzprodukts zwischen einer $m \times n$- und einer $n \times p$-Matrix ist immer eine $m \times p$-Matrix. Ist $m$ oder $p$ gleich `1`, dann ist das Ergebnis ein *Vektor*.
+Zwei spezielle Summen sind die Zeilen- und Spaltensummen. Dabei wird eine zusätzliche Eigenschaft der Matrixmulitplikation ausgenutzt: Das Ergebnis der Matrixmulitplikation zwischen einer $m \times n$- und einer $n \times p$-Matrix ist immer eine $m \times p$-Matrix. Ist $m$ oder $p$ gleich `1`, dann ist das Ergebnis ein *Vektor*.
 
-Für die Zeilen- oder die Spaltensumme müssen alle Werte der gleichen Zeile bzw. der gleichen Spalte zusammengezählt werden. Für das Kreuzprodukt bedeutet das, dass die jeweils andere Matrix an jeder Position den Wert `1` haben muss. Gleichzeitig muss die zweite Matrix ein Vektor sein, damit das Ergebnis ein Vektor mit den entsprechenden Summen ist.
+Für die Zeilen- oder die Spaltensumme müssen alle Werte der gleichen Zeile bzw. der gleichen Spalte zusammengezählt werden. Für die Matrixmulitplikation bedeutet das, dass die jeweils andere Matrix an jeder Position den Wert `1` haben muss. Gleichzeitig muss die zweite Matrix ein Vektor sein, damit das Ergebnis ein Vektor mit den entsprechenden Summen ist.
 
-Entsprechend werden für Zeilen- bzw. Spaltensummen drei Eigenschaften des Kreuzprodukts ausgenutzt: 
+Entsprechend werden für Zeilen- bzw. Spaltensummen drei Eigenschaften der Matrixmulitplikation ausgenutzt: 
 
 1. Vektoren lassen sich als $1 \times n$- bzw. $n \times 1$-Matrizen verstehen.
 2. Das Ergebnis des Kreuzpodukts ist immer eine Matrix mit $m \times p$-Dimensionen. 
 3. Das neutrale Element der Multiplikation ist `1`.
 
-Weil für jede Ergebnisposition des Kreuzprodukts @eq-pos-summe-matrixprod gilt. 
+Weil für jede Ergebnisposition der Matrixmulitplikation @eq-pos-summe-matrixprod gilt. 
 
 $$
 \sum_{i=1}^{n}{a_{ji} \cdot b_{ik}}
@@ -429,7 +455,7 @@ $$
 
 ## Das äussere Matrixprodukt
 
-Bei den Vektoren und Matrizen haben wir bereits das Kreuzprodukt kennengelernt, mit dem wir aus zwei Vektoren eine Matrix konstruieren können. Das Kreuzprodukt ist allerdings nur für die Multiplikation als paarweiser Operator definiert. Neben dem Kreuzprodukt gibt es noch eine zweite und flexiblere Möglichkeit, um aus zwei Vektoren eine Matrix zu generieren: Das sog. äussere Produkt. 
+Bei den Vektoren und Matrizen haben wir bereits die Matrixmultiplikation ($\times$) kennengelernt, mit dem wir aus zwei Vektoren eine Matrix konstruieren können. Die Matrixmultiplikation ist allerdings nur für die Multiplikation als paarweiser Operator definiert. Neben der Matrixmultiplikation gibt es noch eine zweite und flexiblere Möglichkeit, um aus zwei Vektoren eine Matrix zu generieren: Das sog. äussere Produkt. 
 
 Beim **äusseren Produkt** oder *dyadischen Produkt* werden die Werte zweier *Vektoren* *paarweise* miteinander verknüpft, wodurch eine Matrix erzeugt wird, bei der die Anzahl der Zeilen entsprechend der Länge des linken und die Anzahl der Spalten mit der Länge des rechten Vektors übereinstimmt.
 
@@ -441,9 +467,9 @@ $$
 
 Das Ergebnis des äusseren Produkts ist also immer eine Matrix. Wir beachten, dass die Definition nur eine Verknüpfung fordert, aber nicht festlegt, welche Verknüpfung verwendet werden soll. Wir können also *beliebige Operationen* zur Verknüpfung verwenden. 
 
-Wird als Verknüpfungsoperator für das äussere Produkt die Multiplikation gewählt, dann entspricht das Ergebnis des äusseren Produkts für zwei Vektoren dem Kreuzprodukt zwischen Vektoren.
+Wird als Verknüpfungsoperator für das äussere Produkt die Multiplikation gewählt, dann entspricht das Ergebnis des äusseren Produkts für zwei Vektoren der Matrixmultiplikation zwischen Vektoren.
 
-Anders als beim Kreuzprodukt, können beim äusseren Matrixprodukt beliebige Operatoren verwendet werden. In der Praxis werden sehr oft Vergleichsoperatoren für die Verknüpfung verwendet. 
+Anders als bei der Matrixmultiplikation, können beim äusseren Matrixprodukt beliebige Operatoren verwendet werden. In der Praxis werden sehr oft Vergleichsoperatoren für die Verknüpfung verwendet. 
 
 > ::: {#exm-dreiecks-matrix-erzeugen}
 > ## Eine Dreiecks-Matrix mit dem äusseren Produkt erzeugen.
@@ -573,11 +599,11 @@ Co-Occurance Matrizen helfen beim Feststellen der Häufigkeiten des gemeinsamen 
 
 1. Es werden zwei Vektoren erstellt, in dem die Werte aus den Vektoren genau einmal vorkommen. 
 2. Es werden zwei Matrizen über das äussere Produkt des jeweiligen original Vektors und dem zugehörigen eindeutigen Vektor aus Schritt 1 erstellt. Der Operator für das äussere Produkt ist in diesem Fall der Gleichheitsoperator.
-3. Mit den beiden Matrizen aus Schritt 2 wird das Kreuzprodukt gebildet. Dazu muss eine der beiden Matrizen transponiert werden. Dieses Kreuzprodukt ist immer zulässig, weil beide Matrizen die gleiche Anzahl an Zeilen haben, wenn sie aus dem gleichen Datenrahmen gebildet wurden.
+3. Mit den beiden Matrizen aus Schritt 2 wird das Produkt der Matrixmultiplikation gebildet. Dazu muss eine der beiden Matrizen transponiert werden. Das Ergebnis ist immer zulässig, weil beide Matrizen die gleiche Anzahl an Zeilen haben, wenn sie aus dem gleichen Datenrahmen gebildet wurden.
 
 Die Schritte 1 und 2 sind eine direkte Anwendung von @exm-werte-markieren.
 
-Das Ergebnis ist eine Matrix mit der Anzahl der gemeinsamen Vorkommen der Werte aus den beiden eindeutigen Vektoren aus Schritt ein. Die Werte lassen sich über das Kreuzprodukt zuordnen: 
+Das Ergebnis ist eine Matrix mit der Anzahl der gemeinsamen Vorkommen der Werte aus den beiden eindeutigen Vektoren aus Schritt ein. Die Werte lassen sich über die Matrixmultiplikation zuordnen: 
 
 - Die Spalten entsprechen den eindeutigen Werten der linken (nicht transponierten) Matrix.
 - Die Zeilen entsprechen den eindeutigen Werten der rechten (transponierten) Matrix.

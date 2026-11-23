@@ -234,6 +234,12 @@ $$ {#eq-transformation-mit-skalar}
 > $$
 > ::: 
 
+:::{.callout-warning}
+## Aufgepasst!
+
+Die Skalarmultiplikation ist nicht das Gleiche wie das Skalarprodukt aus der Mathematik. Während bei der **Skalarmultiplikation** ein Operand ein Skalar ist, ist beim **Skalarprodukt** das Ergebnis der Multiplikation ein Skalar. 
+:::
+
 ### Transformationen mit einem Vektor
 
 Die Transformation mit einem Skalar kann auf Vektoren erweitert werden. Dabei wird die Transformationsfunktion mit den Elementen eines zweiten Vektors anstelle des Skalars durchgeführt. Eine solche Transformation erfordert, dass die Werte der beiden Vektoren *paarweise* durch die Transformationsfunktion verknüpft werden. Damit solche paarweisen Operationen möglich sind, müssen die beiden Vektoren die *gleiche Länge* haben. 
@@ -278,6 +284,12 @@ $$ {#eq-transformation-mit-vektor}
 > \end{aligned}
 > $$
 > :::
+
+:::{.callout-warning}
+## Aufgepasst!
+
+Während die Vektoraddition in der Mathematik der Vektortransformation entspricht, ist die Vektortransformation über die Multiplikation in der Datenverarbeitung nicht gleichwertig mit dem Vektor-Punktprodukt in der Mathematik. 
+:::
 
 ## Aggregationen
 
