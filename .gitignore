@@ -80,3 +80,5 @@ _freeze/
 **/*.toc
 site_libs/
 dxi-skript.bib.old
+
+**/*.quarto_ipynb
